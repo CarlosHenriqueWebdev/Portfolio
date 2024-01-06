@@ -2,26 +2,497 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-BoldItalic.ttf")
+    format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-ExtraBoldItalic.ttf")
+    format("truetype");
+  font-weight: 800; /* ExtraBold */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-Black.ttf") format("truetype");
+  font-weight: 900; /* Black */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-BlackItalic.ttf")
+    format("truetype");
+  font-weight: 900; /* Black */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-ExtraLight.ttf")
+    format("truetype");
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-ExtraLightItalic.ttf")
+    format("truetype");
+  font-weight: 200; /* ExtraLight */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-Light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-LightItalic.ttf")
+    format("truetype");
+  font-weight: 300; /* Light */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-MediumItalic.ttf")
+    format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-SemiBoldItalic.ttf")
+    format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-Thin.ttf") format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../public/fonts/RobotoCondensed-ThinItalic.ttf")
+    format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Loading for production I guess lol */
+
+body {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 1rem;
+  cursor: url("/cursor-circle.svg") 3 4, auto;
+  color: white;
+  background-color: black;
+}
+
+nav {
+  cursor: default !important;
+}
+
+.cursor-svg-pointer {
+  cursor: url("/cursor-circle.svg") 3 4, auto;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+  line-height: 1.6 !important;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* body {
+  line-height: 1;
+} */
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(to right, #474fdf, black);
+}
+
+/* CSS */
+.my-element {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  transition: padding-bottom 0.3s ease; /* Smooth transition for padding change */
+}
+
+.animation-underline-trigger:hover .animation-underline {
+  animation: expandBorder 0.3s ease; /* Animation for border expansion */
+}
+
+.expand-animation {
+  animation: expandBorder 0.3s ease; /* Animation for border expansion */
+}
+
+@keyframes expandBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Final width, border expands to the right */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.text-shadow-light {
+  text-shadow: 1px 1px 30px #fff;
 }
+
+.strokeme {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.strokeme-nav {
+  text-shadow: 0px 0px 0px #7b00ff;
+}
+
+.bg-royalAmethystGradient {
+  background: linear-gradient(to bottom, #0027ad, #cb6ce6) !important;
+}
+
+.btn-animation::before {
+  transform: translateX(-100%);
+  transition: all 0.3s;
+}
+
+.btn-animation:hover::before {
+  transform: translateX(0);
+}
+
+.btn-animation-upwards::before {
+  transform: translateY(100%);
+  transition: all 0.3s;
+}
+
+.btn-animation-upwards:hover::before {
+  transform: translateY(0);
+}
+
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.checkmark span {
+  width: 32px;
+  height: 3px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.checkmark span:nth-child(1) {
+  top: 10%;
+}
+
+.checkmark span:nth-child(2) {
+  top: 50%;
+}
+
+.checkmark span:nth-child(3) {
+  top: 90%;
+}
+
+.container input:checked + .checkmark span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -moz-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  -o-transform: translateY(-50%) rotate(45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -moz-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  -o-transform: translateY(-50%) rotate(-45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(3) {
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  opacity: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+:focus-visible {
+  outline: 4px solid #007bff; /* Change the color as needed */
+  transition: outline 0.2s ease-in-out; /* Adjust the duration and timing function as needed */
+  z-index: 1500;
+}
+
+/* CustomCursor.module.css */
+.custom-cursor {
+  transition-duration: 0.15s;
+  transition-property: width, height, transform;
+  pointer-events: none;
+}
+
+.sizeTransitionAnimation {
+  opacity: 1;
+  transition-duration: 0.3s;
+  transition-property: width, height, transform, opacity;
+  pointer-events: none;
+}
+
+body:not(body:hover) .custom-cursor {
+  width: 0 !important;
+  height: 0 !important;
+  border-width: 0px !important;
+  transition: width 0.8s, height 0.8s, border-width 0.4s !important;
+}
+
+.custom-cursor-vanish {
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-property: width, height, transform, opacity;
+  pointer-events: none;
+}
+
+.brazil-gradient {
+  background-image: linear-gradient(to right, #00a859, #ffcc29, #3e4095);
+  background-size: 100%;
+  background-clip: text;
+
+  /* Vendor-prefixed properties */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
