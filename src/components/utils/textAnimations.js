@@ -2,9 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export const TextAnimationHeadingEnglish = ({ text }) => {
   const characters = text.split("");
-
-  console.log(characters)
-
+  
   return (
     <AnimatePresence>
       {characters.map((char, index) => {

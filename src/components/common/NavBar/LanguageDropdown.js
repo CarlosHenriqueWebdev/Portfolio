@@ -52,7 +52,7 @@ const LanguageDropdown = () => {
       onMouseLeave={() => setIsDropdownOpenHover(false)}
     >
       <button
-        className="flex gap-[8px] items-center text-[white]"
+        className="flex gap-[8px] items-center text-[white] w-max"
         onClick={toggleDropdown}
       >
         <Image
@@ -86,7 +86,7 @@ const LanguageDropdown = () => {
         }`}
       >
         <div className="relative after:bg-[url(/triangle.svg)] after:z-10 after:content-[''] after:absolute after:w-[73px] after:h-[20px] after:bg-no-repeat after:bg-contain  after:block after:right-[-37px] after:top-[-16px]">
-          <ul className="w-fit relative bg-[black] border-solid border-lightLavender border-[2px]  z-20">
+          <ul className="w-fit relative bg-[black] border-solid border-lightViolet border-[2px]  z-20">
             {options.map((option) => (
               <li
                 className={`w-full bg-midnightBlack px-[12px] py-[8px] cursor-pointer flex gap-[8px] items-center hover:bg-[black] hover:text-[white] ${

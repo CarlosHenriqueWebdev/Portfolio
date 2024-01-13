@@ -21,7 +21,7 @@ const Hero = ({
     ...heroTranslations,
   });
 
-  const { language, switchLanguage } = useLanguage();
+  const { language } = useLanguage();
 
   const [sparkleIsHovered, setsparkleIsHovered] = useState(false);
 
@@ -39,7 +39,7 @@ const Hero = ({
   const animatedTextEnglish = "I'm [Null],a Web Developer";
 
   return (
-    <div className="border-b-[4px] border-solid border-white25">
+    <div className="overflow-hidden border-b-[6px] border-solid border-primaryBlue">
       <div
         className={`hero-shadow bg-cover h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/hero.png)]`}
       >
@@ -47,7 +47,6 @@ const Hero = ({
           style={{
             backgroundColor: `rgba(0, 0, 0, 0.6)`,
           }}
-          className=""
         >
           <div className="px-[24px] lg:px-[48px] py-[72px]">
             <div className="grid gap-[8px]">
@@ -110,29 +109,54 @@ const Hero = ({
 
             <div className="grid mt-[24px] sm:flex gap-[16px]">
               <button
-                className={`${buttonClassName}`}
-                onMouseEnter={(e) => updateCursorShape(e.target)}
+                className={`${buttonClassName} flex gap-[8px] items-center`}
+                onMouseEnter={(e) => updateCursorShape(e.currentTarget)}
                 onMouseLeave={() => setElementHovered(null)}
               >
                 {heroTranslation("text13")}
+                <Image
+                  aria-hidden={true}
+                  className="w-[12px] h-[12px] rotate-[90deg]"
+                  src="/arrow.svg"
+                  alt="Estrela Icone"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
               </button>
 
               <button
-                className={`${buttonClassName} !border-primaryBlue before:!bg-primaryBlue`}
-                onMouseEnter={(e) => updateCursorShape(e.target, "primaryBlue")}
+                className={`${buttonClassName} !border-primaryBlue before:!bg-primaryBlue flex gap-[8px] items-center`}
+                onMouseEnter={(e) => updateCursorShape(e.currentTarget, "primaryBlue")}
                 onMouseLeave={() => setElementHovered(null)}
               >
                 {heroTranslation("text14")}
+                <Image
+                  aria-hidden={true}
+                  className="w-[12px] h-[12px] rotate-[90deg]"
+                  src="/arrow.svg"
+                  alt="Estrela Icone"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
               </button>
 
               <button
-                className={`${buttonClassName} !border-lightLavender before:!bg-lightLavender`}
-                onMouseEnter={(e) =>
-                  updateCursorShape(e.target, "lightLavender")
-                }
+                className={`${buttonClassName} !border-lightViolet before:!bg-lightViolet flex gap-[8px] items-center`}
+                onMouseEnter={(e) => updateCursorShape(e.currentTarget, "lightViolet")}
                 onMouseLeave={() => setElementHovered(null)}
               >
                 {heroTranslation("text15")}
+                <Image
+                  aria-hidden={true}
+                  className="w-[12px] h-[12px] rotate-[90deg]"
+                  src="/arrow.svg"
+                  alt="Estrela Icone"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
               </button>
             </div>
           </div>

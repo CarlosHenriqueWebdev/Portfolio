@@ -6,7 +6,11 @@ import useCustomCursor from "@/components/hooks/useCustomCursor";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import Skills from "@/components/section-content/homepage/Skills/Skills";
 import { useState, useEffect } from "react";
-import AnimatedContent from "./test";
+import { motion } from "framer-motion";
+import Services from "@/components/section-content/homepage/Services/Services";
+import Projects from "@/components/section-content/homepage/Projects/Projects";
+import Resume from "@/components/section-content/homepage/Resume/Resume";
+import SharedData from "@/components/utils/SharedData";
 
 const Home = () => {
   const {
@@ -52,7 +56,9 @@ const Home = () => {
       return null; // Return null during server-side rendering
     }
 
-    const sections = ["homeSection", "aboutSection", "skillsSection"];
+    const linksData = SharedData();
+
+    const sections = linksData.allLinks[0].links.map((link) => link.href);
 
     for (const sectionId of sections) {
       const sectionElement = document.getElementById(sectionId);
@@ -88,7 +94,7 @@ const Home = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [activeSection]); // Add activeSection to dependency array to avoid potential issues
+  }, [activeSection]);
 
   return (
     <div className="bg-[black]">
@@ -112,7 +118,12 @@ const Home = () => {
         activeSection={activeSection}
       />
 
-      <AnimatedContent>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }} // Adjust the value to your needs
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
         <div id="homeSection">
           <Hero
             setElementHovered={setElementHovered}
@@ -122,7 +133,7 @@ const Home = () => {
             sizeHandleButtonLeave={sizeHandleButtonLeave}
           />
         </div>
-      </AnimatedContent>
+      </motion.div>
 
       <div id="aboutSection">
         <About
@@ -132,7 +143,25 @@ const Home = () => {
       </div>
 
       <div id="skillsSection">
-        <Skills />
+        <Skills
+          setElementHovered={setElementHovered}
+          updateCursorShape={updateCursorShape}
+        />
+      </div>
+
+      <div id="servicesSection">
+        <Services />
+      </div>
+
+      <div id="projectsSection">
+        <Projects
+          sizeHandleButtonHover={sizeHandleButtonHover}
+          sizeHandleButtonLeave={sizeHandleButtonLeave}
+        />
+      </div>
+
+      <div id="resumeSection">
+        <Resume />
       </div>
     </div>
   );

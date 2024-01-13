@@ -10,22 +10,22 @@ const SharedData = () => {
             href: "aboutSection", // Unique identifier for the about section
           },
           {
-            href: "skillsSection", // Unique identifier for the skills section
+            href: "skillsSection",
           },
           {
-            href: "/reservar",
+            href: "servicesSection",
           },
           {
-            href: "/mapa",
+            href: "projectsSection",
           },
           {
-            href: "/mapa",
+            href: "resumeSection",
           },
           {
-            href: "/mapa",
+            href: "questionsSection",
           },
           {
-            href: "/mapa",
+            href: "contactSection",
           },
         ],
       },

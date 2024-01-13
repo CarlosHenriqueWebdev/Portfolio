@@ -13,6 +13,8 @@ const NavBar = ({
   const [isScreen1024Px, setIsScreen1024Px] = useState(null);
   const [initialized, setInitialized] = useState(false);
 
+  console.log("isScreen1024Px:", isScreen1024Px);
+
   useEffect(() => {
     setInitialized(true);
   }, []);
@@ -23,7 +25,9 @@ const NavBar = ({
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+      console.log("Window Width:", window.innerWidth);
+
+      if (Math.floor(window.innerWidth) >= 1024) {
         setMenuOpen(true);
         setIsScreen1024Px(true);
       } else {
@@ -72,38 +76,26 @@ const NavBar = ({
               />
             ) : (
               <div className="w-full flex gap-[24px] items-center justify-between">
+                <button
+                  className={`container ${menuOpen ? "menuOpen" : ""}`}
+                  aria-label={menuOpen ? "Fechar Menu" : "Abrir Menu"}
+                  onClick={toggleMenu}
+                >
+                  <div className="checkmark">
+                    <span
+                      className={`bg-white90 ${menuOpen ? "!bg-[white]" : ""}`}
+                    ></span>
+                    <span
+                      className={`bg-white90 ${menuOpen ? "!bg-[white]" : ""}`}
+                    ></span>
+                    <span
+                      className={`bg-white90 ${menuOpen ? "!bg-[white]" : ""}`}
+                    ></span>
+                  </div>
+                </button>
+
                 <div className="order-1">
                   <LanguageDropdown />
-                </div>
-
-                <div>
-                  <label
-                    className="container"
-                    aria-label={menuOpen ? "Fechar Menu" : "Abrir Menu"}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={menuOpen}
-                      onChange={toggleMenu}
-                    />
-                    <div className="checkmark">
-                      <span
-                        className={`bg-white90 ${
-                          menuOpen ? "!bg-[white]" : ""
-                        }`}
-                      ></span>
-                      <span
-                        className={`bg-white90 ${
-                          menuOpen ? "!bg-[white]" : ""
-                        }`}
-                      ></span>
-                      <span
-                        className={`bg-white90 ${
-                          menuOpen ? "!bg-[white]" : ""
-                        }`}
-                      ></span>
-                    </div>
-                  </label>
                 </div>
               </div>
             )}

@@ -9,8 +9,8 @@ module.exports = {
     colors: {
       primaryBlue: "#475EDF",
       royalAmethyst: "#6F59D6",
-      lightLavender: "#e9a6f9",
-      verylightLavender: "#d8c0f1",
+      lightViolet: "#9882ff",
+      verylightViolet: "#d8c0f1",
       midnightBlack: "#151515",
       testingPhaseCyan: "#59aed6",
       crimsonRed: "#D62839",

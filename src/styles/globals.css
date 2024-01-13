@@ -159,11 +159,12 @@
 /* Loading for production I guess lol */
 
 body {
-  font-family: "Roboto Condensed", sans-serif !important;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif !important;
   font-size: 1rem;
   cursor: url("/cursor-circle.svg") 3 4, auto;
   color: white;
   background-color: black;
+  /* overflow-x: hidden; */
 }
 
 nav {
@@ -372,15 +373,6 @@ table {
   transform: translateY(0);
 }
 
-/* Hide the default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
 .checkmark {
   position: relative;
   top: 0;
@@ -412,7 +404,7 @@ table {
   top: 90%;
 }
 
-.container input:checked + .checkmark span:nth-child(1) {
+.container.menuOpen span:nth-child(1) {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
   -webkit-transform: translateY(-50%) rotate(45deg);
@@ -421,7 +413,7 @@ table {
   -o-transform: translateY(-50%) rotate(45deg);
 }
 
-.container input:checked + .checkmark span:nth-child(2) {
+.container.menuOpen span:nth-child(2) {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
   -webkit-transform: translateY(-50%) rotate(-45deg);
@@ -430,7 +422,7 @@ table {
   -o-transform: translateY(-50%) rotate(-45deg);
 }
 
-.container input:checked + .checkmark span:nth-child(3) {
+.container.menuOpen span:nth-child(3) {
   transform: translateX(-50px);
   -webkit-transform: translateX(-50px);
   -moz-transform: translateX(-50px);
@@ -471,10 +463,10 @@ table {
 }
 
 body:not(body:hover) .custom-cursor {
-  width: 0 !important;
-  height: 0 !important;
-  border-width: 0px !important;
-  transition: width 0.8s, height 0.8s, border-width 0.4s !important;
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-property: width, height, transform, opacity;
+  pointer-events: none;
 }
 
 .custom-cursor-vanish {
@@ -496,3 +488,143 @@ body:not(body:hover) .custom-cursor {
   -moz-text-fill-color: transparent;
 }
 
+.background {
+  background-color: white !important;
+  width: 70% !important;
+}
+/* 
+::-webkit-scrollbar-track {
+  background-color: #9b9c9c;
+  border: 1px solid #000000;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #475edf;
+  border: 2px solid black;
+} */
+
+/* ::-webkit-scrollbar {
+  width: 20px;
+  background-color: #686868;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #475edf;
+  box-shadow: 0px 0px 6px 2px rgb(0, 0, 0) inset;
+} */
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f1f1f150;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #919191;
+  border: 3px solid #4c4c4c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9c9c9c;
+}
+
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: #f1f1f150;
+  background-size: 8px;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:single-button:hover {
+  background-color: black;
+}
+
+::-webkit-scrollbar-button:single-button:active {
+  background-color: white;
+}
+
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 12px;
+  width: 16px;
+  background-position: center 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23e5e5e5'><polygon points='50,0 0,50 100,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23ffffff'><polygon points='50,0 0,50 100,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23000000'><polygon points='50,0 0,50 100,50'/></svg>");
+}
+
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 12px;
+  width: 16px;
+  background-position: center 2px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23e5e5e5'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23ffffff'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23000000'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+/* Left */
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  height: 12px;
+  width: 12px;
+  background-position: 3px 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23ffffff'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23ffffff'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23000000'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+
+/* Right */
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+  height: 12px;
+  width: 12px;
+  background-position: 3px 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23ffffff'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23ffffff'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23000000'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+
+.transition-tap-background {
+  transition: background 0.3s ease 0s;
+}
+
+.transition-test {
+  transition: width 5s ease 0s;
+}
+
+.grid-cols-custom {
+  grid-template-columns: 0.85fr 1fr;
+}
+
+.center-absolute-element {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

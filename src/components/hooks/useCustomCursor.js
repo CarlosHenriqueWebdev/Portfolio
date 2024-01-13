@@ -27,14 +27,12 @@ const useCustomCursor = () => {
   }, 16);
 
   const sizeHandleButtonHover = () => {
-    // Set the dynamic size to a different value when button is hovered
     setDynamicSize(80);
 
     setSizeTransitionAnimation(true);
   };
 
   const sizeHandleButtonLeave = () => {
-    // Reset the dynamic size when button is no longer hovered
     setDynamicSize(40);
 
     setTimeout(() => {
@@ -85,7 +83,7 @@ const useCustomCursor = () => {
       height: offsetHeight,
       radius: radius,
       color: color,
-    });
+    }); 
   };
 
   return {
