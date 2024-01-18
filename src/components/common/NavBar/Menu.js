@@ -4,9 +4,8 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import SharedData from "@/components/utils/SharedData";
 import Image from "next/image";
 import LanguageDropdown from "./LanguageDropdown";
-import { navTranslations } from "@/components/utils/siteTranslations";
-import useTranslation from "@/components/utils/useTranslation";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const sidebar = {
   open: () => ({
@@ -52,9 +51,7 @@ const delayItem = {
 };
 
 const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
-  const { translate: navTranslation } = useTranslation({
-    ...navTranslations,
-  });
+  const { t: navTranslation } = useTranslation();
 
   const linksData = SharedData();
 
@@ -114,10 +111,10 @@ const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
                   }`}
                   to={mapItem.href} // Use 'to' instead of 'href'
                   smooth={true} // Enable smooth scrolling
-                  duration={500} // Set the duration of the scroll animation in milliseconds
+                  duration={1200} // Set the duration of the scroll animation in milliseconds
                   offset={-73}
                 >
-                  {navTranslation(`text${itemIndex + 1}`)}
+                  {navTranslation(`navText${itemIndex + 1}`)}
 
                   {isScreen1024Px && (
                     <div

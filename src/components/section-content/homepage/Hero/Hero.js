@@ -1,14 +1,15 @@
 import Image from "next/image";
-import React, { useState } from "react";
-import useTranslation from "@/components/utils/useTranslation";
+import React, { useState, useEffect } from "react";
 import Sparkle from "react-sparkle";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   TextAnimationHeadingEnglish,
   TextAnimationHeadingPortuguese,
 } from "@/components/utils/textAnimations";
-import { heroTranslations } from "@/components/utils/siteTranslations";
-import { useLanguage } from "@/components/context/LanguageContext";
+import { useTranslation } from "react-i18next";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import useLanguageChange from "@/hooks/useLanguageChange";
+import { Trans } from "react-i18next";
 
 const Hero = ({
   setElementHovered,
@@ -17,11 +18,9 @@ const Hero = ({
   sizeHandleButtonHover,
   sizeHandleButtonLeave,
 }) => {
-  const { translate: heroTranslation } = useTranslation({
-    ...heroTranslations,
-  });
+  const { t } = useTranslation();
 
-  const { language } = useLanguage();
+  const { currentLanguage } = useLanguageChange();
 
   const [sparkleIsHovered, setsparkleIsHovered] = useState(false);
 
@@ -51,12 +50,12 @@ const Hero = ({
           <div className="px-[24px] lg:px-[48px] py-[72px]">
             <div className="grid gap-[8px]">
               <span className="strokeme text-white85">
-                {heroTranslation("text1")}
+                {t("heroText1")}
               </span>
 
               <div className="font-bold text-[24px] sm:text-[28px]">
                 <motion.div>
-                  {language === "en" ? (
+                  {currentLanguage === "en" ? (
                     <TextAnimationHeadingEnglish text={animatedTextEnglish} />
                   ) : (
                     <TextAnimationHeadingPortuguese
@@ -67,53 +66,57 @@ const Hero = ({
               </div>
 
               <p className="strokeme text-[20px] text-royalAmethyst font-bold">
-                {heroTranslation("text5")}
+                {t("heroText2")}
               </p>
 
-              <p className="max-w-[600px]">
-                {heroTranslation("text6")}{" "}
-                <strong className="strokeme text-royalAmethyst font-bold">
-                  {heroTranslation("text9")}
-                </strong>{" "}
-                {heroTranslation("text8")}{" "}
-                <strong className="strokeme text-royalAmethyst font-bold">
-                  {heroTranslation("text7")}
-                </strong>{" "}
-                {heroTranslation("text10")}
-                {heroTranslation("text11")}
-              </p>
+              <div className="max-w-[600px]">
+                <p>
+                  <Trans
+                    i18nKey={t("heroText3")} // optional -> fallbacks to defaults if not provided
+                    components={{ bold: <strong /> }}
+                  />
+                </p>
+              </div>
 
               <div className="w-fit h-fit relative">
-                <p
-                  className="text-[16px] sm:text-[20px] font-bold flex items-start sm:items-center gap-[8px] mt-[8px]"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Image
-                    aria-hidden={true}
-                    className={`w-[20px] sm:w-[24px] transition-[300ms] ${
-                      sparkleIsHovered ? "scale-[1.2]" : ""
-                    }`}
-                    src="/star.svg"
-                    alt="Estrela Icone"
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
-                  {heroTranslation("text12")}
-                </p>
+                <motion.button whileTap={{ scale: 0.95 }}>
+                  <ScrollLink
+                    className="cursor-pointer sm:text-[20px] font-bold flex items-start sm:items-center gap-[8px] mt-[8px]"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    to={"contactSection"} // Use 'to' instead of 'href'
+                    smooth={true} // Enable smooth scrolling
+                    duration={500} // Set the duration of the scroll animation in milliseconds
+                    offset={-73}
+                  >
+                    <Image
+                      aria-hidden={true}
+                      className={`w-[20px] sm:w-[24px]`}
+                      src="/star.svg"
+                      alt="Estrela Icone"
+                      width={0}
+                      height={0}
+                      unoptimized
+                    />
+                    {t("heroText4")}
+                  </ScrollLink>
 
-                {sparkleIsHovered && <Sparkle count={10} overflowPx={1} />}
+                  {sparkleIsHovered && <Sparkle count={10} overflowPx={1} />}
+                </motion.button>
               </div>
             </div>
 
             <div className="grid mt-[24px] sm:flex gap-[16px]">
-              <button
+              <ScrollLink
                 className={`${buttonClassName} flex gap-[8px] items-center`}
                 onMouseEnter={(e) => updateCursorShape(e.currentTarget)}
                 onMouseLeave={() => setElementHovered(null)}
+                to={"projectsSection"} // Use 'to' instead of 'href'
+                smooth={true} // Enable smooth scrolling
+                duration={500} // Set the duration of the scroll animation in milliseconds
+                offset={-73}
               >
-                {heroTranslation("text13")}
+                {t("heroText5")}
                 <Image
                   aria-hidden={true}
                   className="w-[12px] h-[12px] rotate-[90deg]"
@@ -123,14 +126,20 @@ const Hero = ({
                   height={0}
                   unoptimized
                 />
-              </button>
+              </ScrollLink>
 
-              <button
+              <ScrollLink
                 className={`${buttonClassName} !border-primaryBlue before:!bg-primaryBlue flex gap-[8px] items-center`}
-                onMouseEnter={(e) => updateCursorShape(e.currentTarget, "primaryBlue")}
+                onMouseEnter={(e) =>
+                  updateCursorShape(e.currentTarget, "primaryBlue")
+                }
                 onMouseLeave={() => setElementHovered(null)}
+                to={"resumeSection"} // Use 'to' instead of 'href'
+                smooth={true} // Enable smooth scrolling
+                duration={500} // Set the duration of the scroll animation in milliseconds
+                offset={-73}
               >
-                {heroTranslation("text14")}
+                {t("heroText6")}
                 <Image
                   aria-hidden={true}
                   className="w-[12px] h-[12px] rotate-[90deg]"
@@ -140,14 +149,20 @@ const Hero = ({
                   height={0}
                   unoptimized
                 />
-              </button>
+              </ScrollLink>
 
-              <button
+              <ScrollLink
                 className={`${buttonClassName} !border-lightViolet before:!bg-lightViolet flex gap-[8px] items-center`}
-                onMouseEnter={(e) => updateCursorShape(e.currentTarget, "lightViolet")}
+                onMouseEnter={(e) =>
+                  updateCursorShape(e.currentTarget, "lightViolet")
+                }
                 onMouseLeave={() => setElementHovered(null)}
+                to={"contactSection"} // Use 'to' instead of 'href'
+                smooth={true} // Enable smooth scrolling
+                duration={500} // Set the duration of the scroll animation in milliseconds
+                offset={-73}
               >
-                {heroTranslation("text15")}
+                {t("heroText7")}
                 <Image
                   aria-hidden={true}
                   className="w-[12px] h-[12px] rotate-[90deg]"
@@ -157,7 +172,7 @@ const Hero = ({
                   height={0}
                   unoptimized
                 />
-              </button>
+              </ScrollLink>
             </div>
           </div>
         </div>

@@ -1,0 +1,331 @@
+{
+  "navText1": "Home",
+  "navText2": "About",
+  "navText3": "Skills",
+  "navText4": "Services",
+  "navText5": "Portfolio",
+  "navText6": "Resume",
+  "navText7": "Questions",
+  "navText8": "Contact",
+
+  "heroText1": "Elevating User Experience Through Code",
+  "heroText2": "Learning UX/UI Design",
+  "heroText3": "Welcome to my website! I'm comfortable working on both front-end and back-end development. I specialize in crafting <bold className='strokeme text-royalAmethyst'>user-friendly</bold> and <bold className='strokeme text-royalAmethyst'>very detailed</bold> websites.",
+  "heroText4": "Available for Freelance & Employment",
+  "heroText5": "Portfolio Showcase",
+  "heroText6": "View Resume",
+  "heroText7": "Contact Me",
+
+  "aboutText1": "About Me",
+  "aboutText2": "Web Developer",
+  "aboutText3": "I'm <bold className='strokeme text-royalAmethyst'> [Null] [Null]</bold>, a <bold className='strokeme text-lightViolet'>Web Developer</bold> based in <bold className='brazil-gradient'>Brazil</bold>. With some experience in both <bold className='strokeme italic'>front-end and back-end development</bold>, I specialize in creating <bold className='strokeme text-primaryBlue'>user-friendly websites</bold> that have a touch of <bold className='strokeme text-royalAmethyst'>detail</bold> and <bold className='strokeme text-lightViolet'>vitality</bold>.",
+  "aboutText4": "For me, <bold className='strokeme font-medium'>problem-solving</bold> is at the core of web development. I believe that given enough time and determination, any challenge can be overcome. My focus is on crafting <bold className='strokeme font-medium'>practical solutions</bold> and ensuring a <bold className='strokeme text-royalAmethyst'>seamless user experience</bold> for every and all.",
+  "aboutText5": "I may not delve into coding intricacies as much as others, but I'm all about <bold className='strokeme text-primaryBlue italic'>results</bold>. My <bold className='strokeme text-royalAmethyst'>hands-on approach</bold> involves extensive study, iterative learning, and practical application. For me, it's about <bold className='strokeme text-lightViolet font-medium'>doing and improving through experience</bold>, rather than <bold className='strokeme text-primaryBlue font-medium'>theoretical matters</bold>.",
+
+  "skillsText1": "Web Skills Showcase",
+  "skillsText2": "Discover my current skills for <bold className='strokeme text-royalAmethyst'>web development</bold>. I believe I can do anything that other people can with all the skills presented here. While I don't know everything, I'm always learning and improving so I can deliver a better experience to all. <bold className='text-white75'>|</bold> <bold className='text-primaryBlue strokeme'>*Click on a card to reveal more information about each skill.</bold>",
+
+  "skillsData": [
+    {
+      "id": 1,
+      "name": "JavaScript",
+      "description": "JavaScript is a versatile scripting language commonly used to create dynamic and interactive web pages. With its widespread adoption, it's an essential skill for front-end and back-end development.",
+      "imageSrc": "/javascript-logo.svg",
+      "imageSrcBlack": "/black-logos/javascript-logo.svg",
+      "extraNote": "I've utilized JavaScript on a few Online Student Projects, implementing common features like Hamburger Menus, Image Slideshows, Dropdowns, and Modals. Although, it's nothing special that I don't do already on React / Nextjs. Anyway, I can always come back to it to make new projects and learn a bit more."
+    },
+    {
+      "id": 2,
+      "name": "CSS / SASS / SCSS",
+      "description": "CSS (Cascading Style Sheets) is the language used to style HTML documents. It controls the layout and appearance of web pages, allowing developers to create visually appealing and responsive designs.",
+      "imageSrc": "/css-logo.svg",
+      "imageSrcBlack": "/black-logos/css-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 3,
+      "name": "Node.js",
+      "description": "Node.js is a server-side JavaScript runtime that allows developers to build scalable and efficient network applications. It's widely used for creating web servers and handling asynchronous tasks.",
+      "imageSrc": "/nodejs-logo.svg",
+      "imageSrcBlack": "/black-logos/nodejs-logo.svg",
+      "extraNote": "I've applied Node.js in an online student project while concurrently learning React. The project focused on a social website, featuring user registration, login, post creation, editing, deletion, likes, comments, user profiles, and profile editing. Additional features included an AuthGuard, user validation, and more. Regrettably, the project remained incomplete due to its nature as an online learning exercise. I thought about completing it by strengthening the AuthGuard, implementing confirmation emails and phone numbers, refining post likes with algorithms, adding post filters, improving the overall design, enabling comment replies, incorporating notifications, friend lists, and other many, many features so it could be ready for production in a real-world scenario. However, the amount of work for creating a fully-fledged social media site completely alone felt like it would require a way too extreme amount of time invested in it, so I discarded the idea after doing it for a while."
+    },
+    {
+      "id": 4,
+      "name": "HTML",
+      "description": "HTML (Hypertext Markup Language) is the foundation of web development. It structures content on the web, defining the elements that make up a webpage, such as headings, paragraphs, and images.",
+      "imageSrc": "/html-logo.svg",
+      "imageSrcBlack": "/black-logos/html-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 5,
+      "name": "Next.js",
+      "description": "Next.js is a React framework that simplifies the process of building server-side rendered and statically generated React applications. It enhances the performance and SEO of web applications.",
+      "imageSrc": "/nextjs-logo.svg",
+      "imageSrcBlack": "/black-logos/nextjs-logo.svg",
+      "extraNote": "So far, my favorite. It's straightforward and kind of does some heavy lifting for you. As someone who likes to make websites that are user-friendly for everyone, having an easy-to-use programming language that makes things simpler for developers is definitely a huge plus for me, and I can definitely appreciate the effort put into it."
+    },
+    {
+      "id": 6,
+      "name": "React / React + Typescript",
+      "description": "React is a JavaScript library for building user interfaces. It allows developers to create reusable components, making it efficient to build and maintain complex web applications.",
+      "imageSrc": "/react-logo.svg",
+      "imageSrcBlack": "/black-logos/react-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 7,
+      "name": "Bootstrap",
+      "description": "Bootstrap is a popular CSS framework that streamlines the process of designing responsive and visually appealing websites. It provides a set of pre-designed components and styles.",
+      "imageSrc": "/bootstrap-logo.svg",
+      "imageSrcBlack": "/black-logos/bootstrap-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 8,
+      "name": "Figma",
+      "description": "Figma is a collaborative design tool that allows designers to create, share, and collaborate on user interfaces in real-time. It's widely used for designing web and mobile applications.",
+      "imageSrc": "/figma-logo.svg",
+      "imageSrcBlack": "/black-logos/figma-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 9,
+      "name": "Tailwind CSS",
+      "description": "Tailwind CSS is a utility-first CSS framework that simplifies the process of styling web applications. It provides low-level utility classes to build designs quickly and maintainably.",
+      "imageSrc": "/tailwind-logo.svg",
+      "imageSrcBlack": "/black-logos/tailwind-logo.svg",
+      "extraNote": "When I heard about the concept Bootstrap had to offer, this is exactly what I thought it would be. Using normal CSS/SASS/SCSS and even Bootstrap honestly feels like a waste when you have Tailwind CSS around. I 100% recommend it to all Developers out there."
+    },
+    {
+      "id": 10,
+      "name": "WordPress",
+      "description": "WordPress is a content management system (CMS) that powers a significant portion of the web. It's used for building websites and blogs, offering a user-friendly interface and extensive plugin support.",
+      "imageSrc": "/wordpress-logo.svg",
+      "imageSrcBlack": "/black-logos/wordpress-logo.svg",
+      "extraNote": "Like Strapi, I've solely used WordPress as a Headless CMS. Unfortunately, I haven't gone too deeply into WordPress, but I'm very inclined to explore it further in the future. The plugins it has to offer might make it a better choice than Strapi, and it may as well be less limiting and offer more freedom at the cost of possible being a bit tougher to use and manage as a Developer than Strapi was."
+    },
+    {
+      "id": 11,
+      "name": "Firebase",
+      "description": "Firebase is a mobile and web application development platform provided by Google. It offers a suite of cloud services, including authentication, real-time databases, and hosting, simplifying backend development.",
+      "imageSrc": "/firebase-logo.svg",
+      "imageSrcBlack": "/black-logos/firebase-logo.svg",
+      "extraNote": "I used it as a database for a social website in an online student project, storing photos of posts, profile pictures, user accounts, and more. I didn't do anything particularly special with it, and I believe similar results could be achieved with any other database without issues."
+    },
+    {
+      "id": 12,
+      "name": "Strapi",
+      "description": "Strapi is an open-source headless CMS that enables developers to build powerful APIs quickly. It's flexible, customizable, and suitable for creating content-rich applications.",
+      "imageSrc": "/strapi-logo.svg",
+      "imageSrcBlack": "/black-logos/strapi-logo.svg",
+      "extraNote": "I use Strapi as a content management for my Doggy Daycare project. From my perspective, Strapi felt more accessible and visually modern compared to WordPress when I started, as it was literally made to be a Headless CMS. However, as I explored further, the limitations in terms of plugins and features made me seriously question whether WordPress might have offered superior customization as a Headless CMS for the client's content. Honestly, I still have yet to try WordPress in depth to be able to tell if that was really the case."
+    },
+    {
+      "id": 13,
+      "name": "Other",
+      "description": "The \"Other\" category represents my openness to learning new skills and technologies. Even if I haven't encountered a specific language or tool yet, I believe I can adapt and acquire the necessary knowledge to use it for production if I have a bit of time to spend learning it.",
+      "imageSrc": "/question-mark.svg",
+      "imageSrcBlack": "/black-logos/question-mark.svg",
+      "extraNote": ""
+    }
+  ],
+
+  "servicesText1": "Elevate Your Digital Presence with my Digital Services.",
+  "servicesText2": "Explore a range of digital services that I offer. From <bold className=''>custom website development</bold> to <bold className=''>responsive designs</bold>, I try and improve every day so my services can not only meet your business needs but also enhance the <bold className='text-royalAmethyst strokeme'>usability</bold> and <bold className='text-royalAmethyst strokeme'>accessibility</bold> of your website for <bold className='text-lightViolet strokeme'>you, your team, and all of the users from your website</bold>. Feel free to <bold className='text-primaryBlue strokeme'>contact me</bold> using the form below if you have any questions about my services.",
+  "servicesText3": "Are you interested in working with me?",
+  "servicesText4": "Let’s get started now",
+
+  "servicesData": [
+    {
+      "id": 1,
+      "title": "Content Management Systems",
+      "description": "While I'm still gaining experience with CMS tools, I'm committed to providing you with the best possible experience. I'll put in the effort to ensure your content management is straightforward and stress-free, allowing you to curate the perfect content for your Website.",
+      "imageSrc": "/dashboard.svg"
+    },
+    {
+      "id": 2,
+      "title": "Frontend & Backend Development",
+      "description": "I handle both frontend and backend development tasks. If you have a gap in your project that needs filling, I'm here to help. While I'm still building experience, I'm ready to take on challenges and contribute to your project's development needs.",
+      "imageSrc": "/code-symbol.svg"
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Design",
+      "description": "While my design might not be as incredible as some, I approach UI/UX with dedication and a commitment to improvement. Given sufficient time, I can create functional, nice-looking and user-friendly designs made to fit your needs.",
+      "imageSrc": "/blueprint.svg"
+    },
+    {
+      "id": 4,
+      "title": "Responsive Design",
+      "description": "It's essential to ensure that your website is accessible to everyone, independently of their machine screen size. Just like every Web Developer, I am able to create a seamless user experience that effortlessly adapts to diverse devices and screen sizes. Whether it's desktops or smartphones, your website will work across all platforms, providing an optimal viewing and user experience for every visitor.",
+      "imageSrc": "/target.svg"
+    },
+    {
+      "id": 5,
+      "title": "Ongoing Support & Content Updates",
+      "description": "I can support your site beyond the initial development phase. I offer ongoing support and content updates to ensure your website works properly and is up-to-date. Whether it's troubleshooting an error, security enhancements, or even adding advanced fresh content that you can't do on your own, I am here to support the longevity and success of your online presence.",
+      "imageSrc": "/cogwheel.svg"
+    },
+    {
+      "id": 6,
+      "title": "SEO Optimization",
+      "description": "Like every Web Developer, improving your online visibility is one of my services. Through thorough SEO optimization, I strategically position your website to reach a wider audience. From keyword research to on-page optimization, my approach is designed to enhance your digital presence and attract organic traffic to your site.",
+      "imageSrc": "/seo.svg"
+    },
+    {
+      "id": 7,
+      "title": "Web Accessibility (WCAG)",
+      "description": "I'm committed to digital accessibility, ensuring my projects are user-friendly for everyone. While developing expertise in accessibility integration, I use tools like Screen Readers and consult guides for thorough testing. Acknowledging the diverse user experiences, I'm dedicated to continual learning and refinement. My goal is to create inclusive and user-friendly online experiences for everyone.",
+      "imageSrc": "/checkmark.svg"
+    },
+    {
+      "id": 8,
+      "title": "Web Skills Training",
+      "description": "I'm dedicated to empowering you with essential web skills. Through personalized tutorial videos, I focus on fundamental tasks like content updates—texts, images, videos, and more. This enables you to confidently manage common aspects of your website. If you have any questions or need assistance, feel free to email me for quick support.",
+      "imageSrc": "/graduation.svg"
+    },
+    {
+      "id": 9,
+      "title": "Fast Website",
+      "description": "I prioritize speed to ensure an optimal user experience for your visitors. Through efficient coding practices and performance optimizations, I am dedicated to delivering a fast and responsive website. Everyone on the web deserves a seamless online journey, and I am committed to providing just that.",
+      "imageSrc": "/speed.svg"
+    }
+  ],
+
+  "projectsText1": "Highlighted Works",
+  "projectsText2": "Highlighted Works",
+  "projectsText3": "While I've done various <bold className='text-royalAmethyst font-bold strokeme'>projects for learning only</bold>, this portfolio exclusively features my <bold className='text-royalAmethyst font-bold strokeme'>comprehensive projects—distinct from mere incomplete learning exercises</bold>. Representing my personal work in design and code, these projects not only display my style but also integrate many skills I have learned soo far.",
+
+  "projectsData": [
+    {
+      "name": "Doggy Daycare",
+      "description": "A project about a fictional Doggy Daycare. Although the Name isn't very creative, the Site was made only with the goal of self-improvement. It served as a platform to mainly enhance my design skills, and utilize a popular CMS tool such as Strapi and WordPress, as I'm quite a fan of the Idea of what a CMS can do. The project also aimed at refining my coding proficiency in Next.js, implementing accessibility features, and a few more.",
+      "descriptionFeatures": "Strapi CMS, Interactive Map, Automatic Email, Accessibility Integration, Loading Screen & Skeleton Loading.",
+      "technologiesUsed": [
+        {
+          "name": "Next.js",
+          "techImageSrc": "/nextjs-logo.svg",
+          "blackTechImageSrc": "/black-logos/nextjs-logo.svg",
+          "reasonWhy": "Next.js was chosen for its efficiency in building React applications and its default dynamic routes & config, allowing the Project to progress faster without needing too many custom configurations like custom Routes."
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/tailwind-logo.svg",
+          "blackTechImageSrc": "/black-logos/tailwind-logo.svg",
+          "reasonWhy": "Tailwind CSS was selected to streamline the styling process with its utility-first approach, ensuring a clean and maintainable codebase. It made styling the website be extremely fast. I honestly can't stress enough about how useful it was."
+        },
+        {
+          "name": "Strapi",
+          "techImageSrc": "/strapi-logo.svg",
+          "blackTechImageSrc": "/black-logos/strapi-logo.svg",
+          "reasonWhy": "Strapi served as the headless CMS to manage content, providing flexibility and ease of use, allowing for efficient content updates. Although, I wouldn't recommend it too much, as at least for me, I felt like quite a bit of features were lacking."
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/figma-logo.svg",
+          "blackTechImageSrc": "/black-logos/figma-logo.svg",
+          "reasonWhy": "Figma was the main design tool; its plugins and features helped a lot, ensuring a cohesive and visually appealing user interface."
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/css-logo.svg",
+          "blackTechImageSrc": "/black-logos/css-logo.svg",
+          "reasonWhy": "While Tailwind CSS was the primary styling tool, custom CSS was utilized for specific design elements, providing a better visual experience."
+        }
+      ],
+      "challenges": [
+        {
+          "challengeTitle": "Reservation Form Enhancement",
+          "challengeDescription": "Creating the reservation form had its challenges. While the main functions worked well—sending data to Strapi and triggering email notifications—the details of form validation and user experience needed improvement. Ensuring accessibility is uncertain without real users for testing, and as a learning project, I didn't want to inconvenience users solely for testing and learning purposes.",
+          "solutionText": "To address these challenges, I refined the form's visual cues for better feedback and extensively tested it with NVDA Screen Reader. I also consulted online guides on form accessibility. However, determining the form's success remains challenging without real-world user interaction. Continuous improvement is completely possible and essential if the website was gonna be accessible to the public as a non-fictional project."
+        },
+        {
+          "challengeTitle": "Strapi Content Management",
+          "challengeDescription": "Working with Strapi for content management was straightforward, but certain limitations posed challenges. Strapi lacked features like adding descriptions or placeholders to custom fields, making it challenging for admins to understand their functions. Customizing the Strapi interface was restricted, resulting in some field pages appearing disorganized. Issues with JSON fields could lead to content display problems if the Admin writes anything in the wrong way on it, as there were no restrictions about what you can type. The absence of user feedback made it difficult to pinpoint improvements, especially when Strapi provided limited flexibility for admin convenience.",
+          "solutionText": "To address these challenges, I created tutorial videos showing each field's functionality. You can find the project on my GitHub repository, along with videos on setup, image scaling for space-saving, backups, and deployment. If you are testing it and you have any questions or need clarification, feel free to reach out."
+        }
+      ],
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Strapi Headless CMS Integration:",
+          "featureDescription": "Easily update Texts, Images, Videos, Job Posts, and Services."
+        },
+        {
+          "featureHeading": "Interactive Leaflet Map:",
+          "featureDescription": "Enables users to locate each facility efficiently."
+        },
+        {
+          "featureHeading": "Accessibility Integration:",
+          "featureDescription": "Screen Reader-friendly design, including the Interactive Map and Contact/Reservation Form."
+        },
+        {
+          "featureHeading": "Graphic Details for a Vibrant Experience:",
+          "featureDescription": "Number Counter, Confetti, Hover Effects on Images, and subtle animations for enhanced design."
+        },
+        {
+          "featureHeading": "Automatic Email Notifications:",
+          "featureDescription": "Sent to Strapi Admin and User upon successful form completion."
+        },
+        {
+          "featureHeading": "HTML Animation Loading Screen:",
+          "featureDescription": "Smooth loading animation while fetching data from Strapi."
+        },
+        {
+          "featureHeading": "Custom Design Elements:",
+          "featureDescription": "Self-made Logo, Dog-Themed Pattern, and a blend of Free Vectors created on Figma."
+        },
+        {
+          "featureHeading": "Custom Video Thumbnail:",
+          "featureDescription": "Custom thumbnail for a nice touch on the Open Positions Page."
+        },
+        {
+          "featureHeading": "Images Interactions:",
+          "featureDescription": "Click non-interactive images to open a modal displaying all of the Page Images, Ken Burns Effect on Open Positions Page, and Infinite Image Carousel working as a Gallery on each Individual Service Page."
+        }
+      ],
+      "achievementsList": [
+        {
+          "achievementHeading": "Strapi Headless CMS Integration:",
+          "achievementDescription": "Successfully integrated Strapi as a headless CMS, enabling easy updates for Texts, Images, Videos, Job Posts, and Services."
+        },
+        {
+          "achievementHeading": "Interactive Leaflet Map:",
+          "achievementDescription": "Implemented an interactive Leaflet map, allowing users to efficiently locate each facility."
+        },
+        {
+          "achievementHeading": "Accessibility Integration:",
+          "achievementDescription": "Designed a Screen Reader-friendly interface, including the Interactive Map and Contact/Reservation Form."
+        },
+        {
+          "achievementHeading": "Graphic Details for a Vibrant Experience:",
+          "achievementDescription": "Added engaging elements like Number Counter, Confetti, Hover Effects on Images, and subtle animations for enhanced design."
+        },
+        {
+          "achievementHeading": "Automatic Email Notifications:",
+          "achievementDescription": "Established automatic email notifications, sent to both Strapi Admin and Users upon successful form completion."
+        },
+        {
+          "achievementHeading": "HTML Animation Loading Screen:",
+          "achievementDescription": "Implemented a smooth loading animation while fetching data from Strapi."
+        },
+        {
+          "achievementHeading": "Custom Design Elements:",
+          "achievementDescription": "Created unique design elements, including a self-made logo, dog-themed pattern, and a blend of free vectors using Figma."
+        },
+        {
+          "achievementHeading": "Custom Video Thumbnail:",
+          "achievementDescription": "Crafted a custom thumbnail for a visually appealing touch on the Open Positions Page."
+        },
+        {
+          "achievementHeading": "Images Interactions:",
+          "achievementDescription": "Implemented interactive features such as clicking non-interactive images to open a modal, Ken Burns Effect on the Open Positions Page, and an Infinite Image Carousel functioning as a gallery on each Individual Service Page."
+        }
+      ],
+      "thumbnail": "/projects/doggy-thumbnail.png",
+      "caseStudyUrl": "",
+      "liveWebsiteUrl": ""
+    }
+  ]
+}

@@ -1,14 +1,28 @@
-import { useLanguage } from "@/components/context/LanguageContext";
+import useLanguageChange from "@/hooks/useLanguageChange";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const LanguageDropdown = () => {
+  const { changeLanguage } = useLanguageChange();
+
   const options = ["en", "pt"];
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpenHover, setIsDropdownOpenHover] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState(false);
 
   const dropdownRef = useRef();
-  const { language, switchLanguage } = useLanguage();
+  const router = useRouter();
+
+  useEffect(() => {
+    const newLanguage = localStorage.getItem("language");
+    if (newLanguage) {
+      setCurrentLanguage(newLanguage);
+    } else {
+      setCurrentLanguage("en");
+    }
+  }, []);
 
   const handleOptionChange = (selected) => {
     setIsDropdownOpenHover(false);
@@ -37,10 +51,6 @@ const LanguageDropdown = () => {
     };
   }, []);
 
-  const handleSwitch = (newLanguage) => {
-    switchLanguage(newLanguage);
-  };
-
   const linkStyle =
     "block w-fit p-[12px] lg:text-[white] lg:hover:text-[white]";
 
@@ -59,7 +69,7 @@ const LanguageDropdown = () => {
           aria-hidden={true}
           className="w-[20px]"
           src={`${
-            language === "en"
+            currentLanguage === "en"
               ? "/american-flag-real.svg"
               : "/brazil-flag-real.svg"
           }`}
@@ -68,7 +78,7 @@ const LanguageDropdown = () => {
           height={0}
           unoptimized
         />
-        {language === "en" ? "English" : "Portugues"}
+        {currentLanguage === "en" ? "English" : "Portugues"}
         <Image
           aria-hidden={true}
           className="w-[12px]"
@@ -81,26 +91,36 @@ const LanguageDropdown = () => {
       </button>
 
       <div
-        className={`hidden absolute overflow-hidden pt-[24px] !w-max right-[-8px] ${
+        className={`hidden absolute z-[200] overflow-hidden pt-[24px] !w-max right-[-8px] ${
           isDropdownOpen || isDropdownOpenHover ? "!block" : ""
         }`}
       >
-        <div className="relative after:bg-[url(/triangle.svg)] after:z-10 after:content-[''] after:absolute after:w-[73px] after:h-[20px] after:bg-no-repeat after:bg-contain  after:block after:right-[-37px] after:top-[-16px]">
-          <ul className="w-fit relative bg-[black] border-solid border-lightViolet border-[2px]  z-20">
+        <div
+          className={`relative ${
+            router.pathname === "/resume" ? "" : "after:bg-[url(/triangle.svg)]"
+          } after:z-10 after:content-[''] after:absolute after:w-[73px] after:h-[20px] after:bg-no-repeat after:bg-contain  after:block after:right-[-37px] after:top-[-16px]`}
+        >
+          <ul
+            className={`w-fit relative bg-[black] border-solid ${
+              router.pathname === "/resume"
+                ? "border-[#002B5C] "
+                : "border-lightViolet"
+            } border-[2px] z-20`}
+          >
             {options.map((option) => (
               <li
                 className={`w-full bg-midnightBlack px-[12px] py-[8px] cursor-pointer flex gap-[8px] items-center hover:bg-[black] hover:text-[white] ${
-                  language === "en" && option === "en"
+                  currentLanguage === "en" && option === "en"
                     ? "bg-primaryBlue !text-[white]"
                     : "text-white75"
                 } ${
-                  language === "pt" && option === "pt"
+                  currentLanguage === "pt" && option === "pt"
                     ? "bg-primaryBlue !text-[white]"
                     : "text-white75"
                 }`}
                 onClick={() => {
                   handleOptionChange(option);
-                  handleSwitch(option);
+                  changeLanguage(option);
                 }}
                 key={option}
               >

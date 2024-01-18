@@ -1,0 +1,41 @@
+{
+  "navText1": "Início",
+  "navText2": "Sobre",
+  "navText3": "Habilidades",
+  "navText4": "Serviços",
+  "navText5": "Portfólio",
+  "navText6": "Currículo",
+  "navText7": "Dúvidas",
+  "navText8": "Contato",
+  "heroText1": "Aperfeiçoando a Experiência do Usuário através do Desenvolvimento",
+  "heroText2": "Learning UX/UI Design",
+  "heroText3": "Welcome to my website! I'm comfortable working on both front-end and back-end development. I specialize in crafting <bold className='strokeme text-royalAmethyst'>user-friendly</bold> and <bold className='strokeme text-royalAmethyst'>very detailed</bold> websites.",
+  "heroText4": "Aberto a Freelance e Oportunidades de Trabalho",
+  "heroText5": "Mostrar Portfólio",
+  "heroText6": "Ver Currículo",
+  "heroText7": "Entre em Contato",
+  "aboutText3": "Sou <bold className='strokeme text-royalAmethyst'>[Null] [Null]</bold>, um <bold className='strokeme text-lightViolet'>Desenvolvedor Web</bold> baseado no <bold className='brazil-gradient'>Brasil</bold>. Com alguma experiência tanto em <bold className='strokeme italic'>desenvolvimento front-end quanto back-end</bold>, eu me especializo em criar <bold className='strokeme text-primaryBlue'>sites amigáveis ao usuário</bold> que têm um toque de <bold className='strokeme text-royalAmethyst'>detalhe</bold> e <bold className='strokeme text-lightViolet'>vitalidade</bold>.",
+
+  "aboutText4": "Para mim, <bold className='strokeme font-medium'>resolver problemas</bold> é essencial no desenvolvimento web. Acredito que, com tempo e determinação suficientes, qualquer desafio pode ser superado. Meu foco está em criar <bold className='strokeme font-medium'>soluções práticas</bold> e garantir uma <bold className='strokeme text-royalAmethyst'>experiência de usuário perfeita</bold> para todos.",
+
+  "aboutText5": "Eu posso não mergulhar nas complexidades da codificação tanto quanto outros, mas meu enfoque é totalmente em <bold className='strokeme text-primaryBlue italic'>resultados</bold>. Minha abordagem prática envolve estudo extensivo, aprendizado iterativo e aplicação prática. Para mim, trata-se de <bold className='strokeme text-lightViolet font-medium'>fazer e melhorar através da experiência</bold>, ao invés de <bold className='strokeme text-primaryBlue font-medium'>questões teóricas</bold>.",
+
+  "skillsData": [
+    {
+      "id": 1,
+      "name": "JavaScriptzz",
+      "description": "JavaScript is a versatile scripting language commonly used to create dynamic and interactive web pages. With its widespread adoption, it's an essential skill for front-end and back-end development.",
+      "imageSrc": "/javascript-logo.svg",
+      "imageSrcBlack": "/black-logos/javascript-logo.svg",
+      "extraNote": "I've utilized JavaScript on a few Online Student Projects, implementing common features like Hamburger Menus, Image Slideshows, Dropdowns, and Modals. Although, it's nothing special that I don't do already on React / Nextjs. Anyway, I can always come back to it to make new projects and learn a bit more."
+    },
+    {
+      "id": 2,
+      "name": "CSS / SASS / SCSS",
+      "description": "CSS (Cascading Style Sheets) is the language used to style HTML documents. It controls the layout and appearance of web pages, allowing developers to create visually appealing and responsive designs.",
+      "imageSrc": "/css-logo.svg",
+      "imageSrcBlack": "/black-logos/css-logo.svg",
+      "extraNote": ""
+    }
+  ]
+}

@@ -1,66 +1,47 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import Hero from "@/components/section-content/homepage/Hero/Hero";
+import CustomCursor from "@/components/utils/CustomCursor";
+import useCustomCursor from "@/hooks/useCustomCursor";
+import React from "react";
+import { buttonClassName } from "@/components/utils/buttonStyle";
 
-const containerStyle = {
-  position: "relative",
-  borderRadius: 21,
-  backgroundColor: "rgba(255, 255, 255, 0.2)",
-  padding: 6,
-  display: "flex",
-  alignContent: "flex-start",
-  alignItems: "start",
-  justifyContent: "start",
-};
-
-const tabStyle = {
-  height: 30,
-  position: "relative",
-  padding: "3px 15px",
-  margin: 0,
-  fontFamily: "sans-serif",
-  fontSize: 20,
-  fontWeight: 700,
-  color: "#222",
-  cursor: "pointer",
-};
-
-const tabs = [
-  { name: "Red", color: "#f00" },
-  { name: "Purple", color: "#b1f" },
-  { name: "Orange", color: "#f90" },
-  { name: "Green", color: "#0c0" },
-];
-
-const Home = () => {
-  const [selected, setSelected] = useState(0);
-  const [formerColor, setFormerColor] = useState(tabs[0].color);
+const New = () => {
+  const {
+    position,
+    elementHovered,
+    setElementHovered,
+    updateCursorShape,
+    dynamicSize,
+    sizeHandleButtonHover,
+    sizeHandleButtonLeave,
+    sizeTransitionAnimation,
+    navbarHover,
+    navbarHandleButtonHover,
+    navbarHandleButtonLeave,
+    borderRadiusShape,
+  } = useCustomCursor();
 
   return (
-    <div className="flex gap-[8px] m-[80px]">
-      {tabs.map(({ name, color }, itemIndex) => (
-        <motion.div
-          className="overflow-hidden px-[12px] py-[10px] bg-[black] border-solid border-[2px] border-white font-bold relative"
-          key={itemIndex}
-          transition={{ duration: 0.3 }}
-          onTap={() => {
-            setFormerColor(tabs[selected].color);
-            setSelected(itemIndex);
-          }}
-        >
-          <span style={{ position: "relative", zIndex: 1 }}>{name}</span>
-          {itemIndex === selected && (
-            <motion.div
-              className="w-full h-full top-0 left-0 absolute"
-              layoutId="selected"
-              initial={{ backgroundColor: formerColor }}
-              animate={{ backgroundColor: color }}
-              transition={{ duration: 0.3 }}
-            />
-          )}
-        </motion.div>
-      ))}
+    <div>
+      <CustomCursor
+        elementHovered={elementHovered}
+        position={position}
+        dynamicSize={dynamicSize}
+        sizeTransitionAnimation={sizeTransitionAnimation}
+        navbarHover={navbarHover}
+        borderRadiusShape={borderRadiusShape}
+      />
+
+      <div id="homeSection">
+        <Hero
+          setElementHovered={setElementHovered}
+          updateCursorShape={updateCursorShape}
+          buttonClassName={buttonClassName}
+          sizeHandleButtonHover={sizeHandleButtonHover}
+          sizeHandleButtonLeave={sizeHandleButtonLeave}
+        />
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default New;

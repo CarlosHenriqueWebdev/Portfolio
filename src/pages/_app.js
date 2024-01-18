@@ -1,10 +1,6 @@
 import "@/styles/globals.css";
-import { LanguageProvider } from "@/components/context/LanguageContext";
+import i18n from "i18n";
 
 export default function App({ Component, pageProps }) {
-  return (
-    <LanguageProvider>
-      <Component {...pageProps} />
-    </LanguageProvider>
-  );
+  return <Component {...pageProps} />;
 }

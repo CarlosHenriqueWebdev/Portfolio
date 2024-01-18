@@ -4,6 +4,7 @@ const CustomCursor = ({
   dynamicSize,
   sizeTransitionAnimation,
   navbarHover,
+  borderRadiusShape,
 }) => {
   return (
     <div
@@ -13,7 +14,7 @@ const CustomCursor = ({
           : sizeTransitionAnimation
           ? "sizeTransitionAnimation"
           : ""
-      } custom-cursor fixed border-solid border-royalAmethyst border-[3px] rounded-[50%] bg-[transparent] z-[99999] ${
+      } custom-cursor fixed border-solid border-royalAmethyst border-[3px] bg-[transparent] z-[5000] ${
         elementHovered?.color === "primaryBlue"
           ? "!border-primaryBlue"
           : elementHovered?.color === "lightViolet"
@@ -35,7 +36,9 @@ const CustomCursor = ({
         }px)`,
         width: elementHovered ? elementHovered?.width : dynamicSize,
         height: elementHovered ? elementHovered?.height : dynamicSize,
-        borderRadius: elementHovered?.radius,
+        borderRadius: elementHovered
+          ? `${elementHovered?.radius}`
+          : `${borderRadiusShape}%`,
       }}
     ></div>
   );

@@ -2,10 +2,18 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { buttonClassName } from "@/components/utils/buttonStyle";
-import { projectsData } from "./projectsData";
 import Sparkle from "react-sparkle";
+import Link from "next/link";
+import { Trans, useTranslation } from "react-i18next";
 
-const Projects = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
+const Projects = ({
+  sizeHandleButtonHover,
+  sizeHandleButtonLeave,
+  setElementHovered,
+  updateCursorShape,
+}) => {
+  const { t } = useTranslation();
+
   const [selectedSkill, setSelectedSkill] = useState(0);
 
   const [sparkleIsHovered, setsparkleIsHovered] = useState(false);
@@ -25,227 +33,198 @@ const Projects = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
   };
 
   const buttonClassNameRadio =
-    "btn-animation relative overflow-hidden z-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-primaryBlue before:z-[-1] bg-[black] px-[16px] py-[8px] bg-[black] border-solid border-[2px] border-lightViolet font-bold rounded-[0px]";
+    "btn-animation relative overflow-hidden z-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-royalAmethyst before:z-[-1] bg-[black] px-[16px] py-[8px] bg-[black] border-solid border-[2px] border-royalAmethyst font-bold rounded-[0px] flex gap-[8px] items-center rounded-[4px]";
 
   return (
-    <div className="overflow-hidden bg-[url('/spike-pattern.png')] border-y-[6px] border-solid border-primaryBlue">
+    <div className="overflow-hidden border-y-[6px] border-solid border-primaryBlue">
       <div
         className="w-full h-full py-[72px]"
         style={{
-          backgroundColor: `rgba(0, 0, 0, 0.17)`,
+          backgroundColor: `rgba(0, 0, 0, 0)`,
         }}
       >
-        <motion.div
-          className="px-[24px] lg:px-[48px] text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }} // Adjust the value to your needs
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-        >
-          <h2 className="font-bold text-[26px]">Highlighted Works</h2>
+        <div className="px-[24px] lg:px-[48px]">
+          <h2 className="font-bold text-[26px]">{t("projectsText1")}</h2>
 
-          <p className="mt-[12px] text-white85 max-w-[800px] mx-auto">
-            While I've done various projects for learning only, this portfolio
-            exclusively features my comprehensive projects—distinct from mere
-            learning exercises. Representing my personal work in design and
-            code, these projects not only display my style but also integrate
-            many skills I have learned soo far.
+          <p className="mt-[12px] max-w-[800px]">
+            <Trans
+              i18nKey={t("projectsText3")}
+              components={{ bold: <strong /> }}
+            />
           </p>
-        </motion.div>
 
-        <div className="mt-[48px]">
-          <motion.div
-            className="mx-auto w-fit px-[24px] lg:px-[48px] flex gap-[16px] mb-[32px]"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }} // Adjust the value to your needs
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
+        </div>
+
+        <div className="px-[24px] lg:px-[48px]">
+          <hr
+            aria-hidden="true"
+            className="border-primaryBlue my-[32px] border-t-[4px]"
+          />
+        </div>
+
+        <div className="">
+          <div className="w-fit px-[24px] lg:px-[48px] flex gap-[16px] mb-[24px]">
             <button
               className={`${buttonClassNameRadio}  ${
                 selectedSkill === 0
-                  ? "border-primaryBlue bg-primaryBlue"
+                  ? "border-royalAmethyst bg-royalAmethyst"
                   : "hover:brightness-90"
               }`}
               onClick={() => handleSkillClick(0)}
+              onMouseEnter={(e) =>
+                updateCursorShape(e.currentTarget, "royalAmethyst")
+              }
+              onMouseLeave={() => setElementHovered(null)}
             >
               Doggy Daycare
+              <Image
+                aria-hidden={true}
+                className="w-[12px] h-[12px] "
+                src="/paw-icon.svg"
+                alt="Estrela Icone"
+                width={0}
+                height={0}
+                unoptimized
+              />
             </button>
 
             <button
               className={`${buttonClassNameRadio} ${
                 selectedSkill === 1
-                  ? "border-primaryBlue bg-primaryBlue"
+                  ? "border-royalAmethyst bg-royalAmethyst"
                   : "hover:brightness-90"
               }`}
               onClick={() => handleSkillClick(1)}
+              onMouseEnter={(e) =>
+                updateCursorShape(e.currentTarget, "royalAmethyst")
+              }
+              onMouseLeave={() => setElementHovered(null)}
             >
               Portfolio
+              <Image
+                aria-hidden={true}
+                className="w-[12px] h-[12px]"
+                src="/paw-icon.svg"
+                alt="Estrela Icone"
+                width={0}
+                height={0}
+                unoptimized
+              />
             </button>
-          </motion.div>
+          </div>
 
-          <motion.ul
+          <ul
             className=""
             style={{
               display: "flex",
               transform: `translateX(${-selectedSkill * 100}%)`,
               transition: "transform 0.5s",
             }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }} // Adjust the value to your needs
-            transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            {projectsData.map((mapItem, itemIndex) => (
-              <li className="bg-[black]" style={{ flex: "0 0 100%" }}>
-                <div className="px-[24px] lg:px-[48px] grid md:grid-cols-2 gap-[24px]">
-                  <div className={`w-full h-fit relative`}>
-                    <video autoPlay muted loop className="">
-                      <source src={mapItem.videoSrcMp4} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-
-                    <div className="absolute center-absolute-element  flex justify-center items-center">
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                      >
-                        <Image
-                          aria-hidden={true}
-                          src={`${
-                            !sparkleIsHovered ? "/globe-dark.svg" : "/globe.svg"
-                          }`}
-                          className="w-[140px] sm:w-[180px] h-[80px]"
-                          alt="Estrela Icone"
-                          width={0}
-                          height={0}
-                          unoptimized
-                        />
-                      </motion.button>
-
-                      {sparkleIsHovered && (
-                        <Sparkle
-                          count={10}
-                          overflowPx={10}
-                          fadeOutSpeed={6}
-                          color="#475EDF"
-                          maxSize={12}
-                          minSize={12}
-                        />
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="grid gap-[16px]">
-                    <div className="grid gap-[12px]">
-                      <h3 className="font-bold text-[20px] text-royalAmethyst strokeme">
-                        {mapItem.name}
-                      </h3>
-
-                      <p className="text-[white]">
-                        {mapItem.description}{" "}
-                        <strong className="text-[white]">
-                          Site Features Include:
-                        </strong>{" "}
-                        {mapItem.descriptionFeatures}
-                      </p>
+            {t("projectsData", { returnObjects: true }).map(
+              (mapItem, itemIndex) => (
+                <li className="bg-[black]" style={{ flex: "0 0 100%" }}>
+                  <div className="px-[24px] lg:px-[48px] grid md:grid-cols-2 gap-[24px]">
+                    <div className={`w-full h-fit grid gap-[12px]`}>
+                      <Image
+                        aria-hidden={true}
+                        className="white-box w-full h-full object-cover"
+                        src={mapItem.thumbnail}
+                        alt="Estrela Icone"
+                        width={0}
+                        height={0}
+                        unoptimized
+                      />
                     </div>
 
-                    <div>
-                      <ul className="flex gap-[12px] flex-wrap">
-                        {mapItem.technologiesUsed.map((mapItem, itemIndex) => (
-                          <li className="p-[8px] rounded-[4px] border-solid border-royalAmethyst bg-[white] border-[2px]">
+                    <div className="grid gap-[16px] h-fit">
+                      <div className="grid gap-[12px]">
+                        <h3 className="font-bold text-[20px] text-royalAmethyst strokeme">
+                          {mapItem.name}
+                        </h3>
+
+                        <div className="flex gap-[8px] items-baseline">
+                          <p className="text-[white]">
+                            {" "}
+                            <strong className="text-[white] font-medium">
+                              Description:
+                            </strong>{" "}
+                            {mapItem.description}
+                          </p>
+                        </div>
+
+                        <div className="flex gap-[8px] items-baseline">
+                          <p>
+                            <strong className="text-[white] font-medium">
+                              Site Features Include:
+                            </strong>{" "}
+                            {mapItem.descriptionFeatures}
+                          </p>
+                        </div>
+
+                        <div className="flex gap-[8px] items-baseline">
+                          <p>
+                            <strong className="text-[white] font-medium">
+                              Website URL:
+                            </strong>{" "}
+                            <Link className="underline" href={"/"}>
+                              https://chat.openai.com/
+                            </Link>
+                          </p>
+                        </div>
+                      </div>
+
+                      <div>
+                        <ul className="flex gap-[12px] flex-wrap">
+                          {mapItem.technologiesUsed.map(
+                            (mapItem, itemIndex) => (
+                              <li className="p-[8px] rounded-[3%] border-solid border-royalAmethyst bg-[white] border-[2px]">
+                                <Image
+                                  aria-hidden={true}
+                                  className="w-[28px] h-[28px]"
+                                  src={mapItem.techImageSrc}
+                                  alt="Estrela Icone"
+                                  width={0}
+                                  height={0}
+                                  unoptimized
+                                />
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <div className="flex gap-[16px] mt-[16px]">
+                          <button
+                            className={`${buttonClassName} rounded-[3%] !px-[32px] !w-fit flex gap-[8px] items-center !border-royalAmethyst before:!bg-royalAmethyst`}
+                            onMouseEnter={(e) =>
+                              updateCursorShape(
+                                e.currentTarget,
+                                "royalAmethyst"
+                              )
+                            }
+                            onMouseLeave={() => setElementHovered(null)}
+                          >
+                            Case Study
                             <Image
                               aria-hidden={true}
-                              className="w-[28px] h-[28px]"
-                              src={mapItem.techImageSrc}
+                              className="w-[12px] h-[12px]"
+                              src="/arrow.svg"
                               alt="Estrela Icone"
                               width={0}
                               height={0}
                               unoptimized
                             />
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <div className="flex gap-[16px] mt-[16px]">
-                        <button
-                          className={`${buttonClassName} !py-[4px] !px-[32px] !w-fit flex gap-[8px] items-center !border-[white]`}
-                        >
-                          Case Study
-                          <Image
-                            aria-hidden={true}
-                            className="w-[12px] h-[12px]"
-                            src="/arrow.svg"
-                            alt="Estrela Icone"
-                            width={0}
-                            height={0}
-                            unoptimized
-                          />
-                        </button>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-
-                {/* <div className="px-[24px] lg:px-[48px] mt-[24px]">
-                  <div>
-                    <h4 className="text-[18px] font-bold mb-[12px]">
-                      Special Features:
-                    </h4>
-
-                    <ul className="grid gap-[8px] grid-cols-3 h-fit w-fit">
-                      {mapItem.siteMainFeatures.map((mapItem, itemIndex) => (
-                        <li className="h-fit w-fit">
-                          <h5>{mapItem.featureHeading}</h5>
-
-                          <p className="text-white75 text-[14px]">
-                            {mapItem.featureDescription}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex gap-[16px] mt-[24px]">
-                    <button
-                      className={`${buttonClassName} !py-[4px] !px-[32px] !w-fit flex gap-[8px] items-center`}
-                    >
-                      Case Study
-                      <Image
-                        aria-hidden={true}
-                        className="w-[12px] h-[12px]"
-                        src="/arrow.svg"
-                        alt="Estrela Icone"
-                        width={0}
-                        height={0}
-                        unoptimized
-                      />
-                    </button>
-
-                    <button
-                      className={`${buttonClassName} !py-[4px] !px-[32px] !w-fit before:!bg-primaryBlue !border-primaryBlue flex gap-[8px] items-center`}
-                    >
-                      View Online
-                      <Image
-                        aria-hidden={true}
-                        className="w-[12px] h-[12px]"
-                        src="/arrow.svg"
-                        alt="Estrela Icone"
-                        width={0}
-                        height={0}
-                        unoptimized
-                      />
-                    </button>
-                  </div>
-                </div> */}
-              </li>
-            ))}
-          </motion.ul>
+                </li>
+              )
+            )}
+          </ul>
         </div>
       </div>
     </div>

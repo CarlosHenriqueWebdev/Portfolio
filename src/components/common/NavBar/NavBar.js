@@ -13,8 +13,6 @@ const NavBar = ({
   const [isScreen1024Px, setIsScreen1024Px] = useState(null);
   const [initialized, setInitialized] = useState(false);
 
-  console.log("isScreen1024Px:", isScreen1024Px);
-
   useEffect(() => {
     setInitialized(true);
   }, []);
@@ -25,8 +23,6 @@ const NavBar = ({
 
   useEffect(() => {
     const handleResize = () => {
-      console.log("Window Width:", window.innerWidth);
-
       if (Math.floor(window.innerWidth) >= 1024) {
         setMenuOpen(true);
         setIsScreen1024Px(true);
@@ -57,7 +53,7 @@ const NavBar = ({
   return (
     <>
       {isScreen1024Px !== null ? (
-        <nav className="text-[white] z-[99999] top-0 sticky">
+        <nav className="text-[white] z-[6000] top-0 sticky">
           <div
             className="px-[24px] py-[8px] lg:px-[48px] bg-[black] border-b-[6px] border-b-primaryBlue border-solid w-full flex lg:justify-center items-center"
             onMouseEnter={navbarHandleButtonHoverWithInitialCheck}
