@@ -3,7 +3,6 @@ import { buttonClassName } from "@/components/utils/buttonStyle";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { Trans } from "react-i18next";
 import useLanguageChange from "@/hooks/useLanguageChange";
 
 const Resume = () => {

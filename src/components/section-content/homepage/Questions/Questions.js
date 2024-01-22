@@ -1,9 +1,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { questionsData } from "./questionsData";
 // eslint-disable-next-line no-unused-vars
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Questions = () => {
   const { t } = useTranslation();

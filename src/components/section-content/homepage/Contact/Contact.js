@@ -3,15 +3,15 @@ import { contactInfo } from "../About/contactInfo";
 import Image from "next/image";
 import Form from "./Form";
 import {
-  TextAnimationContactHeading,
-  TextAnimationHeadingPortuguese,
+  TextAnimationContactHeading
 } from "@/components/utils/textAnimations";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { buttonClassName } from "@/components/utils/buttonStyle";
+// eslint-disable-next-line no-unused-vars
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t } = useTranslation();

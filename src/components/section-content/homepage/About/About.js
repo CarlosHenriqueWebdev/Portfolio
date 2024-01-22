@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { buttonAnimationStyles } from "@/components/utils/buttonStyle";
 import { motion } from "framer-motion";
 import { TextAnimationAboutHeading } from "@/components/utils/textAnimations";
 import { contactInfo } from "./contactInfo";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
-import ImageWithSkeleton from "./imageSkeleton";
 
 const About = () => {
   const { t } = useTranslation();

@@ -7,7 +7,7 @@ import { skillsData } from "@/components/section-content/homepage/Skills/skillsD
 import ScrollToTopButton from "@/components/utils/scrollToTopButton";
 import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import useLanguageChange from "@/hooks/useLanguageChange";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import Head from "next/head";
 
 const Resume = () => {
@@ -117,7 +117,7 @@ const Resume = () => {
               </div>
 
               <div className=" bg-[#002b5c] ">
-                <ul className="mx-auto px-[24px] py-[20px] lg:px-[48px] w-full grid sm:grid-cols-2 md:grid-cols-3 max-w-[900px] w-fit lg:justify-center items-center gap-[24px]">
+                <ul className="mx-auto px-[24px] py-[20px] lg:px-[48px] grid sm:grid-cols-2 md:grid-cols-3 max-w-[900px] w-fit lg:justify-center items-center gap-[24px]">
                   {contactInfo.map((mapItem, itemIndex) => (
                     <li
                       key={itemIndex}

@@ -1,37 +1,14 @@
 import Image from "next/image";
-import React, { useRef, useState } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
-import Link from "next/link";
+import React, { useRef} from "react";
+import { motion } from "framer-motion";
+// eslint-disable-next-line no-unused-vars
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Trans, useTranslation } from "react-i18next";
-
-const delayItem = {
-  open: {
-    transition: { staggerChildren: 0.25 },
-  },
-};
-
-const itemAnimation = {
-  open: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-
-  closed: {
-    opacity: 0,
-    scale: 1.2,
-  },
-};
 
 const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
   const { t } = useTranslation();
 
   const motionUlRef = useRef(null);
-  const isInView = useInView(motionUlRef, { once: true });
 
   return (
     <div className="overflow-hidden border-b-[4px] border-solid border-[black] bg-[url('/square-pattern.png')]">

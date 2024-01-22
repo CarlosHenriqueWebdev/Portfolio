@@ -1,8 +1,8 @@
 // Menu.js
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
+// eslint-disable-next-line no-unused-vars
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import SharedData from "@/components/utils/SharedData";
-import Image from "next/image";
 import LanguageDropdown from "./LanguageDropdown";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";

@@ -1,13 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
-import React, { useRef } from "react";
+import React from "react";
 import { useState } from "react";
-import { useRouter } from "next/router";
-import { buttonClassName } from "@/components/utils/buttonStyle";
-import emailjs from "emailjs-com";
-import { Trans, useTranslation } from "react-i18next";
 
-const Form = ({ didFormSubmit, setDidFormSubmit }) => {
+import emailjs from "emailjs-com";
+import {useTranslation } from "react-i18next";
+
+const Form = ({ setDidFormSubmit }) => {
   const { t } = useTranslation();
 
   const initialFormData = {
@@ -233,7 +231,7 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
         </div>
       </div>
 
-      <div className="mt-[32px] flex flex-col gap-[16px] grid md:grid-cols-2 gap-[32px]">
+      <div className="mt-[32px]  flex-col  grid md:grid-cols-2 gap-[32px]">
         <button
           className={`${buttonClassIsShaking} font-bold w-full button flex gap-[8px] items-center justify-center rounded-[8px] ${
             formFieldsHasError ? "!bg-crimsonRed error-button" : ""

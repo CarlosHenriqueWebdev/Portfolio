@@ -1,5 +1,4 @@
-import Head from "next/head";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const LoadingScreen = () => {
   return (

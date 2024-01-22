@@ -7,6 +7,7 @@ import {
   TextAnimationHeadingPortuguese,
 } from "@/components/utils/textAnimations";
 import { useTranslation } from "react-i18next";
+// eslint-disable-next-line no-unused-vars
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import useLanguageChange from "@/hooks/useLanguageChange";
 import { Trans } from "react-i18next";

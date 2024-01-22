@@ -4,11 +4,10 @@ import Link from "next/link";
 import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { projectsData } from "@/components/section-content/homepage/Projects/projectsData";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import Footer from "@/components/common/Footer/Footer";
 import ScrollToTopButton from "@/components/utils/scrollToTopButton";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import useLanguageChange from "@/hooks/useLanguageChange";
 import { useEffect } from "react";
 import Head from "next/head";
@@ -25,7 +24,7 @@ const Project = () => {
   // State to hold the project once it's loaded
   const [project, setProject] = useState(null);
   // State to represent loading state
-  const [loading, setLoading] = useState(true);
+  const [setLoading] = useState(true);
   const [doesProjectExist, setDoesProjectExist] = useState(false);
 
   useEffect(() => {
@@ -58,6 +57,7 @@ const Project = () => {
     };
 
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug, t]); // Run the effect whenever slug or translation changes
 
   const handleClick = () => {

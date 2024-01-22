@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import useLanguageChange from "@/hooks/useLanguageChange";
 import Project from "./[lang]/projects/[slug]";
 
-const index = () => {
-  const { changeLanguage, isLanguageLoading } = useLanguageChange();
+const ProjectsRedirect = () => {
+  const { isLanguageLoading } = useLanguageChange();
 
   const router = useRouter();
 
@@ -32,4 +32,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default ProjectsRedirect;
