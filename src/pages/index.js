@@ -14,8 +14,6 @@ const IndexRedirect = () => {
       <Head>
         <title>Redirecting...</title>
 
-        <meta name="description" content="" />
-
         {/* <link
           rel="alternate"
           hreflang={language}

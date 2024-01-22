@@ -245,11 +245,6 @@
           "challengeTitle": "Reservation Form Enhancement",
           "challengeDescription": "Creating the reservation form had its challenges. While the main functions worked well—sending data to Strapi and triggering email notifications—the details of form validation and user experience needed improvement. Ensuring accessibility is uncertain without real users for testing, and as a learning project, I didn't want to inconvenience users solely for testing and learning purposes.",
           "solutionText": "To address these challenges, I refined the form's visual cues for better feedback and extensively tested it with NVDA Screen Reader. I also consulted online guides on form accessibility. However, determining the form's success remains challenging without real-world user interaction. Continuous improvement is completely possible and essential if the website was gonna be accessible to the public as a non-fictional project."
-        },
-        {
-          "challengeTitle": "Strapi Content Management",
-          "challengeDescription": "Working with Strapi for content management was straightforward, but certain limitations posed challenges. Strapi lacked features like adding descriptions or placeholders to custom fields, making it challenging for admins to understand their functions. Customizing the Strapi interface was restricted, resulting in some field pages appearing disorganized. Issues with JSON fields could lead to content display problems if the Admin writes anything in the wrong way on it, as there were no restrictions about what you can type. The absence of user feedback made it difficult to pinpoint improvements, especially when Strapi provided limited flexibility for admin convenience.",
-          "solutionText": "To address these challenges, I created tutorial videos showing each field's functionality. You can find the project on my GitHub repository, along with videos on setup, image scaling for space-saving, backups, and deployment. If you are testing it and you have any questions or need clarification, feel free to reach out."
         }
       ],
       "siteMainFeatures": [
@@ -348,7 +343,70 @@
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/"
     }
   ],
-
+  "portfolioData": [
+    {
+      "name": "Web Dev Portfolio",
+      "description": "My personal portfolio, crafted following the development of my Dog Daycare Website. It represents a significant improvement in terms of design, functionality, SEO, and accessibility. I made it with the goal of showcasing my skills, it serves as a convenient platform to present my current and future completed projects moving forward.",
+      "role": "(Sole Developer)",
+      "technologiesUsed": [
+        {
+          "name": "Next.js",
+          "techImageSrc": "/nextjs-logo.svg",
+          "blackTechImageSrc": "/black-logos/nextjs-logo.svg",
+          "reasonWhy": ""
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/tailwind-logo.svg",
+          "blackTechImageSrc": "/black-logos/tailwind-logo.svg",
+          "reasonWhy": ""
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/figma-logo.svg",
+          "blackTechImageSrc": "/black-logos/figma-logo.svg",
+          "reasonWhy": ""
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/css-logo.svg",
+          "blackTechImageSrc": "/black-logos/css-logo.svg",
+          "reasonWhy": ""
+        }
+      ],
+      "achievementsList": [
+        {
+          "achievementHeading": "Multilingual Website Implementation:",
+          "achievementDescription": "Successfully implemented language change functionality using i18next, allowing users to switch between different languages for a more inclusive user experience."
+        },
+        {
+          "achievementHeading": "General Quality of LIfe Updates to Improve User Experience:",
+          "achievementDescription": "Implemented a method for the desired Language to be saved between sessions in the Local Storage. Language can be defined automatically based on User Browser Local,improved Performance for a Faster Website, and Search Engines can see the different versions of the Website based on Language."
+        },
+        {
+          "achievementHeading": "Enhanced User Engagement with Animations:",
+          "achievementDescription": "Implemented captivating animations and extra visual effects to enhance user engagement and create a more interactive and visually appealing website."
+        },
+        {
+          "achievementHeading": "Improved Accessibility On Website:",
+          "achievementDescription": "Successfully integrated improved accessibility features, ensuring the website is accessible to a diverse audience, including individuals with disabilities."
+        },
+        {
+          "achievementHeading": "Automated Email System Implementation:",
+          "achievementDescription": "Implemented an automated email system on Contact Form, streamlining communication processes and enhancing user engagement through email notifications."
+        },
+        {
+          "achievementHeading": "Optimized Website for Search Engines (SEO):",
+          "achievementDescription": "Successfully implemented SEO optimization strategies to improve the website's visibility on search engines."
+        },
+        {
+          "achievementHeading": "Implemented Loading Screen and Skeleton Loading:",
+          "achievementDescription": "Implemented a loading screen during Language Changes and employed skeleton loading techniques to significantly reduce layout shifts during page loading, ensuring a smoother user experience."
+        }
+      ],
+      "liveWebsiteUrl": "https://www.carloshenriquedev.com/en"
+    }
+  ],
   "resumeText1": "Web Developer Resume: Skills and Achievements",
   "resumeText2": "View on Website / Download CV.",
   "resumeText3": "View On Website",
@@ -431,7 +489,7 @@
   "resumePageText2": "Back to Portfolio",
   "resumePageText3": "WEB DEVELOPER",
   "resumePageText4": "PERSONAL STATEMENT",
-  "resumePageText5": "As a self-taught, all-around web developer, I learn new skills with dedication and persistence. While my formal education may be limited, my determination to improve and help other's is high. I invest countless hours daily into coding, crafting projects for learning, and tackling complex coding issues. Through a mix of video tutorials, guides, and thorough documentation, I've cultivated proficiency in design, frontend, and backend development. While I may not have the extensive real-world experience of professionals, I am confident in my ability to deliver high-quality work and meet the demands of any project just like any other person.",
+  "resumePageText5": "As a self-taught, all-around web developer, I learn new skills with dedication and persistence. While my formal education may be limited, my determination to improve and help other's is high. I invest countless hours daily into coding, crafting projects for learning, and tackling complex coding issues. Through a mix of video tutorials, guides, and thorough documentation, I've cultivated proficiency in design, frontend, and backend development. While I may not have the extensive real-world experience of professionals, I am confident in my ability to deliver high-quality work and meet the demands of any project.",
   "resumePageText6": "WEB DEV SKILLS",
   "resumePageText7": "PROJECTS",
 

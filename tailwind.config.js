@@ -13,9 +13,8 @@ module.exports = {
       royalPurpleText: "#7464DD",
       skyBlue: "#4784DF",
       skyBlueText: "#6BA2E1",
+      crimsonRed: "#DF4747",
 
-      crimsonRed: "#D62839",
-      lightRed: "#FFD8D9",
       black75: "rgba(0, 0, 0, 0.75)",
       black50: "rgba(0, 0, 0, 0.50)",
       black25: "rgba(0, 0, 0, 0.25)",

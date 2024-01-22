@@ -154,7 +154,7 @@ const Home = () => {
         <link
           rel="alternate"
           hrefLang={whichLanguageIsIt}
-          href={`https://www.yourwebsite.com/${whichLanguageIsIt}/page`}
+          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}`}
         />
       </Head>
 

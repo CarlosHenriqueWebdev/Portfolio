@@ -38,7 +38,7 @@ const ScrollToTopButton = () => {
   return (
     <motion.button
       aria-hidden="true"
-      className={`fixed bottom-[20px] right-[20px] opacity-0 grid gap-[8px] font-black w-fit items-center justify-center ${
+      className={`fixed bottom-[20px] right-[20px] opacity-0 grid gap-[8px] font-black w-fit items-center justify-center x ${
         isVisible ? "opacity-[1] uppercase text-cornflowerBlueText" : ""
       }`}
       onClick={scrollToTop}

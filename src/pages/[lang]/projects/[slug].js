@@ -24,7 +24,6 @@ const Project = () => {
   // State to hold the project once it's loaded
   const [project, setProject] = useState(null);
   // State to represent loading state
-  const [setLoading] = useState(true);
   const [doesProjectExist, setDoesProjectExist] = useState(false);
 
   useEffect(() => {
@@ -51,7 +50,6 @@ const Project = () => {
         console.error("Error finding data:", error);
       } finally {
         // Loading is complete, update loading state
-        setLoading(false);
         setDoesProjectExist(true);
       }
     };
@@ -103,7 +101,7 @@ const Project = () => {
                 <link
                   rel="alternate"
                   hrefLang={whichLanguageIsIt}
-                  href={`https://www.yourwebsite.com/${whichLanguageIsIt}/page`}
+                  href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/${project.slug}`}
                 />
               </Head>
 

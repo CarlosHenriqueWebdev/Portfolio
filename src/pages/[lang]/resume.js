@@ -26,6 +26,11 @@ const Resume = () => {
     }
   };
 
+  const projectsData = t("projectsData", { returnObjects: true });
+  const portfolioData = t("portfolioData", { returnObjects: true });
+
+  const mergedArray = projectsData.concat(portfolioData);
+
   return (
     <>
       {!isLanguageLoading ? (
@@ -57,7 +62,7 @@ const Resume = () => {
             <link
               rel="alternate"
               hrefLang={whichLanguageIsIt}
-              href={`https://www.yourwebsite.com/${whichLanguageIsIt}/page`}
+              href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/resume`}
             />
           </Head>
 
@@ -241,7 +246,7 @@ const Resume = () => {
 
                 <div className="lg:pl-[12px]">
                   <ul className="grid gap-[24px]">
-                    {t("projectsData", { returnObjects: true }).map(
+                    {mergedArray.map(
                       (mapItem, itemIndex) => (
                         <li key={itemIndex}>
                           <div>
