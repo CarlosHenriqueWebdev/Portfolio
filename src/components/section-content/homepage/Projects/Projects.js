@@ -1,42 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 import Image from "next/image";
 import { buttonClassName } from "@/components/utils/buttonStyle";
-import Sparkle from "react-sparkle";
 import Link from "next/link";
 import { Trans, useTranslation } from "react-i18next";
+import useLanguageChange from "@/hooks/useLanguageChange";
 
-const Projects = ({
-  sizeHandleButtonHover,
-  sizeHandleButtonLeave,
-  setElementHovered,
-  updateCursorShape,
-}) => {
+const Projects = () => {
   const { t } = useTranslation();
 
-  const [selectedSkill, setSelectedSkill] = useState(0);
+  const { currentLanguage } = useLanguageChange();
 
-  const [sparkleIsHovered, setsparkleIsHovered] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(0);
 
-  const handleMouseEnter = () => {
-    setsparkleIsHovered(true);
-    sizeHandleButtonHover();
+  const handleProjectClick = (mapItem) => {
+    setSelectedProject(mapItem);
   };
 
-  const handleMouseLeave = () => {
-    setsparkleIsHovered(false);
-    sizeHandleButtonLeave();
-  };
+  const handleButtonClick = (targetId) => {
+    const targetElement = document.getElementById(targetId);
 
-  const handleSkillClick = (mapItem) => {
-    setSelectedSkill(mapItem);
+    if (targetElement) {
+      targetElement.tabIndex = -1;
+      targetElement.focus();
+    }
   };
 
   const buttonClassNameRadio =
-    "btn-animation relative overflow-hidden z-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-royalAmethyst before:z-[-1] bg-[black] px-[16px] py-[8px] bg-[black] border-solid border-[2px] border-royalAmethyst font-bold rounded-[0px] flex gap-[8px] items-center rounded-[4px]";
+    "btn-animation relative overflow-hidden z-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-royalPurple before:z-[-1] bg-[black] px-[16px] py-[8px] bg-[black] border-solid border-[2px] border-royalPurple font-bold rounded-[0px] flex gap-[8px] items-center rounded-[4px] active:scale-[0.95]";
 
   return (
-    <div className="overflow-hidden border-y-[6px] border-solid border-primaryBlue">
+    <div className="overflow-hidden border-y-[6px] border-solid border-cornflowerBlue">
       <div
         className="w-full h-full py-[72px]"
         style={{
@@ -44,93 +37,73 @@ const Projects = ({
         }}
       >
         <div className="px-[24px] lg:px-[48px]">
-          <h2 className="font-bold text-[26px]">{t("projectsText1")}</h2>
+          <h2 id="projectsHeadingText" className="font-bold text-[26px]">
+            {t("projectsText1")}
+          </h2>
 
           <p className="mt-[12px] max-w-[800px]">
             <Trans
-              i18nKey={t("projectsText3")}
+              i18nKey={t("projectsText2")}
               components={{ bold: <strong /> }}
             />
           </p>
-
         </div>
 
-        <div className="px-[24px] lg:px-[48px]">
-          <hr
-            aria-hidden="true"
-            className="border-primaryBlue my-[32px] border-t-[4px]"
-          />
-        </div>
-
-        <div className="">
+        <div className="mt-[32px]">
           <div className="w-fit px-[24px] lg:px-[48px] flex gap-[16px] mb-[24px]">
-            <button
-              className={`${buttonClassNameRadio}  ${
-                selectedSkill === 0
-                  ? "border-royalAmethyst bg-royalAmethyst"
-                  : "hover:brightness-90"
-              }`}
-              onClick={() => handleSkillClick(0)}
-              onMouseEnter={(e) =>
-                updateCursorShape(e.currentTarget, "royalAmethyst")
-              }
-              onMouseLeave={() => setElementHovered(null)}
-            >
-              Doggy Daycare
-              <Image
-                aria-hidden={true}
-                className="w-[12px] h-[12px] "
-                src="/paw-icon.svg"
-                alt="Estrela Icone"
-                width={0}
-                height={0}
-                unoptimized
-              />
-            </button>
-
-            <button
-              className={`${buttonClassNameRadio} ${
-                selectedSkill === 1
-                  ? "border-royalAmethyst bg-royalAmethyst"
-                  : "hover:brightness-90"
-              }`}
-              onClick={() => handleSkillClick(1)}
-              onMouseEnter={(e) =>
-                updateCursorShape(e.currentTarget, "royalAmethyst")
-              }
-              onMouseLeave={() => setElementHovered(null)}
-            >
-              Portfolio
-              <Image
-                aria-hidden={true}
-                className="w-[12px] h-[12px]"
-                src="/paw-icon.svg"
-                alt="Estrela Icone"
-                width={0}
-                height={0}
-                unoptimized
-              />
-            </button>
+            {t("projectsData", { returnObjects: true }).map(
+              (mapItem, itemIndex) => (
+                <button
+                  aria-label={`${mapItem.name} ${t("accessibilityText9")}`}
+                  key={itemIndex}
+                  className={`${buttonClassNameRadio}  ${
+                    selectedProject === itemIndex
+                      ? "border-royalPurple bg-royalPurple"
+                      : "hover:brightness-90"
+                  }`}
+                  onClick={() => {
+                    handleProjectClick(itemIndex);
+                    handleButtonClick(`projectTextFocusSr${itemIndex}`);
+                  }}
+                >
+                  {mapItem.name}
+                  <Image
+                    aria-hidden={true}
+                    className="w-[12px] h-[12px] "
+                    src={mapItem.icon}
+                    alt={mapItem.iconAltText}
+                    width={0}
+                    height={0}
+                    unoptimized
+                  />
+                </button>
+              )
+            )}
           </div>
 
           <ul
             className=""
             style={{
               display: "flex",
-              transform: `translateX(${-selectedSkill * 100}%)`,
+              transform: `translateX(${-selectedProject * 100}%)`,
               transition: "transform 0.5s",
             }}
           >
             {t("projectsData", { returnObjects: true }).map(
               (mapItem, itemIndex) => (
-                <li className="bg-[black]" style={{ flex: "0 0 100%" }}>
+                <li
+                  aria-hidden={selectedProject === itemIndex ? "false" : "true"}
+                  className="bg-[black]"
+                  style={{ flex: "0 0 100%" }}
+                  key={itemIndex}
+                >
                   <div className="px-[24px] lg:px-[48px] grid md:grid-cols-2 gap-[24px]">
                     <div className={`w-full h-fit grid gap-[12px]`}>
                       <Image
                         aria-hidden={true}
                         className="white-box w-full h-full object-cover"
                         src={mapItem.thumbnail}
-                        alt="Estrela Icone"
+                        alt={mapItem.thumbnailAltText}
                         width={0}
                         height={0}
                         unoptimized
@@ -139,7 +112,10 @@ const Projects = ({
 
                     <div className="grid gap-[16px] h-fit">
                       <div className="grid gap-[12px]">
-                        <h3 className="font-bold text-[20px] text-royalAmethyst strokeme">
+                        <h3
+                          id={`projectTextFocusSr${itemIndex}`}
+                          className="font-bold text-[20px] text-royalPurpleText "
+                        >
                           {mapItem.name}
                         </h3>
 
@@ -147,7 +123,7 @@ const Projects = ({
                           <p className="text-[white]">
                             {" "}
                             <strong className="text-[white] font-medium">
-                              Description:
+                              {t("projectsText3")}
                             </strong>{" "}
                             {mapItem.description}
                           </p>
@@ -156,7 +132,7 @@ const Projects = ({
                         <div className="flex gap-[8px] items-baseline">
                           <p>
                             <strong className="text-[white] font-medium">
-                              Site Features Include:
+                              {t("projectsText4")}
                             </strong>{" "}
                             {mapItem.descriptionFeatures}
                           </p>
@@ -165,25 +141,37 @@ const Projects = ({
                         <div className="flex gap-[8px] items-baseline">
                           <p>
                             <strong className="text-[white] font-medium">
-                              Website URL:
+                              {t("projectsText5")}
                             </strong>{" "}
-                            <Link className="underline" href={"/"}>
-                              https://chat.openai.com/
+                            <Link
+                              tabIndex={
+                                selectedProject === itemIndex ? "0" : "-1"
+                              }
+                              className="underline"
+                              href={mapItem.liveWebsiteUrl}
+                            >
+                              {mapItem.liveWebsiteUrl}
                             </Link>
                           </p>
                         </div>
                       </div>
 
                       <div>
+                        <h4 className="visually-hidden">
+                          {t("resumePageProjectHeadingText2")}
+                        </h4>
+
                         <ul className="flex gap-[12px] flex-wrap">
                           {mapItem.technologiesUsed.map(
                             (mapItem, itemIndex) => (
-                              <li className="p-[8px] rounded-[3%] border-solid border-royalAmethyst bg-[white] border-[2px]">
+                              <li
+                                className="p-[8px] rounded-[3%] border-solid border-royalPurple bg-[white] border-[2px]"
+                                key={itemIndex}
+                              >
                                 <Image
-                                  aria-hidden={true}
                                   className="w-[28px] h-[28px]"
                                   src={mapItem.techImageSrc}
-                                  alt="Estrela Icone"
+                                  alt={mapItem.name}
                                   width={0}
                                   height={0}
                                   unoptimized
@@ -196,27 +184,24 @@ const Projects = ({
 
                       <div>
                         <div className="flex gap-[16px] mt-[16px]">
-                          <button
-                            className={`${buttonClassName} rounded-[3%] !px-[32px] !w-fit flex gap-[8px] items-center !border-royalAmethyst before:!bg-royalAmethyst`}
-                            onMouseEnter={(e) =>
-                              updateCursorShape(
-                                e.currentTarget,
-                                "royalAmethyst"
-                              )
+                          <Link
+                            tabIndex={
+                              selectedProject === itemIndex ? "0" : "-1"
                             }
-                            onMouseLeave={() => setElementHovered(null)}
+                            href={`/${currentLanguage}/projects/${mapItem.slug}`}
+                            className={`${buttonClassName} rounded-[3%] !px-[32px] !w-fit flex gap-[8px] items-center !border-royalPurple before:!bg-royalPurple`}
                           >
-                            Case Study
+                            {t("projectsText6")}
                             <Image
                               aria-hidden={true}
                               className="w-[12px] h-[12px]"
                               src="/arrow.svg"
-                              alt="Estrela Icone"
+                              alt={t("altText1")}
                               width={0}
                               height={0}
                               unoptimized
                             />
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>

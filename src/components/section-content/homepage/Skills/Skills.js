@@ -1,10 +1,6 @@
-import {
-  buttonAnimationStyles,
-  buttonClassName,
-} from "@/components/utils/buttonStyle";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import { Trans, useTranslation } from "react-i18next";
 
 const delayItem = {
@@ -29,7 +25,7 @@ const itemAnimation = {
   },
 };
 
-const Skills = ({ setElementHovered, updateCursorShape }) => {
+const Skills = () => {
   const { t } = useTranslation();
 
   const [selectedSkill, setSelectedSkill] = useState(null);
@@ -43,8 +39,17 @@ const Skills = ({ setElementHovered, updateCursorShape }) => {
     );
   };
 
+  const handleButtonClick = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.tabIndex = -1;
+      targetElement.focus();
+    }
+  };
+
   return (
-    <div className="overflow-hidden border-y-[6px] border-solid border-primaryBlue text-center md:text-start">
+    <div className="overflow-hidden border-y-[6px] border-solid border-cornflowerBlue text-center md:text-start">
       <div
         className="grid gap-[32px] md:grid-cols-2 w-full h-full py-[72px] px-[24px] lg:px-[48px]"
         style={{
@@ -54,13 +59,12 @@ const Skills = ({ setElementHovered, updateCursorShape }) => {
         <div className="max-w-[600px] mx-auto">
           <div>
             <div>
-              {!selectedSkill ? (
-                <h2 className="text-[24px] font-bold">{t("skillsText1")}</h2>
-              ) : (
-                <h2 className="text-[white] text-[24px] font-bold strokeme">
-                  {selectedSkill.name}
-                </h2>
-              )}
+              <h2
+                id="skillsHeadingText"
+                className="text-[white] text-[24px] font-bold "
+              >
+                {selectedSkill ? selectedSkill.name : t("skillsText1")}
+              </h2>
             </div>
           </div>
 
@@ -79,7 +83,7 @@ const Skills = ({ setElementHovered, updateCursorShape }) => {
 
                   {selectedSkill.extraNote !== "" && (
                     <p>
-                      <strong className="font-bold">Extra Note:</strong>{" "}
+                      <strong className="font-bold">{t("skillsText3")}</strong>{" "}
                       {selectedSkill.extraNote}
                     </p>
                   )}
@@ -99,29 +103,21 @@ const Skills = ({ setElementHovered, updateCursorShape }) => {
           >
             {t("skillsData", { returnObjects: true }).map((mapItem) => (
               <motion.li
+                role="button"
+                aria-label={`${mapItem.name}, ${t("accessibilityText10")}`}
                 variants={itemAnimation}
                 key={mapItem.id}
-                className={`rounded-[0%] cursor-pointer transition-tap-background flex gap-[8px] p-[16px] bg-[black] border-solid border-royalAmethyst border-[2px] items-center ${
+                className={` cursor-pointer transition-tap-background flex gap-[8px] p-[16px] bg-[black] border-solid border-royalPurple border-[2px] items-center ${
                   selectedSkill && selectedSkill.id === mapItem.id
                     ? "bg-[white]"
                     : ""
                 }`}
-                onClick={() => handleSkillClick(mapItem)}
+                onClick={() => {
+                  handleSkillClick(mapItem);
+                  handleButtonClick("skillsHeadingText");
+                }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                onMouseEnter={(e) => {
-                  // Capture e.currentTarget in a closure
-                  const element = e.currentTarget;
-
-                  setTimeout(() => {
-                    if (element) {
-                      updateCursorShape(element);
-                    }
-                  }, 30);
-                }}
-                onMouseLeave={() => {
-                  setElementHovered(null);
-                }}
               >
                 <Image
                   aria-hidden={true}

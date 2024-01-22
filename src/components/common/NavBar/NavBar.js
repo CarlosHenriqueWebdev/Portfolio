@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { useRouter } from "next/router";
 import Menu from "@/components/common/NavBar/Menu";
 import LanguageDropdown from "./LanguageDropdown";
+import { useTranslation } from "react-i18next";
 
-const NavBar = ({
-  navbarHandleButtonHover,
-  navbarHandleButtonLeave,
-  activeSection,
-}) => {
+const NavBar = ({ activeSection }) => {
+  const { t } = useTranslation();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScreen1024Px, setIsScreen1024Px] = useState(null);
-  const [initialized, setInitialized] = useState(false);
-
-  useEffect(() => {
-    setInitialized(true);
-  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -44,24 +36,32 @@ const NavBar = ({
     };
   }, []);
 
-  const navbarHandleButtonHoverWithInitialCheck = () => {
-    if (initialized) {
-      navbarHandleButtonHover();
+  const handleClick = () => {
+    const targetElement = document.getElementById("homeHeadingText");
+
+    // Set focus to the target element
+    if (targetElement) {
+      targetElement.tabIndex = -1;
+      targetElement.focus();
     }
   };
 
   return (
     <>
       {isScreen1024Px !== null ? (
-        <nav className="text-[white] z-[6000] top-0 sticky">
-          <div
-            className="px-[24px] py-[8px] lg:px-[48px] bg-[black] border-b-[6px] border-b-primaryBlue border-solid w-full flex lg:justify-center items-center"
-            onMouseEnter={navbarHandleButtonHoverWithInitialCheck}
-            onMouseLeave={navbarHandleButtonLeave}
-          >
-            {/* <a href="#main-content" className="skip-to-content">
-            Pular para o Conteúdo Principal
-          </a> */}
+        <nav
+          role="navigation"
+          className="text-[white] z-[6000] top-0 sticky "
+          aria-labelledby="mainmenulabel"
+        >
+          <div className="px-[24px] py-[8px] lg:px-[48px] bg-[black] border-b-[6px] border-b-cornflowerBlue border-solid w-full flex lg:justify-center items-center">
+            <button className="skip-to-content" onClick={handleClick}>
+              {t("accessibilityText1")}
+            </button>
+
+            <h2 id="mainmenulabel" className="visually-hidden">
+              Main Menu
+            </h2>
 
             {isScreen1024Px ? (
               <Menu
@@ -71,29 +71,42 @@ const NavBar = ({
                 activeSection={activeSection}
               />
             ) : (
-              <div className="w-full flex gap-[24px] items-center justify-between">
-                <button
-                  className={`container ${menuOpen ? "menuOpen" : ""}`}
-                  aria-label={menuOpen ? "Fechar Menu" : "Abrir Menu"}
-                  onClick={toggleMenu}
-                >
-                  <div className="checkmark">
-                    <span
-                      className={`bg-white90 ${menuOpen ? "!bg-[white]" : ""}`}
-                    ></span>
-                    <span
-                      className={`bg-white90 ${menuOpen ? "!bg-[white]" : ""}`}
-                    ></span>
-                    <span
-                      className={`bg-white90 ${menuOpen ? "!bg-[white]" : ""}`}
-                    ></span>
-                  </div>
-                </button>
-
-                <div className="order-1">
+              <ul className="w-full flex gap-[24px] items-center justify-between">
+                <li className="order-[1]">
                   <LanguageDropdown />
-                </div>
-              </div>
+                </li>
+
+                <li>
+                  <button
+                    aria-expanded={menuOpen}
+                    className={`container ${menuOpen ? "menuOpen" : ""}`}
+                    aria-label={
+                      menuOpen
+                        ? t("accessibilityText2")
+                        : t("accessibilityText3")
+                    }
+                    onClick={toggleMenu}
+                  >
+                    <div className="checkmark">
+                      <span
+                        className={`bg-white90 ${
+                          menuOpen ? "!bg-[white]" : ""
+                        }`}
+                      ></span>
+                      <span
+                        className={`bg-white90 ${
+                          menuOpen ? "!bg-[white]" : ""
+                        }`}
+                      ></span>
+                      <span
+                        className={`bg-white90 ${
+                          menuOpen ? "!bg-[white]" : ""
+                        }`}
+                      ></span>
+                    </div>
+                  </button>
+                </li>
+              </ul>
             )}
           </div>
 

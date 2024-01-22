@@ -1,10 +1,16 @@
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
+import useLanguageChange from "@/hooks/useLanguageChange";
 
-const Resume = ({ setElementHovered, updateCursorShape }) => {
+const Resume = () => {
+  const { t } = useTranslation();
+
+  const { currentLanguage } = useLanguageChange();
+
   const handleDownloadClick = () => {
     const link = document.createElement("a");
     link.href = "/download/resume-pdf";
@@ -13,7 +19,7 @@ const Resume = ({ setElementHovered, updateCursorShape }) => {
   };
 
   return (
-    <div className="overflow-hidden border-b-[6px] border-solid border-primaryBlue bg-[url('/space-bg.jpg')] bg-fixed bg-no-repeat bg-cover sm:text-center">
+    <div className="overflow-hidden border-b-[6px] border-solid border-cornflowerBlue bg-[url('/space-bg.jpg')] bg-fixed bg-no-repeat bg-cover sm:text-center">
       <div
         className="w-full h-full py-[72px] px-[24px] lg:px-[48px]"
         style={{
@@ -21,31 +27,29 @@ const Resume = ({ setElementHovered, updateCursorShape }) => {
         }}
       >
         <div className="bg-[black] w-fit mx-auto relative sm:after:bg-[url(/resume.svg)] after:z-20 after:content-[''] after:absolute after:w-[60px] after:h-[120px] after:bg-no-repeat after:bg-contain after:mt-[8px] after:top-[-31px] after:left-[-33px] after:block">
-          <div className="relative p-[24px] md:p-[48px] rounded-[12px] overflow-hidden border-solid border-primaryBlue border-[6px]">
+          <div className="relative p-[24px] md:p-[48px] rounded-[12px] overflow-hidden border-solid border-cornflowerBlue border-[6px]">
             <div className="relative z-50">
               <div>
-                <h2 className="font-bold text-[26px]">
-                  Web Developer Resume: Skills and Achievements
+                <h2 id="resumeHeadingText" className="font-bold text-[26px]">
+                  {t("resumeText1")}
                 </h2>
 
-                <h3 className="font-bold text-[22px] strokeme text-primaryBlue mt-[12px]">
-                  View on Website / Download CV.
+                <h3 className="font-bold text-[22px]  text-cornflowerBlueText mt-[12px]">
+                  {t("resumeText2")}
                 </h3>
               </div>
 
               <div className=" mt-[24px] gap-[16px] grid md:flex items-center sm:max-w-[400px] mx-auto">
                 <Link
-                  href={"/resume"}
-                  className={`${buttonClassName} rounded-[4%] w-full justify-center flex gap-[8px] items-center`}
-                  onMouseEnter={(e) => updateCursorShape(e.currentTarget)}
-                  onMouseLeave={() => setElementHovered(null)}
+                  href={`/${currentLanguage}/resume`}
+                  className={`${buttonClassName} rounded-[4px] w-full justify-center flex gap-[8px] items-center`}
                 >
-                  View On Website
+                  {t("resumeText3")}
                   <Image
                     aria-hidden={true}
                     className="w-[12px] h-[12px]"
                     src="/arrow.svg"
-                    alt="Estrela Icone"
+                    alt={t("altText1")}
                     width={0}
                     height={0}
                     unoptimized
@@ -53,19 +57,15 @@ const Resume = ({ setElementHovered, updateCursorShape }) => {
                 </Link>
 
                 <button
-                  className={`${buttonClassName} rounded-[4%] w-full justify-center !border-primaryBlue before:!bg-primaryBlue flex gap-[8px] items-center`}
-                  onMouseEnter={(e) =>
-                    updateCursorShape(e.currentTarget, "primaryBlue")
-                  }
-                  onMouseLeave={() => setElementHovered(null)}
+                  className={`${buttonClassName} rounded-[4px] w-full justify-center !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
                   onClick={handleDownloadClick}
                 >
-                  Download CV
+                  {t("resumeText4")}
                   <Image
                     aria-hidden={true}
                     className="w-[12px] h-[12px]"
                     src="/download.svg"
-                    alt="Estrela Icone"
+                    alt={t("altText9")}
                     width={0}
                     height={0}
                     unoptimized

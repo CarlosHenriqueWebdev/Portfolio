@@ -1,17 +1,13 @@
 import NavBar from "@/components/common/NavBar/NavBar";
-import CustomCursor from "@/components/utils/CustomCursor";
-import useCustomCursor from "@/hooks/useCustomCursor";
-import { buttonClassName } from "@/components/utils/buttonStyle";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import SharedData from "@/components/utils/SharedData";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
 import Footer from "@/components/common/Footer/Footer";
 import useLanguageChange from "@/hooks/useLanguageChange";
 import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import dynamic from "next/dynamic";
+import React from "react";
 
 const blackLoadingScreen = () => <div className="bg-[black] !h-[100vh]"></div>;
 
@@ -80,44 +76,6 @@ const Contact = dynamic(
 );
 
 const Home = () => {
-  const {
-    position,
-    elementHovered,
-    setElementHovered,
-    updateCursorShape,
-    dynamicSize,
-    sizeHandleButtonHover,
-    sizeHandleButtonLeave,
-    sizeTransitionAnimation,
-    navbarHover,
-    navbarHandleButtonHover,
-    navbarHandleButtonLeave,
-    borderRadiusShape,
-  } = useCustomCursor();
-
-  const [isScreen1024Px, setIsScreen1024Px] = useState(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsScreen1024Px(true);
-      } else {
-        setIsScreen1024Px(false);
-      }
-    };
-
-    // Initial check on component mount
-    handleResize();
-
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   const [activeSection, setActiveSection] = useState("homeSection");
 
   function getActiveSection() {
@@ -147,15 +105,15 @@ const Home = () => {
     return null; // No section is currently in view
   }
 
-  // Function to update activeSection on scroll
-  const handleScroll = () => {
-    const newActiveSection = getActiveSection();
-    if (newActiveSection !== activeSection) {
-      setActiveSection(newActiveSection);
-    }
-  };
-
   useEffect(() => {
+    // Function to update activeSection on scroll
+    const handleScroll = () => {
+      const newActiveSection = getActiveSection();
+      if (newActiveSection !== activeSection) {
+        setActiveSection(newActiveSection);
+      }
+    };
+
     // Add scroll event listener on component mount
     window.addEventListener("scroll", handleScroll);
 
@@ -165,42 +123,44 @@ const Home = () => {
     };
   }, [activeSection]);
 
-  const { changeLanguage, isLanguageLoading } = useLanguageChange();
+  const { isLanguageLoading, whichLanguageIsIt } = useLanguageChange();
 
   return (
     <div className="bg-[black]">
+      <Head>
+        <title>
+          {isLanguageLoading
+            ? "Loading..."
+            : whichLanguageIsIt === "en"
+            ? "Web Developer Portfolio | Explore My Projects and Skills"
+            : whichLanguageIsIt === "pt"
+            ? "Portfolio de Desenvolvedor Web | Explore Meus Projetos e Habilidades"
+            : ""}
+        </title>
+
+        <meta
+          name="description"
+          content={
+            isLanguageLoading
+              ? ""
+              : whichLanguageIsIt === "en"
+              ? "Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
+              : whichLanguageIsIt === "pt"
+              ? "Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end."
+              : ""
+          }
+        />
+
+        <link
+          rel="alternate"
+          hrefLang={whichLanguageIsIt}
+          href={`https://www.yourwebsite.com/${whichLanguageIsIt}/page`}
+        />
+      </Head>
+
       {!isLanguageLoading ? (
         <>
-          <Head>
-            <title>Welcome To My Portfolio [English]</title>
-
-            <meta name="description" content="" />
-
-            {/* <link
-          rel="alternate"
-          hreflang={language}
-          href={`https://www.yourwebsite.com/${language}/page`}
-        /> */}
-          </Head>
-
-          {isScreen1024Px !== null && isScreen1024Px !== false && (
-            <CustomCursor
-              elementHovered={elementHovered}
-              position={position}
-              dynamicSize={dynamicSize}
-              sizeTransitionAnimation={sizeTransitionAnimation}
-              navbarHover={navbarHover}
-              borderRadiusShape={borderRadiusShape}
-            />
-          )}
-
-          <NavBar
-            navbarHandleButtonHover={navbarHandleButtonHover}
-            navbarHandleButtonLeave={navbarHandleButtonLeave}
-            setElementHovered={setElementHovered}
-            updateCursorShape={updateCursorShape}
-            activeSection={activeSection}
-          />
+          <NavBar activeSection={activeSection} />
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -209,35 +169,20 @@ const Home = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <div id="homeSection">
-              <Hero
-                setElementHovered={setElementHovered}
-                updateCursorShape={updateCursorShape}
-                buttonClassName={buttonClassName}
-                sizeHandleButtonHover={sizeHandleButtonHover}
-                sizeHandleButtonLeave={sizeHandleButtonLeave}
-              />
+              <Hero />
             </div>
           </motion.div>
 
           <div id="aboutSection">
-            <About
-              setElementHovered={setElementHovered}
-              updateCursorShape={updateCursorShape}
-            />
+            <About />
           </div>
 
           <div id="skillsSection">
-            <Skills
-              setElementHovered={setElementHovered}
-              updateCursorShape={updateCursorShape}
-            />
+            <Skills />
           </div>
 
           <div id="servicesSection">
-            <Services
-              sizeHandleButtonHover={sizeHandleButtonHover}
-              sizeHandleButtonLeave={sizeHandleButtonLeave}
-            />
+            <Services />
           </div>
 
           <motion.div
@@ -247,35 +192,20 @@ const Home = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <div id="projectsSection">
-              <Projects
-                sizeHandleButtonHover={sizeHandleButtonHover}
-                sizeHandleButtonLeave={sizeHandleButtonLeave}
-                setElementHovered={setElementHovered}
-                updateCursorShape={updateCursorShape}
-              />
+              <Projects />
             </div>
           </motion.div>
 
           <div id="resumeSection">
-            <Resume
-              setElementHovered={setElementHovered}
-              updateCursorShape={updateCursorShape}
-            />
+            <Resume />
           </div>
 
-          <div
-            id="no-cursor"
-            className="relative z-[5500]"
-            onMouseEnter={navbarHandleButtonHover}
-            onMouseLeave={navbarHandleButtonLeave}
-          >
-            <div id="questionsSection">
-              <Questions />
-            </div>
+          <div id="questionsSection">
+            <Questions />
+          </div>
 
-            <div id="contactSection">
-              <Contact />
-            </div>
+          <div id="contactSection">
+            <Contact />
           </div>
 
           <Footer />

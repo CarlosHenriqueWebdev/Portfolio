@@ -1,17 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { buttonAnimationStyles } from "@/components/utils/buttonStyle";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { TextAnimationAboutHeading } from "@/components/utils/textAnimations";
 import { contactInfo } from "./contactInfo";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
+import ImageWithSkeleton from "./imageSkeleton";
 
-const About = ({ setElementHovered, updateCursorShape }) => {
+const About = () => {
   const { t } = useTranslation();
 
-  const animatedText = "Web Developer";
+  const [isAboutImageLoading, setIsAboutImageLoading] = useState(true);
+
+  const handleAboutImageLoad = () => {
+    setIsAboutImageLoading(false);
+  };
 
   return (
     <div className="overflow-hidden bg-[url('/square-pattern.png')]">
@@ -23,65 +28,22 @@ const About = ({ setElementHovered, updateCursorShape }) => {
       >
         <div>
           <div>
-            <h2 className="text-center font-bold text-[26px] mb-[32px]">
+            <h2
+              id="aboutHeadingText"
+              className="text-center font-bold text-[26px] mb-[32px]"
+            >
               {t("aboutText1")}
             </h2>
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-[32px] lg:gap-[24px]">
-          <div>
-            <div className="h-fit grid gap-[12px] justify-items-center md:justify-items-start lg:gap-[8px]">
-              <Image
-                aria-hidden={true}
-                className="max-w-[500px] md:max-w-full w-full h-full object-cover border-solid border-[2px] border-[black]"
-                src="/about-illustration.png"
-                alt="Estrela Icone"
-                width={0}
-                height={0}
-                unoptimized
-              />
-
-              <div className="flex flex-wrap gap-[12px]">
-                {contactInfo
-                  .filter((mapItem) => mapItem.display)
-                  .map((mapItem, itemIndex) => (
-                    <Link
-                      className={`${buttonAnimationStyles} w-fit h-fit p-[12px] bg-[black] border-solid ${
-                        itemIndex % 2 === 0
-                          ? "border-primaryBlue"
-                          : "border-royalAmethyst"
-                      } border-[2px] rounded-[50%] before:bg-[white] before:rounded-[50%]`}
-                      href={mapItem.url}
-                      onMouseEnter={(e) =>
-                        updateCursorShape(
-                          e.currentTarget,
-                          `${itemIndex % 2 === 0 ? "primaryBlue" : ""}`
-                        )
-                      }
-                      onMouseLeave={() => setElementHovered(null)}
-                    >
-                      <Image
-                        aria-hidden={true}
-                        className={`w-[20px] sm:w-[24px]`}
-                        src={mapItem.imageSrc}
-                        alt="Estrela Icone"
-                        width={0}
-                        height={0}
-                        unoptimized
-                      />
-                    </Link>
-                  ))}
-              </div>
-            </div>
-          </div>
-
           <div className="sm:text-center md:text-start">
-            <div className="mb-[16px] font-bold text-[24px] strokeme text-primaryBlue">
-              <motion.div>
-                <TextAnimationAboutHeading
-                  text={t("aboutText2")}
-                />
+            <div className="mb-[16px] font-bold text-[24px]  text-cornflowerBlueText">
+              <h3 className="visually-hidden">{t("aboutText2")}</h3>
+
+              <motion.div aria-hidden="true">
+                <TextAnimationAboutHeading text={t("aboutText2")} />
               </motion.div>
             </div>
 
@@ -114,11 +76,66 @@ const About = ({ setElementHovered, updateCursorShape }) => {
               </div>
 
               <div>
-                <p>
-                  If my approach resonates with you or if you have a project in
-                  mind, let's connect and bring your ideas to life together.
-                </p>
+                <p>{t("aboutText6")}</p>
               </div>
+            </div>
+          </div>
+
+          <div className="order-[-1]">
+            <div className="h-fit grid gap-[12px] justify-items-center md:justify-items-start lg:gap-[8px]">
+              <div
+                className={`relative w-full block ${
+                  isAboutImageLoading ? "h-[500px]" : "h-full"
+                }`}
+              >
+                <Image
+                  src="/about-illustration.png"
+                  alt={t("alText5")}
+                  width={0} // Set your desired width
+                  height={0} // Set your desired height
+                  unoptimized
+                  className={`${
+                    isAboutImageLoading ? "opacity-0" : "opacity-1"
+                  } max-w-[500px] md:max-w-full w-full h-full object-cover border-solid border-[2px] border-[black]`}
+                  onLoadingComplete={handleAboutImageLoad}
+                />
+
+                {isAboutImageLoading && (
+                  <div className="absolute top-0 max-w-[500px] md:max-w-full w-full h-[500px] object-cover border-solid border-[2px] border-cornflowerBlue"></div>
+                )}
+              </div>
+
+              <ul className="flex flex-wrap gap-[12px]">
+                {contactInfo
+                  .filter((mapItem) => mapItem.display)
+                  .map((mapItem, itemIndex) => (
+                    <li key={itemIndex}>
+                      <Link
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${mapItem.name} ${t(
+                          "accessibilityText8"
+                        )}`}
+                        className={`${buttonAnimationStyles} block  p-[12px] bg-[black] border-solid active:scale-[0.95] ${
+                          itemIndex % 2 === 0
+                            ? "border-cornflowerBlue"
+                            : "border-royalPurple"
+                        } border-[2px] rounded-[50%] before:bg-[white] before:rounded-[50%] !w-[52px] !h-[52px] flex justify-center`}
+                        href={mapItem.url}
+                      >
+                        <Image
+                          aria-hidden={true}
+                          className={`w-[20px] sm:w-[24px]`}
+                          src={mapItem.imageSrc}
+                          alt={mapItem.name}
+                          width={0}
+                          height={0}
+                          unoptimized
+                        />
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
             </div>
           </div>
         </div>

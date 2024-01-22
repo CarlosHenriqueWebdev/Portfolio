@@ -1,8 +1,8 @@
 export const contactInfo = [
   {
     name: "Github",
-    description: "https://github.com/",
-    url: "https://github.com/",
+    description: "https://github.com/CarlosHenriqueWebdev",
+    url: "https://github.com/CarlosHenriqueWebdev",
     imageSrc: "/github-blue.svg",
     whiteImageSrc: "/white-icons/github-white.svg",
     display: true,
@@ -18,8 +18,8 @@ export const contactInfo = [
     isForContact: false,
   },
   {
-    name: "nullnull@mail.com",
-    url: "mailto:nullnull@mail.com",
+    name: "carloshenrique.webdev@gmail.com",
+    url: "mailto:carloshenrique.webdev@gmail.com",
     imageSrc: "/email-blue.svg",
     whiteImageSrc: "/white-icons/email-white.svg",
     display: true,

@@ -43,7 +43,9 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
       >
         <div className="">
           <div className="mb-[32px]">
-            <h2 className="font-bold text-[26px]">{t("servicesText1")}</h2>
+            <h2 id="servicesHeadingText" className="font-bold text-[26px]">
+              {t("servicesText1")}
+            </h2>
 
             <p className="mt-[12px]">
               <Trans
@@ -56,9 +58,6 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
           <div>
             <motion.ul
               className="grid gap-x-[16px] gap-y-[24px] items-stretch md:grid-cols-2 lg:grid-cols-3"
-              variants={delayItem}
-              initial="closed"
-              animate={isInView && "open"}
               ref={motionUlRef}
             >
               {t("servicesData", { returnObjects: true }).map(
@@ -66,24 +65,23 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
                   <motion.li
                     className={`rounded-[4px] w-full h-full p-[24px] border-solid border-[3px] ${
                       itemIndex % 2 === 0
-                        ? "border-primaryBlue"
-                        : "border-royalAmethyst"
+                        ? "border-cornflowerBlue"
+                        : "border-royalPurple"
                     } content-baseline bg-[black] grid `}
                     key={itemIndex}
-                    variants={itemAnimation}
                   >
                     <div
                       className={`w-fit border-solid ${
                         itemIndex % 2 === 0
-                          ? "border-primaryBlue"
-                          : "border-royalAmethyst"
+                          ? "border-cornflowerBlue"
+                          : "border-royalPurple"
                       }  border-[3px] p-[12px] rounded-[100%]`}
                     >
                       <Image
                         aria-hidden={true}
                         className="w-[40px] h-[40px]"
                         src={mapItem.imageSrc}
-                        alt="Estrela Icone"
+                        alt={`${t("altText10")} ${mapItem.title}`}
                         width={0}
                         height={0}
                         unoptimized
@@ -108,7 +106,7 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
               {t("servicesText3")}{" "}
               <ScrollLink
                 href="#contactSection"
-                className="text-lightViolet font-semibold hover:underline cursor-pointer"
+                className="text-skyBlueText font-semibold hover:underline cursor-pointer"
                 to={"contactSection"} // Use 'to' instead of 'href'
                 smooth={true} // Enable smooth scrolling
                 duration={500} // Set the duration of the scroll animation in milliseconds

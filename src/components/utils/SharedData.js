@@ -4,53 +4,36 @@ const SharedData = () => {
       {
         links: [
           {
-            href: "homeSection", // Unique identifier for the home section
+            href: "homeSection",
+            screenReaderHref: "homeHeadingText"
           },
           {
-            href: "aboutSection", // Unique identifier for the about section
+            href: "aboutSection",
+            screenReaderHref: "aboutHeadingText"
           },
           {
             href: "skillsSection",
+            screenReaderHref: "skillsHeadingText"
           },
           {
             href: "servicesSection",
+            screenReaderHref: "servicesHeadingText"
           },
           {
             href: "projectsSection",
+            screenReaderHref: "projectsHeadingText"
           },
           {
             href: "resumeSection",
+            screenReaderHref: "resumeHeadingText"
           },
           {
             href: "questionsSection",
+            screenReaderHref: "questionsHeadingText"
           },
           {
             href: "contactSection",
-          },
-        ],
-      },
-      {
-        title: "Informação / Extras",
-        links: [
-          {
-            text: "Depoimentos",
-            href: "/depoimentos",
-          },
-          {
-            text: "Perguntas Frequentes",
-            href: "/perguntas-frequentes",
-          },
-          {
-            text: "Política de Privacidade",
-            href: "/politica-de-privacidade",
-          },
-          {
-            text: "Termos e Condições",
-            href: "/termos-e-condicoes",
-          },
-          {
-            text: "Mapa do Site",
-            href: "/mapa-do-site",
+            screenReaderHref: "contactHeadingText"
           },
         ],
       },

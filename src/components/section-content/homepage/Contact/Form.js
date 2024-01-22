@@ -5,8 +5,11 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import emailjs from "emailjs-com";
+import { Trans, useTranslation } from "react-i18next";
 
 const Form = ({ didFormSubmit, setDidFormSubmit }) => {
+  const { t } = useTranslation();
+
   const initialFormData = {
     Name: "",
     Email: "",
@@ -91,17 +94,17 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
     const errors = {};
 
     if (!data.Name.trim()) {
-      errors.Name = "O Nome é obrigatório";
+      errors.Name = t("formErrorText1");
     }
 
     if (!data.Email.trim()) {
-      errors.Email = "O Email é obrigatório";
+      errors.Email = t("formErrorText2");
     } else if (!isValidEmail(data.Email)) {
-      errors.Email = "Endereço de email inválido";
+      errors.Email = t("formErrorText3");
     }
 
     if (!data.Message.trim()) {
-      errors.Message = "A Mensagem é obrigatória";
+      errors.Message = t("formErrorText4");
     }
 
     return errors;
@@ -116,7 +119,7 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
     formErrors.Name || formErrors.Email || formErrors.Message;
 
   const inputClassName =
-    "bg-[black] w-full rounded-[4px] py-[8px] px-[12px] border-solid border-[2px] border-primaryBlue focus:border-[#00a1ff] focus:outline-none focus:transition-none focus:static focus:z-0 !text-[white]";
+    "bg-[black] w-full rounded-[4px] py-[8px] px-[12px] border-solid border-[2px] border-cornflowerBlue focus:border-[#00a1ff] focus:outline-none focus:transition-none focus:static focus:z-0 !text-[white]";
 
   return (
     <form action="" onSubmit={handleSubmit} className="">
@@ -125,8 +128,8 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
           <div className="flex flex-col gap-[24px]">
             <div className="flex gap-[4px] flex-col">
               <label className="font-medium cursor-pointer" htmlFor="Name">
-                Name:
-                <span aria-hidden={true} className="text-lightViolet">
+                {t("labelText1")}:
+                <span aria-hidden={true} className="text-skyBlueText">
                   *
                 </span>
               </label>
@@ -138,24 +141,30 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
                 type="text"
                 id="Name"
                 name="Name"
-                placeholder="Digite seu primeiro nome"
+                placeholder={t("placeHolderText1")}
                 value={formData.Name}
                 onChange={handleChange}
                 aria-live="assertive"
                 aria-required="true"
+                aria-invalid={formErrors.Name ? "true" : "false"}
+                aria-describedby="name-error"
               />
 
               {formErrors.Name && (
-                <span aria-hidden={true} className="font-bold text-crimsonRed">
-                  {formErrors.Name}
+                <span
+                  id="name-error"
+                  role="alert"
+                  className="font-bold text-crimsonRed"
+                >
+                  Error: {formErrors.Name}
                 </span>
               )}
             </div>
 
             <div className="flex gap-[4px] flex-col">
               <label className="font-medium cursor-pointer" htmlFor="Email">
-                Email:
-                <span aria-hidden={true} className="text-lightViolet">
+                {t("labelText2")}:
+                <span aria-hidden={true} className="text-skyBlueText">
                   *
                 </span>
               </label>
@@ -167,16 +176,22 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
                 type="email"
                 id="Email"
                 name="Email"
-                placeholder="Digite seu endereço de email"
+                placeholder={t("placeHolderText2")}
                 value={formData.Email}
                 onChange={handleChange}
                 aria-live="assertive"
                 aria-required="true"
+                aria-invalid={formErrors.Email ? "true" : "false"}
+                aria-describedby="email-error"
               />
 
               {formErrors.Email && (
-                <span aria-hidden={true} className="font-bold text-crimsonRed">
-                  {formErrors.Email}
+                <span
+                  id="email-error"
+                  role="alert"
+                  className="font-bold text-crimsonRed"
+                >
+                  Error: {formErrors.Email}
                 </span>
               )}
             </div>
@@ -184,12 +199,11 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
 
           <div className="flex gap-[4px] flex-col">
             <label className="font-medium cursor-pointer" htmlFor="Message">
-              Message:
-              <span aria-hidden={true} className="text-lightViolet">
+              {t("labelText3")}:
+              <span aria-hidden={true} className="text-skyBlueText">
                 *
               </span>
             </label>
-
             <textarea
               className={`${inputClassName}  h-full ${
                 formErrors.Message ? "!border-crimsonRed" : ""
@@ -197,16 +211,22 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
               id="Message"
               name="Message"
               rows="4"
-              placeholder="Digite sua mensagem"
+              placeholder={t("placeHolderText3")}
               value={formData.Message}
               onChange={handleChange}
               aria-live="assertive"
               aria-required="true"
+              aria-invalid={formErrors.Message ? "true" : "false"}
+              aria-describedby="message-error"
             ></textarea>
 
             {formErrors.Message && (
-              <span aria-hidden={true} className="font-bold text-crimsonRed">
-                {formErrors.Message}
+              <span
+                id="message-error"
+                role="alert"
+                className="font-bold text-crimsonRed"
+              >
+                Error: {formErrors.Message}
               </span>
             )}
           </div>
@@ -215,37 +235,22 @@ const Form = ({ didFormSubmit, setDidFormSubmit }) => {
 
       <div className="mt-[32px] flex flex-col gap-[16px] grid md:grid-cols-2 gap-[32px]">
         <button
-          className={`${buttonClassIsShaking} button flex gap-[8px] items-center justify-center rounded-[8px] ${
+          className={`${buttonClassIsShaking} font-bold w-full button flex gap-[8px] items-center justify-center rounded-[8px] ${
             formFieldsHasError ? "!bg-crimsonRed error-button" : ""
           }`}
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Enviando..." : "Enviar"}
+          {isSubmitting ? t("formButtonText2") : t("formButtonText1")}
           <Image
             aria-hidden={true}
             className="w-[16px]"
             src="/plane-icon.svg"
-            alt="Avião Icone"
+            alt={t("altText7")}
             width={0}
             height={0}
             unoptimized
           />
         </button>
-
-        <div aria-live="assertive" role="alert">
-          {formFieldsHasError && (
-            <p className="visually-hidden">
-              Houve um erro ao enviar o formulário. Por favor, corrija os
-              seguintes campos e tente novamente:{" "}
-              {formErrors.Name && ` ${formErrors.Name},`}
-              {formErrors.LastName && ` ${formErrors.LastName},`}
-              {formErrors.Email && ` ${formErrors.Email},`}
-              {formErrors.Message && ` ${formErrors.Message},`}
-              {formErrors.Location && ` ${formErrors.Location},`}
-              {formErrors.InquiryType && ` ${formErrors.InquiryType}.`}
-            </p>
-          )}
-        </div>
       </div>
     </form>
   );

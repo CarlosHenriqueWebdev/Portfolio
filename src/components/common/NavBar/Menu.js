@@ -70,7 +70,16 @@ const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
   const linkStyle =
     "relative cursor-pointer block w-full p-[12px] lg:text-[white] lg:p-[10px] lg:hover:text-[white]";
 
-  const underlineStyle = "bg-primaryBlue left-0 absolute w-full h-[4px]";
+  const underlineStyle = "bg-cornflowerBlue left-0 absolute w-full h-[4px]";
+
+  const handleButtonClick = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.tabIndex = -1;
+      targetElement.focus();
+    }
+  };
 
   return (
     <>
@@ -83,7 +92,8 @@ const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
         <div
           className={`bg-[black] lg:h-auto lg:!flex lg:static lg:w-full lg:justify-center`}
         >
-          <motion.ul
+          <motion.ol
+            aria-hidden={menuOpen ? "false" : "true"}
             ref={ulRef}
             role={menuOpen && !isScreen1024Px ? "dialog" : undefined}
             tabIndex="-1" // Make the ul focusable
@@ -91,63 +101,71 @@ const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
             className={`pt-[24px] pb-[48px] lg:mx-[0px] max-h-[420px] flex flex-col items-center text-[1.25rem] overflow-auto lg:flex-row lg:py-[0px] lg:h-auto lg:overflow-visible lg:gap-[16px]`}
             variants={delayItem}
           >
-            {linksData.allLinks[0].links.map((mapItem, itemIndex) => (
-              <motion.li
-                key={itemIndex}
-                className={`px-[24px] pt-[12px] lg:p-0 animation-underline-trigger w-full lg:w-fit group`}
-                variants={itemAnimation}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ScrollLink
-                  className={`${linkStyle} h-fit w-fit ${
-                    !isScreen1024Px
-                      ? "active:border-[white] border-solid border-primaryBlue border-[2px]"
-                      : ""
-                  } ${
-                    mapItem.href === activeSection
-                      ? "strokeme-nav bg-royalAmethyst lg:!bg-[transparent]"
-                      : ""
-                  }`}
-                  to={mapItem.href} // Use 'to' instead of 'href'
-                  smooth={true} // Enable smooth scrolling
-                  duration={1200} // Set the duration of the scroll animation in milliseconds
-                  offset={-73}
-                >
-                  {navTranslation(`navText${itemIndex + 1}`)}
-
-                  {isScreen1024Px && (
-                    <div
-                      className={`${underlineStyle} animation-underline ${
-                        mapItem.href === activeSection
-                          ? "expand-animation opacity-100"
-                          : "opacity-0"
-                      } group-hover:!opacity-100 `}
-                    ></div>
-                  )}
-                </ScrollLink>
-              </motion.li>
-            ))}
-
             {isScreen1024Px && (
               <>
-                <li aria-hidden="true">
+                <li aria-hidden="true" className="order-1">
                   <hr className="border-t-[2px] w-[30px] rotate-[90deg] border-white50" />
                 </li>
 
-                <LanguageDropdown />
+                <li className="order-1">
+                  <LanguageDropdown />
+                </li>
               </>
             )}
 
+            {linksData.allLinks[0].links.map((mapItem, itemIndex) => (
+              <motion.li
+                variants={itemAnimation}
+                key={itemIndex}
+                className={`px-[24px] pt-[12px] lg:p-0 animation-underline-trigger w-full lg:w-fit group`}
+              >
+                <motion.div
+                  tabIndex="-1"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <ScrollLink
+                    className={`${linkStyle} h-fit w-fit ${
+                      !isScreen1024Px
+                        ? "active:border-[white] border-solid border-cornflowerBlue border-[2px]"
+                        : ""
+                    } ${
+                      mapItem.href === activeSection
+                        ? "-nav bg-royalPurple lg:!bg-[transparent]"
+                        : ""
+                    }`}
+                    to={mapItem.href} // Use 'to' instead of 'href'
+                    smooth={true} // Enable smooth scrolling
+                    duration={1200} // Set the duration of the scroll animation in milliseconds
+                    offset={-73}
+                    tabIndex={menuOpen ? "0" : "-1"}
+                    onClick={() => handleButtonClick(mapItem.screenReaderHref)}
+                  >
+                    {navTranslation(`navText${itemIndex + 1}`)}
+
+                    {isScreen1024Px && (
+                      <div
+                        className={`${underlineStyle} animation-underline ${
+                          mapItem.href === activeSection
+                            ? "expand-animation opacity-100"
+                            : "opacity-0"
+                        } group-hover:!opacity-100 `}
+                      ></div>
+                    )}
+                  </ScrollLink>
+                </motion.div>
+              </motion.li>
+            ))}
+
             {menuOpen && !isScreen1024Px && (
               <li
-                className="visually-hidden"
+                className="close-button-sr pl-[24px] mt-[12px] w-full"
                 aria-hidden={menuOpen && !isScreen1024Px ? "false" : "true"}
               >
                 <button onClick={toggleMenu}>Fechar Modal</button>
               </li>
             )}
-          </motion.ul>
+          </motion.ol>
         </div>
       </motion.div>
     </>

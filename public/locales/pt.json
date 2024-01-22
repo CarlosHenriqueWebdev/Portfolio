@@ -5,37 +5,479 @@
   "navText4": "Serviços",
   "navText5": "Portfólio",
   "navText6": "Currículo",
-  "navText7": "Dúvidas",
+  "navText7": "Perguntas",
   "navText8": "Contato",
-  "heroText1": "Aperfeiçoando a Experiência do Usuário através do Desenvolvimento",
-  "heroText2": "Learning UX/UI Design",
-  "heroText3": "Welcome to my website! I'm comfortable working on both front-end and back-end development. I specialize in crafting <bold className='strokeme text-royalAmethyst'>user-friendly</bold> and <bold className='strokeme text-royalAmethyst'>very detailed</bold> websites.",
-  "heroText4": "Aberto a Freelance e Oportunidades de Trabalho",
+
+  "heroText1": "Elevando a Experiência do Usuário Através do Código",
+  "heroText2": "Aprendendo Design UX/UI",
+  "heroText3": "Bem-vindo ao meu site! Eu me sinto à vontade trabalhando tanto no desenvolvimento front-end quanto no back-end. Especializo-me em criar sites <bold className=' text-royalPurpleText'>amigáveis</bold> e <bold className=' text-royalPurpleText'>muito detalhados</bold>.",
+  "heroText4": "Disponível para Freelance e Emprego",
   "heroText5": "Mostrar Portfólio",
   "heroText6": "Ver Currículo",
   "heroText7": "Entre em Contato",
-  "aboutText3": "Sou <bold className='strokeme text-royalAmethyst'>[Null] [Null]</bold>, um <bold className='strokeme text-lightViolet'>Desenvolvedor Web</bold> baseado no <bold className='brazil-gradient'>Brasil</bold>. Com alguma experiência tanto em <bold className='strokeme italic'>desenvolvimento front-end quanto back-end</bold>, eu me especializo em criar <bold className='strokeme text-primaryBlue'>sites amigáveis ao usuário</bold> que têm um toque de <bold className='strokeme text-royalAmethyst'>detalhe</bold> e <bold className='strokeme text-lightViolet'>vitalidade</bold>.",
 
-  "aboutText4": "Para mim, <bold className='strokeme font-medium'>resolver problemas</bold> é essencial no desenvolvimento web. Acredito que, com tempo e determinação suficientes, qualquer desafio pode ser superado. Meu foco está em criar <bold className='strokeme font-medium'>soluções práticas</bold> e garantir uma <bold className='strokeme text-royalAmethyst'>experiência de usuário perfeita</bold> para todos.",
+  "aboutText1": "Sobre Mim",
+  "aboutText2": "Desenvolvedor Web",
+  "aboutText3": "Eu sou <bold className=' text-royalPurpleText'> [Null] [Null]</bold>, um <bold className=' text-skyBlueText'>Desenvolvedor Web</bold> baseado no <bold className='brazil-gradient'>Brasil</bold>. Com alguma experiência em desenvolvimento <bold className=' italic'>front-end e back-end</bold>, eu me especializo em criar <bold className=' text-cornflowerBlueText'>sites amigáveis</bold> com um toque de <bold className=' text-royalPurpleText'>detalhe</bold> e <bold className=' text-skyBlueText'>vitalidade</bold>.",
+  "aboutText4": "Para mim, a <bold className=' font-medium'>resolução de problemas</bold> está no centro do desenvolvimento web. Acredito que, com tempo e determinação suficientes, qualquer desafio pode ser superado. Meu foco é criar <bold className=' font-medium'>soluções práticas</bold> e garantir uma <bold className=' text-royalPurpleText'>experiência do usuário sem problemas</bold> para todos.",
+  "aboutText5": "Eu posso não entrar em detalhes de codificação tanto quanto outros, mas sou tudo sobre <bold className=' text-cornflowerBlueText italic'>resultados</bold>. Minha abordagem <bold className=' text-royalPurpleText'>prática</bold> envolve estudo extensivo, aprendizado iterativo e aplicação prática. Para mim, trata-se de <bold className=' text-skyBlueText font-medium'>fazer e melhorar através da experiência</bold>, em vez de <bold className=' text-cornflowerBlueText font-medium'>questões teóricas</bold>.",
+  "aboutText6": "Se minha abordagem ressoar com você ou se você tiver um projeto em mente, vamos nos conectar e dar vida às suas ideias juntos.",
 
-  "aboutText5": "Eu posso não mergulhar nas complexidades da codificação tanto quanto outros, mas meu enfoque é totalmente em <bold className='strokeme text-primaryBlue italic'>resultados</bold>. Minha abordagem prática envolve estudo extensivo, aprendizado iterativo e aplicação prática. Para mim, trata-se de <bold className='strokeme text-lightViolet font-medium'>fazer e melhorar através da experiência</bold>, ao invés de <bold className='strokeme text-primaryBlue font-medium'>questões teóricas</bold>.",
+  "skillsText1": "Mostruário de Habilidades para a Web",
+  "skillsText2": "Descubra minhas habilidades atuais para o <bold className=' text-royalPurpleText'>desenvolvimento web</bold>. Acredito que posso fazer qualquer coisa que outras pessoas façam com todas as habilidades apresentadas aqui. Embora eu não saiba de tudo, estou sempre aprendendo e melhorando para poder proporcionar uma experiência melhor a todos. <bold className='text-white75'>|</bold> <bold className='text-cornflowerBlueText '>*Clique em um cartão para revelar mais informações sobre cada habilidade.</bold>",
+  "skillsText3": "Anotação Extra:",
 
   "skillsData": [
     {
       "id": 1,
-      "name": "JavaScriptzz",
-      "description": "JavaScript is a versatile scripting language commonly used to create dynamic and interactive web pages. With its widespread adoption, it's an essential skill for front-end and back-end development.",
+      "name": "JavaScript",
+      "description": "JavaScript é uma linguagem de script versátil comumente usada para criar páginas da web dinâmicas e interativas. Com sua ampla adoção, é uma habilidade essencial para o desenvolvimento front-end e back-end.",
       "imageSrc": "/javascript-logo.svg",
       "imageSrcBlack": "/black-logos/javascript-logo.svg",
-      "extraNote": "I've utilized JavaScript on a few Online Student Projects, implementing common features like Hamburger Menus, Image Slideshows, Dropdowns, and Modals. Although, it's nothing special that I don't do already on React / Nextjs. Anyway, I can always come back to it to make new projects and learn a bit more."
+      "extraNote": "Utilizei JavaScript em alguns projetos online de estudantes, implementando recursos comuns como menus hamburguer, slideshows de imagens, dropdowns e modais. Embora não seja nada especial que eu já não faça em React / Nextjs. De qualquer forma, posso sempre voltar a isso para criar novos projetos e aprender um pouco mais."
     },
     {
       "id": 2,
       "name": "CSS / SASS / SCSS",
-      "description": "CSS (Cascading Style Sheets) is the language used to style HTML documents. It controls the layout and appearance of web pages, allowing developers to create visually appealing and responsive designs.",
+      "description": "CSS (Cascading Style Sheets) é a linguagem usada para estilizar documentos HTML. Ele controla o layout e a aparência das páginas da web, permitindo que os desenvolvedores criem designs visualmente atraentes e responsivos.",
       "imageSrc": "/css-logo.svg",
       "imageSrcBlack": "/black-logos/css-logo.svg",
       "extraNote": ""
+    },
+    {
+      "id": 3,
+      "name": "Node.js",
+      "description": "Node.js é um tempo de execução de JavaScript no lado do servidor que permite aos desenvolvedores criar aplicativos de rede escaláveis e eficientes. É amplamente utilizado para criar servidores web e lidar com tarefas assíncronas.",
+      "imageSrc": "/nodejs-logo.svg",
+      "imageSrcBlack": "/black-logos/nodejs-logo.svg",
+      "extraNote": "Apliquei Node.js em um projeto online de estudantes enquanto aprendia React simultaneamente. O projeto focava em um site social, apresentando registro de usuário, login, criação de postagens, edição, exclusão, curtidas, comentários, perfis de usuário e edição de perfil. Recursos adicionais incluíram um AuthGuard, validação de usuário e mais. Lamentavelmente, o projeto permaneceu incompleto devido à sua natureza como um exercício de aprendizado online. Pensei em completá-lo fortalecendo o AuthGuard, implementando e-mails e números de telefone de confirmação, aprimorando curtidas de postagens com algoritmos, adicionando filtros de postagens, melhorando o design geral, habilitando respostas a comentários, incorporando notificações, listas de amigos e muitos, muitos recursos para que estivesse pronto para produção em um cenário do mundo real. No entanto, a quantidade de trabalho para criar um site de mídia social totalmente funcional completamente sozinho parecia que exigiria um tempo demasiado extremo investido nele, então descartei a ideia depois de um tempo."
+    },
+    {
+      "id": 4,
+      "name": "HTML",
+      "description": "HTML (Hypertext Markup Language) é a base do desenvolvimento web. Ele estrutura o conteúdo na web, definindo os elementos que compõem uma página da web, como títulos, parágrafos e imagens.",
+      "imageSrc": "/html-logo.svg",
+      "imageSrcBlack": "/black-logos/html-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 5,
+      "name": "Next.js",
+      "description": "Next.js é um framework React que simplifica o processo de construção de aplicativos React renderizados no lado do servidor e gerados estaticamente. Ele aprimora o desempenho e a SEO de aplicativos web.",
+      "imageSrc": "/nextjs-logo.svg",
+      "imageSrcBlack": "/black-logos/nextjs-logo.svg",
+      "extraNote": "Até agora, meu favorito. É direto e meio que faz todo o trabalho pesado para você. Como alguém que gosta de fazer sites que sejam amigáveis para todos, ter uma linguagem de programação fácil de usar que simplifica as coisas para os desenvolvedores é definitivamente uma grande vantagem para mim, e eu posso definitivamente apreciar o esforço dedicado a isso."
+    },
+    {
+      "id": 6,
+      "name": "React / React + Typescript",
+      "description": "React é uma biblioteca JavaScript para construir interfaces de usuário. Permite que os desenvolvedores criem componentes reutilizáveis, tornando eficiente a construção e manutenção de aplicativos web complexos.",
+      "imageSrc": "/react-logo.svg",
+      "imageSrcBlack": "/black-logos/react-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 7,
+      "name": "Bootstrap",
+      "description": "Bootstrap é um framework CSS popular que simplifica o processo de design de sites responsivos e visualmente atraentes. Ele fornece um conjunto de componentes e estilos pré-projetados.",
+      "imageSrc": "/bootstrap-logo.svg",
+      "imageSrcBlack": "/black-logos/bootstrap-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 8,
+      "name": "Figma",
+      "description": "Figma é uma ferramenta de design colaborativa que permite aos designers criar, compartilhar e colaborar em interfaces de usuário em tempo real. É amplamente utilizado para projetar aplicativos web e móveis.",
+      "imageSrc": "/figma-logo.svg",
+      "imageSrcBlack": "/black-logos/figma-logo.svg",
+      "extraNote": ""
+    },
+    {
+      "id": 9,
+      "name": "Tailwind CSS",
+      "description": "Tailwind CSS é um framework CSS de utilidade que simplifica o processo de estilizar aplicativos web. Ele fornece classes de utilidade de baixo nível para construir designs de forma rápida e sustentável.",
+      "imageSrc": "/tailwind-logo.svg",
+      "imageSrcBlack": "/black-logos/tailwind-logo.svg",
+      "extraNote": "Quando ouvi falar no conceito que o Bootstrap tinha a oferecer, é exatamente isso que eu pensava que seria. Usar CSS/SASS/SCSS normais e até mesmo Bootstrap honestamente parece ser um desperdício quando você tem o Tailwind CSS por perto. Eu o recomendo 100% a todos os desenvolvedores por aí."
+    },
+    {
+      "id": 10,
+      "name": "WordPress",
+      "description": "WordPress é um sistema de gerenciamento de conteúdo (CMS) que alimenta uma parte significativa da web. É usado para construir sites e blogs, oferecendo uma interface amigável e amplo suporte a plugins.",
+      "imageSrc": "/wordpress-logo.svg",
+      "imageSrcBlack": "/black-logos/wordpress-logo.svg",
+      "extraNote": "Assim como o Strapi, usei o WordPress apenas como um Headless CMS. Infelizmente, não aprofundei muito no WordPress, mas estou muito inclinado a explorá-lo mais no futuro. Os plugins que ele tem a oferecer podem torná-lo uma escolha melhor do que o Strapi, e pode muito bem ser menos limitado e oferecer mais liberdade com o custo de possivelmente ser um pouco mais difícil de usar e gerenciar como um desenvolvedor do que o Strapi foi."
+    },
+    {
+      "id": 11,
+      "name": "Firebase",
+      "description": "Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web fornecida pelo Google. Oferece um conjunto de serviços em nuvem, incluindo autenticação, bancos de dados em tempo real e hospedagem, simplificando o desenvolvimento do backend.",
+      "imageSrc": "/firebase-logo.svg",
+      "imageSrcBlack": "/black-logos/firebase-logo.svg",
+      "extraNote": "Usei como banco de dados para um site social em um projeto online de estudante, armazenando fotos de postagens, fotos de perfil, contas de usuário e mais. Não fiz nada especialmente especial com ele, e acredito que resultados semelhantes poderiam ser alcançados com qualquer outro banco de dados sem problemas."
+    },
+    {
+      "id": 12,
+      "name": "Strapi",
+      "description": "Strapi é um CMS de código aberto sem cabeça que permite aos desenvolvedores criar APIs poderosas rapidamente. É flexível, personalizável e adequado para criar aplicativos ricos em conteúdo.",
+      "imageSrc": "/strapi-logo.svg",
+      "imageSrcBlack": "/black-logos/strapi-logo.svg",
+      "extraNote": "Uso o Strapi como gerenciador de conteúdo para meu projeto Doggy Daycare. Do meu ponto de vista, o Strapi parecia mais acessível e visualmente moderno em comparação com o WordPress quando comecei, pois foi literalmente feito para ser um Headless CMS. No entanto, à medida que explorei mais, as limitações em termos de plugins e recursos me fizeram questionar seriamente se o WordPress poderia ter oferecido uma personalização superior como um Headless CMS para o conteúdo do cliente. Honestamente, ainda tenho que experimentar o WordPress a fundo para poder dizer se isso era realmente o caso."
+    },
+    {
+      "id": 13,
+      "name": "Outros",
+      "description": "A categoria \"Outros\" representa minha abertura para aprender novas habilidades e tecnologias. Mesmo que eu ainda não tenha encontrado uma linguagem ou ferramenta específica, acredito que posso me adaptar e adquirir o conhecimento necessário para usá-la em produção se eu tiver um pouco de tempo para aprendê-la.",
+      "imageSrc": "/question-mark.svg",
+      "imageSrcBlack": "/black-logos/question-mark.svg",
+      "extraNote": ""
     }
-  ]
+  ],
+
+  "servicesText1": "Eleve Sua Presença Digital com Meus Serviços Digitais.",
+  "servicesText2": "Explore uma variedade de serviços digitais que ofereço. Desde o <bold className=''>desenvolvimento personalizado de websites</bold> até <bold className=''>designs responsivos</bold>, eu tento melhorar a cada dia para que meus serviços não apenas atendam às suas necessidades comerciais, mas também aprimorem a <bold className='text-royalPurpleText '>usabilidade</bold> e <bold className='text-royalPurpleText '>acessibilidade</bold> do seu site para <bold className='text-skyBlueText '>você, sua equipe e todos os usuários do seu site</bold>. Sinta-se à vontade para <bold className='text-cornflowerBlueText '>entrar em contato</bold> usando o formulário abaixo se tiver alguma dúvida sobre meus serviços.",
+  "servicesText3": "Interessado em trabalhar comigo?",
+  "servicesText4": "Vamos começar agora",
+
+  "servicesData": [
+    {
+      "id": 1,
+      "title": "Sistemas de Gerenciamento de Conteúdo",
+      "description": "Embora ainda esteja ganhando experiência com ferramentas de CMS, estou comprometido em proporcionar a você a melhor experiência possível. Vou me esforçar para garantir que seu gerenciamento de conteúdo seja direto e sem estresse, permitindo que você crie o conteúdo perfeito para o seu site.",
+      "imageSrc": "/dashboard.svg"
+    },
+    {
+      "id": 2,
+      "title": "Desenvolvimento Frontend & Backend",
+      "description": "Lido com tarefas de desenvolvimento tanto frontend quanto backend. Se houver uma lacuna em seu projeto que precisa ser preenchida, estou aqui para ajudar. Embora ainda esteja construindo experiência, estou pronto para enfrentar desafios e contribuir para as necessidades de desenvolvimento do seu projeto.",
+      "imageSrc": "/code-symbol.svg"
+    },
+    {
+      "id": 3,
+      "title": "Design UI/UX",
+      "description": "Embora meu design não seja tão incrível quanto alguns, abordo o UI/UX com dedicação e compromisso com a melhoria. Dado tempo suficiente, posso criar designs funcionais, atraentes e fáceis de usar, feitos para atender às suas necessidades.",
+      "imageSrc": "/blueprint.svg"
+    },
+    {
+      "id": 4,
+      "title": "Design Responsivo",
+      "description": "É essencial garantir que seu site seja acessível a todos, independentemente do tamanho da tela de sua máquina. Assim como todo Desenvolvedor Web, consigo criar uma experiência do usuário perfeita que se adapta facilmente a diversos dispositivos e tamanhos de tela. Seja em desktops ou smartphones, seu site funcionará em todas as plataformas, proporcionando uma visualização e experiência do usuário ideais para cada visitante.",
+      "imageSrc": "/target.svg"
+    },
+    {
+      "id": 5,
+      "title": "Suporte Contínuo e Atualizações de Conteúdo",
+      "description": "Posso apoiar seu site além da fase inicial de desenvolvimento. Ofereço suporte contínuo e atualizações de conteúdo para garantir que seu site funcione corretamente e esteja atualizado. Seja solucionando um erro, aprimorando a segurança ou até mesmo adicionando conteúdo avançado que você não pode fazer sozinho, estou aqui para apoiar a longevidade e o sucesso de sua presença online.",
+      "imageSrc": "/cogwheel.svg"
+    },
+    {
+      "id": 6,
+      "title": "Otimização de SEO",
+      "description": "Assim como todo Desenvolvedor Web, melhorar sua visibilidade online é um dos meus serviços. Através de uma otimização de SEO completa, posiciono estrategicamente seu site para alcançar um público mais amplo. Desde pesquisa de palavras-chave até otimização na página, minha abordagem é projetada para aprimorar sua presença digital e atrair tráfego orgânico para seu site.",
+      "imageSrc": "/seo.svg"
+    },
+    {
+      "id": 7,
+      "title": "Acessibilidade Web (WCAG)",
+      "description": "Estou comprometido com a acessibilidade digital, garantindo que meus projetos sejam fáceis de usar para todos. Ao desenvolver experiência em integração de acessibilidade, utilizo ferramentas como Leitores de Tela e consulto guias para testes detalhados. Reconhecendo as diversas experiências do usuário, estou dedicado à aprendizagem contínua e refinamento. Meu objetivo é criar experiências online inclusivas e fáceis de usar para todos.",
+      "imageSrc": "/checkmark.svg"
+    },
+    {
+      "id": 8,
+      "title": "Treinamento em Habilidades Web",
+      "description": "Estou dedicado a capacitá-lo com habilidades web essenciais. Através de vídeos tutoriais personalizados, foco em tarefas fundamentais como atualizações de conteúdo—textos, imagens, vídeos e mais. Isso permite que você gerencie com confiança aspectos comuns do seu site. Se tiver alguma dúvida ou precisar de ajuda, sinta-se à vontade para me enviar um e-mail para suporte rápido.",
+      "imageSrc": "/graduation.svg"
+    },
+    {
+      "id": 9,
+      "title": "Website Rápido",
+      "description": "Dou prioridade à velocidade para garantir uma experiência de usuário ideal para seus visitantes. Através de práticas de codificação eficientes e otimizações de desempenho, estou dedicado a entregar um site rápido e responsivo. Todos na web merecem uma jornada online sem problemas, e estou comprometido em fornecer exatamente isso.",
+      "imageSrc": "/speed.svg"
+    }
+  ],
+
+  "projectsText1": "Trabalhos em Destaque",
+  "projectsText2": "Embora eu tenha feito vários <bold className='text-royalPurpleText font-bold '>projetos apenas para aprendizado</bold>, este portfólio apresenta exclusivamente meus <bold className='text-royalPurpleText font-bold '>projetos abrangentes — distintos de simples exercícios incompletos de aprendizado</bold>. Representando meu trabalho pessoal em design e código, esses projetos não apenas exibem meu estilo, mas também integram muitas habilidades que aprendi até agora.",
+  "projectsText3": "Descrição:",
+  "projectsText4": "Recursos do Site Incluem:",
+  "projectsText5": "URL do Website:",
+  "projectsText6": "Estudo de Caso:",
+
+  "projectsData": [
+    {
+      "slug": "doggy-daycare",
+      "name": "Doggy Daycare",
+      "description": "Um projeto sobre um fictício Daycare para Cãezinhos. Embora o nome não seja muito criativo, o site foi feito apenas com o objetivo de autoaperfeiçoamento. Serviu como uma plataforma para aprimorar principalmente minhas habilidades de design e utilizar uma ferramenta CMS popular como Strapi e WordPress, já que sou bastante fã da ideia do que um CMS pode fazer. O projeto também teve como objetivo aprimorar minha proficiência em codificação no Next.js, implementar recursos de acessibilidade e alguns outros.",
+      "role": "(Único Desenvolvedor)",
+      "descriptionFeatures": "Strapi CMS, Mapa Interativo, Email Automático, Integração de Acessibilidade, Tela de Carregamento e Carregamento Esqueleto.",
+      "hero": "/projects/doggy-hero.jpg",
+      "technologiesUsed": [
+        {
+          "name": "Next.js",
+          "techImageSrc": "/nextjs-logo.svg",
+          "blackTechImageSrc": "/black-logos/nextjs-logo.svg",
+          "reasonWhy": "Next.js foi escolhido por sua eficiência na construção de aplicações React e suas rotas dinâmicas e configuração padrão, permitindo que o projeto avançasse mais rápido sem precisar de muitas configurações personalizadas, como rotas personalizadas."
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/tailwind-logo.svg",
+          "blackTechImageSrc": "/black-logos/tailwind-logo.svg",
+          "reasonWhy": "Tailwind CSS foi selecionado para simplificar o processo de estilização com sua abordagem utility-first, garantindo um código limpo e de fácil manutenção. Isso tornou a estilização do site extremamente rápida. Sinceramente, não posso enfatizar o suficiente o quão útil foi."
+        },
+        {
+          "name": "Strapi",
+          "techImageSrc": "/strapi-logo.svg",
+          "blackTechImageSrc": "/black-logos/strapi-logo.svg",
+          "reasonWhy": "Strapi serviu como o CMS headless para gerenciar conteúdo, proporcionando flexibilidade e facilidade de uso, permitindo atualizações eficientes de conteúdo. No entanto, eu não recomendaria muito, pois, pelo menos para mim, senti que faltavam muitos recursos."
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/figma-logo.svg",
+          "blackTechImageSrc": "/black-logos/figma-logo.svg",
+          "reasonWhy": "Figma foi a principal ferramenta de design; seus plugins e recursos foram muito úteis, garantindo uma interface de usuário coesa e visualmente atraente."
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/css-logo.svg",
+          "blackTechImageSrc": "/black-logos/css-logo.svg",
+          "reasonWhy": "Embora o Tailwind CSS tenha sido a principal ferramenta de estilização, o CSS personalizado foi utilizado para elementos de design específicos, proporcionando uma melhor experiência visual."
+        }
+      ],
+      "challenges": [
+        {
+          "challengeTitle": "Melhoria no Formulário de Reserva",
+          "challengeDescription": "Criar o formulário de reserva teve seus desafios. Embora as funções principais funcionassem bem — enviar dados para o Strapi e acionar notificações por e-mail — os detalhes da validação do formulário e a experiência do usuário precisavam de melhorias. Garantir acessibilidade é incerto sem usuários reais para testar, e, como um projeto de aprendizado, eu não queria incomodar os usuários apenas para fins de teste e aprendizado.",
+          "solutionText": "Para enfrentar esses desafios, refinei as indicações visuais do formulário para obter um feedback melhor e o testei extensivamente com o NVDA Screen Reader. Também consultei guias online sobre acessibilidade de formulários. No entanto, determinar o sucesso do formulário permanece desafiador sem interação de usuários do mundo real. A melhoria contínua é completamente possível e essencial se o site fosse acessível ao público como um projeto não fictício."
+        },
+        {
+          "challengeTitle": "Gestão de Conteúdo com Strapi",
+          "challengeDescription": "Trabalhar com Strapi para gestão de conteúdo foi direto, mas certas limitações apresentaram desafios. Strapi carecia de recursos como adicionar descrições ou espaços reservados para campos personalizados, tornando desafiador para os administradores entenderem suas funções. A personalização da interface do Strapi era restrita, resultando em algumas páginas de campos parecendo desorganizadas. Problemas com campos JSON podiam levar a problemas na exibição de conteúdo se o administrador escrevesse algo da maneira errada, já que não havia restrições sobre o que você pode digitar. A falta de feedback do usuário dificultou a identificação de melhorias, especialmente quando o Strapi oferecia pouca flexibilidade para a conveniência do administrador.",
+          "solutionText": "Para enfrentar esses desafios, criei vídeos tutoriais mostrando a funcionalidade de cada campo. Você pode encontrar o projeto no meu repositório GitHub, juntamente com vídeos sobre configuração, dimensionamento de imagens para economia de espaço, backups e implantação. Se você estiver testando e tiver alguma dúvida ou precisar de esclarecimentos, sinta-se à vontade para entrar em contato."
+        }
+      ],
+
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Integração Strapi Headless CMS:",
+          "featureDescription": "Atualize facilmente textos, imagens, vídeos, postagens de emprego e serviços."
+        },
+        {
+          "featureHeading": "Mapa Interativo Leaflet:",
+          "featureDescription": "Permite que os usuários localizem cada instalação de maneira eficiente."
+        },
+        {
+          "featureHeading": "Integração de Acessibilidade:",
+          "featureDescription": "Design amigável ao leitor de tela, incluindo o Mapa Interativo e o Formulário de Contato/Reserva."
+        },
+        {
+          "featureHeading": "Detalhes Gráficos para uma Experiência Vibrante:",
+          "featureDescription": "Contador numérico, confetes, efeitos de hover nas imagens e animações sutis para um design aprimorado."
+        },
+        {
+          "featureHeading": "Notificações Automáticas por E-mail:",
+          "featureDescription": "Enviadas para o administrador do Strapi e o usuário após a conclusão bem-sucedida do formulário."
+        },
+        {
+          "featureHeading": "Tela de Carregamento com Animação HTML:",
+          "featureDescription": "Animação suave durante o carregamento de dados do Strapi."
+        },
+        {
+          "featureHeading": "Elementos de Design Personalizados:",
+          "featureDescription": "Logotipo feito sob medida, padrão temático de cachorro e uma mistura de vetores gratuitos criados no Figma."
+        },
+        {
+          "featureHeading": "Miniatura de Vídeo Personalizada:",
+          "featureDescription": "Miniatura personalizada para um toque agradável na página de Posições Abertas."
+        },
+        {
+          "featureHeading": "Interações com Imagens:",
+          "featureDescription": "Clique em imagens não interativas para abrir um modal exibindo todas as imagens da página, efeito Ken Burns na página de Posições Abertas e um carrossel de imagens infinito funcionando como uma galeria em cada página de Serviço Individual."
+        }
+      ],
+      "achievementsList": [
+        {
+          "achievementHeading": "Integração Strapi Headless CMS:",
+          "achievementDescription": "Integrou com sucesso o Strapi como um CMS headless, permitindo atualizações fáceis para textos, imagens, vídeos, postagens de emprego e serviços."
+        },
+        {
+          "achievementHeading": "Mapa Interativo Leaflet:",
+          "achievementDescription": "Implementou um mapa interativo Leaflet, permitindo que os usuários localizem cada instalação de maneira eficiente."
+        },
+        {
+          "achievementHeading": "Integração de Acessibilidade:",
+          "achievementDescription": "Projetou uma interface amigável ao leitor de tela, incluindo o Mapa Interativo e o Formulário de Contato/Reserva."
+        },
+        {
+          "achievementHeading": "Detalhes Gráficos para uma Experiência Vibrante:",
+          "achievementDescription": "Adicionou elementos envolventes como contador numérico, confetes, efeitos de hover nas imagens e animações sutis para um design aprimorado."
+        },
+        {
+          "achievementHeading": "Notificações Automáticas por E-mail:",
+          "achievementDescription": "Estabeleceu notificações automáticas por e-mail, enviadas tanto para o administrador do Strapi quanto para os usuários após a conclusão bem-sucedida do formulário."
+        },
+        {
+          "achievementHeading": "Tela de Carregamento com Animação HTML:",
+          "achievementDescription": "Implementou uma animação suave durante o carregamento de dados do Strapi."
+        },
+        {
+          "achievementHeading": "Elementos de Design Personalizados:",
+          "achievementDescription": "Criou elementos de design exclusivos, incluindo um logotipo feito sob medida, padrão temático de cachorro e uma mistura de vetores gratuitos usando o Figma."
+        },
+        {
+          "achievementHeading": "Miniatura de Vídeo Personalizada:",
+          "achievementDescription": "Criou uma miniatura personalizada para um toque visualmente atraente na página de Posições Abertas."
+        },
+        {
+          "achievementHeading": "Interações com Imagens:",
+          "achievementDescription": "Implementou recursos interativos, como clicar em imagens não interativas para abrir um modal, efeito Ken Burns na página de Posições Abertas e um carrossel de imagens infinito funcionando como uma galeria em cada página de Serviço Individual."
+        }
+      ],
+      "thumbnail": "/projects/doggy-thumbnail.png",
+      "caseStudyUrl": "",
+      "liveWebsiteUrl": ""
+    }
+  ],
+
+  "resumeText1": "Currículo de Desenvolvedor Web: Habilidades e Conquistas",
+  "resumeText2": "Ver no Site / Baixar Currículo.",
+  "resumeText3": "Ver no Site",
+  "resumeText4": "Baixar Currículo",
+
+  "faqText1": "Perguntas Frequentes",
+  "faqText2": "Tem alguma pergunta que não foi respondida aqui?",
+  "faqText3": "Sinta-se à vontade para entrar em contato comigo abaixo",
+
+  "questionsData": [
+    {
+      "question": "1. Como posso entrar em contato com você?",
+      "answer": "Você pode me alcançar através do formulário de contato no meu site. Eu responderei o mais rápido possível."
+    },
+    {
+      "question": "2. Quais serviços você oferece?",
+      "answer": "Ofereço uma variedade de serviços digitais, incluindo desenvolvimento personalizado de sites, design responsivo, desenvolvimento frontend e backend, entre outros. Explore a seção de Serviços para obter mais detalhes."
+    },
+    {
+      "question": "3. Você tem experiência com Sistemas de Gerenciamento de Conteúdo (CMS)?",
+      "answer": "Sim, tenho experiência com CMS como Strapi e um pouco de WordPress. Embora ainda esteja aprendendo, estou comprometido em fornecer uma experiência de gerenciamento de conteúdo fácil e sem estresse para o seu site."
+    },
+    {
+      "question": "4. Como você garante a acessibilidade do site?",
+      "answer": "Garantir a acessibilidade digital é uma prioridade para mim. Eu uso ferramentas como Leitores de Tela, mantenho-me atualizado nas diretrizes de acessibilidade e realizo testes para criar experiências online inclusivas e amigáveis. Recentemente, tenho pensado até mesmo em chamar Testadores de Acessibilidade Online Gratuitos para testarem a acessibilidade do meu site e me darem muitos feedbacks para que eu possa melhorar."
+    },
+    {
+      "question": "5. Posso atualizar o conteúdo do meu site por conta própria?",
+      "answer": "Com certeza! Eu forneço vídeos de treinamento personalizados para capacitá-lo a gerenciar aspectos comuns do seu site de forma independente. Desde atualizações de conteúdo até manutenção básica, estou aqui para ajudar você a aprender."
+    },
+    {
+      "question": "6. Qual é a sua abordagem para a otimização de SEO?",
+      "answer": "Concentro-me na otimização abrangente de SEO, desde a pesquisa de palavras-chave até a otimização na página. Meu objetivo é posicionar estrategicamente seu site para alcançar um público mais amplo e gerar tráfego orgânico."
+    },
+    {
+      "question": "7. Como posso ver seus projetos no portfólio?",
+      "answer": "Você pode explorar meus projetos originais na seção Projetos do meu portfólio. Esses projetos mostram minhas habilidades em design e código, incorporando lições aprendidas de vários projetos de aprendizado."
+    },
+    {
+      "question": "8. Você fornece suporte contínuo para sites?",
+      "answer": "Sim, ofereço suporte contínuo e atualizações de conteúdo para sites. Se precisar de ajuda com a manutenção ou tiver dúvidas sobre seu site, estou aqui para ajudar."
+    },
+    {
+      "question": "9. Como faço para saber mais sobre seus serviços?",
+      "answer": "Você pode usar o formulário de contato no meu site para obter informações sobre meus serviços. Sinta-se à vontade para compartilhar detalhes do seu projeto, e eu entrarei em contato com mais informações."
+    },
+    {
+      "question": "10. Qual é o seu processo para o desenvolvimento de sites?",
+      "answer": "Meu processo inclui entender seus requisitos, criar designs visualmente atraentes e funcionais, e garantir adaptação perfeita a vários dispositivos. Valorizo a comunicação aberta e a colaboração ao longo da jornada de desenvolvimento."
+    }
+  ],
+
+  "contactText1": "Pronto para Colaborar?",
+  "contactText2": "Entre em Contato",
+  "contactText3": "Vamos nos conectar e explorar suas ideias. Se você tiver um projeto em mente, estiver interessado em colaborar ou tiver alguma dúvida, sinta-se à vontade para entrar em contato. Estou aqui para ajudar e ansioso para ouvir de você.",
+
+  "labelText1": "Nome",
+  "labelText2": "E-mail",
+  "labelText3": "Mensagem",
+
+  "formButtonText1": "Enviar",
+  "formButtonText2": "Enviando...",
+
+  "placeHolderText1": "Seu Nome",
+  "placeHolderText2": "Seu E-mail",
+  "placeHolderText3": "Sua Mensagem",
+
+  "formErrorText1": "Nome é obrigatório",
+  "formErrorText2": "E-mail é obrigatório",
+  "formErrorText3": "Endereço de e-mail inválido",
+  "formErrorText4": "Mensagem é obrigatória",
+
+  "successText1": "Mensagem Enviada com Sucesso!",
+  "successText2": "Retornar ao Formulário de Contato",
+
+  "footerText1": "2024 Null Null. Créditos para as ilustrações na",
+  "footerText2": "Página de Créditos",
+
+  "resumePageText1": "Voltar ao Topo",
+  "resumePageText2": "Voltar ao Portfólio",
+  "resumePageText3": "DESENVOLVEDOR WEB",
+  "resumePageText4": "DECLARAÇÃO PESSOAL",
+  "resumePageText5": "Como desenvolvedor web autodidata, aprendo novas habilidades com dedicação e persistência. Embora minha educação formal seja limitada, minha determinação para melhorar e ajudar os outros é elevada. Invisto incontáveis horas diariamente codificando, criando projetos para aprendizado e enfrentando problemas de codificação complexos. Por meio de uma mistura de videoaulas, guias e documentação detalhada, cultivei proficiência em design, desenvolvimento frontend e backend. Embora eu possa não ter a extensa experiência do mundo real de profissionais, estou confiante em minha capacidade de entregar trabalhos de alta qualidade e atender às demandas de qualquer projeto, assim como qualquer outra pessoa.",
+  "resumePageText6": "HABILIDADES DE DESENVOLVEDOR WEB",
+  "resumePageText7": "PROJETOS",
+
+  "resumePageProjectHeadingText1": "DESCRIÇÃO:",
+  "resumePageProjectHeadingText2": "Tecnologias:",
+  "resumePageProjectHeadingText3": "Conquistas:",
+
+  "resumePageText8": "EDUCAÇÃO",
+  "resumePageText9": "DESENVOLVEDOR WEB AUTODIDATA",
+  "resumePageText10": "APRENDIZAGEM ONLINE",
+
+  "educationList": [
+    {
+      "educationHeading": "Videoaulas",
+      "educationDescription": "Assista a videoaulas em plataformas como o YouTube, onde especialistas e educadores compartilham insights, dicas e demonstrações práticas."
+    },
+    {
+      "educationHeading": "Leitura de Documentação",
+      "educationDescription": "Aprofunde-se na documentação oficial de linguagens de programação, frameworks e ferramentas. Adquira uma compreensão profunda dos recursos, funcionalidades e práticas descritas na documentação."
+    },
+    {
+      "educationHeading": "Projetos Práticos",
+      "educationDescription": "Realize projetos práticos para aplicar conhecimentos em um ambiente real. Trabalhei em muitos projetos para fins de aprendizado que abrangem vários aspectos do desenvolvimento web."
+    }
+  ],
+
+  "resumePageText11": "IDIOMAS",
+
+  "languageList": [
+    {
+      "name": "Português",
+      "proficiency": "LÍNGUA NATIVA",
+      "description": "Falante nativo de português com fluência em falar, escrever e ouvir. Confortável em comunicar ideias complexas e conceitos técnicos em português. Proficiente em entender português falado em vários contextos."
+    },
+    {
+      "name": "Inglês",
+      "proficiency": "LEITURA, ESCRITA E AUDIÇÃO",
+      "description": "Proficiente em leitura e escrita em inglês, com forte capacidade de compreender conteúdo técnico. Embora eu não tenha uma grande habilidade vocal, estou confortável lendo, escrevendo e ouvindo um pouco em inglês, especialmente no contexto de codificação, documentação e comunicação por canais escritos."
+    }
+  ],
+
+  "projectsPageText1": "Ver Site Online",
+  "projectsPageText2": "Arquivo de Design Figma",
+  "projectsPageText3": "Repositório no Github",
+  "projectsPageText4": "Desafios:",
+  "projectsPageText5": "Recursos:",
+  "projectsPageText6": "Download do Vídeo",
+  "projectsPageText7": "Visão Rápida das Páginas:",
+
+  "accessibilityText1": "Pular para o Conteúdo Principal",
+  "accessibilityText2": "Fechar Menu",
+  "accessibilityText3": "Abrir Menu",
+  "accessibilityText4": "Fechar Menu de Troca de Idioma",
+  "accessibilityText5": "Abrir Menu para Trocar de Idiomas",
+  "accessibilityText6": "Fechar Lista Suspensa de Créditos",
+  "accessibilityText7": "Abrir Lista Suspensa de Créditos",
+  "accessibilityText8": ", Abrir em uma nova guia",
+  "accessibilityText9": ", Clique para mostrar uma visualização rápida. Informações sobre este Projeto",
+  "accessibilityText10": "Clique para mostrar mais Informações"
 }

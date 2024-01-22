@@ -28,7 +28,7 @@ const Test = () => {
     } finally {
       setIsLanguageLoading(false);
     }
-  }, []); // Run only on mount
+  }, [i18n, router]); // Run only on mount
 
   const changeLanguage = (lng) => {
     localStorage.setItem("language", lng);

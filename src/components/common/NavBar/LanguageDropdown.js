@@ -1,10 +1,13 @@
 import useLanguageChange from "@/hooks/useLanguageChange";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 const LanguageDropdown = () => {
+  const { t } = useTranslation();
+
   const { changeLanguage } = useLanguageChange();
 
   const options = ["en", "pt"];
@@ -24,7 +27,7 @@ const LanguageDropdown = () => {
     }
   }, []);
 
-  const handleOptionChange = (selected) => {
+  const handleOptionChange = () => {
     setIsDropdownOpenHover(false);
     closeDropdown();
   };
@@ -34,34 +37,54 @@ const LanguageDropdown = () => {
     setIsDropdownOpenHover(false);
   };
 
-  const closeDropdown = () => {
+  const closeDropdown = useCallback(() => {
     setIsDropdownOpen(false);
-  };
-
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      closeDropdown();
-    }
-  };
+  }, []); // Empty dependency array as it doesn't depend on any external variables
 
   useEffect(() => {
+    const newLanguage = localStorage.getItem("language");
+    if (newLanguage) {
+      setCurrentLanguage(newLanguage);
+    } else {
+      setCurrentLanguage("en");
+    }
+
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        closeDropdown();
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [closeDropdown]);
+
+  const dropDownUlRef = useRef(null);
+
+  useEffect(() => {
+    if (isDropdownOpen && dropDownUlRef.current) {
+      dropDownUlRef.current.focus();
+    }
+  }, [isDropdownOpen]);
 
   const linkStyle =
     "block w-fit p-[12px] lg:text-[white] lg:hover:text-[white]";
 
   return (
-    <li
+    <div
       ref={dropdownRef}
       className={`${linkStyle} text-[16px] block !w-fit relative`}
       onMouseEnter={() => setIsDropdownOpenHover(true)}
       onMouseLeave={() => setIsDropdownOpenHover(false)}
     >
       <button
+        aria-expanded={isDropdownOpen}
+        aria-label={
+          isDropdownOpen ? t("accessibilityText4") : t("accessibilityText5")
+        }
         className="flex gap-[8px] items-center text-[white] w-max"
         onClick={toggleDropdown}
       >
@@ -73,7 +96,7 @@ const LanguageDropdown = () => {
               ? "/american-flag-real.svg"
               : "/brazil-flag-real.svg"
           }`}
-          alt="Mini Bandeira da America"
+          alt={currentLanguage === "en" ? t("altText3") : t("altText2")}
           width={0}
           height={0}
           unoptimized
@@ -83,7 +106,7 @@ const LanguageDropdown = () => {
           aria-hidden={true}
           className="w-[12px]"
           src="/dropdown-arrow.svg"
-          alt="Flecha apontando para baixo"
+          alt={t("altText4")}
           width={0}
           height={0}
           unoptimized
@@ -101,21 +124,27 @@ const LanguageDropdown = () => {
           } after:z-10 after:content-[''] after:absolute after:w-[73px] after:h-[20px] after:bg-no-repeat after:bg-contain  after:block after:right-[-37px] after:top-[-16px]`}
         >
           <ul
+            tabIndex="-1"
+            ref={dropDownUlRef}
+            role={isDropdownOpen ? "dialog" : undefined}
+            aria-modal={isDropdownOpen ? "true" : "false"}
             className={`w-fit relative bg-[black] border-solid ${
               router.pathname === "/resume"
                 ? "border-[#002B5C] "
-                : "border-lightViolet"
-            } border-[2px] z-20`}
+                : "border-skyBlue"
+            } border-[3px] z-20`}
           >
             {options.map((option) => (
               <li
+                role="button"
+                tabIndex="0"
                 className={`w-full bg-midnightBlack px-[12px] py-[8px] cursor-pointer flex gap-[8px] items-center hover:bg-[black] hover:text-[white] ${
                   currentLanguage === "en" && option === "en"
-                    ? "bg-primaryBlue !text-[white]"
+                    ? "bg-cornflowerBlue !text-[white]"
                     : "text-white75"
                 } ${
                   currentLanguage === "pt" && option === "pt"
-                    ? "bg-primaryBlue !text-[white]"
+                    ? "bg-cornflowerBlue !text-[white]"
                     : "text-white75"
                 }`}
                 onClick={() => {
@@ -133,7 +162,9 @@ const LanguageDropdown = () => {
                         ? "/american-flag-real.svg"
                         : "/brazil-flag-real.svg"
                     }`}
-                    alt="Mini Bandeira da America"
+                    alt={
+                      currentLanguage === "en" ? t("altText3") : t("altText2")
+                    }
                     width={0}
                     height={0}
                     unoptimized
@@ -145,10 +176,19 @@ const LanguageDropdown = () => {
                 </div>
               </li>
             ))}
+
+            <li
+              onClick={toggleDropdown}
+              role="button"
+              tabIndex="0"
+              className="close-button-sr w-full bg-midnightBlack px-[12px] py-[8px] cursor-pointer flex gap-[8px] items-center hover:bg-[black] hover:text-[white]"
+            >
+              <p>{t("accessibilityText4")}</p>
+            </li>
           </ul>
         </div>
       </div>
-    </li>
+    </div>
   );
 };
 

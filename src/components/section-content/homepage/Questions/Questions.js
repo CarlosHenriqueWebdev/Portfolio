@@ -1,11 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import { questionsData } from "./questionsData";
+// eslint-disable-next-line no-unused-vars
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Trans, useTranslation } from "react-i18next";
 
 const Questions = () => {
-  // State to manage visibility of all answers
+  const { t } = useTranslation();
+
   const [openQuestions, setOpenQuestions] = useState([]);
 
   const toggleQuestion = (itemIndex) => {
@@ -14,6 +16,15 @@ const Questions = () => {
         ? previousOpenQuestions.filter((previousId) => previousId !== itemIndex)
         : [...previousOpenQuestions, itemIndex]
     );
+  };
+
+  const handleButtonClick = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.tabIndex = -1;
+      targetElement.focus();
+    }
   };
 
   return (
@@ -25,74 +36,82 @@ const Questions = () => {
         }}
       >
         <div>
-          <h2 className="font-bold text-[26px]">Frequently Asked Questions</h2>
+          <h2 id="questionsHeadingText" className="font-bold text-[26px]">
+            {t("faqText1")}
+          </h2>
         </div>
 
         <hr
           aria-hidden="true"
-          className="border-primaryBlue my-[32px] border-t-[4px]"
+          className="border-cornflowerBlue my-[32px] border-t-[4px]"
         />
 
-        <ul className="flex flex-col border-solid border-primaryBlue border-[3px] rounded-[12px] overflow-hidden">
-          {questionsData.map((mapItem, itemIndex) => (
-            <li>
-              <button
-                aria-expanded={openQuestions.includes(itemIndex)}
-                className={`bg-[black] text-[white] w-full text-left pl-[16px] pr-[16px] pt-[12px] pb-[12px] flex flex-row gap-[24px] items-center justify-between hover:text-white90 border-solid border-b-[3px] border-primaryBlue ${
-                  openQuestions.includes(itemIndex) &&
-                  "italic font-semibold border-b-[black]"
-                } ${itemIndex === 7 && "border-b-[0px]"}
+        <ul className="flex flex-col border-solid border-cornflowerBlue border-[3px] rounded-[12px] overflow-hidden">
+          {t("questionsData", { returnObjects: true }).map(
+            (mapItem, itemIndex, listArray) => (
+              <li key={itemIndex}>
+                <button
+                  aria-expanded={openQuestions.includes(itemIndex)}
+                  className={`bg-[black] text-[white] w-full text-left pl-[16px] pr-[16px] pt-[12px] pb-[12px] flex flex-row gap-[24px] items-center justify-between hover:text-white90 border-solid border-b-[3px] border-cornflowerBlue ${
+                    openQuestions.includes(itemIndex) &&
+                    "italic font-semibold border-b-[black]"
+                  } ${itemIndex === listArray.length - 1 && "!border-b-[0px]"}
                 `}
-                onClick={() => toggleQuestion(itemIndex)}
-              >
-                {mapItem.question}
-                <Image
-                  aria-hidden="true"
-                  className={`w-[16px] xl:w-[18px] transition-all ${
-                    openQuestions.includes(itemIndex) && "rotate-[180deg]"
-                  }`}
-                  src="/dropdown-arrow-white.svg"
-                  alt="Icone Menos"
-                  width="0"
-                  height="0"
-                  unoptimized
-                />
-              </button>
-
-              <div
-                className={`transition-max-height max-h-0 overflow-hidden bg-[#314199] text-[white] ${
-                  openQuestions.includes(itemIndex) ? "!max-h-[500px]" : ""
-                } `}
-                aria-hidden={!openQuestions.includes(itemIndex)}
-              >
-                <p
-                  className={`border-primaryBlue border-solid border-b-[3px] w-full text-left pl-[16px] pr-[16px] pt-[12px] pb-[12px] ${
-                    itemIndex === 7 && "border-b-[0px]"
-                  }`}
+                  onClick={() => {
+                    toggleQuestion(itemIndex);
+                    handleButtonClick(`questionTextFocusSr${itemIndex}`);
+                  }}
                 >
-                  {mapItem.answer}
-                </p>
-              </div>
-            </li>
-          ))}
+                  {mapItem.question}
+                  <Image
+                    aria-hidden="true"
+                    className={`w-[16px] xl:w-[18px] transition-all ${
+                      openQuestions.includes(itemIndex) && "rotate-[180deg]"
+                    }`}
+                    src="/dropdown-arrow-white.svg"
+                    alt={t("altText4")}
+                    width="0"
+                    height="0"
+                    unoptimized
+                  />
+                </button>
+
+                <div
+                  className={`transition-max-height max-h-0 overflow-hidden bg-[#314199] text-[white] ${
+                    openQuestions.includes(itemIndex) ? "!max-h-[500px]" : ""
+                  } `}
+                  aria-hidden={!openQuestions.includes(itemIndex)}
+                >
+                  <p
+                    id={`questionTextFocusSr${itemIndex}`}
+                    className={`border-cornflowerBlue border-solid border-b-[3px] w-full text-left pl-[16px] pr-[16px] pt-[12px] pb-[12px] ${
+                      itemIndex === 7 && "border-b-[0px]"
+                    }`}
+                  >
+                    {mapItem.answer}
+                  </p>
+                </div>
+              </li>
+            )
+          )}
         </ul>
 
         <hr
           aria-hidden="true"
-          className="border-primaryBlue my-[32px] border-t-[4px]"
+          className="border-cornflowerBlue my-[32px] border-t-[4px]"
         />
 
-        <div className="text-[20px]">
+        <div aria-hidden="true" className="text-[20px]">
           <p className="grid gap-[4px] md:flex">
-            Have any questions that haven't been answered here?{" "}
+            {t("faqText2")}{" "}
             <ScrollLink
-              className="cursor-pointer font-bold text-lightViolet strokeme hover:underline"
+              className="cursor-pointer font-bold text-skyBlueText  hover:underline"
               to={"contactSection"} // Use 'to' instead of 'href'
               smooth={true} // Enable smooth scrolling
               duration={500} // Set the duration of the scroll animation in milliseconds
               offset={-73}
             >
-              Feel free to contact me below
+              {t("faqText3")}
             </ScrollLink>
           </p>
         </div>

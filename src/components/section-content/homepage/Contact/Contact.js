@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { contactInfo } from "../About/contactInfo";
 import Image from "next/image";
 import Form from "./Form";
@@ -11,9 +11,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { animateScroll } from "react-scroll";
+import { Trans, useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [didFormSubmit, setDidFormSubmit] = useState(false);
 
   const handleButtonClick = () => {
@@ -27,10 +29,8 @@ const Contact = () => {
     window.scrollTo({ top: elementAndOffset, behavior: "smooth" });
   };
 
-  const animatedTextEnglish = "Ready to Collaborate?";
-
   return (
-    <div className="border-y-[6px] border-solid border-primaryBlue overflow-hidden bg-[url('/gradient-grid.jpg')] ">
+    <div className="border-y-[6px] border-solid border-cornflowerBlue overflow-hidden bg-[url('/gradient-grid.jpg')] ">
       {!didFormSubmit ? (
         <div>
           <div
@@ -42,33 +42,37 @@ const Contact = () => {
             <div>
               <div className="">
                 <div className="h-fit">
-                  <motion.div className="text-[24px] font-bold strokeme text-royalAmethyst">
-                    <TextAnimationContactHeading text={animatedTextEnglish} />
+                  <motion.div
+                    aria-hidden="true"
+                    className="text-[24px] font-bold  text-royalPurpleText"
+                  >
+                    <TextAnimationContactHeading text={t("contactText1")} />
                   </motion.div>
 
-                  <h2 className="text-[26px] font-bold mt-[8px]">Contact Me</h2>
+                  <h2
+                    id="contactHeadingText"
+                    className="text-[26px] font-bold mt-[8px]"
+                  >
+                    {t("contactText2")}
+                  </h2>
 
-                  <p className="mt-[12px]">
-                    Let's connect and explore your ideas. If you have a project
-                    in mind, are interested in collaboration, or have any
-                    questions,
-                    <br />
-                    then feel free to reach out. I'm here to help and eager to
-                    hear from you.
-                  </p>
+                  <p className="mt-[12px]">{t("contactText3")}</p>
                 </div>
 
                 <ul className="flex flex-wrap flex-col sm:flex-row gap-[12px] h-fit w-fit mt-[16px]">
                   {contactInfo
                     .filter((mapItem) => mapItem.isForContact)
                     .map((mapItem, itemIndex) => (
-                      <li className="w-fit flex gap-[8px] items-start">
+                      <li
+                        key={itemIndex}
+                        className="w-fit flex gap-[8px] items-start"
+                      >
                         <div className="w-[20px] h-[20px] ">
                           <Image
                             aria-hidden={true}
                             className={`w-full h-full`}
                             src={mapItem.whiteImageSrc}
-                            alt="Estrela Icone"
+                            alt={mapItem.name}
                             width={0}
                             height={0}
                             unoptimized
@@ -77,6 +81,9 @@ const Contact = () => {
 
                         {mapItem.url.startsWith("mailto:") ? (
                           <a
+                            aria-label={`${mapItem.name} ${t(
+                              "accessibilityText8"
+                            )}`}
                             className="text-[14px] font-semibold underline"
                             href={mapItem.url}
                             target="_blank"
@@ -86,6 +93,9 @@ const Contact = () => {
                           </a>
                         ) : mapItem.url.startsWith("https://wa.me/") ? (
                           <a
+                            aria-label={`${mapItem.name} ${t(
+                              "accessibilityText8"
+                            )}`}
                             className="text-[14px] font-semibold underline"
                             href={mapItem.url}
                             target="_blank"
@@ -95,6 +105,9 @@ const Contact = () => {
                           </a>
                         ) : (
                           <Link
+                            aria-label={`${mapItem.name} ${t(
+                              "accessibilityText8"
+                            )}`}
                             className="text-[14px] font-semibold underline"
                             href={mapItem.url}
                             target="_blank"
@@ -109,6 +122,11 @@ const Contact = () => {
               </div>
 
               <div className="mt-[32px]">
+                <h3 className="visually-hidden">
+                  Contact Form below, provide your Name, your Email, and your
+                  Message.
+                </h3>
+
                 <Form
                   didFormSubmit={didFormSubmit}
                   setDidFormSubmit={setDidFormSubmit}
@@ -137,31 +155,34 @@ const Contact = () => {
               aria-hidden={true}
               className="w-full h-full max-w-[280px] mx-auto object-cover"
               src="/success-illustration.svg"
-              alt="Estrela Icone"
+              alt={t("altText6")}
               width={0}
               height={0}
               unoptimized
             />
           </motion.div>
 
-          <h2 className="text-[26px] text-center font-bold text-lightViolet">
-            Message Sent Successfully!
+          <h2
+            role="alert"
+            className="text-[26px] text-center font-bold text-skyBlueText"
+          >
+            {t("successText1")}
           </h2>
 
           <button
-            className={`${buttonClassName} w-fit mx-auto !border-primaryBlue before:!bg-primaryBlue flex gap-[8px] items-center`}
+            className={`${buttonClassName} w-fit mx-auto !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
             onClick={handleButtonClick}
           >
             <Image
               aria-hidden={true}
               className="w-[16px] rotate-[180deg]"
               src="/arrow.svg"
-              alt="Avião Icone"
+              alt={t("altText1")}
               width={0}
               height={0}
               unoptimized
             />
-            Return to Contact Form
+            {t("successText2")}
           </button>
         </div>
       )}

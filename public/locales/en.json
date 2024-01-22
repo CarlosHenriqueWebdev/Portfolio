@@ -10,7 +10,7 @@
 
   "heroText1": "Elevating User Experience Through Code",
   "heroText2": "Learning UX/UI Design",
-  "heroText3": "Welcome to my website! I'm comfortable working on both front-end and back-end development. I specialize in crafting <bold className='strokeme text-royalAmethyst'>user-friendly</bold> and <bold className='strokeme text-royalAmethyst'>very detailed</bold> websites.",
+  "heroText3": "Welcome to my website! I'm comfortable working on both front-end and back-end development. I specialize in crafting <bold className=' text-royalPurpleText font-medium'>user-friendly</bold> and <bold className=' text-royalPurpleText font-medium'>very detailed</bold> websites.",
   "heroText4": "Available for Freelance & Employment",
   "heroText5": "Portfolio Showcase",
   "heroText6": "View Resume",
@@ -18,12 +18,14 @@
 
   "aboutText1": "About Me",
   "aboutText2": "Web Developer",
-  "aboutText3": "I'm <bold className='strokeme text-royalAmethyst'> [Null] [Null]</bold>, a <bold className='strokeme text-lightViolet'>Web Developer</bold> based in <bold className='brazil-gradient'>Brazil</bold>. With some experience in both <bold className='strokeme italic'>front-end and back-end development</bold>, I specialize in creating <bold className='strokeme text-primaryBlue'>user-friendly websites</bold> that have a touch of <bold className='strokeme text-royalAmethyst'>detail</bold> and <bold className='strokeme text-lightViolet'>vitality</bold>.",
-  "aboutText4": "For me, <bold className='strokeme font-medium'>problem-solving</bold> is at the core of web development. I believe that given enough time and determination, any challenge can be overcome. My focus is on crafting <bold className='strokeme font-medium'>practical solutions</bold> and ensuring a <bold className='strokeme text-royalAmethyst'>seamless user experience</bold> for every and all.",
-  "aboutText5": "I may not delve into coding intricacies as much as others, but I'm all about <bold className='strokeme text-primaryBlue italic'>results</bold>. My <bold className='strokeme text-royalAmethyst'>hands-on approach</bold> involves extensive study, iterative learning, and practical application. For me, it's about <bold className='strokeme text-lightViolet font-medium'>doing and improving through experience</bold>, rather than <bold className='strokeme text-primaryBlue font-medium'>theoretical matters</bold>.",
+  "aboutText3": "I'm <bold className=' text-royalPurpleText font-medium'> Carlos Henrique</bold>, a <bold className=' text-skyBlueText'>Web Developer</bold> based in <bold className='brazil-gradient'>Brazil</bold>. With some experience in both <bold className=' italic'>front-end and back-end development</bold>, I specialize in creating <bold className=' text-cornflowerBlueText font-medium'>user-friendly websites</bold> that have a touch of <bold className=' text-royalPurpleText font-medium'>detail</bold> and <bold className=' text-skyBlueText'>vitality</bold>.",
+  "aboutText4": "For me, <bold className=' font-medium'>problem-solving</bold> is at the core of web development. I believe that given enough time and determination, any challenge can be overcome. My focus is on crafting <bold className=' font-medium'>practical solutions</bold> and ensuring a <bold className=' text-royalPurpleText font-medium'>seamless user experience</bold> for every and all.",
+  "aboutText5": "I may not delve into coding intricacies as much as others, but I'm all about <bold className=' text-cornflowerBlueText italic'>results</bold>. My <bold className=' text-royalPurpleText font-medium'>hands-on approach</bold> involves extensive study, iterative learning, and practical application. For me, it's about <bold className=' text-skyBlueText font-medium'>doing and improving through experience</bold>, rather than <bold className=' text-cornflowerBlueText font-medium'>theoretical matters</bold>.",
+  "aboutText6": "If my approach resonates with you or if you have a project in mind, let's connect and bring your ideas to life together.",
 
   "skillsText1": "Web Skills Showcase",
-  "skillsText2": "Discover my current skills for <bold className='strokeme text-royalAmethyst'>web development</bold>. I believe I can do anything that other people can with all the skills presented here. While I don't know everything, I'm always learning and improving so I can deliver a better experience to all. <bold className='text-white75'>|</bold> <bold className='text-primaryBlue strokeme'>*Click on a card to reveal more information about each skill.</bold>",
+  "skillsText2": "Discover my current skills for <bold className=' text-royalPurpleText font-medium'>web development</bold>. I believe I can do anything that other people can with all the skills presented here. While I don't know everything, I'm always learning and improving so I can deliver a better experience to all. <bold className='text-white75'>|</bold> <bold className='text-cornflowerBlueText font-medium'>*Click on a card to reveal more information about each skill.</bold>",
+  "skillsText3": "Extra Note:",
 
   "skillsData": [
     {
@@ -133,7 +135,7 @@
   ],
 
   "servicesText1": "Elevate Your Digital Presence with my Digital Services.",
-  "servicesText2": "Explore a range of digital services that I offer. From <bold className=''>custom website development</bold> to <bold className=''>responsive designs</bold>, I try and improve every day so my services can not only meet your business needs but also enhance the <bold className='text-royalAmethyst strokeme'>usability</bold> and <bold className='text-royalAmethyst strokeme'>accessibility</bold> of your website for <bold className='text-lightViolet strokeme'>you, your team, and all of the users from your website</bold>. Feel free to <bold className='text-primaryBlue strokeme'>contact me</bold> using the form below if you have any questions about my services.",
+  "servicesText2": "Explore a range of digital services that I offer. From <bold className=''>custom website development</bold> to <bold className=''>responsive designs</bold>, I try and improve every day so my services can not only meet your business needs but also enhance the <bold className='text-royalPurpleText font-medium'>usability</bold> and <bold className='text-royalPurpleText font-medium'>accessibility</bold> of your website for <bold className='text-skyBlueText font-medium'>you, your team, and all of the users from your website</bold>. Feel free to <bold className='text-cornflowerBlueText font-medium'>contact me</bold> using the form below if you have any questions about my services.",
   "servicesText3": "Are you interested in working with me?",
   "servicesText4": "Let’s get started now",
 
@@ -182,12 +184,6 @@
     },
     {
       "id": 8,
-      "title": "Web Skills Training",
-      "description": "I'm dedicated to empowering you with essential web skills. Through personalized tutorial videos, I focus on fundamental tasks like content updates—texts, images, videos, and more. This enables you to confidently manage common aspects of your website. If you have any questions or need assistance, feel free to email me for quick support.",
-      "imageSrc": "/graduation.svg"
-    },
-    {
-      "id": 9,
       "title": "Fast Website",
       "description": "I prioritize speed to ensure an optimal user experience for your visitors. Through efficient coding practices and performance optimizations, I am dedicated to delivering a fast and responsive website. Everyone on the web deserves a seamless online journey, and I am committed to providing just that.",
       "imageSrc": "/speed.svg"
@@ -195,13 +191,20 @@
   ],
 
   "projectsText1": "Highlighted Works",
-  "projectsText2": "Highlighted Works",
-  "projectsText3": "While I've done various <bold className='text-royalAmethyst font-bold strokeme'>projects for learning only</bold>, this portfolio exclusively features my <bold className='text-royalAmethyst font-bold strokeme'>comprehensive projects—distinct from mere incomplete learning exercises</bold>. Representing my personal work in design and code, these projects not only display my style but also integrate many skills I have learned soo far.",
+  "projectsText2": "While I've done various <bold className='text-royalPurpleText font-medium '>projects for learning only</bold>, this portfolio exclusively features my <bold className='text-royalPurpleText font-medium '>complete projects, distinct from one page learning exercises</bold>. Representing my personal work in design and code, these projects not only display my style but also integrate many skills I have learned soo far.",
+  "projectsText3": "Description:",
+  "projectsText4": "Site Features Include:",
+  "projectsText5": "Website URL:",
+  "projectsText6": "Read Case Study",
 
   "projectsData": [
     {
+      "slug": "doggy-daycare",
+      "icon": "/paw-icon.svg",
+      "iconAltText": "Dog Paws",
       "name": "Doggy Daycare",
       "description": "A project about a fictional Doggy Daycare. Although the Name isn't very creative, the Site was made only with the goal of self-improvement. It served as a platform to mainly enhance my design skills, and utilize a popular CMS tool such as Strapi and WordPress, as I'm quite a fan of the Idea of what a CMS can do. The project also aimed at refining my coding proficiency in Next.js, implementing accessibility features, and a few more.",
+      "role": "(Sole Developer)",
       "descriptionFeatures": "Strapi CMS, Interactive Map, Automatic Email, Accessibility Integration, Loading Screen & Skeleton Loading.",
       "technologiesUsed": [
         {
@@ -235,6 +238,8 @@
           "reasonWhy": "While Tailwind CSS was the primary styling tool, custom CSS was utilized for specific design elements, providing a better visual experience."
         }
       ],
+      "challengesDescription": "While developing this project, I encountered minimal challenges, mostly centered around refining site details and handling repetitive tasks due to the CMS. The complexity of the project was relatively low, with the most complicated steps being only a little challenging in comparison.",
+      "featuresDescription": "Explore the diverse range of features and functionality implemented in this project. From seamless content management to user-friendly interactions, each element is designed to enhance the overall user experience.",
       "challenges": [
         {
           "challengeTitle": "Reservation Form Enhancement",
@@ -323,9 +328,186 @@
           "achievementDescription": "Implemented interactive features such as clicking non-interactive images to open a modal, Ken Burns Effect on the Open Positions Page, and an Infinite Image Carousel functioning as a gallery on each Individual Service Page."
         }
       ],
+      "websiteVideos": [
+        {
+          "videoSrcMp4": "/projects/doggy-homepage.mp4",
+          "videoSrcWebm": "/projects/doggy-homepage.mp4"
+        },
+        {
+          "videoSrcMp4": "/projects/doggy-showcase.mp4",
+          "videoSrcWebm": "/projects/doggy-showcase.mp4"
+        },
+        {
+          "videoSrcMp4": "/projects/doggy-strapi.mp4",
+          "videoSrcWebm": "/projects/doggy-strapi.mp4"
+        }
+      ],
       "thumbnail": "/projects/doggy-thumbnail.png",
-      "caseStudyUrl": "",
-      "liveWebsiteUrl": ""
+      "thumbnailAltText": "Website Homepage Inside a Monitor Frame",
+      "hero": "/projects/doggy-hero.jpg",
+      "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/"
     }
-  ]
+  ],
+
+  "resumeText1": "Web Developer Resume: Skills and Achievements",
+  "resumeText2": "View on Website / Download CV.",
+  "resumeText3": "View On Website",
+  "resumeText4": "Download CV",
+
+  "faqText1": "Frequently Asked Questions",
+  "faqText2": "Have any questions that haven't been answered here?",
+  "faqText3": "Feel free to contact me below",
+
+  "questionsData": [
+    {
+      "question": "1. How can I contact you?",
+      "answer": "You can reach me through the contact form on my website. I'll get back to you as soon as possible."
+    },
+    {
+      "question": "2. What services do you offer?",
+      "answer": "I offer a range of digital services, including custom website development, responsive design, frontend and backend development, and more. Explore my Services section for details."
+    },
+    {
+      "question": "3. Do you have experience with Content Management Systems (CMS)?",
+      "answer": "Yes, I have experience with CMS like Strapi and a bit of WordPress. While I'm still learning, I'm committed to providing an easy and stress-free content management experience for your site."
+    },
+    {
+      "question": "4. How do you ensure website accessibility?",
+      "answer": "Ensuring digital accessibility is a top priority for me. I use tools like Screen Readers, stay updated on accessibility guidelines, and run tests to create inclusive and user-friendly online experiences. Lately, I have been thinking about even calling Free Online Accessibility Testers so they can test the accessibility of my Site and give me a lot of Feedback so I can improve."
+    },
+    {
+      "question": "5. Can I update my website content myself?",
+      "answer": "Absolutely! I can provide personalized training videos to empower you to manage common aspects of your website independently. From content updates to basic maintenance, I'm here to help you learn if necessary."
+    },
+    {
+      "question": "6. What is your approach to SEO optimization?",
+      "answer": "I focus on comprehensive SEO optimization, from keyword research to on-page optimization. My goal is to strategically position your website to reach a wider audience and drive organic traffic."
+    },
+    {
+      "question": "7. How can I view your portfolio projects?",
+      "answer": "You can explore my original projects in the Projects section of my portfolio. These projects showcase my skills in design and code, incorporating lessons learned from various learning projects."
+    },
+    {
+      "question": "8. Do you provide ongoing support for websites?",
+      "answer": "Yes, I offer ongoing support and content updates for websites. Whether you need assistance with maintenance or have questions about your site, I'm here to help."
+    },
+    {
+      "question": "9. How do I inquire about your services?",
+      "answer": "You can use the contact form on my website to inquire about my services. Feel free to share your project details, and I'll get back to you with more information."
+    },
+    {
+      "question": "10. What is your process for website development?",
+      "answer": "My process includes understanding your requirements, creating visually appealing and functional designs, and ensuring seamless adaptation to various devices. I value open communication and collaboration throughout the development journey."
+    }
+  ],
+
+  "contactText1": "Ready to Collaborate?",
+  "contactText2": "Contact Me",
+  "contactText3": "Let's connect and explore your ideas. If you have a project in mind, are interested in collaboration, or have any questions, then feel free to reach out. I'm here to help and eager to hear from you.",
+
+  "labelText1": "Name",
+  "labelText2": "Email",
+  "labelText3": "Message",
+
+  "formButtonText1": "Submit",
+  "formButtonText2": "Submit...",
+
+  "placeHolderText1": "Your Name",
+  "placeHolderText2": "Your Email",
+  "placeHolderText3": "Your Message",
+
+  "formErrorText1": "Name is required",
+  "formErrorText2": "Email is required",
+  "formErrorText3": "Invalid email address",
+  "formErrorText4": "Message is required",
+
+  "successText1": "Message Sent Successfully!",
+  "successText2": "Return to Contact Form",
+
+  "footerText1": "Carlos Henrique.",
+  "footerText2": "Click Here to Open the Credits Tab",
+
+  "resumePageText1": "Back to Top",
+  "resumePageText2": "Back to Portfolio",
+  "resumePageText3": "WEB DEVELOPER",
+  "resumePageText4": "PERSONAL STATEMENT",
+  "resumePageText5": "As a self-taught, all-around web developer, I learn new skills with dedication and persistence. While my formal education may be limited, my determination to improve and help other's is high. I invest countless hours daily into coding, crafting projects for learning, and tackling complex coding issues. Through a mix of video tutorials, guides, and thorough documentation, I've cultivated proficiency in design, frontend, and backend development. While I may not have the extensive real-world experience of professionals, I am confident in my ability to deliver high-quality work and meet the demands of any project just like any other person.",
+  "resumePageText6": "WEB DEV SKILLS",
+  "resumePageText7": "PROJECTS",
+
+  "resumePageProjectHeadingText1": "DESCRIPTION:",
+  "resumePageProjectHeadingText2": "Technologies:",
+  "resumePageProjectHeadingText3": "Achievements:",
+
+  "resumePageText8": "EDUCATION",
+  "resumePageText9": "SELF-TAUGHT WEB DEVELOPER",
+  "resumePageText10": "ONLINE LEARNING",
+
+  "educationList": [
+    {
+      "educationHeading": "Video Tutorials",
+      "educationDescription": "Watch video tutorials on platforms like YouTube, where experts and educators share insights, tips, and practical demonstrations."
+    },
+    {
+      "educationHeading": "Documentation Reading",
+      "educationDescription": "Dive into official documentation of programming languages, frameworks, and tools. Gain a deep understanding of the features, functionalities, and practices outlined in documentation."
+    },
+    {
+      "educationHeading": "Practical Projects",
+      "educationDescription": "Undertake hands-on projects to apply knowledge in a practical setting. Worked on many projects for learning purposes that cover various aspects of web development."
+    }
+  ],
+
+  "resumePageText11": "LANGUAGES",
+
+  "languageList": [
+    {
+      "name": "Portuguese",
+      "proficiency": "NATIVE SPEAKER",
+      "description": "Native Portuguese speaker with fluency in speaking, writing, and listening. Comfortable communicating complex ideas and technical concepts in Portuguese. Proficient in understanding spoken Portuguese in various contexts."
+    },
+    {
+      "name": "ENGLISH",
+      "proficiency": "READING, WRITING AND LISTENING",
+      "description": "Proficient in reading and writing English, with a strong ability to comprehend technical content. While I don't have a great vocal skill, I am comfortable reading, writing, and a bit of listening to voices in English, especially in the context of coding, documentation, and communication through written channels."
+    }
+  ],
+
+  "projectsPageText1": "View Website Online",
+  "projectsPageText2": "Figma Design File",
+  "projectsPageText3": "Repository On Github",
+  "projectsPageText4": "Challenges:",
+  "projectsPageText5": "Features:",
+  "projectsPageText6": "Download Video",
+  "projectsPageText7": "Pages Quick Overview:",
+  "projectsPageText8": "View More Online On Website",
+
+  "accessibilityText1": "Skip To Main Content",
+  "accessibilityText2": "Close Menu",
+  "accessibilityText3": "Open Menu",
+  "accessibilityText4": "Close Language Switch Menu",
+  "accessibilityText5": "Open Menu to Switch Languages",
+  "accessibilityText6": "Close Credits Dropdown",
+  "accessibilityText7": "Open Credits Dropdown",
+  "accessibilityText8": ", Open in a new Tab",
+  "accessibilityText9": ", Click to show a quick preview. Information about this Project",
+  "accessibilityText10": "Click to show more Information",
+
+  "altText1": "Forward arrow",
+  "altText2": "Brazilian flag",
+  "altText3": "Flag of the United States",
+  "altText4": "Toggle dropdown arrow",
+  "altText5": "Programming illustration",
+  "altText6": "Success checkmark surrounded by stars",
+  "altText7": "Paper Plane",
+  "altText8": "Star shape",
+  "altText9": "Get Download file",
+  "altText10": "Service Illustration for:",
+  "altText11": "Return arrow",
+  "altText12": "Website Planet Illustration",
+  "altText13": "Figma Logo Illustration",
+  "altText14": "Github Repository Illustration",
+  "altText15": "Outside Link Symbol",
+
+  "titleText1": "resume"
 }

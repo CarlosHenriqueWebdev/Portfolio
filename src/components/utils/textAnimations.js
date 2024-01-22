@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export const TextAnimationHeadingEnglish = ({ text }) => {
   const characters = text.split("");
-  
+
   return (
     <AnimatePresence>
       {characters.map((char, index) => {
@@ -18,10 +18,10 @@ export const TextAnimationHeadingEnglish = ({ text }) => {
             transition={{ duration: 0.1, delay: index * 0.03 }}
             viewport={{ once: true }}
             className={`inline-block ${
-              isStrong ? "strokeme text-royalAmethyst" : ""
+              isStrong ? " text-royalPurpleText" : ""
             }`}
           >
-            {char === " " ? "\u00A0" : char === "," ? ",\u00A0" : char}
+            {char === " " ? "\u00A0" : char === "," ? "," : char}
           </motion.span>
         );
       })}
@@ -47,7 +47,7 @@ export const TextAnimationHeadingPortuguese = ({ text }) => {
             transition={{ duration: 0.1, delay: index * 0.03 }}
             viewport={{ once: true }}
             className={`inline-block ${
-              isStrong ? "strokeme text-royalAmethyst" : ""
+              isStrong ? " text-royalPurpleText" : ""
             }`}
           >
             {char === " " ? "\u00A0" : char === "," ? ",\u00A0" : char}
