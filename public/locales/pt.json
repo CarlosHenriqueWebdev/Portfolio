@@ -343,6 +343,71 @@
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/"
     }
   ],
+  "portfolioData": [
+    {
+      "name": "Portfólio de Desenvolvimento Web",
+      "description": "Meu portfólio pessoal, desenvolvido após a criação do meu site de creche para cães. Ele representa uma melhoria significativa em termos de design, funcionalidade, SEO e acessibilidade. Fiz com o objetivo de destacar minhas habilidades; ele serve como uma plataforma conveniente para apresentar meus projetos concluídos atuais e futuros.",
+      "role": "(Desenvolvedor Único)",
+      "technologiesUsed": [
+        {
+          "name": "Next.js",
+          "techImageSrc": "/nextjs-logo.svg",
+          "blackTechImageSrc": "/black-logos/nextjs-logo.svg",
+          "reasonWhy": ""
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/tailwind-logo.svg",
+          "blackTechImageSrc": "/black-logos/tailwind-logo.svg",
+          "reasonWhy": ""
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/figma-logo.svg",
+          "blackTechImageSrc": "/black-logos/figma-logo.svg",
+          "reasonWhy": ""
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/css-logo.svg",
+          "blackTechImageSrc": "/black-logos/css-logo.svg",
+          "reasonWhy": ""
+        }
+      ],
+      "achievementsList": [
+        {
+          "achievementHeading": "Implementação de Site Multilíngue:",
+          "achievementDescription": "Implementação bem-sucedida da funcionalidade de troca de idioma usando o i18next, permitindo que os usuários alternem entre diferentes idiomas para uma experiência mais inclusiva."
+        },
+        {
+          "achievementHeading": "Aprimoramentos para uma Melhor Experiência do Usuário:",
+          "achievementDescription": "Implementou um mecanismo para salvar a preferência de idioma selecionada entre as sessões no Armazenamento Local. Também melhorou o desempenho para um site mais rápido. Além disso, os mecanismos de busca agora podem identificar diferentes versões de idioma do site."
+        },
+        {
+          "achievementHeading": "Melhoria no Engajamento do Usuário com Animações:",
+          "achievementDescription": "Implementou animações envolventes e efeitos visuais extras para aprimorar o engajamento do usuário e criar um site mais interativo e visualmente atraente."
+        },
+        {
+          "achievementHeading": "Melhoria na Acessibilidade do Site:",
+          "achievementDescription": "Integrou com sucesso recursos aprimorados de acessibilidade, garantindo que o site seja acessível a um público diversificado, incluindo pessoas com deficiências."
+        },
+        {
+          "achievementHeading": "Implementação de Sistema Automatizado de E-mails:",
+          "achievementDescription": "Implementou um sistema automatizado de e-mails no formulário de contato, otimizando os processos de comunicação e aprimorando o engajamento do usuário por meio de notificações por e-mail."
+        },
+        {
+          "achievementHeading": "Otimização do Site para Mecanismos de Busca (SEO):",
+          "achievementDescription": "Implementou com sucesso estratégias de otimização de SEO para melhorar a visibilidade do site nos mecanismos de busca."
+        },
+        {
+          "achievementHeading": "Implementação de Tela de Carregamento e Carregamento Esquelético:",
+          "achievementDescription": "Implementou uma tela de carregamento durante as mudanças de idioma e empregou técnicas de carregamento esquelético para reduzir significativamente os deslocamentos de layout durante o carregamento da página, garantindo uma experiência mais suave para o usuário."
+        }
+      ],
+
+      "liveWebsiteUrl": "https://www.carloshenriquedev.com/en"
+    }
+  ],
 
   "resumeText1": "Currículo de Desenvolvedor Web: Habilidades e Conquistas",
   "resumeText2": "Ver no Site / Baixar Currículo.",

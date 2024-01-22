@@ -380,8 +380,8 @@
           "achievementDescription": "Successfully implemented language change functionality using i18next, allowing users to switch between different languages for a more inclusive user experience."
         },
         {
-          "achievementHeading": "General Quality of LIfe Updates to Improve User Experience:",
-          "achievementDescription": "Implemented a method for the desired Language to be saved between sessions in the Local Storage. Language can be defined automatically based on User Browser Local,improved Performance for a Faster Website, and Search Engines can see the different versions of the Website based on Language."
+          "achievementHeading": "Enhancements for a Better User Experience:",
+          "achievementDescription": "Implemented a mechanism to save the selected language preference between sessions in Local Storage. Also Improved performance for a faster website. Additionally, search engines can now identify different language versions of the website."
         },
         {
           "achievementHeading": "Enhanced User Engagement with Animations:",
