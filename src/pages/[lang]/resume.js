@@ -21,8 +21,10 @@ const Resume = () => {
 
     // Set focus to the target element
     if (targetElement) {
-      targetElement.tabIndex = -1;
-      targetElement.focus();
+      setTimeout(() => {
+        targetElement.tabIndex = -1;
+        targetElement.focus();
+      }, 1200);
     }
   };
 
@@ -223,7 +225,7 @@ const Resume = () => {
                           alt={`${mapItem.name} Logo`}
                           width={0}
                           height={0}
-                          unoptimize
+                          unoptimized
                         />
 
                         <p className="w-fit">{mapItem.name}</p>

@@ -12,8 +12,8 @@ const Resume = () => {
 
   const handleDownloadClick = () => {
     const link = document.createElement("a");
-    link.href = "/download/resume-pdf";
-    link.download = "/about-illustration.png";
+    link.href = "/english-resume-pdf";
+    link.download = "/english-resume-pdf";
     link.click();
   };
 

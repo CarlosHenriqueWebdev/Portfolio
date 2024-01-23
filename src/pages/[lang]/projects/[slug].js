@@ -63,8 +63,10 @@ const Project = () => {
 
     // Set focus to the target element
     if (targetElement) {
-      targetElement.tabIndex = -1;
-      targetElement.focus();
+      setTimeout(() => {
+        targetElement.tabIndex = -1;
+        targetElement.focus();
+      }, 1200);
     }
   };
 

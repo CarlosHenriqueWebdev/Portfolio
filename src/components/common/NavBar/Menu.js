@@ -76,8 +76,10 @@ const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      targetElement.tabIndex = -1;
-      targetElement.focus();
+      setTimeout(() => {
+        targetElement.tabIndex = -1;
+        targetElement.focus();
+      }, 1200);
     }
   };
 
