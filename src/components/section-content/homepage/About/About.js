@@ -95,7 +95,7 @@ const About = () => {
                   unoptimized
                   className={`${
                     isAboutImageLoading ? "opacity-0" : "opacity-1"
-                  } max-w-[500px] md:max-w-full w-full h-full object-cover border-solid border-[2px] border-[black]`}
+                  } max-w-[500px] mx-auto md:max-w-full w-full h-full object-cover border-solid border-[2px] border-[black]`}
                   onLoad={handleAboutImageLoad}
                 />
 

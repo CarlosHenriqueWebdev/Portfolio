@@ -66,56 +66,36 @@ const Footer = () => {
 
         <ul className="mt-[24px] flex flex-col w-full !text-start items-center gap-[16px]">
           <li className="w-full">
-            <p className="font-medium">
-              Hero & Resume[Page] Background from Behance:{" "}
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline font-bold text-royalPurpleText"
-                href="https://www.behance.net/gallery/92232693/Software-development-programming-coding-concept-blue"
-              >
-                https://www.behance.net/gallery/92232693/Software-development-programming-coding-concept-blue
-              </Link>
-            </p>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-bold text-royalPurpleText"
+              href="https://br.freepik.com/vetores-gratis/fundo-de-tecnologia-de-conexao-de-rede-de-terra-digital-global_6864941.htm#from_view=detail_alsolike"
+            >
+              Hero and Resume Image from starline on Freepik
+            </Link>
           </li>
+
           <li className="w-full">
-            <p className="font-medium">
-              About Illustration from Freepik:{" "}
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline font-bold text-royalPurpleText"
-                href="https://br.freepik.com/fotos-gratis/programador-ocupado-digitando-e-mails-em-ia-geradora-de-laptop-iluminado_42213829.htm#page=2&query=programacao&position=3&from_view=keyword&track=sph&uuid=f32f9277-41a1-41fe-9621-0327ec1092a5"
-              >
-                https://br.freepik.com/fotos-gratis/programador-ocupado-digitando-e-mails-em-ia-geradora-de-laptop-iluminado_42213829.htm#page=2&query=programacao&position=3&from_view=keyword&track=sph&uuid=f32f9277-41a1-41fe-9621-0327ec1092a5
-              </Link>
-            </p>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-bold text-royalPurpleText"
+              href="https://br.freepik.com/fotos-gratis/uma-pessoa-digitando-no-teclado-do-computador-a-noite-gerado-por-ia_42191506.htm#page=3&query=Keyboard&position=5&from_view=search&track=sph&uuid=57a3dd1d-f9d9-43f8-b260-ade742cb266f"
+            >
+              About Image from vecstock on Freepik
+            </Link>
           </li>
+
           <li className="w-full">
-            <p className="font-medium">
-              Resume[Section] Background from:{" "}
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline font-bold text-royalPurpleText"
-                href="https://pixabay.com/pt/illustrations/espa%C3%A7o-nebulosa-estrelas-cosmos-7709489/"
-              >
-                https://pixabay.com/pt/illustrations/espa%C3%A7o-nebulosa-estrelas-cosmos-7709489/
-              </Link>
-            </p>
-          </li>
-          <li className="w-full">
-            <p className="font-medium">
-              Beautiful Patterns from Toptal:{" "}
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline font-bold text-royalPurpleText"
-                href="https://www.toptal.com/designers/subtlepatterns/"
-              >
-                https://www.toptal.com/designers/subtlepatterns/
-              </Link>
-            </p>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-bold text-royalPurpleText"
+              href="https://br.freepik.com/vetores-gratis/interior-de-quarto-de-menino-adolescente-computadores-na-mesa_8924570.htm#query=Programa%C3%A7%C3%A3o&position=47&from_view=search&track=sph&uuid=971d2afb-231a-430f-a18c-2e74520c43c3"
+            >
+              Image Above Contact from upklyak on Freepik
+            </Link>
           </li>
         </ul>
       </div>

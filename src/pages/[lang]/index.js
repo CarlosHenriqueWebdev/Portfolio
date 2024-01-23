@@ -204,6 +204,19 @@ const Home = () => {
             <Questions />
           </div>
 
+          <div
+            className={`border-t-[6px] border-cornflowerBlue border-solid bg-cover bg-fixed  bg-[black] w-full bg-no-repeat bg-center bg-[url(/about-illustration5.png)]`}
+          >
+            <div
+              className="h-[50vh] uppercase w-full flex justify-center items-center text-[26px] font-bold"
+              style={{
+                backgroundColor: `rgba(0, 0, 0, 0.7)`,
+              }}
+            >
+              
+            </div>
+          </div>
+
           <div id="contactSection">
             <Contact />
           </div>

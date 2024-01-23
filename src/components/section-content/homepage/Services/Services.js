@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useRef} from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 // eslint-disable-next-line no-unused-vars
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
@@ -34,7 +34,7 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
 
           <div>
             <motion.ul
-              className="grid gap-x-[16px] gap-y-[24px] items-stretch md:grid-cols-2 lg:grid-cols-3"
+              className="grid gap-x-[16px] gap-y-[24px] items-stretch md:grid-cols-2"
               ref={motionUlRef}
             >
               {t("servicesData", { returnObjects: true }).map(
@@ -44,15 +44,15 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
                       itemIndex % 2 === 0
                         ? "border-cornflowerBlue"
                         : "border-royalPurple"
-                    } content-baseline bg-[black] grid `}
+                    } content-baseline bg-[black] flex gap-[16px] `}
                     key={itemIndex}
                   >
-                    <div
-                      className={`w-fit border-solid ${
+                                     <div
+                      className={`w-fit h-fit border-solid ${
                         itemIndex % 2 === 0
                           ? "border-cornflowerBlue"
                           : "border-royalPurple"
-                      }  border-[3px] p-[12px] rounded-[100%]`}
+                      }  border-[3px] p-[12px] rounded-[8px]`}
                     >
                       <Image
                         aria-hidden={true}
@@ -64,8 +64,8 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
                         unoptimized
                       />
                     </div>
-
-                    <div className="grid gap-[8px] mt-[16px]">
+                    
+                    <div className="grid gap-[8px] h-fit">
                       <h3 className="text-[18px] sm:text-[20px]">
                         {mapItem.title}
                       </h3>
@@ -74,6 +74,8 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
                         {mapItem.description}
                       </p>
                     </div>
+
+   
                   </motion.li>
                 )
               )}
