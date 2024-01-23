@@ -85,9 +85,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline font-bold text-royalPurpleText"
-                href="https://br.freepik.com/fotos-premium/conceito-de-seguranca-cibernetica-monitor-de-computador-com-codigo-binario-em-fundo-escuro-tela-de-computador-moderno-mostrando-codificacao-colorida-ai-generated_47715328.htm"
+                href="https://br.freepik.com/fotos-gratis/programador-ocupado-digitando-e-mails-em-ia-geradora-de-laptop-iluminado_42213829.htm#page=2&query=programacao&position=3&from_view=keyword&track=sph&uuid=f32f9277-41a1-41fe-9621-0327ec1092a5"
               >
-                https://br.freepik.com/fotos-premium/conceito-de-seguranca-cibernetica-monitor-de-computador-com-codigo-binario-em-fundo-escuro-tela-de-computador-moderno-mostrando-codificacao-colorida-ai-generated_47715328.htm
+                https://br.freepik.com/fotos-gratis/programador-ocupado-digitando-e-mails-em-ia-geradora-de-laptop-iluminado_42213829.htm#page=2&query=programacao&position=3&from_view=keyword&track=sph&uuid=f32f9277-41a1-41fe-9621-0327ec1092a5
               </Link>
             </p>
           </li>
