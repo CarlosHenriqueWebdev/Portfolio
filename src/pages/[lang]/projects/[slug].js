@@ -76,9 +76,9 @@ const Project = () => {
         <title>
           {isLanguageLoading
             ? "Loading..."
-            : whichLanguageIsIt === "en"
+            : whichLanguageIsIt === "en" && doesProjectExist
             ? `Project: ${project.name} | Web Development Portfolio`
-            : whichLanguageIsIt === "pt"
+            : whichLanguageIsIt === "pt" && doesProjectExist
             ? `Projeto: ${project.name} | Portfolio de Desenvolvimento Web`
             : ""}
         </title>
@@ -88,9 +88,9 @@ const Project = () => {
           content={
             isLanguageLoading
               ? ""
-              : whichLanguageIsIt === "en"
+              : whichLanguageIsIt === "en" && doesProjectExist
               ? `Explore details about the project "${project.name}" in my web development portfolio. Learn about the technologies used and the key features implemented.`
-              : whichLanguageIsIt === "pt"
+              : whichLanguageIsIt === "pt" && doesProjectExist
               ? `Explore detalhes sobre o projeto "${project.name}" no meu portfólio de desenvolvimento web. Saiba mais sobre as tecnologias utilizadas e as principais funcionalidades implementadas.`
               : ""
           }
@@ -99,7 +99,7 @@ const Project = () => {
         <link
           rel="alternate"
           hrefLang={whichLanguageIsIt}
-          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/${project.slug}`}
+          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/${project && doesProjectExist ? project.slug : ""}`}
         />
       </Head>
       
