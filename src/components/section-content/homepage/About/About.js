@@ -88,7 +88,7 @@ const About = () => {
                 }`}
               >
                 <Image
-                  src="/about-illustration.png"
+                  src="/assets/about-illustration.png"
                   alt={t("alText5")}
                   width={0} // Set your desired width
                   height={0} // Set your desired height

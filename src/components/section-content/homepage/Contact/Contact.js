@@ -2,9 +2,7 @@ import React from "react";
 import { contactInfo } from "../About/contactInfo";
 import Image from "next/image";
 import Form from "./Form";
-import {
-  TextAnimationContactHeading
-} from "@/components/utils/textAnimations";
+import { TextAnimationContactHeading } from "@/components/utils/textAnimations";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
@@ -154,7 +152,7 @@ const Contact = () => {
             <Image
               aria-hidden={true}
               className="w-full h-full max-w-[280px] mx-auto object-cover"
-              src="/success-illustration.svg"
+              src="/assets/success-illustration.svg"
               alt={t("altText6")}
               width={0}
               height={0}
@@ -176,7 +174,7 @@ const Contact = () => {
             <Image
               aria-hidden={true}
               className="w-[16px] rotate-[180deg]"
-              src="/arrow.svg"
+              src="/assets/arrow.svg"
               alt={t("altText1")}
               width={0}
               height={0}

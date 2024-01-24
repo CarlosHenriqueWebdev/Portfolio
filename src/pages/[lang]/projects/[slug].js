@@ -72,41 +72,41 @@ const Project = () => {
 
   return (
     <>
+      <Head>
+        <title>
+          {isLanguageLoading
+            ? "Loading..."
+            : whichLanguageIsIt === "en"
+            ? `Project: ${project.name} | Web Development Portfolio`
+            : whichLanguageIsIt === "pt"
+            ? `Projeto: ${project.name} | Portfolio de Desenvolvimento Web`
+            : ""}
+        </title>
+
+        <meta
+          name="description"
+          content={
+            isLanguageLoading
+              ? ""
+              : whichLanguageIsIt === "en"
+              ? `Explore details about the project "${project.name}" in my web development portfolio. Learn about the technologies used and the key features implemented.`
+              : whichLanguageIsIt === "pt"
+              ? `Explore detalhes sobre o projeto "${project.name}" no meu portfólio de desenvolvimento web. Saiba mais sobre as tecnologias utilizadas e as principais funcionalidades implementadas.`
+              : ""
+          }
+        />
+
+        <link
+          rel="alternate"
+          hrefLang={whichLanguageIsIt}
+          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/${project.slug}`}
+        />
+      </Head>
+      
       {!isLanguageLoading && doesProjectExist ? (
         <>
           {project ? (
             <>
-              <Head>
-                <title>
-                  {isLanguageLoading
-                    ? "Loading..."
-                    : whichLanguageIsIt === "en"
-                    ? `Project: ${project.name} | Web Development Portfolio`
-                    : whichLanguageIsIt === "pt"
-                    ? `Projeto: ${project.name} | Portfolio de Desenvolvimento Web`
-                    : ""}
-                </title>
-
-                <meta
-                  name="description"
-                  content={
-                    isLanguageLoading
-                      ? ""
-                      : whichLanguageIsIt === "en"
-                      ? `Explore details about the project "${project.name}" in my web development portfolio. Learn about the technologies used and the key features implemented.`
-                      : whichLanguageIsIt === "pt"
-                      ? `Explore detalhes sobre o projeto "${project.name}" no meu portfólio de desenvolvimento web. Saiba mais sobre as tecnologias utilizadas e as principais funcionalidades implementadas.`
-                      : ""
-                  }
-                />
-
-                <link
-                  rel="alternate"
-                  hrefLang={whichLanguageIsIt}
-                  href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/${project.slug}`}
-                />
-              </Head>
-
               <div className="cursor-auto">
                 <ScrollToTopButton />
 
@@ -125,7 +125,7 @@ const Project = () => {
                           <Image
                             aria-hidden={true}
                             className="w-[20px] h-[20px]"
-                            src="/left-arrow-icon.svg"
+                            src="/assets/left-arrow-icon.svg"
                             alt={t("altText11")}
                             width={0}
                             height={0}
@@ -177,7 +177,7 @@ const Project = () => {
                             <Image
                               aria-hidden={true}
                               className="w-[16px] h-[16px]"
-                              src="/white-icons/website-white.svg"
+                              src="/assets/white-icons/website-white.svg"
                               alt={t("altText12")}
                               width={0}
                               height={0}
@@ -198,7 +198,7 @@ const Project = () => {
                           <Image
                             aria-hidden={true}
                             className="w-[16px] h-[16px]"
-                            src="/white-icons/figma-white.svg"
+                            src="/assets/white-icons/figma-white.svg"
                             alt={t("altText13")}
                             width={0}
                             height={0}
@@ -219,7 +219,7 @@ const Project = () => {
                           <Image
                             aria-hidden={true}
                             className="w-[16px] h-[16px]"
-                            src="/white-icons/github-white.svg"
+                            src="/assets/white-icons/github-white.svg"
                             alt={t("altText14")}
                             width={0}
                             height={0}
@@ -371,7 +371,7 @@ const Project = () => {
                           <Image
                             aria-hidden={true}
                             className="w-[16px] h-[16px]"
-                            src="/arrow.svg"
+                            src="/assets/arrow.svg"
                             alt={t("altText1")}
                             width={0}
                             height={0}

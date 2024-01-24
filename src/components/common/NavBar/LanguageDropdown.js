@@ -93,8 +93,8 @@ const LanguageDropdown = () => {
           className="w-[20px]"
           src={`${
             currentLanguage === "en"
-              ? "/american-flag-real.svg"
-              : "/brazil-flag-real.svg"
+              ? "/assets/american-flag-real.svg"
+              : "/assets/brazil-flag-real.svg"
           }`}
           alt={currentLanguage === "en" ? t("altText3") : t("altText2")}
           width={0}
@@ -105,7 +105,7 @@ const LanguageDropdown = () => {
         <Image
           aria-hidden={true}
           className="w-[12px]"
-          src="/dropdown-arrow.svg"
+          src="/assets/dropdown-arrow.svg"
           alt={t("altText4")}
           width={0}
           height={0}
@@ -120,7 +120,9 @@ const LanguageDropdown = () => {
       >
         <div
           className={`relative ${
-            router.pathname === "/resume" ? "" : "after:bg-[url(/triangle.svg)]"
+            router.pathname === "/resume"
+              ? ""
+              : "after:bg-[url(/assets/triangle.svg)]"
           } after:z-10 after:content-[''] after:absolute after:w-[73px] after:h-[20px] after:bg-no-repeat after:bg-contain  after:block after:right-[-37px] after:top-[-16px]`}
         >
           <ul
@@ -159,8 +161,8 @@ const LanguageDropdown = () => {
                     className="w-[18px]"
                     src={`${
                       option === "en"
-                        ? "/american-flag-real.svg"
-                        : "/brazil-flag-real.svg"
+                        ? "/assets/american-flag-real.svg"
+                        : "/assets/brazil-flag-real.svg"
                     }`}
                     alt={
                       currentLanguage === "en" ? t("altText3") : t("altText2")

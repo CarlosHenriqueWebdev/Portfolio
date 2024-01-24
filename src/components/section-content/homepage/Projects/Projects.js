@@ -197,7 +197,7 @@ const Projects = () => {
                             <Image
                               aria-hidden={true}
                               className="w-[12px] h-[12px]"
-                              src="/arrow.svg"
+                              src="/assets/arrow.svg"
                               alt={t("altText1")}
                               width={0}
                               height={0}

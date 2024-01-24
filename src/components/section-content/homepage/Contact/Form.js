@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 
 import emailjs from "emailjs-com";
-import {useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Form = ({ setDidFormSubmit }) => {
   const { t } = useTranslation();
@@ -242,7 +242,7 @@ const Form = ({ setDidFormSubmit }) => {
           <Image
             aria-hidden={true}
             className="w-[16px]"
-            src="/plane-icon.svg"
+            src="/assets/plane-icon.svg"
             alt={t("altText7")}
             width={0}
             height={0}

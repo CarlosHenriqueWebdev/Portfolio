@@ -10,36 +10,36 @@ export const projectsData = [
     technologiesUsed: [
       {
         name: "Next.js",
-        techImageSrc: "/nextjs-logo.svg",
-        blackTechImageSrc: "/black-logos/nextjs-logo.svg",
+        techImageSrc: "/assets/nextjs-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/nextjs-logo.svg",
         reasonWhy:
           "Next.js was chosen for its efficiency in building React applications and it's default dynamic routes & config, allowing the Project to progress faster without needing too many custom configurations like custom Routes.",
       },
       {
         name: "Tailwind CSS",
-        techImageSrc: "/tailwind-logo.svg",
-        blackTechImageSrc: "/black-logos/tailwind-logo.svg",
+        techImageSrc: "/assets/tailwind-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/tailwind-logo.svg",
         reasonWhy:
           "Tailwind CSS was selected to streamline the styling process with its utility-first approach, ensuring a clean and maintainable codebase. It made styling the website to be extremly fast. I honestly can't stress enough about how useful it was.",
       },
       {
         name: "Strapi",
-        techImageSrc: "/strapi-logo.svg",
-        blackTechImageSrc: "/black-logos/strapi-logo.svg",
+        techImageSrc: "/assets/strapi-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/strapi-logo.svg",
         reasonWhy:
           "Strapi served as the headless CMS to manage content, providing flexibility and ease of use, allowing for efficient content updates. Although, I wouldn't reccommend it too much, as at least for me, I felt like quite a bit of features were lacking.",
       },
       {
         name: "Figma",
-        techImageSrc: "/figma-logo.svg",
-        blackTechImageSrc: "/black-logos/figma-logo.svg",
+        techImageSrc: "/assets/figma-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/figma-logo.svg",
         reasonWhy:
           "Figma was the main design tool, it's plugins and features helped a lot, ensuring a cohesive and visually appealing user interface.",
       },
       {
         name: "CSS",
-        techImageSrc: "/css-logo.svg",
-        blackTechImageSrc: "/black-logos/css-logo.svg",
+        techImageSrc: "/assets/css-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/css-logo.svg",
         reasonWhy:
           "While Tailwind CSS was the primary styling tool, custom CSS was utilized for specific design elements, providing a better visual experience.",
       },
@@ -171,36 +171,36 @@ export const projectsData = [
     technologiesUsed: [
       {
         name: "Next.js",
-        techImageSrc: "/nextjs-logo.svg",
-        blackTechImageSrc: "/black-logos/nextjs-logo.svg",
+        techImageSrc: "/assets/nextjs-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/nextjs-logo.svg",
         reasonWhy:
           "Next.js was chosen for its efficiency in building React applications and it's default dynamic routes & config, allowing the Project to progress faster without needing too many custom configurations like custom Routes.",
       },
       {
         name: "Tailwind CSS",
-        techImageSrc: "/tailwind-logo.svg",
-        blackTechImageSrc: "/black-logos/tailwind-logo.svg",
+        techImageSrc: "/assets/tailwind-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/tailwind-logo.svg",
         reasonWhy:
           "Tailwind CSS was selected to streamline the styling process with its utility-first approach, ensuring a clean and maintainable codebase. It made styling the website to be extremly fast. I honestly can't stress enough about how useful it was.",
       },
       {
         name: "Strapi",
-        techImageSrc: "/strapi-logo.svg",
-        blackTechImageSrc: "/black-logos/strapi-logo.svg",
+        techImageSrc: "/assets/strapi-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/strapi-logo.svg",
         reasonWhy:
           "Strapi served as the headless CMS to manage content, providing flexibility and ease of use, allowing for efficient content updates. Although, I wouldn't reccommend it too much, as at least for me, I felt like quite a bit of features were lacking.",
       },
       {
         name: "Figma",
-        techImageSrc: "/figma-logo.svg",
-        blackTechImageSrc: "/black-logos/figma-logo.svg",
+        techImageSrc: "/assets/figma-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/figma-logo.svg",
         reasonWhy:
           "Figma was the main design tool, it's plugins and features helped a lot, ensuring a cohesive and visually appealing user interface.",
       },
       {
         name: "CSS",
-        techImageSrc: "/css-logo.svg",
-        blackTechImageSrc: "/black-logos/css-logo.svg",
+        techImageSrc: "/assets/css-logo.svg",
+        blackTechImageSrc: "/assets/black-logos/css-logo.svg",
         reasonWhy:
           "While Tailwind CSS was the primary styling tool, custom CSS was utilized for specific design elements, providing a better visual experience.",
       },

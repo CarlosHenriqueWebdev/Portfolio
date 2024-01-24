@@ -45,7 +45,7 @@ const Hero = () => {
   return (
     <div className="overflow-hidden border-b-[6px] border-solid border-cornflowerBlue">
       <div
-        className={`hero-shadow bg-cover h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/hero.png)]`}
+        className={`hero-shadow bg-cover h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/assets/hero.png)]`}
       >
         <div
           style={{
@@ -109,7 +109,7 @@ const Hero = () => {
                     <Image
                       aria-hidden={true}
                       className={`w-[20px] sm:w-[24px]`}
-                      src="/star.svg"
+                      src="/assets/star.svg"
                       alt={t("altText8")}
                       width={0}
                       height={0}
@@ -137,7 +137,7 @@ const Hero = () => {
                 <Image
                   aria-hidden={true}
                   className="w-[12px] h-[12px] rotate-[90deg]"
-                  src="/arrow.svg"
+                  src="/assets/arrow.svg"
                   alt={t("altText1")}
                   width={0}
                   height={0}
@@ -158,7 +158,7 @@ const Hero = () => {
                 <Image
                   aria-hidden={true}
                   className="w-[12px] h-[12px] rotate-[90deg]"
-                  src="/arrow.svg"
+                  src="/assets/arrow.svg"
                   alt={t("altText1")}
                   width={0}
                   height={0}
@@ -179,7 +179,7 @@ const Hero = () => {
                 <Image
                   aria-hidden={true}
                   className="w-[12px] h-[12px] rotate-[90deg]"
-                  src="/arrow.svg"
+                  src="/assets/arrow.svg"
                   alt={t("altText1")}
                   width={0}
                   height={0}

@@ -18,14 +18,14 @@ const Resume = () => {
   };
 
   return (
-    <div className="overflow-hidden border-b-[6px] border-solid border-cornflowerBlue bg-[url('/space-bg.jpg')] bg-fixed bg-no-repeat bg-cover sm:text-center">
+    <div className="overflow-hidden border-b-[6px] border-solid border-cornflowerBlue bg-[url('/assets/space-bg.jpg')] bg-fixed bg-no-repeat bg-cover sm:text-center">
       <div
         className="w-full h-full py-[72px] px-[24px] lg:px-[48px]"
         style={{
           backgroundColor: `rgba(0, 0, 0, 0.8)`,
         }}
       >
-        <div className="bg-[black] w-fit mx-auto relative sm:after:bg-[url(/resume.svg)] after:z-20 after:content-[''] after:absolute after:w-[60px] after:h-[120px] after:bg-no-repeat after:bg-contain after:mt-[8px] after:top-[-31px] after:left-[-33px] after:block">
+        <div className="bg-[black] w-fit mx-auto relative sm:after:bg-[url(/assets/resume.svg)] after:z-20 after:content-[''] after:absolute after:w-[60px] after:h-[120px] after:bg-no-repeat after:bg-contain after:mt-[8px] after:top-[-31px] after:left-[-33px] after:block">
           <div className="relative p-[24px] md:p-[48px] rounded-[12px] overflow-hidden border-solid border-cornflowerBlue border-[6px]">
             <div className="relative z-50">
               <div>
@@ -47,7 +47,7 @@ const Resume = () => {
                   <Image
                     aria-hidden={true}
                     className="w-[12px] h-[12px]"
-                    src="/arrow.svg"
+                    src="/assets/arrow.svg"
                     alt={t("altText1")}
                     width={0}
                     height={0}
@@ -63,7 +63,7 @@ const Resume = () => {
                   <Image
                     aria-hidden={true}
                     className="w-[12px] h-[12px]"
-                    src="/download.svg"
+                    src="/assets/download.svg"
                     alt={t("altText9")}
                     width={0}
                     height={0}

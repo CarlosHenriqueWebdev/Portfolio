@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion  } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const ScrollToTopButton = () => {
@@ -49,7 +49,7 @@ const ScrollToTopButton = () => {
         <Image
           aria-hidden={true}
           className="w-[28px] h-[28px] rotate-[180deg]"
-          src="/dropdown-arrow-white.svg"
+          src="/assets/dropdown-arrow-white.svg"
           alt={t("altText4")}
           width={0}
           height={0}

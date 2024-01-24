@@ -69,7 +69,7 @@ const Questions = () => {
                     className={`w-[16px] xl:w-[18px] transition-all ${
                       openQuestions.includes(itemIndex) && "rotate-[180deg]"
                     }`}
-                    src="/dropdown-arrow-white.svg"
+                    src="/assets/dropdown-arrow-white.svg"
                     alt={t("altText4")}
                     width="0"
                     height="0"

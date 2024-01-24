@@ -32,104 +32,104 @@
       "id": 1,
       "name": "JavaScript",
       "description": "JavaScript é uma linguagem de script versátil comumente usada para criar páginas da web dinâmicas e interativas. Com sua ampla adoção, é uma habilidade essencial para o desenvolvimento front-end e back-end.",
-      "imageSrc": "/javascript-logo.svg",
-      "imageSrcBlack": "/black-logos/javascript-logo.svg",
+      "imageSrc": "/assets/javascript-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/javascript-logo.svg",
       "extraNote": "Utilizei JavaScript em alguns projetos online de estudantes, implementando recursos comuns como menus hamburguer, slideshows de imagens, dropdowns e modais. Embora não seja nada especial que eu já não faça em React / Nextjs. De qualquer forma, posso sempre voltar a isso para criar novos projetos e aprender muito mais."
     },
     {
       "id": 2,
       "name": "CSS / SASS / SCSS",
       "description": "CSS (Cascading Style Sheets) é a linguagem usada para estilizar documentos HTML. Ele controla o layout e a aparência das páginas da web, permitindo que os desenvolvedores criem designs visualmente atraentes e responsivos.",
-      "imageSrc": "/css-logo.svg",
-      "imageSrcBlack": "/black-logos/css-logo.svg",
+      "imageSrc": "/assets/css-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/css-logo.svg",
       "extraNote": ""
     },
     {
       "id": 3,
       "name": "Node.js",
       "description": "Node.js é um tempo de execução de JavaScript no lado do servidor que permite aos desenvolvedores criar aplicativos de rede escaláveis e eficientes. É amplamente utilizado para criar servidores web e lidar com tarefas assíncronas.",
-      "imageSrc": "/nodejs-logo.svg",
-      "imageSrcBlack": "/black-logos/nodejs-logo.svg",
+      "imageSrc": "/assets/nodejs-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/nodejs-logo.svg",
       "extraNote": "Apliquei Node.js em um projeto online de estudante enquanto aprendia React simultaneamente. O projeto focava em um site social, apresentando registro de usuário, login, criação de postagens, edição, exclusão, curtidas, comentários, perfis de usuário e edição de perfil. Recursos adicionais incluíram um AuthGuard, validação de usuário e mais. Lamentavelmente, o projeto permaneceu incompleto devido à sua natureza como um exercício de aprendizado online. Pensei em completá-lo fortalecendo o AuthGuard, implementando e-mails e números de telefone com confirmação, aprimorando curtidas de postagens com algoritmos, adicionando filtros de postagens, melhorando o design geral, habilitando respostas a comentários, incorporando notificações, listas de amigos e muitos, muitos recursos para que estivesse pronto para produção em um cenário do mundo real. No entanto, a quantidade de trabalho para criar um site de mídia social totalmente funcional completamente sozinho parecia que exigiria um tempo extremo investido nele, então descartei a ideia depois de tentar por um tempo."
     },
     {
       "id": 4,
       "name": "HTML",
       "description": "HTML (Hypertext Markup Language) é a base do desenvolvimento web. Ele estrutura o conteúdo na web, definindo os elementos que compõem uma página da web, como títulos, parágrafos e imagens.",
-      "imageSrc": "/html-logo.svg",
-      "imageSrcBlack": "/black-logos/html-logo.svg",
+      "imageSrc": "/assets/html-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/html-logo.svg",
       "extraNote": ""
     },
     {
       "id": 5,
       "name": "Next.js",
       "description": "Next.js é um framework React que simplifica o processo de construção de aplicativos React renderizados no lado do servidor e gerados estaticamente. Ele aprimora o desempenho e a SEO de aplicativos web.",
-      "imageSrc": "/nextjs-logo.svg",
-      "imageSrcBlack": "/black-logos/nextjs-logo.svg",
+      "imageSrc": "/assets/nextjs-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/nextjs-logo.svg",
       "extraNote": "Até agora, meu favorito. É direto e meio que faz todo o trabalho pesado para você. Como alguém que gosta de fazer sites que sejam amigáveis para todos, ter uma linguagem de programação fácil de usar que simplifica as coisas para os desenvolvedores é definitivamente uma grande vantagem para mim, e eu posso definitivamente apreciar o esforço dedicado a isso."
     },
     {
       "id": 6,
       "name": "React / React + Typescript",
       "description": "React é uma biblioteca JavaScript para construir interfaces de usuário. Permite que os desenvolvedores criem componentes reutilizáveis, tornando eficiente a construção e manutenção de aplicativos web complexos.",
-      "imageSrc": "/react-logo.svg",
-      "imageSrcBlack": "/black-logos/react-logo.svg",
+      "imageSrc": "/assets/react-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/react-logo.svg",
       "extraNote": ""
     },
     {
       "id": 7,
       "name": "Bootstrap",
       "description": "Bootstrap é um framework CSS popular que simplifica o processo de design de sites responsivos e visualmente atraentes. Ele fornece um conjunto de componentes e estilos pré-projetados.",
-      "imageSrc": "/bootstrap-logo.svg",
-      "imageSrcBlack": "/black-logos/bootstrap-logo.svg",
+      "imageSrc": "/assets/bootstrap-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/bootstrap-logo.svg",
       "extraNote": ""
     },
     {
       "id": 8,
       "name": "Figma",
       "description": "Figma é uma ferramenta de design colaborativa que permite aos designers criar, compartilhar e colaborar em interfaces de usuário em tempo real. É amplamente utilizado para projetar aplicativos web e móveis.",
-      "imageSrc": "/figma-logo.svg",
-      "imageSrcBlack": "/black-logos/figma-logo.svg",
+      "imageSrc": "/assets/figma-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/figma-logo.svg",
       "extraNote": ""
     },
     {
       "id": 9,
       "name": "Tailwind CSS",
       "description": "Tailwind CSS é um framework CSS de utilidade que simplifica o processo de estilizar aplicativos web. Ele fornece classes de utilidade de baixo nível para construir designs de forma rápida e sustentável.",
-      "imageSrc": "/tailwind-logo.svg",
-      "imageSrcBlack": "/black-logos/tailwind-logo.svg",
+      "imageSrc": "/assets/tailwind-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/tailwind-logo.svg",
       "extraNote": "Quando ouvi falar no conceito que o Bootstrap tinha a oferecer, é exatamente isso que eu pensava que seria. Usar CSS/SASS/SCSS normais e até mesmo Bootstrap honestamente parece ser um desperdício quando você tem o Tailwind CSS por perto. Eu o recomendo 100% a todos os desenvolvedores do mundo todo."
     },
     {
       "id": 10,
       "name": "WordPress",
       "description": "WordPress é um sistema de gerenciamento de conteúdo (CMS) que alimenta uma parte significativa da web. É usado para construir sites e blogs, oferecendo uma interface amigável e amplo suporte a plugins.",
-      "imageSrc": "/wordpress-logo.svg",
-      "imageSrcBlack": "/black-logos/wordpress-logo.svg",
+      "imageSrc": "/assets/wordpress-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/wordpress-logo.svg",
       "extraNote": "Assim como o Strapi, usei o WordPress apenas como um Headless CMS. Infelizmente, não aprofundei muito no WordPress, mas estou muito inclinado a explorá-lo mais no futuro. Os plugins que ele tem a oferecer podem torná-lo uma escolha melhor do que o Strapi, e pode muito bem ser menos limitado e oferecer mais liberdade com o custo de possivelmente ser um pouco mais difícil de usar e gerenciar como um desenvolvedor do que o Strapi foi."
     },
     {
       "id": 11,
       "name": "Firebase",
       "description": "Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web fornecida pelo Google. Oferece um conjunto de serviços em nuvem, incluindo autenticação, bancos de dados em tempo real e hospedagem, simplificando o desenvolvimento do backend.",
-      "imageSrc": "/firebase-logo.svg",
-      "imageSrcBlack": "/black-logos/firebase-logo.svg",
+      "imageSrc": "/assets/firebase-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/firebase-logo.svg",
       "extraNote": "Usei como banco de dados para um site social em um projeto online de estudante, armazenando fotos de postagens, fotos de perfil, contas de usuário e mais. Não fiz nada especialmente especial com ele, e acredito que resultados semelhantes poderiam ser alcançados com qualquer outro banco de dados sem problemas."
     },
     {
       "id": 12,
       "name": "Strapi",
       "description": "Strapi é um CMS de código aberto sem cabeça que permite aos desenvolvedores criar APIs poderosas rapidamente. É flexível, personalizável e adequado para criar aplicativos ricos em conteúdo.",
-      "imageSrc": "/strapi-logo.svg",
-      "imageSrcBlack": "/black-logos/strapi-logo.svg",
+      "imageSrc": "/assets/strapi-logo.svg",
+      "imageSrcBlack": "/assets/black-logos/strapi-logo.svg",
       "extraNote": "Uso o Strapi como gerenciador de conteúdo para meu projeto Doggy Daycare. Do meu ponto de vista, o Strapi parecia mais acessível e visualmente moderno em comparação com o WordPress quando comecei, pois foi literalmente feito para ser um Headless CMS. No entanto, à medida que explorei mais, as limitações em termos de plugins e recursos me fizeram questionar seriamente se o WordPress poderia ter oferecido uma personalização superior como um Headless CMS para o conteúdo do cliente. Honestamente, ainda tenho que experimentar o WordPress a fundo para poder dizer se isso era realmente o caso."
     },
     {
       "id": 13,
       "name": "Outros",
       "description": "A categoria \"Outros\" representa minha abertura para aprender novas habilidades e tecnologias. Mesmo que eu ainda não tenha encontrado uma linguagem ou ferramenta específica, acredito que posso me adaptar e adquirir o conhecimento necessário para usá-la em produção se eu tiver um pouco de tempo para aprendê-la.",
-      "imageSrc": "/question-mark.svg",
-      "imageSrcBlack": "/black-logos/question-mark.svg",
+      "imageSrc": "/assets/question-mark.svg",
+      "imageSrcBlack": "/assets/black-logos/question-mark.svg",
       "extraNote": ""
     }
   ],
@@ -144,49 +144,49 @@
       "id": 1,
       "title": "Sistemas de Gerenciamento de Conteúdo",
       "description": "Embora ainda esteja ganhando experiência com ferramentas de CMS, estou comprometido em proporcionar a você a melhor experiência possível. Vou me esforçar para garantir que seu gerenciamento de conteúdo seja direto e sem estresse, permitindo que você crie o conteúdo perfeito para o seu site.",
-      "imageSrc": "/dashboard.svg"
+      "imageSrc": "/assets/dashboard.svg"
     },
     {
       "id": 2,
       "title": "Desenvolvimento Frontend & Backend",
       "description": "Lido com tarefas de desenvolvimento tanto frontend quanto backend. Se houver uma espaço vazio em seu projeto que precisa ser preenchid0, estou aqui para ajudar. Embora ainda esteja construindo experiência, estou pronto para enfrentar desafios e contribuir para as necessidades de desenvolvimento do seu projeto.",
-      "imageSrc": "/code-symbol.svg"
+      "imageSrc": "/assets/code-symbol.svg"
     },
     {
       "id": 3,
       "title": "Design UI/UX",
       "description": "Embora meu design não seja tão incrível quanto muitos, abordo o UI/UX com dedicação e compromisso com a melhoria. Dado tempo suficiente, posso criar designs funcionais, atraentes e fáceis de usar, feitos para atender às suas necessidades.",
-      "imageSrc": "/blueprint.svg"
+      "imageSrc": "/assets/blueprint.svg"
     },
     {
       "id": 4,
       "title": "Design Responsivo",
       "description": "É essencial garantir que seu site seja acessível a todos, independentemente do tamanho da tela de sua máquina. Assim como todo Desenvolvedor Web, consigo criar uma experiência do usuário perfeita que se adapta facilmente a diversos dispositivos e tamanhos de tela. Seja em desktops ou smartphones, seu site funcionará em todas as plataformas, proporcionando uma visualização e experiência do usuário ideais para cada visitante.",
-      "imageSrc": "/target.svg"
+      "imageSrc": "/assets/target.svg"
     },
     {
       "id": 5,
       "title": "Suporte Contínuo e Atualizações de Conteúdo",
       "description": "Posso apoiar seu site além da fase inicial de desenvolvimento. Ofereço suporte contínuo e atualizações de conteúdo para garantir que seu site funcione corretamente e esteja atualizado. Seja solucionando um erro, aprimorando a segurança ou até mesmo adicionando conteúdo avançado que você não pode fazer sozinho, estou aqui para apoiar a longevidade e o sucesso de sua presença online.",
-      "imageSrc": "/cogwheel.svg"
+      "imageSrc": "/assets/cogwheel.svg"
     },
     {
       "id": 6,
       "title": "Otimização de SEO",
       "description": "Assim como todo Desenvolvedor Web, melhorar sua visibilidade online é um dos meus serviços. Através de uma otimização de SEO completa, posiciono seu site para alcançar um público mais amplo. Desde pesquisa de palavras-chave até otimização na página, minha abordagem é projetada para aprimorar sua presença digital e atrair tráfego orgânico para seu site.",
-      "imageSrc": "/seo.svg"
+      "imageSrc": "/assets/seo.svg"
     },
     {
       "id": 7,
       "title": "Acessibilidade Web (WCAG)",
       "description": "Estou comprometido com a acessibilidade digital, garantindo que meus projetos sejam fáceis de usar para todos. Ao desenvolver experiência em integração de acessibilidade, utilizo ferramentas como Leitores de Tela e consulto guias para testes detalhados. Reconhecendo as diversas experiências do usuário, estou dedicado à aprendizagem contínua e refinamento. Meu objetivo é criar experiências online inclusivas e fáceis de usar para todos.",
-      "imageSrc": "/checkmark.svg"
+      "imageSrc": "/assets/checkmark.svg"
     },
     {
       "id": 8,
       "title": "Website Rápido",
       "description": "Dou prioridade à velocidade para garantir uma experiência de usuário ideal para seus visitantes. Através de práticas de codificação eficientes e otimizações de desempenho, estou dedicado a entregar um site rápido e responsivo. Todos na web merecem uma jornada online sem problemas, e estou comprometido em fornecer exatamente isso.",
-      "imageSrc": "/speed.svg"
+      "imageSrc": "/assets/speed.svg"
     }
   ],
 
@@ -200,42 +200,42 @@
   "projectsData": [
     {
       "slug": "doggy-daycare",
-      "icon": "/paw-icon.svg",
+      "icon": "/assets/paw-icon.svg",
       "iconAltText": "Pata de Cachorro",
       "name": "Doggy Daycare",
       "description": "Um projeto sobre um fictício Daycare para Cãezinhos. Embora o nome não seja muito criativo, o site foi feito apenas com o objetivo de autoaperfeiçoamento. Serviu como uma plataforma para aprimorar principalmente minhas habilidades de design e utilizar uma ferramenta CMS popular como Strapi e WordPress, já que sou bastante fã da ideia do que um CMS pode fazer. O projeto também teve como objetivo aprimorar minha proficiência em codificação no Next.js, implementar recursos de acessibilidade e alguns outros.",
       "role": "(Único Desenvolvedor)",
       "descriptionFeatures": "Strapi CMS, Mapa Interativo, Email Automático, Integração de Acessibilidade, Tela de Carregamento e Carregamento Esqueleto.",
-      "hero": "/projects/doggy-hero.jpg",
+      "hero": "/assets/projects/doggy-hero.jpg",
       "technologiesUsed": [
         {
           "name": "Next.js",
-          "techImageSrc": "/nextjs-logo.svg",
-          "blackTechImageSrc": "/black-logos/nextjs-logo.svg",
+          "techImageSrc": "/assets/nextjs-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/nextjs-logo.svg",
           "reasonWhy": "Next.js foi escolhido por sua eficiência na construção de aplicações React e suas rotas dinâmicas e configuração padrão, permitindo que o projeto avançasse mais rápido sem precisar de muitas configurações personalizadas, como rotas personalizadas."
         },
         {
           "name": "Tailwind CSS",
-          "techImageSrc": "/tailwind-logo.svg",
-          "blackTechImageSrc": "/black-logos/tailwind-logo.svg",
+          "techImageSrc": "/assets/tailwind-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/tailwind-logo.svg",
           "reasonWhy": "Tailwind CSS foi selecionado para simplificar o processo de estilização com sua abordagem utility-first, garantindo um código limpo e de fácil manutenção. Isso tornou a estilização do site extremamente rápida. Sinceramente, não posso enfatizar o suficiente o quão útil foi."
         },
         {
           "name": "Strapi",
-          "techImageSrc": "/strapi-logo.svg",
-          "blackTechImageSrc": "/black-logos/strapi-logo.svg",
+          "techImageSrc": "/assets/strapi-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/strapi-logo.svg",
           "reasonWhy": "Strapi serviu como o CMS headless para gerenciar conteúdo, proporcionando flexibilidade e facilidade de uso, permitindo atualizações eficientes de conteúdo. No entanto, eu não recomendaria muito, pois, pelo menos para mim, senti que faltavam muitos recursos."
         },
         {
           "name": "Figma",
-          "techImageSrc": "/figma-logo.svg",
-          "blackTechImageSrc": "/black-logos/figma-logo.svg",
+          "techImageSrc": "/assets/figma-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
           "reasonWhy": "Figma foi a principal ferramenta de design; seus plugins e recursos foram muito úteis, garantindo uma interface de usuário boa e visualmente atraente."
         },
         {
           "name": "CSS",
-          "techImageSrc": "/css-logo.svg",
-          "blackTechImageSrc": "/black-logos/css-logo.svg",
+          "techImageSrc": "/assets/css-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
           "reasonWhy": "Embora o Tailwind CSS tenha sido a principal ferramenta de estilização, o CSS personalizado foi utilizado para elementos de design específicos, proporcionando uma melhor experiência visual."
         }
       ],
@@ -326,19 +326,19 @@
       ],
       "websiteVideos": [
         {
-          "videoSrcMp4": "/projects/doggy-homepage.mp4",
-          "videoSrcWebm": "/projects/doggy-homepage.mp4"
+          "videoSrcMp4": "/assets/projects/doggy-homepage.mp4",
+          "videoSrcWebm": "/assets/projects/doggy-homepage.mp4"
         },
         {
-          "videoSrcMp4": "/projects/doggy-showcase.mp4",
-          "videoSrcWebm": "/projects/doggy-showcase.mp4"
+          "videoSrcMp4": "/assets/projects/doggy-showcase.mp4",
+          "videoSrcWebm": "/assets/projects/doggy-showcase.mp4"
         },
         {
-          "videoSrcMp4": "/projects/doggy-strapi.mp4",
-          "videoSrcWebm": "/projects/doggy-strapi.mp4"
+          "videoSrcMp4": "/assets/projects/doggy-strapi.mp4",
+          "videoSrcWebm": "/assets/projects/doggy-strapi.mp4"
         }
       ],
-      "thumbnail": "/projects/doggy-thumbnail.png",
+      "thumbnail": "/assets/projects/doggy-thumbnail.png",
       "thumbnailAltText": "Página Inicial do Site Dentro de uma Moldura de Monitor",
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/"
     }
@@ -351,26 +351,26 @@
       "technologiesUsed": [
         {
           "name": "Next.js",
-          "techImageSrc": "/nextjs-logo.svg",
-          "blackTechImageSrc": "/black-logos/nextjs-logo.svg",
+          "techImageSrc": "/assets/nextjs-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/nextjs-logo.svg",
           "reasonWhy": ""
         },
         {
           "name": "Tailwind CSS",
-          "techImageSrc": "/tailwind-logo.svg",
-          "blackTechImageSrc": "/black-logos/tailwind-logo.svg",
+          "techImageSrc": "/assets/tailwind-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/tailwind-logo.svg",
           "reasonWhy": ""
         },
         {
           "name": "Figma",
-          "techImageSrc": "/figma-logo.svg",
-          "blackTechImageSrc": "/black-logos/figma-logo.svg",
+          "techImageSrc": "/assets/figma-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
           "reasonWhy": ""
         },
         {
           "name": "CSS",
-          "techImageSrc": "/css-logo.svg",
-          "blackTechImageSrc": "/black-logos/css-logo.svg",
+          "techImageSrc": "/assets/css-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
           "reasonWhy": ""
         }
       ],

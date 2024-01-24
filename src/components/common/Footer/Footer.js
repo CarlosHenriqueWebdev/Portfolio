@@ -41,7 +41,7 @@ const Footer = () => {
           <Image
             aria-hidden="true"
             className={`w-[12px] transition-all rotate-[90deg]`}
-            src="/arrow-purple.svg"
+            src="/assets/arrow-purple.svg"
             alt={t("altText1")}
             width="0"
             height="0"
