@@ -2,5 +2,6 @@
 module.exports = {
   siteUrl:  'https://www.carloshenriquedev.com',
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
 
 }
