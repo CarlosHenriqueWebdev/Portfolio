@@ -339,7 +339,7 @@
       ],
       "thumbnail": "/assets/projects/doggy-thumbnail.png",
       "thumbnailAltText": "Website Homepage Inside a Monitor Frame",
-      "hero": "/assets/projects/doggy-hero.jpg",
+      "hero": "/assets/projects/doggy-hero.png",
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/"
     }
   ],

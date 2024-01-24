@@ -172,7 +172,7 @@ const Project = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href={project.liveWebsiteUrl}
-                            className={`${buttonClassName} px-[16px] !border-[#002B5C] before:!bg-[#002B5C] flex gap-[8px] items-center`}
+                            className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
                           >
                             <Image
                               aria-hidden={true}
@@ -193,7 +193,7 @@ const Project = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           href="/"
-                          className={`${buttonClassName} px-[16px] !border-[#002B5C] before:!bg-[#002B5C] flex gap-[8px] items-center`}
+                          className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
                         >
                           <Image
                             aria-hidden={true}
@@ -214,7 +214,7 @@ const Project = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           href="/"
-                          className={`${buttonClassName} px-[16px] !border-[#002B5C] before:!bg-[#002B5C] flex gap-[8px] items-center`}
+                          className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
                         >
                           <Image
                             aria-hidden={true}
@@ -344,7 +344,7 @@ const Project = () => {
                         <ul className="h-fit grid gap-[16px] grid-cols-3">
                           {project.websiteVideos.map((mapItem, itemIndex) => (
                             <li
-                              className="border-solid border-[4px] border-[#002B5C] h-fit"
+                              className="border-solid border-[4px] border-cornflowerBlue h-fit"
                               key={itemIndex}
                             >
                               <video className="w-fit h-fit" controls>
@@ -365,7 +365,7 @@ const Project = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           href={project.liveWebsiteUrl}
-                          className={`${buttonClassName} mt-[16px] w-fit  px-[32px] !border-[#002B5C] before:!bg-[#002B5C] flex gap-[8px] items-center`}
+                          className={`${buttonClassName} mt-[16px] w-fit  px-[32px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
                         >
                           {t("projectsPageText8")}
                           <Image

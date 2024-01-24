@@ -206,7 +206,7 @@
       "description": "Um projeto sobre um fictício Daycare para Cãezinhos. Embora o nome não seja muito criativo, o site foi feito apenas com o objetivo de autoaperfeiçoamento. Serviu como uma plataforma para aprimorar principalmente minhas habilidades de design e utilizar uma ferramenta CMS popular como Strapi e WordPress, já que sou bastante fã da ideia do que um CMS pode fazer. O projeto também teve como objetivo aprimorar minha proficiência em codificação no Next.js, implementar recursos de acessibilidade e alguns outros.",
       "role": "(Único Desenvolvedor)",
       "descriptionFeatures": "Strapi CMS, Mapa Interativo, Email Automático, Integração de Acessibilidade, Tela de Carregamento e Carregamento Esqueleto.",
-      "hero": "/assets/projects/doggy-hero.jpg",
+      "hero": "/assets/projects/doggy-hero.png",
       "technologiesUsed": [
         {
           "name": "Next.js",

@@ -1,7 +1,7 @@
 export const contactInfo = [
   {
-    name: "Github",
-    description: "CarlosHenriqueWebdev",
+    name: "CarlosHenriqueWebdev",
+    description: "Github",
     url: "https://github.com/CarlosHenriqueWebdev",
     imageSrc: "/assets/github-blue.svg",
     whiteImageSrc: "/assets/white-icons/github-white.svg",
@@ -34,8 +34,8 @@ export const contactInfo = [
     isForContact: true,
   },
   {
-    name: "http://localhost:3000/resume",
-    url: "XXX",
+    name: "carloshenriquedev.com",
+    url: "https://www.carloshenriquedev.com/en",
     imageSrc: "/assets/website-icon.svg",
     whiteImageSrc: "/assets/white-icons/website-white.svg",
     display: false,

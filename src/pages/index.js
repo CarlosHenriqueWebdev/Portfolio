@@ -13,12 +13,6 @@ const IndexRedirect = () => {
     <div>
       <Head>
         <title>Redirecting...</title>
-
-        {/* <link
-          rel="alternate"
-          hreflang={language}
-          href={`https://www.yourwebsite.com/${language}/page`}
-        /> */}
       </Head>
 
       {!isLanguageLoading &&
