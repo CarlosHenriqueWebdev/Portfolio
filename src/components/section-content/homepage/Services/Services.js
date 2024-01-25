@@ -1,11 +1,9 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-// eslint-disable-next-line no-unused-vars
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Trans, useTranslation } from "react-i18next";
 
-const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
+const Services = () => {
   const { t } = useTranslation();
 
   const motionUlRef = useRef(null);
@@ -19,12 +17,12 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
         }}
       >
         <div className="">
-          <div className="mb-[32px]">
-            <h2 id="servicesHeadingText" className="font-bold text-[26px]">
+          <div className="mb-[32px] text-center">
+            <h2 id="servicesHeadingText" className="font-bold text-[1.625rem]">
               {t("servicesText1")}
             </h2>
 
-            <p className="mt-[12px]">
+            <p className="mt-[16px] text-white85 mx-auto">
               <Trans
                 i18nKey={t("servicesText2")}
                 components={{ bold: <strong /> }}
@@ -47,7 +45,7 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
                     } content-baseline bg-[black] flex gap-[16px] `}
                     key={itemIndex}
                   >
-                                     <div
+                    <div
                       className={`w-fit h-fit border-solid ${
                         itemIndex % 2 === 0
                           ? "border-cornflowerBlue"
@@ -64,38 +62,20 @@ const Services = ({ sizeHandleButtonHover, sizeHandleButtonLeave }) => {
                         unoptimized
                       />
                     </div>
-                    
+
                     <div className="grid gap-[8px] h-fit">
-                      <h3 className="text-[18px] sm:text-[20px]">
+                      <h3 className="text-[1.125rem] sm:text-[1.25rem]">
                         {mapItem.title}
                       </h3>
 
-                      <p className="max-w-[400px] text-white85 text-[14px] sm:text-[16px]">
+                      <p className="max-w-[400px] text-white85 text-[0.875rem] sm:text-[1rem]">
                         {mapItem.description}
                       </p>
                     </div>
-
-   
                   </motion.li>
                 )
               )}
             </motion.ul>
-
-            <p className="mt-[32px] text-[20px]">
-              {t("servicesText3")}{" "}
-              <ScrollLink
-                href="#contactSection"
-                className="text-skyBlueText font-semibold hover:underline cursor-pointer"
-                to={"contactSection"} // Use 'to' instead of 'href'
-                smooth={true} // Enable smooth scrolling
-                duration={500} // Set the duration of the scroll animation in milliseconds
-                offset={-73}
-                onMouseEnter={sizeHandleButtonHover}
-                onMouseLeave={sizeHandleButtonLeave}
-              >
-                {t("servicesText4")}
-              </ScrollLink>
-            </p>
           </div>
         </div>
       </div>

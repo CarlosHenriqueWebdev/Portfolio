@@ -37,7 +37,7 @@ const Questions = () => {
         }}
       >
         <div>
-          <h2 id="questionsHeadingText" className="font-bold text-[26px]">
+          <h2 id="questionsHeadingText" className="font-bold text-[1.625rem]">
             {t("faqText1")}
           </h2>
         </div>
@@ -102,7 +102,7 @@ const Questions = () => {
           className="border-cornflowerBlue my-[32px] border-t-[4px]"
         />
 
-        <div aria-hidden="true" className="text-[20px]">
+        <div aria-hidden="true" className="text-[1.25rem]">
           <p className="grid gap-[4px] md:flex">
             {t("faqText2")}{" "}
             <ScrollLink

@@ -21,7 +21,7 @@ const Footer = () => {
   }, [isDropdownOpen]);
 
   return (
-    <div className="text-center px-[24px] lg:px-[48px] py-[48px] text-[18px] font-medium">
+    <footer className="text-center px-[24px] lg:px-[48px] py-[48px] text-[1.125rem] font-medium">
       <div className="flex gap-[4px] mx-auto w-fit">
         <p>
           &copy; {new Date().getFullYear()} {t("footerText1")}{" "}
@@ -59,7 +59,7 @@ const Footer = () => {
           tabIndex="-1"
           ref={dropDownHeadingRef}
           id="attributionFocusSr"
-          className="text-[22px] font-black"
+          className="text-[1.375rem] font-black"
         >
           Attributions
         </h2>
@@ -99,7 +99,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </footer>
   );
 };
 

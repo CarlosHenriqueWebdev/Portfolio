@@ -39,7 +39,7 @@ const Projects = () => {
         }}
       >
         <div className="px-[24px] lg:px-[48px]">
-          <h2 id="projectsHeadingText" className="font-bold text-[26px]">
+          <h2 id="projectsHeadingText" className="font-bold text-[1.625rem]">
             {t("projectsText1")}
           </h2>
 
@@ -116,7 +116,7 @@ const Projects = () => {
                       <div className="grid gap-[12px]">
                         <h3
                           id={`projectTextFocusSr${itemIndex}`}
-                          className="font-bold text-[20px] text-royalPurpleText "
+                          className="font-bold text-[1.25rem] text-royalPurpleText "
                         >
                           {mapItem.name}
                         </h3>

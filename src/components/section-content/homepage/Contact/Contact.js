@@ -42,14 +42,14 @@ const Contact = () => {
                 <div className="h-fit">
                   <motion.div
                     aria-hidden="true"
-                    className="text-[24px] font-bold  text-royalPurpleText"
+                    className="text-[1.5rem] font-bold  text-royalPurpleText"
                   >
                     <TextAnimationContactHeading text={t("contactText1")} />
                   </motion.div>
 
                   <h2
                     id="contactHeadingText"
-                    className="text-[26px] font-bold mt-[8px]"
+                    className="text-[1.625rem] font-bold mt-[8px]"
                   >
                     {t("contactText2")}
                   </h2>
@@ -82,7 +82,7 @@ const Contact = () => {
                             aria-label={`${mapItem.name} ${t(
                               "accessibilityText8"
                             )}`}
-                            className="text-[14px] font-semibold underline"
+                            className="text-[0.875rem] font-semibold underline"
                             href={mapItem.url}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -94,7 +94,7 @@ const Contact = () => {
                             aria-label={`${mapItem.name} ${t(
                               "accessibilityText8"
                             )}`}
-                            className="text-[14px] font-semibold underline"
+                            className="text-[0.875rem] font-semibold underline"
                             href={mapItem.url}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -106,7 +106,7 @@ const Contact = () => {
                             aria-label={`${mapItem.name} ${t(
                               "accessibilityText8"
                             )}`}
-                            className="text-[14px] font-semibold underline"
+                            className="text-[0.875rem] font-semibold underline"
                             href={mapItem.url}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -162,7 +162,7 @@ const Contact = () => {
 
           <h2
             role="alert"
-            className="text-[26px] text-center font-bold text-skyBlueText"
+            className="text-[1.625rem] text-center font-bold text-skyBlueText"
           >
             {t("successText1")}
           </h2>

@@ -1,6 +1,6 @@
 import LanguageDropdown from "@/components/common/NavBar/LanguageDropdown";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { contactInfo } from "@/components/section-content/homepage/About/contactInfo";
 import Image from "next/image";
 import { skillsData } from "@/components/section-content/homepage/Skills/skillsData";
@@ -12,6 +12,20 @@ import Head from "next/head";
 
 const Resume = () => {
   const { t } = useTranslation();
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const dropDownHeadingRef = useRef(null);
+
+  useEffect(() => {
+    if (isDropdownOpen && dropDownHeadingRef.current) {
+      dropDownHeadingRef.current.focus();
+    }
+  }, [isDropdownOpen]);
 
   const { isLanguageLoading, currentLanguage, whichLanguageIsIt } =
     useLanguageChange();
@@ -74,11 +88,11 @@ const Resume = () => {
                 {t("accessibilityText1")}
               </button>
 
-              <div className="px-[24px] py-[8px] lg:px-[48px] bg-[#002b5c]  w-full flex lg:justify-center items-center">
+              <div className="px-[24px] py-[8px] lg:px-[48px] bg-[#002b5c] w-full flex lg:justify-center items-center">
                 <div className="w-full flex gap-[24px] items-center justify-between">
                   <div>
                     <Link
-                      className="font-bold flex gap-[8px] items-center underline text-[14px] sm:text-[16px]"
+                      className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
                       href={`/${currentLanguage}`}
                     >
                       <Image
@@ -112,12 +126,12 @@ const Resume = () => {
                   backgroundColor: `rgba(0, 0, 0, 0.6)`,
                 }}
               >
-                <div className="font-bold text-[24px] sm:text-[28px] uppercase py-[72px] grid gap-[4px] tracking-[6px]">
+                <div className="font-bold text-[1.5rem] sm:text-[1.75rem] uppercase py-[72px] grid gap-[4px] tracking-[6px]">
                   <h1 id="resumeHeadingText" className="w-fit mx-auto">
                     Carlos Henrique
                   </h1>
 
-                  <p className="text-[20px] text-white85 w-fit mx-auto">
+                  <p className="text-[1.25rem] text-white85 w-fit mx-auto">
                     {t("resumePageText3")}
                   </p>
                 </div>
@@ -186,7 +200,7 @@ const Resume = () => {
             <div className="text-[black] grid gap-[16px] px-[24px] lg:px-[48px] py-[48px]">
               <div className="grid gap-[16px]">
                 <div className="relative w-fit">
-                  <h2 className="text-[24px] uppercase font-bold w-fit">
+                  <h2 className="text-[1.5rem] uppercase font-bold w-fit">
                     {t("resumePageText4")}
                   </h2>
 
@@ -202,7 +216,7 @@ const Resume = () => {
 
               <div className="grid gap-[16px]">
                 <div className="relative w-fit">
-                  <h2 className="text-[24px] uppercase font-bold w-fit">
+                  <h2 className="text-[1.5rem] uppercase font-bold w-fit">
                     {t("resumePageText6")}
                   </h2>
 
@@ -237,7 +251,7 @@ const Resume = () => {
 
               <div className="grid gap-[16px]">
                 <div className="relative w-fit">
-                  <h2 className="text-[24px] uppercase font-bold w-fit">
+                  <h2 className="text-[1.5rem] uppercase font-bold w-fit">
                     {t("resumePageText7")}
                   </h2>
 
@@ -251,7 +265,7 @@ const Resume = () => {
                     {mergedArray.map((mapItem, itemIndex) => (
                       <li key={itemIndex}>
                         <div>
-                          <h3 className="font-bold text-[18px] uppercase flex gap-[4px] items-baseline">
+                          <h3 className="font-bold text-[1.125rem] uppercase flex gap-[4px] items-baseline">
                             <Link
                               href={mapItem.liveWebsiteUrl}
                               target="_blank"
@@ -270,13 +284,13 @@ const Resume = () => {
                               />
                               {mapItem.name}
                             </Link>{" "}
-                            <span className="text-[12px] text-[white75] normal-case">
+                            <span className="text-[0.75rem] text-[white75] normal-case">
                               {" "}
                               {mapItem.role}
                             </span>
                           </h3>
 
-                          <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[16px] text-[#002b5c]">
+                          <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#002b5c]">
                             {t("resumePageProjectHeadingText1")}
                           </h4>
 
@@ -286,7 +300,7 @@ const Resume = () => {
                         </div>
 
                         <div>
-                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[16px] text-[#002b5c]">
+                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[1rem] text-[#002b5c]">
                             {t("resumePageProjectHeadingText2")}
                           </h4>
 
@@ -315,7 +329,7 @@ const Resume = () => {
                         </div>
 
                         <div>
-                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[16px] text-[#002b5c]">
+                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[1rem] text-[#002b5c]">
                             {t("resumePageProjectHeadingText3")}
                           </h4>
 
@@ -326,11 +340,11 @@ const Resume = () => {
                                   key={itemIndex}
                                   className="bg-[white] lg:pl-[12px] flex flex-col gap-[4px] w-full"
                                 >
-                                  <h5 className="uppercase w-fit font-bold text-[14px]">
+                                  <h5 className="uppercase w-fit font-bold text-[0.875rem]">
                                     {mapItem.achievementHeading}
                                   </h5>
 
-                                  <p className="text-[14px]">
+                                  <p className="text-[0.875rem]">
                                     {mapItem.achievementDescription}
                                   </p>
                                 </li>
@@ -346,7 +360,7 @@ const Resume = () => {
 
               <div className="grid gap-[16px]">
                 <div className="relative w-fit">
-                  <h2 className="text-[24px] uppercase font-bold w-fit">
+                  <h2 className="text-[1.5rem] uppercase font-bold w-fit">
                     {t("resumePageText8")}
                   </h2>
 
@@ -356,11 +370,11 @@ const Resume = () => {
                 </div>
 
                 <div className="lg:pl-[12px]">
-                  <h3 className="font-bold text-[18px] uppercase">
+                  <h3 className="font-bold text-[1.125rem] uppercase">
                     {t("resumePageText9")}
                   </h3>
 
-                  <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[16px] text-[#002b5c]">
+                  <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#002b5c]">
                     {t("resumePageText10")}
                   </h4>
 
@@ -371,11 +385,11 @@ const Resume = () => {
                           key={itemIndex}
                           className="bg-[white] lg:pl-[12px] flex flex-col gap-[4px] w-full"
                         >
-                          <h5 className="uppercase w-fit font-bold text-[14px]">
+                          <h5 className="uppercase w-fit font-bold text-[0.875rem]">
                             {mapItem.educationHeading}
                           </h5>
 
-                          <p className="text-[14px]">
+                          <p className="text-[0.875rem]">
                             {mapItem.educationDescription}
                           </p>
                         </li>
@@ -387,7 +401,7 @@ const Resume = () => {
 
               <div className="grid gap-[16px]">
                 <div className="relative w-fit">
-                  <h2 className="text-[24px] uppercase font-bold w-fit">
+                  <h2 className="text-[1.5rem] uppercase font-bold w-fit">
                     {t("resumePageText11")}
                   </h2>
 
@@ -400,11 +414,11 @@ const Resume = () => {
                   {t("languageList", { returnObjects: true }).map(
                     (mapItem, itemIndex) => (
                       <li key={itemIndex}>
-                        <h3 className="font-bold text-[18px] uppercase">
+                        <h3 className="font-bold text-[1.125rem] uppercase">
                           {mapItem.name}
                         </h3>
 
-                        <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[16px] text-[#002b5c]">
+                        <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#002b5c]">
                           {mapItem.proficiency}
                         </h4>
 
@@ -418,7 +432,87 @@ const Resume = () => {
               </div>
             </div>
 
-            <div className="border-solid border-t-[6px] border-[black]  w-full h-[70px] bg-[#002b5c]"></div>
+            <footer className="border-solid border-t-[6px] border-[black] bg-[#002b5c] text-center px-[24px] lg:px-[48px] py-[48px] text-[1.125rem] font-medium">
+              <div className="flex gap-[4px] mx-auto w-fit">
+                <p>
+                  &copy; {new Date().getFullYear()} {t("footerText1")}{" "}
+                </p>
+
+                <button
+                  aria-label={
+                    isDropdownOpen
+                      ? t("accessibilityText6")
+                      : t("accessibilityText7")
+                  }
+                  className="font-bold underline flex items-center gap-[8px]"
+                  onClick={() => {
+                    handleButtonClick();
+                  }}
+                >
+                  {t("footerText2")}
+
+                  <Image
+                    aria-hidden="true"
+                    className={`w-[12px] transition-all rotate-[90deg]`}
+                    src="/assets/arrow-purple.svg"
+                    alt={t("altText1")}
+                    width="0"
+                    height="0"
+                    unoptimized
+                  />
+                </button>
+              </div>
+
+              <div
+                className={`mt-[32px] px-[24px] lg:px-[48px] bg-[white] rounded-[8px] text-[black] p-[24px] border-solid border-[4px] border-cornflowerBlue w-fit mx-auto hidden ${
+                  isDropdownOpen ? "!block" : ""
+                }`}
+              >
+                <h2
+                  tabIndex="-1"
+                  ref={dropDownHeadingRef}
+                  id="attributionFocusSr"
+                  className="text-[1.375rem] font-black"
+                >
+                  Attributions
+                </h2>
+
+                <ul className="mt-[24px] flex flex-col w-full !text-start items-center gap-[16px]">
+                  <li className="w-full">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline font-bold text-royalPurpleText"
+                      href="https://br.freepik.com/vetores-gratis/fundo-de-tecnologia-de-conexao-de-rede-de-terra-digital-global_6864941.htm#from_view=detail_alsolike"
+                    >
+                      Hero and Resume Image from starline on Freepik
+                    </Link>
+                  </li>
+
+                  <li className="w-full">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline font-bold text-royalPurpleText"
+                      href="https://br.freepik.com/fotos-gratis/uma-pessoa-digitando-no-teclado-do-computador-a-noite-gerado-por-ia_42191506.htm#page=3&query=Keyboard&position=5&from_view=search&track=sph&uuid=57a3dd1d-f9d9-43f8-b260-ade742cb266f"
+                    >
+                      About Image from vecstock on Freepik
+                    </Link>
+                  </li>
+
+                  <li className="w-full">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline font-bold text-royalPurpleText"
+                      href="https://br.freepik.com/vetores-gratis/interior-de-quarto-de-menino-adolescente-computadores-na-mesa_8924570.htm#query=Programa%C3%A7%C3%A3o&position=47&from_view=search&track=sph&uuid=971d2afb-231a-430f-a18c-2e74520c43c3"
+                    >
+                      Image Above Contact from upklyak on Freepik
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </footer>
           </div>
         </>
       ) : (

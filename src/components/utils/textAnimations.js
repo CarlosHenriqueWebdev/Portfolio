@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react"
+import React from "react";
 
 export const TextAnimationHeadingEnglish = ({ text }) => {
   const characters = text.split("");
@@ -51,7 +51,7 @@ export const TextAnimationHeadingPortuguese = ({ text }) => {
               isStrong ? " text-royalPurpleText" : ""
             }`}
           >
-            {char === " " ? "\u00A0" : char === "," ? ",\u00A0" : char}
+            {char === " " ? "\u00A0" : char === "," ? "," : char}
           </motion.span>
         );
       })}

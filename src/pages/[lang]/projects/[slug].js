@@ -99,10 +99,12 @@ const Project = () => {
         <link
           rel="alternate"
           hrefLang={whichLanguageIsIt}
-          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/${project && doesProjectExist ? project.slug : ""}`}
+          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/${
+            project && doesProjectExist ? project.slug : ""
+          }`}
         />
       </Head>
-      
+
       {!isLanguageLoading && doesProjectExist ? (
         <>
           {project ? (
@@ -119,7 +121,7 @@ const Project = () => {
                     <div className="w-full flex gap-[24px] items-center justify-between">
                       <div>
                         <Link
-                          className="font-bold flex gap-[8px] items-center underline text-[14px] sm:text-[16px]"
+                          className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
                           href={`/${currentLanguage}`}
                         >
                           <Image
@@ -156,7 +158,7 @@ const Project = () => {
                         <div className="grid gap-[12px]">
                           <h1
                             id="projectHeadingText"
-                            className="text-[26px] font-bold"
+                            className="text-[1.625rem] font-bold"
                           >
                             {project.name}
                           </h1>
@@ -236,7 +238,7 @@ const Project = () => {
                       />
 
                       <div className="grid gap-[12px]">
-                        <h2 className="text-[22px] font-bold">
+                        <h2 className="text-[1.375rem] font-bold">
                           {t("resumePageProjectHeadingText2")}
                         </h2>
 
@@ -247,7 +249,7 @@ const Project = () => {
                                 key={itemIndex}
                                 className="h-fit grid gap-[8px]"
                               >
-                                <h3 className="font-bold text-[20px]">
+                                <h3 className="font-bold text-[1.25rem]">
                                   {itemIndex + 1}. {mapItem.name}
                                 </h3>
 
@@ -265,7 +267,7 @@ const Project = () => {
 
                       <div className="grid gap-[16px]">
                         <div className="grid gap-[12px]">
-                          <h2 className="text-[22px] font-bold">
+                          <h2 className="text-[1.375rem] font-bold">
                             {t("projectsPageText4")}
                           </h2>
 
@@ -278,7 +280,7 @@ const Project = () => {
                               key={itemIndex}
                               className="h-fit grid gap-[8px]"
                             >
-                              <h3 className="text-[20px] font-bold">
+                              <h3 className="text-[1.25rem] font-bold">
                                 {itemIndex + 1}. {mapItem.challengeTitle}:
                               </h3>
 
@@ -302,7 +304,7 @@ const Project = () => {
 
                       <div className="grid gap-[16px]">
                         <div className="grid gap-[12px]">
-                          <h2 className="text-[22px] font-bold">
+                          <h2 className="text-[1.375rem] font-bold">
                             {t("projectsPageText5")}
                           </h2>
 
@@ -316,7 +318,7 @@ const Project = () => {
                                 key={itemIndex}
                                 className="h-fit grid gap-[8px]"
                               >
-                                <h3 className="font-bold text-[20px]">
+                                <h3 className="font-bold text-[1.25rem]">
                                   {itemIndex + 1}. {mapItem.featureHeading}
                                 </h3>
 
@@ -336,7 +338,7 @@ const Project = () => {
 
                       <div className="grid gap-[16px]">
                         <div className="grid gap-[12px]">
-                          <h2 className="text-[22px] font-bold">
+                          <h2 className="text-[1.375rem] font-bold">
                             {t("projectsPageText7")}
                           </h2>
                         </div>

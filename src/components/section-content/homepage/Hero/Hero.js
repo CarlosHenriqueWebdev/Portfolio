@@ -58,7 +58,7 @@ const Hero = () => {
                 {t("heroText1")}
               </span>
 
-              <div className="font-bold text-[24px] sm:text-[28px]">
+              <div className="font-bold text-[1.5rem] sm:text-[1.75rem]">
                 <motion.div aria-hidden="true">
                   {currentLanguage === "en" ? (
                     <TextAnimationHeadingEnglish text={animatedTextEnglish} />
@@ -80,7 +80,7 @@ const Hero = () => {
                 )}
               </div>
 
-              <p className=" text-[20px] text-royalPurpleText font-bold">
+              <p className=" text-[1.25rem] text-royalPurpleText font-bold">
                 {t("heroText2")}
               </p>
 
@@ -98,7 +98,7 @@ const Hero = () => {
               <div aria-hidden="true" className="w-fit h-fit relative">
                 <motion.button whileTap={{ scale: 0.95 }} tabIndex="-1">
                   <ScrollLink
-                    className="cursor-pointer sm:text-[20px] font-bold flex items-start sm:items-center gap-[8px] mt-[8px]"
+                    className="cursor-pointer sm:text-[1.25rem] font-bold flex items-start sm:items-center gap-[8px] mt-[8px]"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     to={"contactSection"} // Use 'to' instead of 'href'

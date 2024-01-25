@@ -76,7 +76,7 @@ const LanguageDropdown = () => {
   return (
     <div
       ref={dropdownRef}
-      className={`${linkStyle} text-[16px] block !w-fit relative`}
+      className={`${linkStyle} text-[1rem] block !w-fit relative`}
       onMouseEnter={() => setIsDropdownOpenHover(true)}
       onMouseLeave={() => setIsDropdownOpenHover(false)}
     >

@@ -20,7 +20,7 @@ const About = () => {
   return (
     <div className="overflow-hidden bg-[url('/square-pattern.png')]">
       <div
-        className="w-full h-full pt-[72px] pb-[48px] px-[24px] lg:px-[48px]"
+        className="w-full h-full py-[72px] px-[24px] lg:px-[48px]"
         style={{
           backgroundColor: `rgba(0, 0, 0, 0.17)`,
         }}
@@ -29,16 +29,16 @@ const About = () => {
           <div>
             <h2
               id="aboutHeadingText"
-              className="text-center font-bold text-[26px] mb-[32px]"
+              className="text-center font-bold text-[1.625rem] mb-[32px]"
             >
               {t("aboutText1")}
             </h2>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-[32px] lg:gap-[24px]">
+        <div className="grid md:grid-cols-2 gap-[32px]">
           <div className="sm:text-center md:text-start">
-            <div className="mb-[16px] font-bold text-[24px]  text-cornflowerBlueText">
+            <div className="mb-[16px] font-bold text-[1.5rem]  text-cornflowerBlueText">
               <h3 className="visually-hidden">{t("aboutText2")}</h3>
 
               <motion.div aria-hidden="true">

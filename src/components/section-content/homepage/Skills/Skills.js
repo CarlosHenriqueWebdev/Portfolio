@@ -63,7 +63,7 @@ const Skills = () => {
             <div>
               <h2
                 id="skillsHeadingText"
-                className="text-[white] text-[24px] font-bold "
+                className="text-[white] text-[1.5rem] font-bold "
               >
                 {selectedSkill ? selectedSkill.name : t("skillsText1")}
               </h2>

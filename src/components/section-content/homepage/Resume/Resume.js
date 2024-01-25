@@ -29,11 +29,14 @@ const Resume = () => {
           <div className="relative p-[24px] md:p-[48px] rounded-[12px] overflow-hidden border-solid border-cornflowerBlue border-[6px]">
             <div className="relative z-50">
               <div>
-                <h2 id="resumeHeadingText" className="font-bold text-[26px]">
+                <h2
+                  id="resumeHeadingText"
+                  className="font-bold text-[1.625rem]"
+                >
                   {t("resumeText1")}
                 </h2>
 
-                <h3 className="font-bold text-[22px]  text-cornflowerBlueText mt-[12px]">
+                <h3 className="font-bold text-[1.375rem]  text-cornflowerBlueText mt-[12px]">
                   {t("resumeText2")}
                 </h3>
               </div>
