@@ -121,8 +121,7 @@ const Contact = () => {
 
               <div className="mt-[32px]">
                 <h3 className="visually-hidden">
-                  Contact Form below, provide your Name, your Email, and your
-                  Message.
+                  {t("accessibilityText11")}
                 </h3>
 
                 <Form

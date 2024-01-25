@@ -22,6 +22,7 @@ const Form = ({ setDidFormSubmit }) => {
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setSubmitting] = useState(false);
+  const [hasErrorOnSubmit, setHasErrorOnSubmit] = useState(false);
 
   const [isShaking, setShaking] = useState(false);
   const buttonClassIsShaking = `btn ${isShaking ? "shake" : ""}`;
@@ -35,6 +36,7 @@ const Form = ({ setDidFormSubmit }) => {
     }
 
     // Start the submission process
+    setHasErrorOnSubmit(false);
     setSubmitting(true);
 
     const errors = validateForm(formData);
@@ -43,14 +45,14 @@ const Form = ({ setDidFormSubmit }) => {
     if (Object.keys(errors).length === 0) {
       try {
         await emailjs.send(
-          process.env.EMAILJS_SERVICE_ID,
-          process.env.EMAILJS_TEMPLATE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
           {
             from_name: formData.Name,
             to_email: formData.Email,
             message: formData.Message,
           },
-          process.env.EMAILJS_USER_ID
+          process.env.NEXT_PUBLIC_EMAILJS_USER_ID
         );
 
         // After successful submission, clear the form data
@@ -66,6 +68,8 @@ const Form = ({ setDidFormSubmit }) => {
 
         window.scrollTo({ top: elementAndOffset, behavior: "smooth" });
       } catch (error) {
+        setHasErrorOnSubmit(true);
+
         console.log("unexpected error while sending email:", error.message);
       } finally {
         setSubmitting(false);
@@ -114,7 +118,10 @@ const Form = ({ setDidFormSubmit }) => {
   };
 
   const formFieldsHasError =
-    formErrors.Name || formErrors.Email || formErrors.Message;
+    formErrors.Name ||
+    formErrors.Email ||
+    formErrors.Message ||
+    hasErrorOnSubmit;
 
   const inputClassName =
     "bg-[black] w-full rounded-[4px] py-[8px] px-[12px] border-solid border-[2px] border-cornflowerBlue focus:border-[#00a1ff] focus:outline-none focus:transition-none focus:static focus:z-0 !text-[white]";
@@ -250,6 +257,15 @@ const Form = ({ setDidFormSubmit }) => {
           />
         </button>
       </div>
+      {hasErrorOnSubmit && (
+        <p
+          role="alert"
+          aria-live="assertive"
+          className="text-crimsonRed mt-[12px] font-bold"
+        >
+          {t("accessibilityText12")}
+        </p>
+      )}
     </form>
   );
 };
