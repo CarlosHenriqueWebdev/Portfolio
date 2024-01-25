@@ -43,14 +43,14 @@ const Form = ({ setDidFormSubmit }) => {
     if (Object.keys(errors).length === 0) {
       try {
         await emailjs.send(
-          "service_uick65u",
-          "template_lngfq3x",
+          process.env.EMAILJS_SERVICE_ID,
+          process.env.EMAILJS_TEMPLATE_ID,
           {
             from_name: formData.Name,
             to_email: formData.Email,
             message: formData.Message,
           },
-          "BamDFrE-1b3vTZfHb"
+          process.env.EMAILJS_USER_ID
         );
 
         // After successful submission, clear the form data
