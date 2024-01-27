@@ -8,6 +8,7 @@ import useLanguageChange from "@/hooks/useLanguageChange";
 import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import dynamic from "next/dynamic";
 import React from "react";
+import { useRouter } from "next/router";
 
 const blackLoadingScreen = () => <div className="bg-[black] !h-[100vh]"></div>;
 
@@ -78,6 +79,11 @@ const Contact = dynamic(
 const Home = () => {
   const [activeSection, setActiveSection] = useState("homeSection");
 
+  const router = useRouter();
+
+  const isLanguageEnglishUrl = router.asPath === "/en";
+  const isLanguagePortugueseUrl = router.asPath === "/pt";
+
   function getActiveSection() {
     if (typeof window === "undefined") {
       return null; // Return null during server-side rendering
@@ -123,39 +129,55 @@ const Home = () => {
     };
   }, [activeSection]);
 
-  const { isLanguageLoading, whichLanguageIsIt } = useLanguageChange();
+  const { isLanguageLoading } = useLanguageChange();
 
   return (
     <div className="bg-[black]">
       <Head>
-        <title>
-          {isLanguageLoading
-            ? "Loading..."
-            : whichLanguageIsIt === "en"
-            ? "Web Developer Portfolio | Explore My Projects and Skills"
-            : whichLanguageIsIt === "pt"
-            ? "Portfolio de Desenvolvedor Web | Explore Meus Projetos e Habilidades"
-            : ""}
-        </title>
+        {isLanguageLoading && (
+          <>
+            <title>Loading...</title>
+          </>
+        )}
 
-        <meta
-          name="description"
-          content={
-            isLanguageLoading
-              ? ""
-              : whichLanguageIsIt === "en"
-              ? "Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
-              : whichLanguageIsIt === "pt"
-              ? "Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end."
-              : ""
-          }
-        />
+        {isLanguageEnglishUrl && (
+          <>
+            <html lang="en" />
+
+            <title>
+              Web Developer Portfolio | Explore My Projects and Skills
+            </title>
+
+            <meta
+              name="description"
+              content="Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
+            />
+          </>
+        )}
+
+        {isLanguagePortugueseUrl && (
+          <>
+            <html lang="pt" />
+
+            <title>
+              Portfolio de Desenvolvedor Web | Explore Meus Projetos e
+              Habilidades
+            </title>
+
+            <meta
+              name="description"
+              content="Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end."
+            />
+          </>
+        )}
 
         <link
           rel="alternate"
-          hrefLang={whichLanguageIsIt}
-          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}`}
+          hrefLang="x-default"
+          href="http://localhost:3000/en"
         />
+        <link rel="alternate" hrefLang="en" href="http://localhost:3000/en" />
+        <link rel="alternate" hrefLang="pt" href="http://localhost:3000/pt" />
       </Head>
 
       {!isLanguageLoading ? (

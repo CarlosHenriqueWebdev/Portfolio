@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import Home from "./[lang]";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -12,6 +12,8 @@ const IndexRedirect = () => {
   return (
     <div>
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
+
         <title>Redirecting...</title>
       </Head>
 
