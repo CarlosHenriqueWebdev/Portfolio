@@ -134,6 +134,8 @@ const Home = () => {
   return (
     <div className="bg-[black]">
       <Head>
+        <link rel="icon" href="/favicon.ico" />
+
         {isLanguageLoading && (
           <>
             <title>Loading...</title>
@@ -176,8 +178,16 @@ const Home = () => {
           hrefLang="x-default"
           href="https://www.carloshenriquedev.com/en"
         />
-        <link rel="alternate" hrefLang="en" href="https://www.carloshenriquedev.com/en" />
-        <link rel="alternate" hrefLang="pt" href="https://www.carloshenriquedev.com/pt" />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://www.carloshenriquedev.com/en"
+        />
+        <link
+          rel="alternate"
+          hrefLang="pt"
+          href="https://www.carloshenriquedev.com/pt"
+        />
       </Head>
 
       {!isLanguageLoading ? (

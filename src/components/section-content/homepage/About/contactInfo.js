@@ -26,8 +26,8 @@ export const contactInfo = [
     isForContact: true,
   },
   {
-    name: "+993594837261",
-    url: "https://wa.me/+993594837261",
+    name: "+5535998589234",
+    url: "https://wa.me/+5535998589234",
     imageSrc: "/assets/whatsapp-amethyst.svg",
     whiteImageSrc: "/assets/white-icons/whatsapp-white.svg",
     display: true,
@@ -44,8 +44,6 @@ export const contactInfo = [
   {
     name: "Minas Gerais, Itájuba",
     url: "https://www.google.com/maps/place/Itajub%C3%A1,+MG/@-22.4329106,-45.4590676,14z/data=!3m1!4b1!4m6!3m5!1s0x94cb638240ee9d05:0x9c782630346ca79d!8m2!3d-22.4247429!4d-45.4601323!16s%2Fg%2F11bxfwt6wr?entry=ttu",
-    addressLine1: "XXX",
-    addressLine2: "XXX",
     whiteImageSrc: "/assets/white-icons/address-white.svg",
     display: false,
     isForContact: true,
