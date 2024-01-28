@@ -174,10 +174,10 @@ const Home = () => {
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="http://localhost:3000/en"
+          href="https://www.carloshenriquedev.com/en"
         />
-        <link rel="alternate" hrefLang="en" href="http://localhost:3000/en" />
-        <link rel="alternate" hrefLang="pt" href="http://localhost:3000/pt" />
+        <link rel="alternate" hrefLang="en" href="https://www.carloshenriquedev.com/en" />
+        <link rel="alternate" hrefLang="pt" href="https://www.carloshenriquedev.com/pt" />
       </Head>
 
       {!isLanguageLoading ? (
