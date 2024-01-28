@@ -12,13 +12,6 @@ const useLanguageChange = () => {
 
   useEffect(() => {
     try {
-      const getSavedLanguage = () => {
-        const savedLanguage = localStorage.getItem("language") || "en";
-        i18n.changeLanguage(savedLanguage);
-        setCurrentLanguage(savedLanguage);
-        return savedLanguage;
-      };
-
       const currentSavedLanguage = localStorage.getItem("language");
 
       setWhichLanguageIsIt(currentSavedLanguage);
@@ -26,24 +19,31 @@ const useLanguageChange = () => {
       // Check if the current route is the homepage
       const isHomepageRedirect = router.pathname === "/";
 
-      const isHomepageLanguage = router.pathname === "/[lang]";
-
-      const isResumeRedirect = router.pathname === "/resume";
-
-      const isResumeLanguage = router.pathname === "/resume/[lang]";
-
-      const isProjectsLanguage = router.pathname === "/[lang]/projects/[slug]";
-
-      if (isHomepageRedirect || isHomepageLanguage) {
-        const savedLanguage = getSavedLanguage();
+      if (isHomepageRedirect) {
+        const savedLanguage = localStorage.getItem("language") || "en";
+        i18n.changeLanguage(savedLanguage);
+        setCurrentLanguage(savedLanguage);
 
         router.push(`/${savedLanguage}`);
-      } else if (isResumeRedirect || isResumeLanguage) {
-        const savedLanguage = getSavedLanguage();
+      }
 
-        router.push(`/${savedLanguage}/resume`);
-      } else if (isProjectsLanguage) {
-        getSavedLanguage();
+      // const isResumeRedirect = router.pathname === "/resume";
+
+      // const isResumeLanguage = router.pathname === "/resume/[lang]";
+
+      // const isProjectsLanguage = router.pathname === "/[lang]/projects/[slug]";
+
+      const isLanguageEnglishUrl = router.asPath === "/en";
+      const isLanguagePortugueseUrl = router.asPath === "/pt";
+
+      if (isLanguageEnglishUrl) {
+        i18n.changeLanguage("en");
+
+        localStorage.setItem("language", "en");
+      } else if (isLanguagePortugueseUrl) {
+        i18n.changeLanguage("pt");
+
+        localStorage.setItem("language", "pt");
       }
     } catch (error) {
       console.error("An error occurred:", error);
@@ -59,19 +59,19 @@ const useLanguageChange = () => {
     setIsLanguageLoading(true);
 
     try {
-      localStorage.setItem("language", lng);
-
-      const currentPath = router.asPath;
-      const newPath = currentPath.replace(/\/[a-z]{2}\//, `/${lng}/`);
-
       // Replace the current route with the new language parameter
-      window.location.href = newPath;
+      window.location.href = `/${lng}`;
     } catch (error) {
       console.error("An error occurred:", error);
     }
   };
 
-  return { changeLanguage, isLanguageLoading, currentLanguage, whichLanguageIsIt };
+  return {
+    changeLanguage,
+    isLanguageLoading,
+    currentLanguage,
+    whichLanguageIsIt,
+  };
 };
 
 export default useLanguageChange;
