@@ -4,16 +4,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
+import useLanguageChange from "@/hooks/useLanguageChange";
 
 const Resume = () => {
   const { t } = useTranslation();
 
-  const router = useRouter()
+  const { whichLanguageIsIt } = useLanguageChange();
+
+  const router = useRouter();
 
   const handleDownloadClick = () => {
     const link = document.createElement("a");
-    link.href = "/english-resume-pdf";
-    link.download = "/english-resume-pdf";
+
+    link.href = `${
+      whichLanguageIsIt === "en"
+        ? "/assets/downloads/english-resume.pdf"
+        : whichLanguageIsIt === "pt"
+        ? "/assets/downloads/portuguese-resume.pdf"
+        : "/assets/downloads/english-resume.pdf"
+    }`;
+    link.download = `${
+      whichLanguageIsIt === "en"
+        ? "english-resume"
+        : whichLanguageIsIt === "pt"
+        ? "resumo-portugues"
+        : "english-resume"
+    }`;
     link.click();
   };
 
@@ -43,7 +59,13 @@ const Resume = () => {
 
               <div className=" mt-[24px] gap-[16px] grid md:flex items-center sm:max-w-[400px] mx-auto">
                 <Link
-                  href={`${router.asPath === "/en" ? "/en/resume" : router.asPath === "/pt" ? "/pt/resume" : "/resume"}`}
+                  href={`${
+                    router.asPath === "/en"
+                      ? "/en/resume"
+                      : router.asPath === "/pt"
+                      ? "/pt/resume"
+                      : "/resume"
+                  }`}
                   className={`${buttonClassName} rounded-[4px] w-full justify-center flex gap-[8px] items-center`}
                 >
                   {t("resumeText3")}

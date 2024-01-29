@@ -239,7 +239,7 @@ const Home = () => {
           </div>
 
           <div
-            className={`border-t-[6px] border-cornflowerBlue border-solid bg-cover bg-fixed  bg-[black] w-full bg-no-repeat bg-center bg-[url(/assets/about-illustration5.png)]`}
+            className={`border-t-[6px] border-cornflowerBlue border-solid bg-cover bg-fixed  bg-[black] w-full bg-no-repeat bg-center bg-[url(/assets/divider-illustration.png)]`}
           >
             <div
               className="h-[50vh] uppercase w-full flex justify-center items-center text-[1.625rem] font-bold"
