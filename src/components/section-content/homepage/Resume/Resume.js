@@ -3,12 +3,12 @@ import { buttonClassName } from "@/components/utils/buttonStyle";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import useLanguageChange from "@/hooks/useLanguageChange";
+import { useRouter } from "next/router";
 
 const Resume = () => {
   const { t } = useTranslation();
 
-  const { currentLanguage } = useLanguageChange();
+  const router = useRouter()
 
   const handleDownloadClick = () => {
     const link = document.createElement("a");
@@ -43,7 +43,7 @@ const Resume = () => {
 
               <div className=" mt-[24px] gap-[16px] grid md:flex items-center sm:max-w-[400px] mx-auto">
                 <Link
-                  href={`/${currentLanguage}/resume`}
+                  href={`${router.asPath === "/en" ? "/en/resume" : router.asPath === "/pt" ? "/pt/resume" : "/resume"}`}
                   className={`${buttonClassName} rounded-[4px] w-full justify-center flex gap-[8px] items-center`}
                 >
                   {t("resumeText3")}

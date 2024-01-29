@@ -3,12 +3,12 @@ import Image from "next/image";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import Link from "next/link";
 import { Trans, useTranslation } from "react-i18next";
-import useLanguageChange from "@/hooks/useLanguageChange";
+import { useRouter } from "next/router";
 
 const Projects = () => {
   const { t } = useTranslation();
 
-  const { currentLanguage } = useLanguageChange();
+  const router = useRouter();
 
   const [selectedProject, setSelectedProject] = useState(0);
 
@@ -190,7 +190,13 @@ const Projects = () => {
                             tabIndex={
                               selectedProject === itemIndex ? "0" : "-1"
                             }
-                            href={`/${currentLanguage}/projects/${mapItem.slug}`}
+                            href={`${
+                              router.asPath === "/en"
+                                ? `/en/projects/${mapItem.slug}`
+                                : router.asPath === "/pt"
+                                ? `/pt/projects/${mapItem.slug}`
+                                : `/en/projects/${mapItem.slug}`
+                            }`}
                             className={`${buttonClassName} rounded-[3%] !px-[32px] !w-fit flex gap-[8px] items-center !border-royalPurple before:!bg-royalPurple`}
                           >
                             {t("projectsText6")}

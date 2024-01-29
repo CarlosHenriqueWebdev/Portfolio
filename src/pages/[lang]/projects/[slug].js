@@ -15,8 +15,7 @@ import Head from "next/head";
 const Project = () => {
   const { t } = useTranslation();
 
-  const { currentLanguage, isLanguageLoading, whichLanguageIsIt } =
-    useLanguageChange();
+  const { isLanguageLoading, whichLanguageIsIt } = useLanguageChange();
 
   const router = useRouter();
   const { slug } = router.query;
@@ -122,7 +121,7 @@ const Project = () => {
                       <div>
                         <Link
                           className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
-                          href={`/${currentLanguage}`}
+                          href={`/${whichLanguageIsIt}`}
                         >
                           <Image
                             aria-hidden={true}

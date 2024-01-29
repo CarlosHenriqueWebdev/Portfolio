@@ -145,6 +145,7 @@ const Home = () => {
         {isLanguageEnglishUrl && (
           <>
             <html lang="en" />
+            <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
 
             <title>
               Web Developer Portfolio | Explore My Projects and Skills
@@ -160,6 +161,7 @@ const Home = () => {
         {isLanguagePortugueseUrl && (
           <>
             <html lang="pt" />
+            <link rel="canonical" href="https://www.carloshenriquedev.com/pt" />
 
             <title>
               Portfolio de Desenvolvedor Web | Explore Meus Projetos e

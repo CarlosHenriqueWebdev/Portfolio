@@ -9,9 +9,12 @@ import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import useLanguageChange from "@/hooks/useLanguageChange";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Resume = () => {
   const { t } = useTranslation();
+
+  const router = useRouter();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -27,7 +30,7 @@ const Resume = () => {
     }
   }, [isDropdownOpen]);
 
-  const { isLanguageLoading, currentLanguage, whichLanguageIsIt } =
+  const { isLanguageLoading, whichLanguageIsIt } =
     useLanguageChange();
 
   const handleClick = () => {
@@ -93,7 +96,13 @@ const Resume = () => {
                   <div>
                     <Link
                       className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
-                      href={`/${currentLanguage}`}
+                      href={`${
+                        router.asPath === "/en/resume"
+                          ? "/en"
+                          : router.asPath === "/pt/resume"
+                          ? "/pt"
+                          : "/"
+                      }`}
                     >
                       <Image
                         aria-hidden={true}

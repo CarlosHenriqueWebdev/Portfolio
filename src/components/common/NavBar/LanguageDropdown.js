@@ -8,24 +8,14 @@ import { useTranslation } from "react-i18next";
 const LanguageDropdown = () => {
   const { t } = useTranslation();
 
-  const { changeLanguage } = useLanguageChange();
+  const { changeLanguage, whichLanguageIsIt } = useLanguageChange();
 
   const options = ["en", "pt"];
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpenHover, setIsDropdownOpenHover] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState(false);
 
   const dropdownRef = useRef();
   const router = useRouter();
-
-  useEffect(() => {
-    const newLanguage = localStorage.getItem("language");
-    if (newLanguage) {
-      setCurrentLanguage(newLanguage);
-    } else {
-      setCurrentLanguage("en");
-    }
-  }, []);
 
   const handleOptionChange = () => {
     setIsDropdownOpenHover(false);
@@ -42,13 +32,6 @@ const LanguageDropdown = () => {
   }, []); // Empty dependency array as it doesn't depend on any external variables
 
   useEffect(() => {
-    const newLanguage = localStorage.getItem("language");
-    if (newLanguage) {
-      setCurrentLanguage(newLanguage);
-    } else {
-      setCurrentLanguage("en");
-    }
-
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         closeDropdown();
@@ -92,16 +75,16 @@ const LanguageDropdown = () => {
           aria-hidden={true}
           className="w-[20px]"
           src={`${
-            currentLanguage === "en"
+            whichLanguageIsIt === "en"
               ? "/assets/american-flag-real.svg"
               : "/assets/brazil-flag-real.svg"
           }`}
-          alt={currentLanguage === "en" ? t("altText3") : t("altText2")}
+          alt={whichLanguageIsIt === "en" ? t("altText3") : t("altText2")}
           width={0}
           height={0}
           unoptimized
         />
-        {currentLanguage === "en" ? "English" : "Portugues"}
+        {whichLanguageIsIt === "en" ? "English" : "Portugues"}
         <Image
           aria-hidden={true}
           className="w-[12px]"
@@ -141,11 +124,11 @@ const LanguageDropdown = () => {
                 role="button"
                 tabIndex="0"
                 className={`w-full bg-midnightBlack px-[12px] py-[8px] cursor-pointer flex gap-[8px] items-center hover:bg-[black] hover:text-[white] ${
-                  currentLanguage === "en" && option === "en"
+                  whichLanguageIsIt === "en" && option === "en"
                     ? "bg-cornflowerBlue !text-[white]"
                     : "text-white75"
                 } ${
-                  currentLanguage === "pt" && option === "pt"
+                  whichLanguageIsIt === "pt" && option === "pt"
                     ? "bg-cornflowerBlue !text-[white]"
                     : "text-white75"
                 }`}
@@ -165,7 +148,7 @@ const LanguageDropdown = () => {
                         : "/assets/brazil-flag-real.svg"
                     }`}
                     alt={
-                      currentLanguage === "en" ? t("altText3") : t("altText2")
+                      whichLanguageIsIt === "en" ? t("altText3") : t("altText2")
                     }
                     width={0}
                     height={0}

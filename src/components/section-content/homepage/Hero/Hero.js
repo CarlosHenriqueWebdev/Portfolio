@@ -16,7 +16,7 @@ import { buttonClassName } from "@/components/utils/buttonStyle";
 const Hero = () => {
   const { t } = useTranslation();
 
-  const { currentLanguage } = useLanguageChange();
+  const { whichLanguageIsIt } = useLanguageChange();
 
   const [sparkleIsHovered, setsparkleIsHovered] = useState(false);
 
@@ -60,7 +60,7 @@ const Hero = () => {
 
               <div className="font-bold text-[1.5rem] sm:text-[1.75rem]">
                 <motion.div aria-hidden="true">
-                  {currentLanguage === "en" ? (
+                  {whichLanguageIsIt === "en" ? (
                     <TextAnimationHeadingEnglish text={animatedTextEnglish} />
                   ) : (
                     <TextAnimationHeadingPortuguese
@@ -69,7 +69,7 @@ const Hero = () => {
                   )}
                 </motion.div>
 
-                {currentLanguage === "en" ? (
+                {whichLanguageIsIt === "en" ? (
                   <h1 id="homeHeadingText" className="visually-hidden">
                     {animatedTextEnglish}
                   </h1>

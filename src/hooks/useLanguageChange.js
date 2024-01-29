@@ -5,62 +5,77 @@ import { useTranslation } from "react-i18next";
 
 const useLanguageChange = () => {
   const [isLanguageLoading, setIsLanguageLoading] = useState(true);
-  const [currentLanguage, setCurrentLanguage] = useState(false);
+  const [isLanguageReady, setIsLanguageReady] = useState(null);
   const [whichLanguageIsIt, setWhichLanguageIsIt] = useState("");
   const router = useRouter();
   const { i18n } = useTranslation();
 
+  const checkingPath =
+    router.asPath !== "/[lang]" &&
+    router.asPath !== "/en" &&
+    router.asPath !== "/pt" &&
+    router.asPath !== "/[lang]/resume" &&
+    router.asPath !== "/en/resume" &&
+    router.asPath !== "/pt/resume" &&
+    router.asPath !== "/en/projects/doggy-daycare" &&
+    router.asPath !== "/pt/projects/doggy-daycare" &&
+    router.asPath !== "/[lang]/projects/[slug]";
+
+  const isLanguageEnglishUrl =
+    router.asPath === "/en" || router.asPath === "/en/resume";
+  const isLanguagePortugueseUrl =
+    router.asPath === "/pt" || router.asPath === "/pt/resume";
+
   useEffect(() => {
-    try {
-      const currentSavedLanguage = localStorage.getItem("language");
-
-      setWhichLanguageIsIt(currentSavedLanguage);
-
-      // Check if the current route is the homepage
-      const isHomepageRedirect = router.pathname === "/";
-
-      if (isHomepageRedirect) {
-        const savedLanguage = localStorage.getItem("language") || "en";
-        i18n.changeLanguage(savedLanguage);
-        setCurrentLanguage(savedLanguage);
-
-        router.push(`/${savedLanguage}`);
-      }
-
-      // const isResumeRedirect = router.pathname === "/resume";
-
-      // const isResumeLanguage = router.pathname === "/resume/[lang]";
-
-      // const isProjectsLanguage = router.pathname === "/[lang]/projects/[slug]";
-
-      const isLanguageEnglishUrl = router.asPath === "/en";
-      const isLanguagePortugueseUrl = router.asPath === "/pt";
-
-      if (isLanguageEnglishUrl) {
-        i18n.changeLanguage("en");
-
-        localStorage.setItem("language", "en");
-      } else if (isLanguagePortugueseUrl) {
-        i18n.changeLanguage("pt");
-
-        localStorage.setItem("language", "pt");
-      }
-    } catch (error) {
-      console.error("An error occurred:", error);
-    } finally {
-      setTimeout(() => {
-        setIsLanguageLoading(false);
-      }, 2000);
+    if (isLanguagePortugueseUrl) {
+      i18n.changeLanguage("pt");
+      localStorage.setItem("language", "pt");
+    } else if (isLanguageEnglishUrl) {
+      i18n.changeLanguage("en");
+      localStorage.setItem("language", "en");
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Run only on mount
+
+    const currentSavedLanguage = localStorage.getItem("language") || "en";
+
+    setWhichLanguageIsIt(currentSavedLanguage);
+
+    if (checkingPath) {
+      setIsLanguageReady(checkingPath);
+    }
+
+    if (isLanguageReady) {
+      router.push(`/${currentSavedLanguage}`);
+    }
+
+    setTimeout(() => {
+      setIsLanguageLoading(false);
+    }, 2000);
+  }, [
+    checkingPath,
+    isLanguageReady,
+    router,
+    i18n,
+    isLanguagePortugueseUrl,
+    isLanguageEnglishUrl,
+  ]);
 
   const changeLanguage = (lng) => {
     setIsLanguageLoading(true);
 
+    const isHomepage = router.asPath === "/en" || router.asPath === "/pt";
+
     try {
-      // Replace the current route with the new language parameter
-      window.location.href = `/${lng}`;
+      if (!isHomepage) {
+        localStorage.setItem("language", lng);
+        const currentPath = window.location.pathname;
+        const newPath = currentPath.replace(/\/(en|pt)\//, `/${lng}/`);
+
+        // Redirect to the new path
+        window.location.href = newPath;
+      } else {
+        localStorage.setItem("language", lng);
+        window.location.href = `/${lng}`;
+      }
     } catch (error) {
       console.error("An error occurred:", error);
     }
@@ -69,7 +84,7 @@ const useLanguageChange = () => {
   return {
     changeLanguage,
     isLanguageLoading,
-    currentLanguage,
+    isLanguageReady,
     whichLanguageIsIt,
   };
 };
