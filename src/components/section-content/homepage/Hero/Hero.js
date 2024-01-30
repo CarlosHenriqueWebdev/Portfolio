@@ -52,7 +52,7 @@ const Hero = () => {
             backgroundColor: `rgba(0, 0, 0, 0.6)`,
           }}
         >
-          <div className="px-[24px] lg:px-[48px] py-[72px]">
+          <div className="px-[24px] lg:px-[48px] py-[72px] xl:max-w-[1280px] xl:mx-auto">
             <div className="grid gap-[8px]">
               <span aria-hidden="true" className=" text-white85">
                 {t("heroText1")}

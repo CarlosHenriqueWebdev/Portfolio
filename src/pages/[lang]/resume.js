@@ -30,8 +30,7 @@ const Resume = () => {
     }
   }, [isDropdownOpen]);
 
-  const { isLanguageLoading, whichLanguageIsIt } =
-    useLanguageChange();
+  const { isLanguageLoading, whichLanguageIsIt } = useLanguageChange();
 
   const handleClick = () => {
     const targetElement = document.getElementById("resumeHeadingText");
@@ -86,39 +85,41 @@ const Resume = () => {
       {!isLanguageLoading ? (
         <>
           <div className="cursor-auto bg-[white] overflow-hidden">
-            <nav className="text-[white]">
-              <button className="skip-to-content" onClick={handleClick}>
-                {t("accessibilityText1")}
-              </button>
+            <nav className="text-[white] bg-[#002b5c] w-full">
+              <div className="xl:max-w-[1280px] xl:mx-auto">
+                <button className="skip-to-content" onClick={handleClick}>
+                  {t("accessibilityText1")}
+                </button>
 
-              <div className="px-[24px] py-[8px] lg:px-[48px] bg-[#002b5c] w-full flex lg:justify-center items-center">
-                <div className="w-full flex gap-[24px] items-center justify-between">
-                  <div>
-                    <Link
-                      className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
-                      href={`${
-                        router.asPath === "/en/resume"
-                          ? "/en"
-                          : router.asPath === "/pt/resume"
-                          ? "/pt"
-                          : "/"
-                      }`}
-                    >
-                      <Image
-                        aria-hidden={true}
-                        className="w-[20px] h-[20px]"
-                        src="/assets/left-arrow-icon.svg"
-                        alt="Estrela Icone"
-                        width={0}
-                        height={0}
-                        unoptimized
-                      />
-                      {t("resumePageText2")}
-                    </Link>
-                  </div>
+                <div className="px-[24px] py-[8px] lg:px-[48px]  flex lg:justify-center items-center">
+                  <div className="w-full flex gap-[24px] items-center justify-between">
+                    <div>
+                      <Link
+                        className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
+                        href={`${
+                          router.asPath === "/en/resume"
+                            ? "/en"
+                            : router.asPath === "/pt/resume"
+                            ? "/pt"
+                            : "/"
+                        }`}
+                      >
+                        <Image
+                          aria-hidden={true}
+                          className="w-[20px] h-[20px]"
+                          src="/assets/left-arrow-icon.svg"
+                          alt="Estrela Icone"
+                          width={0}
+                          height={0}
+                          unoptimized
+                        />
+                        {t("resumePageText2")}
+                      </Link>
+                    </div>
 
-                  <div className="order-1">
-                    <LanguageDropdown />
+                    <div className="order-1">
+                      <LanguageDropdown />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -206,7 +207,7 @@ const Resume = () => {
               </div>
             </div>
 
-            <div className="text-[black] grid gap-[16px] px-[24px] lg:px-[48px] py-[48px]">
+            <div className="text-[black] grid gap-[16px] px-[24px] lg:px-[48px] py-[48px] xl:max-w-[1280px] xl:mx-auto">
               <div className="grid gap-[16px]">
                 <div className="relative w-fit">
                   <h2 className="text-[1.5rem] uppercase font-bold w-fit">

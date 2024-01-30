@@ -33,7 +33,7 @@ const Projects = () => {
   return (
     <div className="overflow-hidden border-y-[6px] border-solid border-cornflowerBlue">
       <div
-        className="w-full h-full py-[72px]"
+        className="w-full h-full py-[72px] xl:max-w-[1280px] xl:mx-auto"
         style={{
           backgroundColor: `rgba(0, 0, 0, 0)`,
         }}

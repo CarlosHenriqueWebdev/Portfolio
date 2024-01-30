@@ -20,7 +20,7 @@ const About = () => {
   return (
     <div className="overflow-hidden bg-[url('/square-pattern.png')]">
       <div
-        className="w-full h-full py-[72px] px-[24px] lg:px-[48px]"
+        className="w-full h-full py-[72px] px-[24px] lg:px-[48px] xl:max-w-[1280px] xl:mx-auto"
         style={{
           backgroundColor: `rgba(0, 0, 0, 0.17)`,
         }}

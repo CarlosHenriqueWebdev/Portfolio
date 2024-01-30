@@ -112,32 +112,34 @@ const Project = () => {
                 <ScrollToTopButton />
 
                 <nav className="text-[white] border-solid border-b-[6px] border-cornflowerBlue">
-                  <button className="skip-to-content" onClick={handleClick}>
-                    {t("accessibilityText1")}
-                  </button>
+                  <div className="xl:max-w-[1280px] xl:mx-auto">
+                    <button className="skip-to-content" onClick={handleClick}>
+                      {t("accessibilityText1")}
+                    </button>
 
-                  <div className="px-[24px] py-[8px] lg:px-[48px] bg-[black] w-full flex lg:justify-center items-center">
-                    <div className="w-full flex gap-[24px] items-center justify-between">
-                      <div>
-                        <Link
-                          className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
-                          href={`/${whichLanguageIsIt}`}
-                        >
-                          <Image
-                            aria-hidden={true}
-                            className="w-[20px] h-[20px]"
-                            src="/assets/left-arrow-icon.svg"
-                            alt={t("altText11")}
-                            width={0}
-                            height={0}
-                            unoptimized
-                          />
-                          {t("resumePageText2")}
-                        </Link>
-                      </div>
+                    <div className="px-[24px] py-[8px] lg:px-[48px] bg-[black] w-full flex lg:justify-center items-center">
+                      <div className="w-full flex gap-[24px] items-center justify-between">
+                        <div>
+                          <Link
+                            className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
+                            href={`/${whichLanguageIsIt}`}
+                          >
+                            <Image
+                              aria-hidden={true}
+                              className="w-[20px] h-[20px]"
+                              src="/assets/left-arrow-icon.svg"
+                              alt={t("altText11")}
+                              width={0}
+                              height={0}
+                              unoptimized
+                            />
+                            {t("resumePageText2")}
+                          </Link>
+                        </div>
 
-                      <div className="order-1">
-                        <LanguageDropdown />
+                        <div className="order-1">
+                          <LanguageDropdown />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -146,13 +148,13 @@ const Project = () => {
                 <div className="">
                   <div>
                     <div
-                      className="bg-center bg-cover h-[80vh] border-solid border-b-[6px] border-cornflowerBlue"
+                      className="bg-center bg-cover h-[80vh] border-solid border-b-[6px] border-cornflowerBlue "
                       style={{
                         backgroundImage: `url(${project.hero})`,
                       }}
                     ></div>
 
-                    <div className="py-[72px] px-[24px] lg:px-[48px]">
+                    <div className="py-[72px] px-[24px] lg:px-[48px] xl:max-w-[1280px] xl:mx-auto">
                       <div>
                         <div className="grid gap-[12px]">
                           <h1

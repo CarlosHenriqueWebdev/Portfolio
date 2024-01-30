@@ -32,7 +32,7 @@ const Contact = () => {
       {!didFormSubmit ? (
         <div>
           <div
-            className="w-full h-full pt-[72px] pb-[48px] px-[24px] lg:px-[96px]"
+            className="w-full h-full pt-[72px] pb-[48px] px-[24px] lg:px-[96px] xl:max-w-[1280px] xl:mx-auto"
             style={{
               backgroundColor: `rgba(0, 0, 0, 0.92)`,
             }}

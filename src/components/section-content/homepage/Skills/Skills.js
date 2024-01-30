@@ -53,7 +53,7 @@ const Skills = () => {
   return (
     <div className="overflow-hidden border-y-[6px] border-solid border-cornflowerBlue text-center md:text-start">
       <div
-        className="grid gap-[32px] md:grid-cols-2 w-full h-full py-[72px] px-[24px] lg:px-[48px]"
+        className="grid gap-[32px] md:grid-cols-2 w-full h-full py-[72px] px-[24px] lg:px-[48px] xl:max-w-[1280px] xl:mx-auto"
         style={{
           backgroundColor: `rgba(0, 0, 0, 0)`,
         }}
