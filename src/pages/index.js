@@ -12,7 +12,6 @@ const IndexRedirect = () => {
   return (
     <div>
       <Head>
-        <meta name="robots" content="noindex, nofollow" />
 
         <title>Redirecting...</title>
       </Head>
