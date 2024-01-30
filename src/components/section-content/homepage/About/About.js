@@ -46,7 +46,7 @@ const About = () => {
               </motion.div>
             </div>
 
-            <div className="grid gap-[12px] max-w-[640px] mx-auto h-fit">
+            <div className="grid gap-[12px] max-w-[640px] mx-auto h-fit md:mx-0">
               <div>
                 <p>
                   <Trans

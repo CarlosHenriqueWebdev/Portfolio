@@ -58,7 +58,7 @@ const Skills = () => {
           backgroundColor: `rgba(0, 0, 0, 0)`,
         }}
       >
-        <div className="max-w-[600px] mx-auto">
+        <div className="max-w-[600px] mx-auto md:mx-0">
           <div>
             <div>
               <h2
