@@ -161,7 +161,7 @@ const Form = ({ setDidFormSubmit }) => {
                   role="alert"
                   className="font-bold text-crimsonRed"
                 >
-                  Error: {formErrors.Name}
+                  {formErrors.Name}
                 </span>
               )}
             </div>
@@ -196,7 +196,7 @@ const Form = ({ setDidFormSubmit }) => {
                   role="alert"
                   className="font-bold text-crimsonRed"
                 >
-                  Error: {formErrors.Email}
+                  {formErrors.Email}
                 </span>
               )}
             </div>
@@ -231,7 +231,7 @@ const Form = ({ setDidFormSubmit }) => {
                 role="alert"
                 className="font-bold text-crimsonRed"
               >
-                Error: {formErrors.Message}
+                {formErrors.Message}
               </span>
             )}
           </div>
