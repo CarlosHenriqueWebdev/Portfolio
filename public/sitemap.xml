@@ -7,7 +7,6 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://www.carloshenriquedev.com</loc>
-        <priority>0.0</priority>
     </url>
     <url>
         <loc>https://www.carloshenriquedev.com/en</loc>
