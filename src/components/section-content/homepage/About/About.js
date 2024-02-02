@@ -84,7 +84,7 @@ const About = () => {
             <div className="h-fit grid gap-[12px] justify-items-center md:justify-items-start lg:gap-[8px]">
               <div
                 className={`relative w-full block ${
-                  isAboutImageLoading ? "h-[500px]" : "h-full"
+                  isAboutImageLoading ? "h-full" : "h-full"
                 }`}
               >
                 <Image
@@ -94,14 +94,11 @@ const About = () => {
                   height={0} // Set your desired height
                   unoptimized
                   className={`${
-                    isAboutImageLoading ? "opacity-0" : "opacity-1"
+                    isAboutImageLoading ? "opacity-0 h-[200px]" : "opacity-1"
                   } max-w-[500px] mx-auto md:max-w-full w-full h-full object-cover border-solid border-[2px] border-[black]`}
                   onLoad={handleAboutImageLoad}
                 />
-
-                {isAboutImageLoading && (
-                  <div className="absolute top-0 max-w-[500px] md:max-w-full w-full h-[500px] object-cover border-solid border-[2px] border-cornflowerBlue"></div>
-                )}
+     
               </div>
 
               <ul className="flex flex-wrap gap-[12px]">

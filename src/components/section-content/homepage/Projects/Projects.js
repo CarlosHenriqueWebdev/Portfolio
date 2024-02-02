@@ -100,10 +100,10 @@ const Projects = () => {
                   key={itemIndex}
                 >
                   <div className="px-[24px] lg:px-[48px] grid md:grid-cols-2 gap-[24px]">
-                    <div className={`w-full h-fit grid gap-[12px]`}>
+                    <div className={`w-full h-full`}>
                       <Image
                         aria-hidden={true}
-                        className="white-box w-full h-full object-cover"
+                        className="white-box w-full h-fit"
                         src={mapItem.thumbnail}
                         alt={mapItem.thumbnailAltText}
                         width={0}
