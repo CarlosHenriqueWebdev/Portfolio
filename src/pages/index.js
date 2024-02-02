@@ -13,6 +13,7 @@ const IndexRedirect = () => {
     <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
 
         <title>Redirecting...</title>
       </Head>
