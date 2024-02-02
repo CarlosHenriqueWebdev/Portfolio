@@ -6,37 +6,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-        <loc>https://www.carloshenriquedev.com/en</loc>
-        <priority>1.0</priority>
-         <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://www.carloshenriquedev.com/en"
-        />
-        <link rel="alternate" hrefLang="en" href="https://www.carloshenriquedev.com/en" />
-        <link rel="alternate" hrefLang="pt" href="https://www.carloshenriquedev.com/pt" />
-    </url>
-    <url>
-        <loc>https://www.carloshenriquedev.com/pt</loc>
-        <priority>1.0</priority>
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://www.carloshenriquedev.com/en"
-        />
-        <link rel="alternate" hrefLang="en" href="https://www.carloshenriquedev.com/en" />
-        <link rel="alternate" hrefLang="pt" href="https://www.carloshenriquedev.com/pt" />
-    </url>
-    <url>
-        <loc>https://www.carloshenriquedev.com/projects</loc>
+        <loc>https://www.carloshenriquedev.com</loc>
         <priority>0.0</priority>
     </url>
     <url>
-        <loc>https://www.carloshenriquedev.com/en/resume</loc>
-        <priority>1.0</priority>
+        <loc>https://www.carloshenriquedev.com/en</loc>
     </url>
     <url>
-        <loc>https://www.carloshenriquedev.com/pt/resume</loc>
-        <priority>1.0</priority>
+        <loc>https://www.carloshenriquedev.com/pt</loc>
     </url>
 </urlset>

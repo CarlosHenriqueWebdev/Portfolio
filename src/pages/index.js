@@ -12,6 +12,7 @@ const IndexRedirect = () => {
   return (
     <div>
       <Head>
+        <link rel="icon" href="/favicon.ico" />
 
         <title>Redirecting...</title>
       </Head>
