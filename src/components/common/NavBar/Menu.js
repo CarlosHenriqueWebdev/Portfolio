@@ -86,13 +86,13 @@ const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
   return (
     <>
       <motion.div
-        className="w-[70%] fixed lg:static lg:w-full"
+        className="w-[70%] fixed h-full lg:static lg:w-full"
         initial={false}
         animate={menuOpen ? "open" : "closed"}
         variants={!isScreen1024Px ? sidebar : null}
       >
         <div
-          className={`bg-[black] lg:h-auto lg:!flex lg:static lg:w-full lg:justify-center`}
+          className={`bg-[black] h-full lg:h-auto lg:!flex lg:static lg:w-full lg:justify-center`}
         >
           <motion.ol
             aria-hidden={menuOpen ? "false" : "true"}
