@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { contactInfo } from "@/components/section-content/homepage/About/contactInfo";
 import Image from "next/image";
-import { skillsData } from "@/components/section-content/homepage/Skills/skillsData";
 import ScrollToTopButton from "@/components/utils/scrollToTopButton";
 import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import useLanguageChange from "@/hooks/useLanguageChange";
@@ -237,7 +236,7 @@ const Resume = () => {
 
                 <div className="lg:pl-[12px]">
                   <ul className="mt-[16px] grid gap-x-[16px] gap-y-[12px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
-                    {skillsData.map((mapItem, itemIndex) => (
+                    {t("skillsData", { returnObjects: true }).map((mapItem, itemIndex) => (
                       <li
                         key={itemIndex}
                         className="bg-[white] px-[16px] py-[8px] flex gap-[8px] items-center w-full h-full border-solid border-[3px] border-[#002b5c] font-bold"
