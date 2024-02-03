@@ -45,7 +45,7 @@ const Hero = () => {
   return (
     <div className="overflow-hidden border-b-[6px] border-solid border-cornflowerBlue">
       <div
-        className={`hero-shadow bg-cover h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/assets/hero.png)]`}
+        className={`hero-shadow bg-cover h-full bg-[black] w-full bg-no-repeat relative bg-center lg:bg-[url(/assets/hero.png)]`}
       >
         <div
           style={{
@@ -53,7 +53,7 @@ const Hero = () => {
           }}
         >
           <div className="px-[24px] lg:px-[48px] py-[72px] xl:max-w-[1280px] xl:mx-auto">
-            <div className="grid gap-[8px]">
+            <div className="grid gap-[12px]">
               <span aria-hidden="true" className=" text-white85">
                 {t("heroText1")}
               </span>
