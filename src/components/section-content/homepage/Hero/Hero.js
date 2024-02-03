@@ -125,7 +125,7 @@ const Hero = () => {
 
             <div className="grid mt-[24px] sm:flex gap-[16px]">
               <ScrollLink
-                className={`${buttonClassName} px-[16px] flex gap-[8px] items-center`}
+                className={`${buttonClassName} px-[16px] w-fit flex gap-[8px] items-center`}
                 to={"projectsSection"} // Use 'to' instead of 'href'
                 smooth={true} // Enable smooth scrolling
                 duration={500} // Set the duration of the scroll animation in milliseconds
@@ -146,7 +146,7 @@ const Hero = () => {
               </ScrollLink>
 
               <ScrollLink
-                className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
+                className={`${buttonClassName} px-[16px] w-fit !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
                 to={"resumeSection"} // Use 'to' instead of 'href'
                 smooth={true} // Enable smooth scrolling
                 duration={500} // Set the duration of the scroll animation in milliseconds
@@ -167,7 +167,7 @@ const Hero = () => {
               </ScrollLink>
 
               <ScrollLink
-                className={`${buttonClassName} px-[16px] !border-skyBlue before:!bg-skyBlue flex gap-[8px] items-center`}
+                className={`${buttonClassName} px-[16px] w-fit !border-skyBlue before:!bg-skyBlue flex gap-[8px] items-center`}
                 to={"contactSection"} // Use 'to' instead of 'href'
                 smooth={true} // Enable smooth scrolling
                 duration={500} // Set the duration of the scroll animation in milliseconds

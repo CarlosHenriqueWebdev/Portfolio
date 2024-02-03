@@ -22,7 +22,7 @@ const Footer = () => {
 
   return (
     <footer className="text-center px-[24px] lg:px-[48px] py-[48px] text-[1.125rem] font-medium">
-      <div className="flex gap-[4px] mx-auto w-fit">
+      <div className="flex flex-col sm:flex-row gap-[4px] mx-auto w-fit">
         <p>
           &copy; {new Date().getFullYear()} {t("footerText1")}{" "}
         </p>
