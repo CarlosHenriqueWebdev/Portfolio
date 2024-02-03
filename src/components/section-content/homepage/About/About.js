@@ -37,7 +37,7 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-[32px]">
-          <div className="sm:text-center md:text-start">
+          <div className="md:text-start">
             <div className="mb-[16px] font-bold text-[1.5rem]  text-cornflowerBlueText">
               <h3 className="visually-hidden">{t("aboutText2")}</h3>
 
@@ -46,7 +46,7 @@ const About = () => {
               </motion.div>
             </div>
 
-            <div className="grid gap-[12px] max-w-[640px] mx-auto h-fit md:mx-0">
+            <div className="grid gap-[12px] h-fit md:mx-0">
               <div>
                 <p>
                   <Trans
@@ -98,7 +98,6 @@ const About = () => {
                   } max-w-[500px] mx-auto md:max-w-full w-full h-full object-cover border-solid border-[2px] border-[black]`}
                   onLoad={handleAboutImageLoad}
                 />
-     
               </div>
 
               <ul className="flex flex-wrap gap-[12px]">

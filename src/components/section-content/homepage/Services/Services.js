@@ -17,7 +17,7 @@ const Services = () => {
         }}
       >
         <div className="">
-          <div className="mb-[32px] text-center">
+          <div className="mb-[32px]">
             <h2 id="servicesHeadingText" className="font-bold text-[1.625rem]">
               {t("servicesText1")}
             </h2>
@@ -42,7 +42,7 @@ const Services = () => {
                       itemIndex % 2 === 0
                         ? "border-cornflowerBlue"
                         : "border-royalPurple"
-                    } content-baseline bg-[black] flex gap-[16px] `}
+                    } content-baseline bg-[black] grid sm:flex md:grid lg:flex gap-[16px] `}
                     key={itemIndex}
                   >
                     <div
@@ -68,7 +68,7 @@ const Services = () => {
                         {mapItem.title}
                       </h3>
 
-                      <p className="max-w-[400px] text-white85 text-[0.875rem] sm:text-[1rem]">
+                      <p className="max-w-[500px] text-white85 text-[0.875rem] sm:text-[1rem]">
                         {mapItem.description}
                       </p>
                     </div>

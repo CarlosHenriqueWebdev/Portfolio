@@ -51,14 +51,14 @@ const Skills = () => {
   };
 
   return (
-    <div className="overflow-hidden border-y-[6px] border-solid border-cornflowerBlue text-center md:text-start">
+    <div className="overflow-hidden border-y-[6px] border-solid border-cornflowerBlue md:text-start">
       <div
         className="grid gap-[32px] md:grid-cols-2 w-full h-full py-[72px] px-[24px] lg:px-[48px] xl:max-w-[1280px] xl:mx-auto"
         style={{
           backgroundColor: `rgba(0, 0, 0, 0)`,
         }}
       >
-        <div className="max-w-[600px] mx-auto md:mx-0">
+        <div className="md:max-w-[600px] mx-auto md:mx-0">
           <div>
             <div>
               <h2
@@ -97,7 +97,7 @@ const Skills = () => {
 
         <div>
           <motion.ul
-            className="mx-auto flex flex-wrap gap-[16px] w-fit justify-center max-w-[500px]"
+            className="flex flex-wrap gap-[16px] w-fit md:justify-center md:max-w-[500px]"
             variants={delayItem}
             initial="closed"
             animate={isInView && "open"}
