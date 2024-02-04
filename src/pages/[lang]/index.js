@@ -8,7 +8,6 @@ import useLanguageChange from "@/hooks/useLanguageChange";
 import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import dynamic from "next/dynamic";
 import React from "react";
-import { useRouter } from "next/router";
 
 const blackLoadingScreen = () => <div className="bg-[black] !h-[100vh]"></div>;
 
@@ -76,13 +75,10 @@ const Contact = dynamic(
   }
 );
 
-const Home = () => {
+const Home = ({ lang }) => {
+  const { isLanguageLoading } = useLanguageChange();
+
   const [activeSection, setActiveSection] = useState("homeSection");
-
-  const router = useRouter();
-
-  const isLanguageEnglishUrl = router.asPath === "/en";
-  const isLanguagePortugueseUrl = router.asPath === "/pt";
 
   function getActiveSection() {
     if (typeof window === "undefined") {
@@ -129,20 +125,12 @@ const Home = () => {
     };
   }, [activeSection]);
 
-  const { isLanguageLoading } = useLanguageChange();
-
   return (
     <div className="bg-[black]">
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
-        {isLanguageLoading && (
-          <>
-            <title>Loading...</title>
-          </>
-        )}
-
-        {isLanguageEnglishUrl && (
+        {lang === "en" ? (
           <>
             <html lang="en" />
             <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
@@ -156,9 +144,7 @@ const Home = () => {
               content="Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
             />
           </>
-        )}
-
-        {isLanguagePortugueseUrl && (
+        ) : lang === "pt" ? (
           <>
             <html lang="pt" />
             <link rel="canonical" href="https://www.carloshenriquedev.com/pt" />
@@ -173,7 +159,7 @@ const Home = () => {
               content="Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end."
             />
           </>
-        )}
+        ) : undefined}
 
         <link
           rel="alternate"
@@ -261,5 +247,16 @@ const Home = () => {
     </div>
   );
 };
+
+export async function getServerSideProps({ query }) {
+  // Extract language from the URL path
+  const { lang } = query;
+
+  return {
+    props: {
+      lang,
+    },
+  };
+}
 
 export default Home;

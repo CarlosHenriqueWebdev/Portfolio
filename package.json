@@ -20,6 +20,7 @@
     "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-helmet": "^6.1.0",
     "react-i18next": "^14.0.0",
     "react-intersection-observer": "^9.5.3",
     "react-intl": "^6.5.5",
