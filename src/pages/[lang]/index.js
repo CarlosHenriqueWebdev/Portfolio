@@ -159,7 +159,21 @@ const Home = ({ lang }) => {
               content="Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end."
             />
           </>
-        ) : undefined}
+        ) : (
+          <>
+            <html lang="en" />
+            <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
+
+            <title>
+              Web Developer Portfolio | Explore My Projects and Skills
+            </title>
+
+            <meta
+              name="description"
+              content="Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
+            />
+          </>
+        )}
 
         <link
           rel="alternate"
