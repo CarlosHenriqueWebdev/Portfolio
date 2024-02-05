@@ -152,8 +152,6 @@ const Home = ({ lang }) => {
   return (
     <div className="bg-[black]">
       <Head>
-        <html lang={htmlLangAndCanonical} />
-
         <link rel="icon" href="/favicon.ico" />
 
         <title>{title}</title>
