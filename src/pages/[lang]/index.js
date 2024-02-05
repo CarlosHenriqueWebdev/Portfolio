@@ -130,7 +130,7 @@ const Home = ({ lang }) => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
-        {lang === "en" ? (
+        {lang && lang === "en" ? (
           <>
             <html lang="en" />
             <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
@@ -144,7 +144,7 @@ const Home = ({ lang }) => {
               content="Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
             />
           </>
-        ) : lang === "pt" ? (
+        ) : lang && lang === "pt" ? (
           <>
             <html lang="pt" />
             <link rel="canonical" href="https://www.carloshenriquedev.com/pt" />
