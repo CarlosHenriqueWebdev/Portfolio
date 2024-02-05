@@ -76,6 +76,19 @@ const Contact = dynamic(
 );
 
 const Home = ({ lang }) => {
+  // Define default values for title and description
+  let title = "Web Developer Portfolio | Explore My Projects and Skills";
+  let description =
+    "Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies.";
+
+  // Override default values based on the language
+  if (lang === "pt") {
+    title =
+      "Portfolio de Desenvolvedor Web | Explore Meus Projetos e Habilidades";
+    description =
+      "Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end.";
+  }
+
   const { isLanguageLoading } = useLanguageChange();
 
   const [activeSection, setActiveSection] = useState("homeSection");
@@ -130,7 +143,31 @@ const Home = ({ lang }) => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
-        {lang && lang === "en" ? (
+        <title>{title}</title>
+
+        <meta name="description" content={description} />
+
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://www.carloshenriquedev.com/en"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://www.carloshenriquedev.com/en"
+        />
+        <link
+          rel="alternate"
+          hrefLang="pt"
+          href="https://www.carloshenriquedev.com/pt"
+        />
+      </Head>
+
+      {/* <Head>
+        <link rel="icon" href="/favicon.ico" />
+
+       {lang && lang === "en" ? (
           <>
             <html lang="en" />
             <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
@@ -173,7 +210,7 @@ const Home = ({ lang }) => {
               content="Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
             />
           </>
-        )}
+        )} 
 
         <link
           rel="alternate"
@@ -190,7 +227,7 @@ const Home = ({ lang }) => {
           hrefLang="pt"
           href="https://www.carloshenriquedev.com/pt"
         />
-      </Head>
+      </Head> */}
 
       {!isLanguageLoading ? (
         <>
@@ -263,7 +300,6 @@ const Home = ({ lang }) => {
 };
 
 export async function getServerSideProps({ query }) {
-  // Extract language from the URL path
   const { lang } = query;
 
   return {
