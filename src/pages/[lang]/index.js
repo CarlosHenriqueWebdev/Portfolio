@@ -95,11 +95,6 @@ const Home = ({ lang }) => {
       "Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end.";
   }
 
-  // Ensure htmlLangAndCanonical always contains a valid language code
-  if (!["en", "pt"].includes(htmlLangAndCanonical)) {
-    htmlLangAndCanonical = "en"; // Default to English if an invalid language is provided
-  }
-
   const { isLanguageLoading } = useLanguageChange();
 
   const [activeSection, setActiveSection] = useState("homeSection");
@@ -153,6 +148,8 @@ const Home = ({ lang }) => {
     <div className="bg-[black]">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+
+        <html lang={htmlLangAndCanonical} /> 
 
         <title>{title}</title>
 
