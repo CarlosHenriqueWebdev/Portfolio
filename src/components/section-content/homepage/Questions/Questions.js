@@ -29,7 +29,7 @@ const Questions = () => {
   };
 
   return (
-    <div className="overflow-hidden bg-[url('/square-pattern.png')]">
+    <div className="overflow-hidden ">
       <div
         className="w-full h-full py-[72px] px-[24px] lg:px-[96px] xl:max-w-[1280px] xl:mx-auto"
         style={{

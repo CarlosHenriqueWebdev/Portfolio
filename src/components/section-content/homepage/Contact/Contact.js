@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="border-y-[6px] border-solid border-cornflowerBlue overflow-hidden bg-[url('/gradient-grid.jpg')] ">
+    <div className="border-y-[6px] border-solid border-cornflowerBlue overflow-hidden">
       {!didFormSubmit ? (
         <div>
           <div
