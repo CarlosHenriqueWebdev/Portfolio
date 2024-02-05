@@ -79,8 +79,6 @@ const Home = ({ lang }) => {
   // Define default values for title and description
   let title = "Web Developer Portfolio | Explore My Projects and Skills";
 
-  let htmlLangAndCanonical = "en";
-
   let description =
     "Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies.";
 
@@ -88,8 +86,6 @@ const Home = ({ lang }) => {
   if (lang === "pt") {
     title =
       "Portfolio de Desenvolvedor Web | Explore Meus Projetos e Habilidades";
-
-    htmlLangAndCanonical = "pt";
 
     description =
       "Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end.";
@@ -149,9 +145,9 @@ const Home = ({ lang }) => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
-        <html lang={htmlLangAndCanonical} />
+        {/* <html lang={htmlLangAndCanonical} />
 
-        <link rel="canonical" href={`https://www.carloshenriquedev.com/${htmlLangAndCanonical}`} />
+        <link rel="canonical" href={`https://www.carloshenriquedev.com/${htmlLangAndCanonical}`} /> */}
 
         <title>{title}</title>
 
