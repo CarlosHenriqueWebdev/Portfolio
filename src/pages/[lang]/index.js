@@ -149,8 +149,6 @@ const Home = ({ lang }) => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
-        <html lang={htmlLangAndCanonical} /> 
-
         <title>{title}</title>
 
         <meta name="description" content={description} />
