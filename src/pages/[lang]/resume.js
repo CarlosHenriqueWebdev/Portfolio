@@ -1,6 +1,6 @@
 import LanguageDropdown from "@/components/common/NavBar/LanguageDropdown";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { contactInfo } from "@/components/section-content/homepage/About/contactInfo";
 import Image from "next/image";
 import ScrollToTopButton from "@/components/utils/scrollToTopButton";
@@ -15,19 +15,6 @@ const Resume = () => {
 
   const router = useRouter();
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleButtonClick = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const dropDownHeadingRef = useRef(null);
-
-  useEffect(() => {
-    if (isDropdownOpen && dropDownHeadingRef.current) {
-      dropDownHeadingRef.current.focus();
-    }
-  }, [isDropdownOpen]);
 
   const { isLanguageLoading, whichLanguageIsIt } = useLanguageChange();
 
@@ -84,7 +71,7 @@ const Resume = () => {
       {!isLanguageLoading ? (
         <>
           <div className="cursor-auto bg-[white] overflow-hidden">
-            <nav className="text-[white] bg-[#002b5c] w-full">
+            <nav className="text-[white] bg-[black] w-full">
               <div className="xl:max-w-[1280px] xl:mx-auto">
                 <button className="skip-to-content" onClick={handleClick}>
                   {t("accessibilityText1")}
@@ -127,31 +114,31 @@ const Resume = () => {
             <ScrollToTopButton />
 
             <div
-              className={`border-solid border-b-[6px] border-[black]  bg-cover h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/assets/hero.png)]`}
+              className={`border-solid border-b-[6px] border-[#5541D4]  bg-cover h-full bg-[black] w-full bg-no-repeat relative bg-center`}
             >
               <div
-                className="border-solid border-y-[6px] border-[black]  flex justify-center items-center"
+                className="border-solid border-y-[6px] border-[#5541D4]  flex justify-center items-center"
                 style={{
-                  backgroundColor: `rgba(0, 0, 0, 0.6)`,
+                  backgroundColor: `rgba(0, 0, 0, 0.8)`,
                 }}
               >
-                <div className="font-bold text-[1.5rem] sm:text-[1.75rem] uppercase py-[72px] grid gap-[4px] tracking-[6px]">
+                <div className="font-bold text-[1.5rem] sm:text-[1.75rem] uppercase py-[72px] grid gap-[4px]">
                   <h1 id="resumeHeadingText" className="w-fit mx-auto">
                     Carlos Henrique
                   </h1>
 
-                  <p className="text-[1.25rem] text-white85 w-fit mx-auto">
+                  <p className="text-[1.25rem] text-[#5541D4] w-fit mx-auto">
                     {t("resumePageText3")}
                   </p>
                 </div>
               </div>
 
-              <div className=" bg-[#002b5c] ">
-                <ul className="mx-auto px-[24px] py-[20px] lg:px-[48px] grid sm:grid-cols-2 md:grid-cols-3 max-w-[900px] w-fit lg:justify-center items-center gap-[24px]">
+              <div className="bg-[black] ">
+                <ul className="w-full px-[24px] py-[20px] lg:px-[48px] grid sm:grid-cols-2 lg:grid-cols-3 lg:justify-center items-center gap-[24px]">
                   {contactInfo.map((mapItem, itemIndex) => (
                     <li
                       key={itemIndex}
-                      className="w-full flex gap-[8px] font-bold text-white75"
+                      className="w-full flex gap-[8px] font-bold "
                     >
                       <Image
                         aria-hidden={true}
@@ -214,7 +201,7 @@ const Resume = () => {
                   </h2>
 
                   <div
-                    className={`bg-[#002b5c] left-0 absolute w-full h-[4px]`}
+                    className={`bg-[black] left-0 absolute w-full h-[4px]`}
                   ></div>
                 </div>
 
@@ -230,30 +217,32 @@ const Resume = () => {
                   </h2>
 
                   <div
-                    className={`bg-[#002b5c] left-0 absolute w-full h-[4px]`}
+                    className={`bg-[black] left-0 absolute w-full h-[4px]`}
                   ></div>
                 </div>
 
                 <div className="lg:pl-[12px]">
                   <ul className="mt-[16px] grid gap-x-[16px] gap-y-[12px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
-                    {t("skillsData", { returnObjects: true }).map((mapItem, itemIndex) => (
-                      <li
-                        key={itemIndex}
-                        className="bg-[white] px-[16px] py-[8px] flex gap-[8px] items-center w-full h-full border-solid border-[3px] border-[#002b5c] font-bold"
-                      >
-                        <Image
-                          aria-hidden={true}
-                          className={`w-[20px] h-[20px]`}
-                          src={mapItem.imageSrcBlack}
-                          alt={`${mapItem.name} Logo`}
-                          width={0}
-                          height={0}
-                          unoptimized
-                        />
+                    {t("skillsData", { returnObjects: true }).map(
+                      (mapItem, itemIndex) => (
+                        <li
+                          key={itemIndex}
+                          className="bg-[black] text-[white] px-[16px] py-[8px] flex gap-[8px] items-center w-full h-full border-solid border-[3px] border-[#5541D4] font-bold"
+                        >
+                          <Image
+                            aria-hidden={true}
+                            className={`w-[20px] h-[20px]`}
+                            src={mapItem.imageSrc}
+                            alt={`${mapItem.name} Logo`}
+                            width={0}
+                            height={0}
+                            unoptimized
+                          />
 
-                        <p className="w-fit">{mapItem.name}</p>
-                      </li>
-                    ))}
+                          <p className="w-fit">{mapItem.name}</p>
+                        </li>
+                      )
+                    )}
                   </ul>
                 </div>
               </div>
@@ -265,7 +254,7 @@ const Resume = () => {
                   </h2>
 
                   <div
-                    className={`bg-[#002b5c] left-0 absolute w-full h-[4px]`}
+                    className={`bg-[black] left-0 absolute w-full h-[4px]`}
                   ></div>
                 </div>
 
@@ -293,13 +282,13 @@ const Resume = () => {
                               />
                               {mapItem.name}
                             </Link>{" "}
-                            <span className="text-[0.75rem] text-[white75] normal-case">
+                            <span className="text-[0.75rem] normal-case">
                               {" "}
                               {mapItem.role}
                             </span>
                           </h3>
 
-                          <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#002b5c]">
+                          <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#5541D4]">
                             {t("resumePageProjectHeadingText1")}
                           </h4>
 
@@ -309,7 +298,7 @@ const Resume = () => {
                         </div>
 
                         <div>
-                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[1rem] text-[#002b5c]">
+                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[1rem] text-[#5541D4]">
                             {t("resumePageProjectHeadingText2")}
                           </h4>
 
@@ -318,12 +307,12 @@ const Resume = () => {
                               (mapItem, itemIndex) => (
                                 <li
                                   key={itemIndex}
-                                  className="bg-[white] px-[16px] py-[8px] flex gap-[8px] items-center w-full h-full border-solid border-[3px] border-[#002b5c] font-bold"
+                                  className="bg-[black] text-[white] px-[16px] py-[8px] flex gap-[8px] items-center w-full h-full border-solid border-[3px] border-[#5541D4] font-bold"
                                 >
                                   <Image
                                     aria-hidden={true}
                                     className="w-[20px] h-[20px]"
-                                    src={mapItem.blackTechImageSrc}
+                                    src={mapItem.techImageSrc}
                                     alt={mapItem.name}
                                     width={0}
                                     height={0}
@@ -338,7 +327,7 @@ const Resume = () => {
                         </div>
 
                         <div>
-                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[1rem] text-[#002b5c]">
+                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[1rem] text-[#5541D4]">
                             {t("resumePageProjectHeadingText3")}
                           </h4>
 
@@ -374,7 +363,7 @@ const Resume = () => {
                   </h2>
 
                   <div
-                    className={`bg-[#002b5c] left-0 absolute w-full h-[4px]`}
+                    className={`bg-[black] left-0 absolute w-full h-[4px]`}
                   ></div>
                 </div>
 
@@ -383,7 +372,7 @@ const Resume = () => {
                     {t("resumePageText9")}
                   </h3>
 
-                  <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#002b5c]">
+                  <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#5541D4]">
                     {t("resumePageText10")}
                   </h4>
 
@@ -415,7 +404,7 @@ const Resume = () => {
                   </h2>
 
                   <div
-                    className={`bg-[#002b5c] left-0 absolute w-full h-[4px]`}
+                    className={`bg-[black] left-0 absolute w-full h-[4px]`}
                   ></div>
                 </div>
 
@@ -427,7 +416,7 @@ const Resume = () => {
                           {mapItem.name}
                         </h3>
 
-                        <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#002b5c]">
+                        <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#5541D4]">
                           {mapItem.proficiency}
                         </h4>
 
@@ -441,87 +430,7 @@ const Resume = () => {
               </div>
             </div>
 
-            <footer className="border-solid border-t-[6px] border-[black] bg-[#002b5c] text-center px-[24px] lg:px-[48px] py-[48px] text-[1.125rem] font-medium">
-              <div className="flex gap-[4px] mx-auto w-fit">
-                <p>
-                  &copy; {new Date().getFullYear()} {t("footerText1")}{" "}
-                </p>
-
-                <button
-                  aria-label={
-                    isDropdownOpen
-                      ? t("accessibilityText6")
-                      : t("accessibilityText7")
-                  }
-                  className="font-bold underline flex items-center gap-[8px]"
-                  onClick={() => {
-                    handleButtonClick();
-                  }}
-                >
-                  {t("footerText2")}
-
-                  <Image
-                    aria-hidden="true"
-                    className={`w-[12px] transition-all rotate-[90deg]`}
-                    src="/assets/arrow-purple.svg"
-                    alt={t("altText1")}
-                    width="0"
-                    height="0"
-                    unoptimized
-                  />
-                </button>
-              </div>
-
-              <div
-                className={`mt-[32px] px-[24px] lg:px-[48px] bg-[white] rounded-[8px] text-[black] p-[24px] border-solid border-[4px] border-cornflowerBlue w-fit mx-auto hidden ${
-                  isDropdownOpen ? "!block" : ""
-                }`}
-              >
-                <h2
-                  tabIndex="-1"
-                  ref={dropDownHeadingRef}
-                  id="attributionFocusSr"
-                  className="text-[1.375rem] font-black"
-                >
-                  Attributions
-                </h2>
-
-                <ul className="mt-[24px] flex flex-col w-full !text-start items-center gap-[16px]">
-                  <li className="w-full">
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline font-bold text-royalPurpleText"
-                      href="https://br.freepik.com/vetores-gratis/fundo-de-tecnologia-de-conexao-de-rede-de-terra-digital-global_6864941.htm#from_view=detail_alsolike"
-                    >
-                      Hero and Resume Image from starline on Freepik
-                    </Link>
-                  </li>
-
-                  <li className="w-full">
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline font-bold text-royalPurpleText"
-                      href="https://br.freepik.com/fotos-gratis/uma-pessoa-digitando-no-teclado-do-computador-a-noite-gerado-por-ia_42191506.htm#page=3&query=Keyboard&position=5&from_view=search&track=sph&uuid=57a3dd1d-f9d9-43f8-b260-ade742cb266f"
-                    >
-                      About Image from vecstock on Freepik
-                    </Link>
-                  </li>
-
-                  <li className="w-full">
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline font-bold text-royalPurpleText"
-                      href="https://br.freepik.com/vetores-gratis/interior-de-quarto-de-menino-adolescente-computadores-na-mesa_8924570.htm#query=Programa%C3%A7%C3%A3o&position=47&from_view=search&track=sph&uuid=971d2afb-231a-430f-a18c-2e74520c43c3"
-                    >
-                      Image Above Contact from upklyak on Freepik
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </footer>
+            <footer className="border-solid border-t-[6px] border-[#5541D4] bg-[black] text-center px-[24px] lg:px-[48px] py-[48px] text-[1.125rem] font-medium"></footer>
           </div>
         </>
       ) : (

@@ -148,6 +148,7 @@ const Home = ({ lang }) => {
     <div className="bg-[black]">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google" content="notranslate" />
 
         <title>{title}</title>
 
