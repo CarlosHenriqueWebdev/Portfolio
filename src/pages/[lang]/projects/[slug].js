@@ -2,7 +2,6 @@ import LanguageDropdown from "@/components/common/NavBar/LanguageDropdown";
 import React, { useState } from "react";
 import Link from "next/link";
 import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import Footer from "@/components/common/Footer/Footer";
@@ -12,13 +11,10 @@ import useLanguageChange from "@/hooks/useLanguageChange";
 import { useEffect } from "react";
 import Head from "next/head";
 
-const Project = () => {
+const Project = ({ lang, slug }) => {
   const { t } = useTranslation();
 
-  const { isLanguageLoading, whichLanguageIsIt } = useLanguageChange();
-
-  const router = useRouter();
-  const { slug } = router.query;
+  const { isLanguageLoading } = useLanguageChange();
 
   // State to hold the project once it's loaded
   const [project, setProject] = useState(null);
@@ -73,13 +69,15 @@ const Project = () => {
     <>
       <Head>
         <title>
-          {isLanguageLoading
-            ? "Loading..."
-            : whichLanguageIsIt === "en" && doesProjectExist
-            ? `Project: ${project.name} | Web Development Portfolio`
-            : whichLanguageIsIt === "pt" && doesProjectExist
-            ? `Projeto: ${project.name} | Portfolio de Desenvolvimento Web`
-            : ""}
+          {lang === "en"
+            ? `${
+                slug === "doggy-daycare" ? "Doggy Daycare" : null
+              } | Web Development Portfolio`
+            : lang === "pt"
+            ? `${
+                slug === "doggy-daycare" ? "Doggy Daycare" : null
+              } | Portfolio de Desenvolvimento Web`
+            : null}
         </title>
 
         <meta
@@ -87,20 +85,39 @@ const Project = () => {
           content={
             isLanguageLoading
               ? ""
-              : whichLanguageIsIt === "en" && doesProjectExist
-              ? `Explore details about the project "${project.name}" in my web development portfolio. Learn about the technologies used and the key features implemented.`
-              : whichLanguageIsIt === "pt" && doesProjectExist
-              ? `Explore detalhes sobre o projeto "${project.name}" no meu portfólio de desenvolvimento web. Saiba mais sobre as tecnologias utilizadas e as principais funcionalidades implementadas.`
-              : ""
+              : lang === "en"
+              ? `Explore details about the project "${
+                  slug === "doggy-daycare" ? "Doggy Daycare" : null
+                }" in my web development portfolio. Learn about the technologies used and the key features implemented.`
+              : lang === "pt"
+              ? `Explore detalhes sobre o projeto "${
+                  slug === "doggy-daycare" ? "Doggy Daycare" : null
+                }" no meu portfólio de desenvolvimento web. Saiba mais sobre as tecnologias utilizadas e as principais funcionalidades implementadas.`
+              : null
           }
         />
 
         <link
+          rel="canonical"
+          href={`https://www.carloshenriquedev.com/${
+            lang === "en" ? "en" : lang === "pt" ? "pt" : null
+          }/projects/${slug}`}
+        />
+
+        <link
           rel="alternate"
-          hrefLang={whichLanguageIsIt}
-          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/${
-            project && doesProjectExist ? project.slug : ""
-          }`}
+          hrefLang="x-default"
+          href={`https://www.carloshenriquedev.com/en/projects/${slug}`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href={`https://www.carloshenriquedev.com/en/projects/${slug}`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="pt"
+          href={`https://www.carloshenriquedev.com/pt/projects/${slug}`}
         />
       </Head>
 
@@ -122,7 +139,7 @@ const Project = () => {
                         <div>
                           <Link
                             className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
-                            href={`/${whichLanguageIsIt}`}
+                            href={`/${lang}`}
                           >
                             <Image
                               aria-hidden={true}
@@ -148,7 +165,7 @@ const Project = () => {
                 <div className="">
                   <div>
                     <div
-                      className="bg-center bg-cover h-[80vh] border-solid border-b-[6px] border-cornflowerBlue "
+                      className="bg-center bg-cover h-[80vh] border-solid border-b-[6px] border-cornflowerBlue bg-fixed"
                       style={{
                         backgroundImage: `url(${project.hero})`,
                       }}
@@ -188,48 +205,6 @@ const Project = () => {
                             />
                             {t("projectsPageText1")}
                           </Link>
-
-                          {/* <Link
-                          aria-label={`${t("projectsPageText2")} ${t(
-                            "accessibilityText8"
-                          )}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="/"
-                          className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                        >
-                          <Image
-                            aria-hidden={true}
-                            className="w-[16px] h-[16px]"
-                            src="/assets/white-icons/figma-white.svg"
-                            alt={t("altText13")}
-                            width={0}
-                            height={0}
-                            unoptimized
-                          />
-                          {t("projectsPageText2")}
-                        </Link>
-
-                        <Link
-                          aria-label={`${t("projectsPageText3")} ${t(
-                            "accessibilityText8"
-                          )}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="/"
-                          className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                        >
-                          <Image
-                            aria-hidden={true}
-                            className="w-[16px] h-[16px]"
-                            src="/assets/white-icons/github-white.svg"
-                            alt={t("altText14")}
-                            width={0}
-                            height={0}
-                            unoptimized
-                          />
-                          {t("projectsPageText3")}
-                        </Link> */}
                         </div>
                       </div>
 
@@ -401,5 +376,16 @@ const Project = () => {
     </>
   );
 };
+
+export async function getServerSideProps({ query }) {
+  const { lang, slug } = query;
+
+  return {
+    props: {
+      lang,
+      slug,
+    },
+  };
+}
 
 export default Project;

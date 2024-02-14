@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 
 const useLanguageChange = () => {
   const [isLanguageLoading, setIsLanguageLoading] = useState(true);
-  const [isLanguageReady, setIsLanguageReady] = useState(null);
   const [whichLanguageIsIt, setWhichLanguageIsIt] = useState("");
   const router = useRouter();
   const { i18n } = useTranslation();
@@ -21,71 +20,60 @@ const useLanguageChange = () => {
     router.asPath !== "/pt/projects/doggy-daycare" &&
     router.asPath !== "/[lang]/projects/[slug]";
 
-  const isLanguageEnglishUrl =
-    router.asPath === "/en" || router.asPath === "/en/resume";
-  const isLanguagePortugueseUrl =
-    router.asPath === "/pt" || router.asPath === "/pt/resume";
-
   useEffect(() => {
+    if (checkingPath) {
+      const localStorageLang = localStorage.getItem("language" || "en");
+      window.location.href = `/${localStorageLang}`;
+
+      return;
+    }
+
+    const isLanguageEnglishUrl =
+      router.asPath === "/en" ||
+      router.asPath === "/en/resume" ||
+      router.asPath === "/en/projects/doggy-daycare";
+    const isLanguagePortugueseUrl =
+      router.asPath === "/pt" ||
+      router.asPath === "/pt/resume" ||
+      router.asPath === "/pt/projects/doggy-daycare";
+
     if (isLanguagePortugueseUrl) {
       i18n.changeLanguage("pt");
       localStorage.setItem("language", "pt");
+      setWhichLanguageIsIt("pt");
     } else if (isLanguageEnglishUrl) {
       i18n.changeLanguage("en");
       localStorage.setItem("language", "en");
-    }
-
-    const currentSavedLanguage = localStorage.getItem("language") || "en";
-
-    setWhichLanguageIsIt(currentSavedLanguage);
-
-    if (checkingPath) {
-      setIsLanguageReady(checkingPath);
-    }
-
-    if (isLanguageReady) {
-      router.push(`/${currentSavedLanguage}`);
+      setWhichLanguageIsIt("en");
     }
 
     setTimeout(() => {
       setIsLanguageLoading(false);
     }, 2000);
-  }, [
-    checkingPath,
-    isLanguageReady,
-    router,
-    i18n,
-    isLanguagePortugueseUrl,
-    isLanguageEnglishUrl,
-  ]);
+  }, [i18n, router.asPath, checkingPath]); // Run the effect only once when the component mounts
+
+  const isHomepage = router.asPath === "/en" || router.asPath === "/pt";
 
   const changeLanguage = (lng) => {
     setIsLanguageLoading(true);
 
-    const isHomepage = router.asPath === "/en" || router.asPath === "/pt";
+    if (!isHomepage) {
+      const currentPath = window.location.pathname;
+      const newPath = currentPath.replace(/\/(en|pt)\//, `/${lng}/`);
 
-    try {
-      if (!isHomepage) {
-        localStorage.setItem("language", lng);
-        const currentPath = window.location.pathname;
-        const newPath = currentPath.replace(/\/(en|pt)\//, `/${lng}/`);
-
-        // Redirect to the new path
-        window.location.href = newPath;
-      } else {
-        localStorage.setItem("language", lng);
-        window.location.href = `/${lng}`;
-      }
-    } catch (error) {
-      console.error("An error occurred:", error);
+      // Redirect to the new path
+      window.location.href = newPath;
+    } else {
+      window.location.href = `/${lng}`;
     }
   };
 
   return {
+    whichLanguageIsIt,
+    isHomepage,
     changeLanguage,
     isLanguageLoading,
-    isLanguageReady,
-    whichLanguageIsIt,
+    i18n,
   };
 };
 

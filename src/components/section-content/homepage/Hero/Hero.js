@@ -123,7 +123,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="grid mt-[24px] sm:flex gap-[16px]">
+            <div className="flex flex-wrap mt-[24px] gap-[16px]">
               <ScrollLink
                 className={`${buttonClassName} px-[16px] w-fit flex gap-[8px] items-center`}
                 to={"projectsSection"} // Use 'to' instead of 'href'

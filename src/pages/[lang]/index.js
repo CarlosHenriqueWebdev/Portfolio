@@ -76,25 +76,6 @@ const Contact = dynamic(
 );
 
 const Home = ({ lang }) => {
-  // Define default values for title and description
-  let title = "Web Developer Portfolio | Explore My Projects and Skills";
-
-  let htmlLangAndCanonical = "en";
-
-  let description =
-    "Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies.";
-
-  // Override default values based on the language
-  if (lang === "pt") {
-    title =
-      "Portfolio de Desenvolvedor Web | Explore Meus Projetos e Habilidades";
-
-    htmlLangAndCanonical = "pt";
-
-    description =
-      "Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end.";
-  }
-
   const { isLanguageLoading } = useLanguageChange();
 
   const [activeSection, setActiveSection] = useState("homeSection");
@@ -148,15 +129,29 @@ const Home = ({ lang }) => {
     <div className="bg-[black]">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="google" content="notranslate" />
 
-        <title>{title}</title>
+        <title>
+          {lang === "en"
+            ? "Web Developer Portfolio | Explore My Projects and Skills"
+            : lang === "pt"
+            ? "Portfolio de Desenvolvedor Web | Explore Meus Projetos e Habilidades"
+            : null}
+        </title>
 
-        <meta name="description" content={description} />
+        <meta
+          name="description"
+          content={
+            lang === "en"
+              ? "Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
+              : lang === "pt"
+              ? "Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end."
+              : null
+          }
+        />
 
         <link
           rel="canonical"
-          href={`https://www.carloshenriquedev.com/${htmlLangAndCanonical}`}
+          href={`https://www.carloshenriquedev.com/${lang === "en" ? "en" : lang === "pt" ? "pt" : null}`}
         />
 
         <link
@@ -175,71 +170,6 @@ const Home = ({ lang }) => {
           href="https://www.carloshenriquedev.com/pt"
         />
       </Head>
-
-      {/* <Head>
-        <link rel="icon" href="/favicon.ico" />
-
-       {lang && lang === "en" ? (
-          <>
-            <html lang="en" />
-            <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
-
-            <title>
-              Web Developer Portfolio | Explore My Projects and Skills
-            </title>
-
-            <meta
-              name="description"
-              content="Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
-            />
-          </>
-        ) : lang && lang === "pt" ? (
-          <>
-            <html lang="pt" />
-            <link rel="canonical" href="https://www.carloshenriquedev.com/pt" />
-
-            <title>
-              Portfolio de Desenvolvedor Web | Explore Meus Projetos e
-              Habilidades
-            </title>
-
-            <meta
-              name="description"
-              content="Confira meu portfólio de desenvolvimento web para explorar uma vitrine de projetos e habilidades. Conheça minha expertise em tecnologias front-end e back-end."
-            />
-          </>
-        ) : (
-          <>
-            <html lang="en" />
-            <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
-
-            <title>
-              Web Developer Portfolio | Explore My Projects and Skills
-            </title>
-
-            <meta
-              name="description"
-              content="Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies."
-            />
-          </>
-        )} 
-
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://www.carloshenriquedev.com/en"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://www.carloshenriquedev.com/en"
-        />
-        <link
-          rel="alternate"
-          hrefLang="pt"
-          href="https://www.carloshenriquedev.com/pt"
-        />
-      </Head> */}
 
       {!isLanguageLoading ? (
         <>

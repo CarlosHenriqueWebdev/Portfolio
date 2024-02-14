@@ -4,7 +4,9 @@ import React from "react";
 export default function Document() {
   return (
     <Html>
-      <Head />
+      <Head>
+        <meta name="google" content="notranslate" />
+      </Head>
       <body>
         <Main />
         <NextScript />

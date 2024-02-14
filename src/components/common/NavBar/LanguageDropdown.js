@@ -77,14 +77,20 @@ const LanguageDropdown = () => {
           src={`${
             whichLanguageIsIt === "en"
               ? "/assets/american-flag-real.svg"
-              : "/assets/brazil-flag-real.svg"
+              : whichLanguageIsIt === "pt"
+              ? "/assets/brazil-flag-real.svg"
+              : null
           }`}
           alt={whichLanguageIsIt === "en" ? t("altText3") : t("altText2")}
           width={0}
           height={0}
           unoptimized
         />
-        {whichLanguageIsIt === "en" ? "English" : "Portugues"}
+        {whichLanguageIsIt === "en"
+          ? "English"
+          : whichLanguageIsIt === "pt"
+          ? "Portugues"
+          : ""}
         <Image
           aria-hidden={true}
           className="w-[12px]"

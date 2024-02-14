@@ -10,13 +10,12 @@ import { useTranslation } from "react-i18next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const Resume = () => {
+const Resume = ({ lang }) => {
   const { t } = useTranslation();
 
   const router = useRouter();
 
-
-  const { isLanguageLoading, whichLanguageIsIt } = useLanguageChange();
+  const { isLanguageLoading } = useLanguageChange();
 
   const handleClick = () => {
     const targetElement = document.getElementById("resumeHeadingText");
@@ -39,32 +38,45 @@ const Resume = () => {
     <>
       <Head>
         <title>
-          {isLanguageLoading
-            ? "Loading..."
-            : whichLanguageIsIt === "en"
+          {lang === "en"
             ? "Web Developer Resume | Skills, Experience, and Achievements"
-            : whichLanguageIsIt === "pt"
+            : lang === "pt"
             ? "Currículo de Desenvolvedor Web | Habilidades, Experiência e Conquistas"
-            : ""}
+            : null}
         </title>
 
         <meta
           name="description"
           content={
-            isLanguageLoading
-              ? ""
-              : whichLanguageIsIt === "en"
+            lang === "en"
               ? "Explore my web developer resume to learn about my skills, experience, and notable achievements."
-              : whichLanguageIsIt === "pt"
+              : lang === "pt"
               ? "Confira meu currículo de desenvolvedor web para saber mais sobre minhas habilidades, experiência e conquistas notáveis."
-              : ""
+              : null
           }
         />
 
         <link
+          rel="canonical"
+          href={`https://www.carloshenriquedev.com/${
+            lang === "en" ? "en" : lang === "pt" ? "pt" : null
+          }/resume`}
+        />
+
+        <link
           rel="alternate"
-          hrefLang={whichLanguageIsIt}
-          href={`https://www.carloshenriquedev.com/${whichLanguageIsIt}/resume`}
+          hrefLang="x-default"
+          href="https://www.carloshenriquedev.com/en/resume"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://www.carloshenriquedev.com/en/resume"
+        />
+        <link
+          rel="alternate"
+          hrefLang="pt"
+          href="https://www.carloshenriquedev.com/pt/resume"
         />
       </Head>
 
@@ -439,5 +451,15 @@ const Resume = () => {
     </>
   );
 };
+
+export async function getServerSideProps({ query }) {
+  const { lang } = query;
+
+  return {
+    props: {
+      lang,
+    },
+  };
+}
 
 export default Resume;
