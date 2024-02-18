@@ -82,13 +82,6 @@ const Skills = () => {
               ) : (
                 <div className="grid gap-[12px]">
                   <p className="text-[white]">{selectedSkill.description}</p>
-
-                  {selectedSkill.extraNote !== "" && (
-                    <p>
-                      <strong className="font-bold">{t("skillsText3")}</strong>{" "}
-                      {selectedSkill.extraNote}
-                    </p>
-                  )}
                 </div>
               )}
             </div>

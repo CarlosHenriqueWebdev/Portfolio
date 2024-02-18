@@ -14,6 +14,7 @@ const IndexRedirect = () => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://www.carloshenriquedev.com/en" />
+        <meta name="robots" content="noindex" />
 
         <title>Redirecting...</title>
       </Head>
