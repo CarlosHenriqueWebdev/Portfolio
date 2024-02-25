@@ -3,28 +3,14 @@ import Image from "next/image";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import Link from "next/link";
 import { Trans, useTranslation } from "react-i18next";
-import { useRouter } from "next/router";
 
 const Projects = () => {
   const { t } = useTranslation();
-
-  const router = useRouter();
 
   const [selectedProject, setSelectedProject] = useState(0);
 
   const handleProjectClick = (mapItem) => {
     setSelectedProject(mapItem);
-  };
-
-  const handleButtonClick = (targetId) => {
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      setTimeout(() => {
-        targetElement.tabIndex = -1;
-        targetElement.focus();
-      }, 1200);
-    }
   };
 
   const buttonClassNameRadio =
@@ -65,7 +51,6 @@ const Projects = () => {
                   }`}
                   onClick={() => {
                     handleProjectClick(itemIndex);
-                    handleButtonClick(`projectTextFocusSr${itemIndex}`);
                   }}
                 >
                   {mapItem.name}
@@ -190,13 +175,7 @@ const Projects = () => {
                             tabIndex={
                               selectedProject === itemIndex ? "0" : "-1"
                             }
-                            href={`${
-                              router.asPath === "/en"
-                                ? `/en/projects/${mapItem.slug}`
-                                : router.asPath === "/pt"
-                                ? `/pt/projects/${mapItem.slug}`
-                                : `/en/projects/${mapItem.slug}`
-                            }`}
+                            href={`/projects/${mapItem.slug}`}
                             className={`${buttonClassName} rounded-[3%] !px-[32px] !w-fit flex gap-[8px] items-center !border-royalPurple before:!bg-royalPurple`}
                           >
                             {t("projectsText6")}

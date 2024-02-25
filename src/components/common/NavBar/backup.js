@@ -1,11 +1,14 @@
+import useLanguageChange from "@/hooks/useLanguageChange";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const LanguageDropdown = ({ locale, changeLanguage }) => {
+const LanguageDropdown = ({ locale }) => {
   const { t } = useTranslation();
+
+  const { changeLanguage } = useLanguageChange();
 
   const options = ["en", "pt"];
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -83,7 +86,11 @@ const LanguageDropdown = ({ locale, changeLanguage }) => {
           height={0}
           unoptimized
         />
-        {locale === "en" ? "English" : locale === "pt" ? "Portugues" : ""}
+        {locale === "en"
+          ? "English"
+          : locale === "pt"
+          ? "Portugues"
+          : ""}
         <Image
           aria-hidden={true}
           className="w-[12px]"
@@ -146,7 +153,9 @@ const LanguageDropdown = ({ locale, changeLanguage }) => {
                         ? "/assets/american-flag-real.svg"
                         : "/assets/brazil-flag-real.svg"
                     }`}
-                    alt={locale === "en" ? t("altText3") : t("altText2")}
+                    alt={
+                      locale === "en" ? t("altText3") : t("altText2")
+                    }
                     width={0}
                     height={0}
                     unoptimized

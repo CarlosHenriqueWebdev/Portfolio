@@ -9,14 +9,11 @@ import {
 import { useTranslation } from "react-i18next";
 // eslint-disable-next-line no-unused-vars
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import useLanguageChange from "@/hooks/useLanguageChange";
 import { Trans } from "react-i18next";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 
-const Hero = () => {
+const Hero = ({ locale }) => {
   const { t } = useTranslation();
-
-  const { whichLanguageIsIt } = useLanguageChange();
 
   const [sparkleIsHovered, setsparkleIsHovered] = useState(false);
 
@@ -60,7 +57,7 @@ const Hero = () => {
 
               <div className="font-bold text-[1.5rem] sm:text-[1.75rem]">
                 <motion.div aria-hidden="true">
-                  {whichLanguageIsIt === "en" ? (
+                  {locale === "en" ? (
                     <TextAnimationHeadingEnglish text={animatedTextEnglish} />
                   ) : (
                     <TextAnimationHeadingPortuguese
@@ -69,7 +66,7 @@ const Hero = () => {
                   )}
                 </motion.div>
 
-                {whichLanguageIsIt === "en" ? (
+                {locale === "en" ? (
                   <h1 id="homeHeadingText" className="visually-hidden">
                     {animatedTextEnglish}
                   </h1>

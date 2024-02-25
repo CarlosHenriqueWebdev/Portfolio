@@ -1,5 +1,5 @@
 import LanguageDropdown from "@/components/common/NavBar/LanguageDropdown";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import Image from "next/image";
@@ -8,50 +8,13 @@ import Footer from "@/components/common/Footer/Footer";
 import ScrollToTopButton from "@/components/utils/scrollToTopButton";
 import { useTranslation } from "react-i18next";
 import useLanguageChange from "@/hooks/useLanguageChange";
-import { useEffect } from "react";
+import i18n from "../../../i18n";
 import Head from "next/head";
 
-const Project = ({ lang, slug }) => {
+const Project = ({ locale, slug, foundProject }) => {
   const { t } = useTranslation();
 
-  const { isLanguageLoading } = useLanguageChange();
-
-  // State to hold the project once it's loaded
-  const [project, setProject] = useState(null);
-  // State to represent loading state
-  const [doesProjectExist, setDoesProjectExist] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Fetch the translated projects data
-        const translatedProjectsData = await t("projectsData", {
-          returnObjects: true,
-        });
-
-        // Find the project based on the current slug
-        const foundProject = translatedProjectsData.find(
-          (p) => p.slug === slug
-        );
-
-        if (!foundProject) {
-          // Handle the case when the project is not found
-          console.log("No project found");
-        } else {
-          // Update the project state
-          setProject(foundProject);
-        }
-      } catch (error) {
-        console.error("Error finding data:", error);
-      } finally {
-        // Loading is complete, update loading state
-        setDoesProjectExist(true);
-      }
-    };
-
-    fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug, t]); // Run the effect whenever slug or translation changes
+  const { isLanguageLoading, changeLanguage } = useLanguageChange();
 
   const handleClick = () => {
     const targetElement = document.getElementById("projectHeadingText");
@@ -68,40 +31,13 @@ const Project = ({ lang, slug }) => {
   return (
     <>
       <Head>
-        <title>
-          {lang === "en"
-            ? `${
-                slug === "doggy-daycare" ? "Doggy Daycare" : null
-              } | Web Development Portfolio`
-            : lang === "pt"
-            ? `${
-                slug === "doggy-daycare" ? "Doggy Daycare" : null
-              } | Portfolio de Desenvolvimento Web`
-            : null}
-        </title>
+        <title>{`${foundProject.pageTitle}`}</title>
 
-        <meta
-          name="description"
-          content={
-            isLanguageLoading
-              ? ""
-              : lang === "en"
-              ? `Explore details about the project "${
-                  slug === "doggy-daycare" ? "Doggy Daycare" : null
-                }" in my web development portfolio. Learn about the technologies used and the key features implemented.`
-              : lang === "pt"
-              ? `Explore detalhes sobre o projeto "${
-                  slug === "doggy-daycare" ? "Doggy Daycare" : null
-                }" no meu portfólio de desenvolvimento web. Saiba mais sobre as tecnologias utilizadas e as principais funcionalidades implementadas.`
-              : null
-          }
-        />
+        <meta name="description" content={foundProject.description} />
 
         <link
           rel="canonical"
-          href={`https://www.carloshenriquedev.com/${
-            lang === "en" ? "en" : lang === "pt" ? "pt" : null
-          }/projects/${slug}`}
+          href={`https://www.carloshenriquedev.com/${locale}/projects/${slug}`}
         />
 
         <link
@@ -121,9 +57,9 @@ const Project = ({ lang, slug }) => {
         />
       </Head>
 
-      {!isLanguageLoading && doesProjectExist ? (
+      {!isLanguageLoading ? (
         <>
-          {project ? (
+          {foundProject ? (
             <>
               <div className="cursor-auto">
                 <ScrollToTopButton />
@@ -139,7 +75,7 @@ const Project = ({ lang, slug }) => {
                         <div>
                           <Link
                             className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
-                            href={`/${lang}`}
+                            href={`/${locale}`}
                           >
                             <Image
                               aria-hidden={true}
@@ -155,19 +91,22 @@ const Project = ({ lang, slug }) => {
                         </div>
 
                         <div className="order-1">
-                          <LanguageDropdown />
+                          <LanguageDropdown
+                            locale={locale}
+                            changeLanguage={changeLanguage}
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                 </nav>
 
-                <div className="">
+                <div>
                   <div>
                     <div
                       className="bg-center bg-cover h-[80vh] border-solid border-b-[6px] border-cornflowerBlue bg-fixed"
                       style={{
-                        backgroundImage: `url(${project.hero})`,
+                        backgroundImage: `url(${foundProject.hero})`,
                       }}
                     ></div>
 
@@ -178,20 +117,20 @@ const Project = ({ lang, slug }) => {
                             id="projectHeadingText"
                             className="text-[1.625rem] font-bold"
                           >
-                            {project.name}
+                            {foundProject.name}
                           </h1>
 
-                          <p>{project.description}</p>
+                          <p>{foundProject.description}</p>
                         </div>
 
-                        <div className="mt-[24px] flex gap-[16px]">
+                        <div className="mt-[24px] flex gap-[16px] flex-wrap">
                           <Link
                             aria-label={`${t("projectsPageText1")} ${t(
                               "accessibilityText8"
                             )}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            href={project.liveWebsiteUrl}
+                            href={foundProject.liveWebsiteUrl}
                             className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
                           >
                             <Image
@@ -204,6 +143,50 @@ const Project = ({ lang, slug }) => {
                               unoptimized
                             />
                             {t("projectsPageText1")}
+                          </Link>
+
+                          {foundProject.slug !== "doggy-daycare" && (
+                            <Link
+                              aria-label={`${t("projectsPageText1")} ${t(
+                                "accessibilityText8"
+                              )}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href={foundProject.figmaUrl}
+                              className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
+                            >
+                              <Image
+                                aria-hidden={true}
+                                className="w-[16px] h-[16px]"
+                                src="/assets/white-icons/figma-white.svg"
+                                alt={t("altText12")}
+                                width={0}
+                                height={0}
+                                unoptimized
+                              />
+                              {t("projectsPageText2")}
+                            </Link>
+                          )}
+
+                          <Link
+                            aria-label={`${t("projectsPageText1")} ${t(
+                              "accessibilityText8"
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={foundProject.gitHubUrl}
+                            className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
+                          >
+                            <Image
+                              aria-hidden={true}
+                              className="w-[16px] h-[16px]"
+                              src="/assets/white-icons/github-white.svg"
+                              alt={t("altText12")}
+                              width={0}
+                              height={0}
+                              unoptimized
+                            />
+                            {t("projectsPageText3")}
                           </Link>
                         </div>
                       </div>
@@ -219,7 +202,7 @@ const Project = ({ lang, slug }) => {
                         </h2>
 
                         <ul className="h-fit gap-x-[32px] gap-y-[12px] grid grid-cols-2">
-                          {project.technologiesUsed.map(
+                          {foundProject.technologiesUsed.map(
                             (mapItem, itemIndex) => (
                               <li
                                 key={itemIndex}
@@ -247,11 +230,11 @@ const Project = ({ lang, slug }) => {
                             {t("projectsPageText4")}
                           </h2>
 
-                          <p>{project.challengesDescription}</p>
+                          <p>{foundProject.challengesDescription}</p>
                         </div>
 
                         <ul className="h-fit gap-x-[32px] gap-y-[12px]  grid grid-cols-2">
-                          {project.challenges.map((mapItem, itemIndex) => (
+                          {foundProject.challenges.map((mapItem, itemIndex) => (
                             <li
                               key={itemIndex}
                               className="h-fit grid gap-[8px]"
@@ -284,11 +267,11 @@ const Project = ({ lang, slug }) => {
                             {t("projectsPageText5")}
                           </h2>
 
-                          <p>{project.featuresDescription}</p>
+                          <p>{foundProject.featuresDescription}</p>
                         </div>
 
                         <ul className="h-fit gap-x-[32px] gap-y-[12px]  grid grid-cols-2">
-                          {project.siteMainFeatures.map(
+                          {foundProject.siteMainFeatures.map(
                             (mapItem, itemIndex) => (
                               <li
                                 key={itemIndex}
@@ -307,56 +290,64 @@ const Project = ({ lang, slug }) => {
                         </ul>
                       </div>
 
-                      <hr
-                        aria-hidden="true"
-                        className="border-t-[3px] border-cornflowerBlue my-[32px]"
-                      />
-
-                      <div className="grid gap-[16px]">
-                        <div className="grid gap-[12px]">
-                          <h2 className="text-[1.375rem] font-bold">
-                            {t("projectsPageText7")}
-                          </h2>
-                        </div>
-
-                        <ul className="h-fit grid gap-[16px] grid-cols-3">
-                          {project.websiteVideos.map((mapItem, itemIndex) => (
-                            <li
-                              className="border-solid border-[4px] border-cornflowerBlue h-fit"
-                              key={itemIndex}
-                            >
-                              <video className="w-fit h-fit" controls>
-                                <source
-                                  src={mapItem.videoSrcMp4}
-                                  type="video/mp4"
-                                />
-                                Your browser does not support the video tag.
-                              </video>
-                            </li>
-                          ))}
-                        </ul>
-
-                        <Link
-                          aria-label={`${t("projectsPageText8")} ${t(
-                            "accessibilityText8"
-                          )}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={project.liveWebsiteUrl}
-                          className={`${buttonClassName} mt-[16px] w-fit  px-[32px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                        >
-                          {t("projectsPageText8")}
-                          <Image
-                            aria-hidden={true}
-                            className="w-[16px] h-[16px]"
-                            src="/assets/arrow.svg"
-                            alt={t("altText1")}
-                            width={0}
-                            height={0}
-                            unoptimized
+                      {foundProject.websiteVideos && (
+                        <>
+                          <hr
+                            aria-hidden="true"
+                            className="border-t-[3px] border-cornflowerBlue my-[32px]"
                           />
-                        </Link>
-                      </div>
+
+                          <div className="grid gap-[16px]">
+                            <div className="grid gap-[12px]">
+                              <h2 className="text-[1.375rem] font-bold">
+                                {t("projectsPageText7")}
+                              </h2>
+                            </div>
+
+                            <ul className="h-fit grid gap-[16px] grid-cols-3">
+                              {foundProject.websiteVideos &&
+                                foundProject.websiteVideos.map(
+                                  (mapItem, itemIndex) => (
+                                    <li
+                                      className="border-solid border-[4px] border-cornflowerBlue h-fit"
+                                      key={itemIndex}
+                                    >
+                                      <video className="w-fit h-fit" controls>
+                                        <source
+                                          src={mapItem.videoSrcMp4}
+                                          type="video/mp4"
+                                        />
+                                        Your browser does not support the video
+                                        tag.
+                                      </video>
+                                    </li>
+                                  )
+                                )}
+                            </ul>
+
+                            <Link
+                              aria-label={`${t("projectsPageText8")} ${t(
+                                "accessibilityText8"
+                              )}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href={foundProject.liveWebsiteUrl}
+                              className={`${buttonClassName} mt-[16px] w-fit  px-[32px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
+                            >
+                              {t("projectsPageText8")}
+                              <Image
+                                aria-hidden={true}
+                                className="w-[16px] h-[16px]"
+                                src="/assets/arrow.svg"
+                                alt={t("altText1")}
+                                width={0}
+                                height={0}
+                                unoptimized
+                              />
+                            </Link>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -377,12 +368,27 @@ const Project = ({ lang, slug }) => {
   );
 };
 
-export async function getServerSideProps({ query }) {
-  const { lang, slug } = query;
+export async function getServerSideProps({ locale, query }) {
+  const { slug } = query;
+
+  i18n.changeLanguage(locale);
+
+  // Fetch the translated projects data
+  const { t } = i18n;
+
+  const translatedProjectsData = await t("projectsData", {
+    returnObjects: true,
+  });
+
+  // Find the foundProject based on the current slug
+  const foundProject = translatedProjectsData.find(
+    (project) => project.slug === slug
+  );
 
   return {
     props: {
-      lang,
+      foundProject,
+      locale,
       slug,
     },
   };

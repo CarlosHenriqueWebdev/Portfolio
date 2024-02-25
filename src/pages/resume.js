@@ -8,14 +8,11 @@ import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import useLanguageChange from "@/hooks/useLanguageChange";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
-const Resume = ({ lang }) => {
+const Resume = ({ locale }) => {
   const { t } = useTranslation();
 
-  const router = useRouter();
-
-  const { isLanguageLoading } = useLanguageChange();
+  const { isLanguageLoading, changeLanguage } = useLanguageChange();
 
   const handleClick = () => {
     const targetElement = document.getElementById("resumeHeadingText");
@@ -37,30 +34,13 @@ const Resume = ({ lang }) => {
   return (
     <>
       <Head>
-        <title>
-          {lang === "en"
-            ? "Web Developer Resume | Skills, Experience, and Achievements"
-            : lang === "pt"
-            ? "Currículo de Desenvolvedor Web | Habilidades, Experiência e Conquistas"
-            : null}
-        </title>
+        <title>{t("resumeTitle")}</title>
 
-        <meta
-          name="description"
-          content={
-            lang === "en"
-              ? "Explore my web developer resume to learn about my skills, experience, and notable achievements."
-              : lang === "pt"
-              ? "Confira meu currículo de desenvolvedor web para saber mais sobre minhas habilidades, experiência e conquistas notáveis."
-              : null
-          }
-        />
+        <meta name="description" content={t("resumeMetaDescription")} />
 
         <link
           rel="canonical"
-          href={`https://www.carloshenriquedev.com/${
-            lang === "en" ? "en" : lang === "pt" ? "pt" : null
-          }/resume`}
+          href={`https://www.carloshenriquedev.com/${locale}/resume`}
         />
 
         <link
@@ -94,13 +74,7 @@ const Resume = ({ lang }) => {
                     <div>
                       <Link
                         className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
-                        href={`${
-                          router.asPath === "/en/resume"
-                            ? "/en"
-                            : router.asPath === "/pt/resume"
-                            ? "/pt"
-                            : "/"
-                        }`}
+                        href={`${"/"}`}
                       >
                         <Image
                           aria-hidden={true}
@@ -116,7 +90,7 @@ const Resume = ({ lang }) => {
                     </div>
 
                     <div className="order-1">
-                      <LanguageDropdown />
+                      <LanguageDropdown locale={locale} changeLanguage={changeLanguage} />
                     </div>
                   </div>
                 </div>
@@ -337,31 +311,6 @@ const Resume = ({ lang }) => {
                             )}
                           </ul>
                         </div>
-
-                        <div>
-                          <h4 className="lg:pl-[12px] uppercase mt-[16px] font-bold text-[1rem] text-[#5541D4]">
-                            {t("resumePageProjectHeadingText3")}
-                          </h4>
-
-                          <ul className="lg:pl-[12px] mt-[16px] grid gap-x-[32px] gap-y-[12px] w-fit md:grid-cols-2">
-                            {mapItem.achievementsList.map(
-                              (mapItem, itemIndex) => (
-                                <li
-                                  key={itemIndex}
-                                  className="bg-[white] lg:pl-[12px] flex flex-col gap-[4px] w-full"
-                                >
-                                  <h5 className="uppercase w-fit font-bold text-[0.875rem]">
-                                    {mapItem.achievementHeading}
-                                  </h5>
-
-                                  <p className="text-[0.875rem]">
-                                    {mapItem.achievementDescription}
-                                  </p>
-                                </li>
-                              )
-                            )}
-                          </ul>
-                        </div>
                       </li>
                     ))}
                   </ul>
@@ -452,12 +401,10 @@ const Resume = ({ lang }) => {
   );
 };
 
-export async function getServerSideProps({ query }) {
-  const { lang } = query;
-
+export async function getServerSideProps({ locale }) {
   return {
     props: {
-      lang,
+      locale,
     },
   };
 }

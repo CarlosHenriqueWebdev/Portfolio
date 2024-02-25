@@ -20,14 +20,13 @@ const useLanguageChange = () => {
   const isHomepage = router.asPath === "/en" || router.asPath === "/pt";
 
   const changeLanguage = (lng) => {
-    // you can do interpolation
     setIsLanguageLoading(true);
-
-    setTimeout(() => {
-      router
-        .push({ pathname, query }, asPath, { locale: `${lng}` })
-        .then(() => setIsLanguageLoading(false));
-    }, 2000);
+    
+    // you can do interpolation
+    router
+      .push({ pathname, query }, asPath, { locale: `${lng}` })
+      .then(() => setIsLanguageLoading(true))
+      .catch(() => setIsLanguageLoading(true));
   };
 
   return {

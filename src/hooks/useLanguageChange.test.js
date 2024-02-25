@@ -29,23 +29,6 @@ describe("useLanguageChange", () => {
     const { result } = renderHook(() => useLanguageChange());
 
     expect(result.current.isLanguageLoading).toBe(true);
-    expect(result.current.whichLanguageIsIt).toBe("en" || "pt");
-  });
-
-  it("whichLanguageIsIt is PT", () => {
-    require("next/router").setMockPathname("/pt");
-
-    const { result } = renderHook(() => useLanguageChange());
-
-    expect(result.current.whichLanguageIsIt).toBe("pt");
-  });
-
-  it("whichLanguageIsIt is EN", () => {
-    require("next/router").setMockPathname("/en");
-
-    const { result } = renderHook(() => useLanguageChange());
-
-    expect(result.current.whichLanguageIsIt).toBe("en");
   });
 
   it("changeLanguage if it is on the Homepage", () => {

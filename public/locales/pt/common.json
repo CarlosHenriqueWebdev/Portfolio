@@ -1,5 +1,10 @@
 {
-  "pageTitle": "Portfolio de Desenvolvedor Web | Explore Meus Projetos e Habilidades",
+  "homeTitle": "Portfólio de Desenvolvedor Web | Explore Meus Projetos e Habilidades",
+  "homeMetaDescription": "Confira meu portfólio de desenvolvimento web para explorar uma seleção de projetos e habilidades. Saiba mais sobre minha expertise em tecnologias front-end e back-end.",
+  "resumeTitle": "Currículo | Habilidades, Experiência e Conquistas",
+  "resumeMetaDescription": "Explore meu currículo de desenvolvedor web para saber mais sobre minhas habilidades, experiência e conquistas notáveis.",
+  "downloadCvPath": "/assets/downloads/portuguese-resume.pdf",
+  "downloadCvFileName": "Currículo",
 
   "navText1": "Início",
   "navText2": "Sobre",
@@ -128,6 +133,12 @@
     },
     {
       "id": 13,
+      "name": "Jest",
+      "description": "Jest é um framework de teste JavaScript encantador com foco em simplicidade. Ele funciona perfeitamente com a maioria dos projetos e fornece recursos como runners de teste integrados, assertivas e mocks para testes eficientes e confiáveis.",
+      "imageSrc": "/assets/jest-logo.svg"
+    },
+    {
+      "id": 14,
       "name": "Outros",
       "description": "A categoria \"Outros\" representa minha abertura para aprender novas habilidades e tecnologias. Mesmo que eu ainda não tenha encontrado uma linguagem ou ferramenta específica, acredito que posso me adaptar e adquirir o conhecimento necessário para usá-la em produção se eu tiver um pouco de tempo para aprendê-la.",
       "imageSrc": "/assets/question-mark.svg",
@@ -201,63 +212,63 @@
 
   "projectsData": [
     {
+      "pageTitle": "Doggy Daycare | Portfólio de Desenvolvimento Web",
       "slug": "doggy-daycare",
       "icon": "/assets/paw-icon.svg",
-      "iconAltText": "Pata de Cachorro",
+      "iconAltText": "Patadas de Cão",
       "name": "Doggy Daycare",
-      "description": "Um projeto sobre um fictício Daycare para Cãezinhos. Embora o nome não seja muito criativo, o site foi feito apenas com o objetivo de autoaperfeiçoamento. Serviu como uma plataforma para aprimorar principalmente minhas habilidades de design e utilizar uma ferramenta CMS popular como Strapi e WordPress, já que sou bastante fã da ideia do que um CMS pode fazer. O projeto também teve como objetivo aprimorar minha proficiência em codificação no Next.js, implementar recursos de acessibilidade e alguns outros.",
-      "role": "(Único Desenvolvedor)",
-      "descriptionFeatures": "Strapi CMS, Mapa Interativo, Email Automático, Integração de Acessibilidade, Tela de Carregamento e Carregamento Esqueleto.",
-      "hero": "/assets/projects/doggy-hero.png",
+      "description": "Um projeto sobre uma creche fictícia para cães. Embora o nome não seja muito criativo, o site foi feito apenas com o objetivo de autoaperfeiçoamento. Serviu como plataforma para melhorar principalmente minhas habilidades de design e utilizar ferramentas CMS populares como Strapi e WordPress, já que sou bastante fã da ideia do que um CMS pode fazer. O projeto também visava refinar minha proficiência em codificação no Next.js, implementando recursos de acessibilidade e alguns outros.",
+      "role": "(Desenvolvedor Único)",
+      "descriptionFeatures": "CMS Strapi, Mapa Interativo, Email Automático, Integração de Acessibilidade, Tela de Carregamento & Carregamento Esquelético.",
       "technologiesUsed": [
         {
           "name": "Next.js",
           "techImageSrc": "/assets/nextjs-logo.svg",
           "blackTechImageSrc": "/assets/black-logos/nextjs-logo.svg",
-          "reasonWhy": "Next.js foi escolhido por sua eficiência na construção de aplicações React e suas rotas dinâmicas e configuração padrão, permitindo que o projeto avançasse mais rápido sem precisar de muitas configurações personalizadas, como rotas personalizadas."
+          "reasonWhy": "Next.js foi escolhido por sua eficiência na construção de aplicações React e suas rotas e configuração dinâmicas padrão, permitindo que o projeto progredisse mais rápido sem precisar de muitas configurações personalizadas como rotas personalizadas."
         },
         {
           "name": "Tailwind CSS",
           "techImageSrc": "/assets/tailwind-logo.svg",
           "blackTechImageSrc": "/assets/black-logos/tailwind-logo.svg",
-          "reasonWhy": "Tailwind CSS foi selecionado para simplificar o processo de estilização com sua abordagem utility-first, garantindo um código limpo e de fácil manutenção. Isso tornou a estilização do site extremamente rápida. Sinceramente, não posso enfatizar o suficiente o quão útil foi."
+          "reasonWhy": "Tailwind CSS foi selecionado para otimizar o processo de estilização com sua abordagem utility-first, garantindo uma base de código limpa e fácil de manter. Ele fez com que a estilização do site fosse extremamente rápida. Sinceramente, não consigo enfatizar o suficiente sobre o quão útil foi."
         },
         {
           "name": "Strapi",
           "techImageSrc": "/assets/strapi-logo.svg",
           "blackTechImageSrc": "/assets/black-logos/strapi-logo.svg",
-          "reasonWhy": "Strapi serviu como o CMS headless para gerenciar conteúdo, proporcionando flexibilidade e facilidade de uso, permitindo atualizações eficientes de conteúdo. No entanto, eu não recomendaria muito, pois, pelo menos para mim, senti que faltavam muitos recursos."
+          "reasonWhy": "Strapi serviu como o CMS headless para gerenciar conteúdo, proporcionando flexibilidade e facilidade de uso, permitindo atualizações de conteúdo eficientes. Embora, eu não o recomendaria muito, pois, pelo menos para mim, senti que muitos recursos estavam faltando."
         },
         {
           "name": "Figma",
           "techImageSrc": "/assets/figma-logo.svg",
           "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": "Figma foi a principal ferramenta de design; seus plugins e recursos foram muito úteis, garantindo uma interface de usuário boa e visualmente atraente."
+          "reasonWhy": "Figma foi a principal ferramenta de design; seus plugins e recursos ajudaram muito, garantindo uma interface de usuário coesa e visualmente atraente."
         },
         {
           "name": "CSS",
           "techImageSrc": "/assets/css-logo.svg",
           "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": "Embora o Tailwind CSS tenha sido a principal ferramenta de estilização, o CSS personalizado foi utilizado para elementos de design específicos, proporcionando uma melhor experiência visual."
+          "reasonWhy": "Enquanto o Tailwind CSS era a principal ferramenta de estilização, o CSS personalizado foi utilizado para elementos de design específicos, proporcionando uma melhor experiência visual."
         }
       ],
+      "challengesDescription": "Ao desenvolver este projeto, encontrei desafios mínimos, principalmente centrados em refinar detalhes do site e lidar com tarefas repetitivas devido ao CMS. A complexidade do projeto foi relativamente baixa, sendo os passos mais complicados apenas um pouco desafiadores em comparação.",
+      "featuresDescription": "Explore a diversa gama de recursos e funcionalidades implementadas neste projeto. Desde a gestão de conteúdo sem problemas até interações amigáveis, cada elemento é projetado para melhorar a experiência geral do usuário.",
       "challenges": [
         {
-          "challengeTitle": "Melhoria no Formulário de Reserva",
-          "challengeDescription": "Criar o formulário de reserva teve seus desafios. Embora as funções principais funcionassem bem — enviar dados para o Strapi e acionar notificações por e-mail — os detalhes da validação do formulário e a experiência do usuário precisavam de melhorias. Garantir acessibilidade é incerto sem usuários reais para testar, e, como um projeto de aprendizado, eu não queria incomodar os usuários apenas para fins de teste e aprendizado.",
-          "solutionText": "Para enfrentar esses desafios, refinei as indicações visuais do formulário para obter um feedback melhor e o testei extensivamente com o NVDA Screen Reader. Também consultei guias online sobre acessibilidade de formulários. No entanto, determinar o sucesso do formulário permanece desafiador sem interação de usuários do mundo real. A melhoria contínua é completamente possível e essencial se o site fosse acessível ao público como um projeto não fictício."
+          "challengeTitle": "Aprimoramento do Formulário de Reserva",
+          "challengeDescription": "Criar o formulário de reserva teve seus desafios. Embora as principais funções funcionassem bem - enviar dados para o Strapi e acionar notificações por email - os detalhes da validação do formulário e a experiência do usuário precisavam de melhorias. Garantir a acessibilidade é incerto sem usuários reais para testes, e como projeto de aprendizado, eu não queria incomodar os usuários apenas para fins de teste e aprendizado.",
+          "solutionText": "Para enfrentar esses desafios, refinei as dicas visuais do formulário para um melhor feedback e testei extensivamente com o NVDA Screen Reader. Também consultei guias online sobre acessibilidade de formulários. No entanto, determinar o sucesso do formulário permanece desafiador sem interação do usuário do mundo real. A melhoria contínua é completamente possível e essencial se o site fosse acessível ao público como um projeto não fictício."
         }
       ],
-      "challengesDescription": "Ao desenvolver este projeto, encontrei desafios mínimos, principalmente centrados em refinar detalhes do site e lidar com tarefas repetitivas devido ao CMS. A complexidade do projeto foi relativamente baixa, com os passos mais complicados sendo apenas um pouco desafiadores em comparação.",
-      "featuresDescription": "Explore a diversidade de recursos e funcionalidades implementadas neste projeto. Desde o gerenciamento de conteúdo sem complicações até interações amigáveis ao usuário, cada elemento é projetado para aprimorar a experiência geral do usuário.",
       "siteMainFeatures": [
         {
-          "featureHeading": "Integração Strapi Headless CMS:",
-          "featureDescription": "Atualize facilmente textos, imagens, vídeos, postagens de emprego e serviços."
+          "featureHeading": "Integração com CMS Strapi Headless:",
+          "featureDescription": "Atualize facilmente Textos, Imagens, Vídeos, Postagens de Trabalho e Serviços."
         },
         {
-          "featureHeading": "Mapa Interativo Leaflet:",
-          "featureDescription": "Permite que os usuários localizem cada instalação de maneira eficiente."
+          "featureHeading": "Mapa Interativo do Leaflet:",
+          "featureDescription": "Permite aos usuários localizar cada instalação de forma eficiente."
         },
         {
           "featureHeading": "Integração de Acessibilidade:",
@@ -265,65 +276,27 @@
         },
         {
           "featureHeading": "Detalhes Gráficos para uma Experiência Vibrante:",
-          "featureDescription": "Contador numérico, confetes, efeitos de hover nas imagens e animações sutis para um design aprimorado."
+          "featureDescription": "Contador de Números, Confete, Efeitos de Hover em Imagens e animações sutis para um design aprimorado."
         },
         {
-          "featureHeading": "Notificações Automáticas por E-mail:",
-          "featureDescription": "Enviadas para o administrador do Strapi e o usuário após a conclusão bem-sucedida do formulário."
+          "featureHeading": "Notificações Automáticas por Email:",
+          "featureDescription": "Enviadas para o Administrador do Strapi e o Usuário após a conclusão bem-sucedida do formulário."
         },
         {
           "featureHeading": "Tela de Carregamento com Animação HTML:",
-          "featureDescription": "Animação suave durante o carregamento de dados do Strapi."
+          "featureDescription": "Animação de carregamento suave ao buscar dados do Strapi."
         },
         {
           "featureHeading": "Elementos de Design Personalizados:",
-          "featureDescription": "Logotipo feito sob medida, padrão temático de cachorro e uma mistura de vetores gratuitos criados no Figma."
+          "featureDescription": "Logotipo feito por mim, Padrão Temático de Cães e uma combinação de Vetores Gratuitos criados no Figma."
         },
         {
           "featureHeading": "Miniatura de Vídeo Personalizada:",
-          "featureDescription": "Miniatura personalizada para um toque agradável na página de Posições Abertas."
+          "featureDescription": "Miniatura personalizada para um toque agradável na Página de Posições Abertas."
         },
         {
           "featureHeading": "Interações com Imagens:",
-          "featureDescription": "Clique em imagens não interativas para abrir um modal exibindo todas as imagens da página, efeito Ken Burns na página de Posições Abertas e um carrossel de imagens infinito funcionando como uma galeria em cada página de Serviço Individual."
-        }
-      ],
-      "achievementsList": [
-        {
-          "achievementHeading": "Integração Strapi Headless CMS:",
-          "achievementDescription": "Integrou com sucesso o Strapi como um CMS headless, permitindo atualizações fáceis para textos, imagens, vídeos, postagens de emprego e serviços."
-        },
-        {
-          "achievementHeading": "Mapa Interativo Leaflet:",
-          "achievementDescription": "Implementou um mapa interativo Leaflet, permitindo que os usuários localizem cada instalação de maneira eficiente."
-        },
-        {
-          "achievementHeading": "Integração de Acessibilidade:",
-          "achievementDescription": "Projetou uma interface amigável ao leitor de tela, incluindo o Mapa Interativo e o Formulário de Contato/Reserva."
-        },
-        {
-          "achievementHeading": "Detalhes Gráficos para uma Experiência Vibrante:",
-          "achievementDescription": "Adicionou elementos envolventes como contador numérico, confetes, efeitos de hover nas imagens e animações sutis para um design aprimorado."
-        },
-        {
-          "achievementHeading": "Notificações Automáticas por E-mail:",
-          "achievementDescription": "Estabeleceu notificações automáticas por e-mail, enviadas tanto para o administrador do Strapi quanto para os usuários após a conclusão bem-sucedida do formulário."
-        },
-        {
-          "achievementHeading": "Tela de Carregamento com Animação HTML:",
-          "achievementDescription": "Implementou uma animação suave durante o carregamento de dados do Strapi."
-        },
-        {
-          "achievementHeading": "Elementos de Design Personalizados:",
-          "achievementDescription": "Criou elementos de design exclusivos, incluindo um logotipo feito sob medida, padrão temático de cachorro e uma mistura de vetores gratuitos usando o Figma."
-        },
-        {
-          "achievementHeading": "Miniatura de Vídeo Personalizada:",
-          "achievementDescription": "Criou uma miniatura personalizada para um toque visualmente atraente na página de Posições Abertas."
-        },
-        {
-          "achievementHeading": "Interações com Imagens:",
-          "achievementDescription": "Implementou recursos interativos, como clicar em imagens não interativas para abrir um modal, efeito Ken Burns na página de Posições Abertas e um carrossel de imagens infinito funcionando como uma galeria em cada página de Serviço Individual."
+          "featureDescription": "Clique em imagens não interativas para abrir um modal exibindo todas as Imagens da Página, Efeito Ken Burns na Página de Posições Abertas e Carrossel de Imagens Infinito funcionando como uma Galeria em cada Página de Serviço Individual."
         }
       ],
       "websiteVideos": [
@@ -341,10 +314,89 @@
         }
       ],
       "thumbnail": "/assets/projects/doggy-thumbnail.png",
-      "thumbnailAltText": "Página Inicial do Site Dentro de uma Moldura de Monitor",
-      "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/"
+      "thumbnailAltText": "Página Inicial do Site Dentro de um Quadro de Monitor",
+      "hero": "/assets/projects/doggy-hero.png",
+      "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/DoggyDaycareFront",
+      "figmaUrl": ""
+    },
+    {
+      "pageTitle": "Tic Tac Toe | Portfólio de Desenvolvimento Web",
+      "slug": "tic-tac-toe",
+      "icon": "/assets/cross.svg",
+      "iconAltText": "Ícone de Jogo da Velha",
+      "name": "Tic Tac Toe",
+      "description": "Um simples jogo da velha implementado usando HTML, CSS e JavaScript. Este projeto foi criado principalmente para praticar minhas habilidades de TDD com Jest.",
+      "role": "(Desenvolvedor Único)",
+      "descriptionFeatures": "Lógica básica do jogo, estilização CSS para uma interface visualmente atraente, áudio de videogame e JavaScript para interatividade.",
+      "technologiesUsed": [
+        {
+          "name": "HTML",
+          "techImageSrc": "/assets/html-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/html-logo.svg",
+          "reasonWhy": "HTML fornece a estrutura e o conteúdo do jogo."
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
+          "reasonWhy": "CSS estiliza a interface do jogo, tornando-a visualmente atraente."
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
+          "reasonWhy": "Figma foi a principal ferramenta de design."
+        },
+        {
+          "name": "JavaScript",
+          "techImageSrc": "/assets/javascript-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/javascript-logo.svg",
+          "reasonWhy": "JavaScript adiciona interatividade ao jogo, lidando com a lógica do jogo e interações do usuário."
+        },
+        {
+          "name": "Jest",
+          "techImageSrc": "/assets/jest-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/jest-logo.svg",
+          "reasonWhy": "Jest é usado para testar a lógica do jogo e garantir sua correção."
+        }
+      ],
+      "challengesDescription": "O principal e único desafio deste projeto foi usar o Jest como TDD.",
+      "challenges": [
+        {
+          "challengeTitle": "Jest TDD",
+          "challengeDescription": "Usar Jest se mostrou bastante desafiador. Muitas funcionalidades não funcionaram como esperado com Jest, necessitando o uso de inúmeros mocks. Além disso, encontrei frequentemente obstáculos em diferentes partes do projeto, levando a extensa pesquisa online e leitura de documentação.",
+          "solutionText": "Até o momento, não há uma solução definitiva, pois ainda estou trabalhando ativamente nisso. No entanto, estou aprendendo muito com esse processo e minhas habilidades de teste melhoraram significativamente devido à natureza interativa do jogo."
+        }
+      ],
+      "featuresDescription": "O jogo apresenta uma interface de usuário simples onde os jogadores podem se revezar clicando nas células para fazer sua jogada. O jogo acompanha o jogador atual e exibe o vencedor ou um empate quando o jogo termina.",
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Interface de Usuário Simples",
+          "featureDescription": "O jogo apresenta uma interface de usuário simples onde os jogadores podem fazer suas jogadas facilmente clicando nas células."
+        },
+        {
+          "featureHeading": "Rastreamento da Vez do Jogador",
+          "featureDescription": "O jogo acompanha o jogador atual e alterna as jogadas após cada jogada."
+        },
+        {
+          "featureHeading": "Detecção de Vitória e Empate",
+          "featureDescription": "O jogo verifica a condição de vitória ou empate após cada jogada e exibe o resultado conforme apropriado."
+        },
+        {
+          "featureHeading": "Efeitos Sonoros",
+          "featureDescription": "Toca sons diferentes em Movimentos, Vitórias e Empates."
+        }
+      ],
+      "thumbnail": "/assets/projects/tic-tac-toe-thumbnail.png",
+      "thumbnailAltText": "Miniatura do Jogo da Velha",
+      "hero": "/assets/projects/tic-tac-toe-hero.png",
+      "liveWebsiteUrl": "https://tic-tac-toe-nine-tan.vercel.app/",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/tic-tac-toe",
+      "figmaUrl": "https://www.figma.com/file/SDtAyFbfhWtXmP0DAo2Dtt/Tic-Tac-Toe?type=design&mode=design&t=XNRXwdNnySDk0hor-0"
     }
   ],
+
   "portfolioData": [
     {
       "name": "Portfólio de Desenvolvimento Web",

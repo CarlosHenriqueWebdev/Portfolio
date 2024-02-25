@@ -3,7 +3,7 @@ import Menu from "@/components/common/NavBar/Menu";
 import LanguageDropdown from "./LanguageDropdown";
 import { useTranslation } from "react-i18next";
 
-const NavBar = ({ activeSection }) => {
+const NavBar = ({ activeSection, locale, changeLanguage }) => {
   const { t } = useTranslation();
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -67,6 +67,8 @@ const NavBar = ({ activeSection }) => {
 
             {isScreen1024Px ? (
               <Menu
+                changeLanguage={changeLanguage}
+                locale={locale}
                 menuOpen={menuOpen}
                 setMenuOpen={setMenuOpen}
                 isScreen1024Px={isScreen1024Px}
@@ -75,7 +77,10 @@ const NavBar = ({ activeSection }) => {
             ) : (
               <ul className="w-full flex gap-[24px] items-center justify-between">
                 <li className="order-[1]">
-                  <LanguageDropdown />
+                  <LanguageDropdown
+                    locale={locale}
+                    changeLanguage={changeLanguage}
+                  />
                 </li>
 
                 <li>

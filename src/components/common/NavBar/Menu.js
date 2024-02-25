@@ -50,8 +50,15 @@ const delayItem = {
   },
 };
 
-const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
-  const { t: navTranslation } = useTranslation();
+const Menu = ({
+  menuOpen,
+  setMenuOpen,
+  isScreen1024Px,
+  activeSection,
+  locale,
+  changeLanguage,
+}) => {
+  const { t } = useTranslation();
 
   const linksData = SharedData();
 
@@ -110,7 +117,10 @@ const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
                 </li>
 
                 <li className="order-1">
-                  <LanguageDropdown />
+                  <LanguageDropdown
+                    locale={locale}
+                    changeLanguage={changeLanguage}
+                  />
                 </li>
               </>
             )}
@@ -143,7 +153,7 @@ const Menu = ({ menuOpen, setMenuOpen, isScreen1024Px, activeSection }) => {
                     tabIndex={menuOpen ? "0" : "-1"}
                     onClick={() => handleButtonClick(mapItem.screenReaderHref)}
                   >
-                    {navTranslation(`navText${itemIndex + 1}`)}
+                    {t(`navText${itemIndex + 1}`)}
 
                     {isScreen1024Px && (
                       <div
