@@ -340,7 +340,7 @@
         {
           "challengeTitle": "Jest TDD",
           "challengeDescription": "Using Jest proved to be quite challenging. Many functionalities didn't work as expected with Jest, necessitating the use of numerous mocks. Additionally, I frequently encountered obstacles in different parts of the project, leading to extensive online research and documentation reading.",
-          "solutionText": "As of now, there is no definitive solution, as I am still actively working on it. However, I am learning a great deal through this process and my testing skills have improved significantly due to the interactive nature of the game."
+          "solutionText": "During the Jest TDD challenge, I encountered various problems with Jest, relying heavily on mocks. Despite the challenges, I persevered through multiple trials and errors, gaining a deeper understanding of how Jest works overall. As a result, my Jest tests are now much more precise and useful compared to before."
         }
       ],
       "featuresDescription": "The game features a simple user interface where players can take turns clicking on cells to make their move. The game keeps track of the current player and displays the winner or a draw when the game ends.",

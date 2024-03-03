@@ -366,7 +366,7 @@
         {
           "challengeTitle": "Jest TDD",
           "challengeDescription": "Usar Jest se mostrou bastante desafiador. Muitas funcionalidades não funcionaram como esperado com Jest, necessitando o uso de inúmeros mocks. Além disso, encontrei frequentemente obstáculos em diferentes partes do projeto, levando a extensa pesquisa online e leitura de documentação.",
-          "solutionText": "Até o momento, não há uma solução definitiva, pois ainda estou trabalhando ativamente nisso. No entanto, estou aprendendo muito com esse processo e minhas habilidades de teste melhoraram significativamente devido à natureza interativa do jogo."
+          "solutionText": "Durante o desafio de TDD com Jest, deparei-me com vários problemas, tendo que recorrer bastante a mocks. Apesar dos desafios, persisti através de múltiplas tentativas e erros, ganhando um entendimento mais profundo de como o Jest funciona como um todo. Como resultado, meus testes com Jest agora são muito mais precisos e úteis em comparação com antes."
         }
       ],
       "featuresDescription": "O jogo apresenta uma interface de usuário simples onde os jogadores podem se revezar clicando nas células para fazer sua jogada. O jogo acompanha o jogador atual e exibe o vencedor ou um empate quando o jogo termina.",
