@@ -201,7 +201,7 @@ const Project = ({ locale, slug, foundProject }) => {
                           {t("resumePageProjectHeadingText2")}
                         </h2>
 
-                        <ul className="h-fit gap-x-[32px] gap-y-[12px] grid grid-cols-2">
+                        <ul className="h-fit gap-x-[32px] gap-y-[12px] grid sm:grid-cols-2">
                           {foundProject.technologiesUsed.map(
                             (mapItem, itemIndex) => (
                               <li
@@ -219,42 +219,48 @@ const Project = ({ locale, slug, foundProject }) => {
                         </ul>
                       </div>
 
-                      <hr
-                        aria-hidden="true"
-                        className="border-t-[3px] border-cornflowerBlue my-[32px]"
-                      />
+                      {foundProject.challenges && (
+                        <>
+                          <hr
+                            aria-hidden="true"
+                            className="border-t-[3px] border-cornflowerBlue my-[32px]"
+                          />
 
-                      <div className="grid gap-[16px]">
-                        <div className="grid gap-[12px]">
-                          <h2 className="text-[1.375rem] font-bold">
-                            {t("projectsPageText4")}
-                          </h2>
+                          <div className="grid gap-[16px]">
+                            <div className="grid gap-[12px]">
+                              <h2 className="text-[1.375rem] font-bold">
+                                {t("projectsPageText4")}
+                              </h2>
 
-                          <p>{foundProject.challengesDescription}</p>
-                        </div>
+                              <p>{foundProject.challengesDescription}</p>
+                            </div>
 
-                        <ul className="h-fit gap-x-[32px] gap-y-[12px]  grid grid-cols-2">
-                          {foundProject.challenges.map((mapItem, itemIndex) => (
-                            <li
-                              key={itemIndex}
-                              className="h-fit grid gap-[8px]"
-                            >
-                              <h3 className="text-[1.25rem] font-bold">
-                                {itemIndex + 1}. {mapItem.challengeTitle}:
-                              </h3>
+                            <ul className="h-fit gap-x-[32px] gap-y-[12px] grid sm:grid-cols-2">
+                              {foundProject.challenges.map(
+                                (mapItem, itemIndex) => (
+                                  <li
+                                    key={itemIndex}
+                                    className="h-fit grid gap-[8px]"
+                                  >
+                                    <h3 className="text-[1.25rem] font-bold">
+                                      {itemIndex + 1}. {mapItem.challengeTitle}:
+                                    </h3>
 
-                              <p>{mapItem.challengeDescription}</p>
+                                    <p>{mapItem.challengeDescription}</p>
 
-                              <p>
-                                <strong className="italic font-semibold">
-                                  Solution:
-                                </strong>{" "}
-                                {mapItem.solutionText}
-                              </p>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                                    <p>
+                                      <strong className="italic font-semibold">
+                                        Solution:
+                                      </strong>{" "}
+                                      {mapItem.solutionText}
+                                    </p>
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          </div>
+                        </>
+                      )}
 
                       <hr
                         aria-hidden="true"
@@ -270,7 +276,7 @@ const Project = ({ locale, slug, foundProject }) => {
                           <p>{foundProject.featuresDescription}</p>
                         </div>
 
-                        <ul className="h-fit gap-x-[32px] gap-y-[12px]  grid grid-cols-2">
+                        <ul className="h-fit gap-x-[32px] gap-y-[12px]  grid sm:grid-cols-2">
                           {foundProject.siteMainFeatures.map(
                             (mapItem, itemIndex) => (
                               <li
@@ -281,9 +287,7 @@ const Project = ({ locale, slug, foundProject }) => {
                                   {itemIndex + 1}. {mapItem.featureHeading}
                                 </h3>
 
-                                <h4 className="font-semibold">
-                                  {mapItem.featureDescription}
-                                </h4>
+                                <h4>{mapItem.featureDescription}</h4>
                               </li>
                             )
                           )}

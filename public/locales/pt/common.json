@@ -139,12 +139,22 @@
     },
     {
       "id": 14,
+      "name": "Angular",
+      "description": "Angular é um framework front-end popular para construir aplicações web. Ele fornece um conjunto abrangente de recursos para criar interfaces de usuário dinâmicas e responsivas, tornando-o uma ferramenta poderosa para o desenvolvimento web.",
+      "imageSrc": "/assets/angular-logo.svg"
+      },
+      {
+      "id": 15,
+      "name": "TypeScript",
+      "description": "TypeScript é um superset do JavaScript que adiciona tipagem estática à linguagem. Ele ajuda os desenvolvedores a identificar erros mais cedo no processo de desenvolvimento e escrever um código mais manutenível.",
+      "imageSrc": "/assets/typescript-logo.svg"
+      },
+      {
+      "id": 16,
       "name": "Outros",
-      "description": "A categoria \"Outros\" representa minha abertura para aprender novas habilidades e tecnologias. Mesmo que eu ainda não tenha encontrado uma linguagem ou ferramenta específica, acredito que posso me adaptar e adquirir o conhecimento necessário para usá-la em produção se eu tiver um pouco de tempo para aprendê-la.",
-      "imageSrc": "/assets/question-mark.svg",
-      "imageSrcBlack": "/assets/black-logos/question-mark.svg",
-      "extraNote": ""
-    }
+      "description": "A categoria \"Outros\" representa minha abertura para aprender novas habilidades e tecnologias. Mesmo que eu ainda não tenha encontrado uma linguagem ou ferramenta específica, acredito que posso me adaptar e adquirir o conhecimento necessário para usá-la em produção se tiver um pouco de tempo para aprendê-la.",
+      "imageSrc": "/assets/question-mark.svg"
+      }
   ],
 
   "servicesText1": "Eleve Sua Presença Digital com Meus Serviços Digitais.",
@@ -394,6 +404,73 @@
       "liveWebsiteUrl": "https://tic-tac-toe-nine-tan.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/tic-tac-toe",
       "figmaUrl": "https://www.figma.com/file/SDtAyFbfhWtXmP0DAo2Dtt/Tic-Tac-Toe?type=design&mode=design&t=XNRXwdNnySDk0hor-0"
+    },
+    {
+      "pageTitle": "Pixel Python | Portfólio de Desenvolvimento Web",
+      "slug": "pixel-python",
+      "icon": "/assets/snake.svg",
+      "iconAltText": "Ícone do Pixel Python",
+      "name": "Pixel Python",
+      "description": "Um jogo clássico da Snake implementado usando Angular, TypeScript, CSS, Bootstrap e Figma para design. Este projeto foi criado para mostrar minhas habilidades em desenvolvimento front-end e programação de jogos de forma mais divertida.",
+      "role": "(Desenvolvedor Único)",
+      "descriptionFeatures": "Lógica clássica do jogo da Snake, estilização CSS responsiva, Bootstrap para layout e componentes, TypeScript para comportamento do jogo e Figma para design.",
+      "technologiesUsed": [
+        {
+          "name": "Angular",
+          "techImageSrc": "/assets/angular-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/angular-logo.svg",
+          "reasonWhy": "Angular fornece um framework robusto para construir aplicações de página única."
+        },
+        {
+          "name": "TypeScript",
+          "techImageSrc": "/assets/typescript-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/typescript-logo.svg",
+          "reasonWhy": "TypeScript adiciona tipagem estática e outros recursos avançados ao JavaScript, tornando o código mais manutenível e escalável."
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
+          "reasonWhy": "CSS estiliza a interface do jogo, garantindo um layout visualmente atraente."
+        },
+        {
+          "name": "Bootstrap",
+          "techImageSrc": "/assets/bootstrap-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/bootstrap-logo.svg",
+          "reasonWhy": "Bootstrap fornece componentes pré-designados e um sistema de grade responsivo, simplificando o processo de desenvolvimento de layout."
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg",
+          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
+          "reasonWhy": "O Figma foi usado para projetar os elementos visuais do jogo, incluindo layouts e gráficos."
+        }
+      ],
+      "featuresDescription": "O jogo apresenta uma experiência clássica de jogo da Snake, onde os jogadores controlam uma cobra para comer comida e crescer. O jogo termina se a cobra colidir consigo mesma ou com as paredes.",
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Jogabilidade Clássica da Snake",
+          "featureDescription": "Os jogadores controlam uma cobra para comer comida e crescer, evitando colisões com as paredes ou com ela mesma."
+        },
+        {
+          "featureHeading": "Efeitos Sonoros do Jogo",
+          "featureDescription": "Curta uma jogabilidade imersiva com efeitos sonoros que melhoram a experiência geral do jogo."
+        },
+        {
+          "featureHeading": "Opções Personalizadas",
+          "featureDescription": "Pausar ou silenciar o jogo a qualquer momento. Acompanhe sua pontuação atual e a pontuação mais alta na tela, adicionando conveniência e personalização à sua experiência de jogo."
+        },
+        {
+          "featureHeading": "Controles Intuitivos",
+          "featureDescription": "Experimente controles suaves e responsivos com a capacidade de enfileirar seus movimentos. O jogo é executado em um ritmo ligeiramente mais lento, garantindo que você possa inserir seus controles sem esforço, tornando o movimento incrivelmente fácil. Você também recebe 3 vezes mais comprimento do que o normal."
+        }
+      ],
+      "thumbnail": "/assets/projects/pixel-python-thumbnail.png",
+      "thumbnailAltText": "Thumbnail do Jogo Pixel Python",
+      "hero": "/assets/projects/pixel-python-hero.jpg",
+      "liveWebsiteUrl": "https://pixel-python.vercel.app/",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
+      "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
     }
   ],
 
