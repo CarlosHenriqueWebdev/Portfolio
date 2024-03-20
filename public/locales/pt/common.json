@@ -3,7 +3,7 @@
   "homeMetaDescription": "Confira meu portfólio de desenvolvimento web para explorar uma seleção de projetos e habilidades. Saiba mais sobre minha expertise em tecnologias front-end e back-end.",
   "resumeTitle": "Currículo | Habilidades, Experiência e Conquistas",
   "resumeMetaDescription": "Explore meu currículo de desenvolvedor web para saber mais sobre minhas habilidades, experiência e conquistas notáveis.",
-  "downloadCvPath": "/assets/downloads/portuguese-resume.pdf",
+  "downloadCvPath": "/assets/downloads/CV_Carlos_Henrique.pdf",
   "downloadCvFileName": "Currículo",
 
   "navText1": "Início",
@@ -17,7 +17,7 @@
 
   "heroText1": "Elevando a Experiência do Usuário Através do Código",
   "heroText2": "UX/UI Designer",
-  "heroText3": "Bem-vindo ao meu site! Sinto-me à vontade trabalhando tanto no desenvolvimento de front-end quanto no de back-end. Sou especializado em criar sites que são <bold className=' text-royalPurpleText font-medium'>user-friendly</bold> e <bold className=' text-royalPurpleText font-medium'>bem detalhados</bold>.",
+  "heroText3": "<bold className='font-medium'>Pretensão Salarial: R$700 - R$1.412 | </bold> Bem-vindo ao meu site! Sinto-me à vontade trabalhando tanto no desenvolvimento de front-end quanto no de back-end. Sou especializado em criar sites que são <bold className=' text-royalPurpleText font-medium'>user-friendly</bold> e <bold className=' text-royalPurpleText font-medium'>bem detalhados</bold>.",
   "heroText4": "Disponível para Freelance e Emprego",
   "heroText5": "Mostrar Portfólio",
   "heroText6": "Ver Currículo",

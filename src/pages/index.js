@@ -145,12 +145,7 @@ const Home = ({ locale }) => {
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://www.carloshenriquedev.com/en"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://www.carloshenriquedev.com/en"
+          href="https://www.carloshenriquedev.com"
         />
         <link
           rel="alternate"

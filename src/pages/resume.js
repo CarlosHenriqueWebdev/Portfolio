@@ -46,12 +46,7 @@ const Resume = ({ locale }) => {
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://www.carloshenriquedev.com/en/resume"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://www.carloshenriquedev.com/en/resume"
+          href="https://www.carloshenriquedev.com/resume"
         />
         <link
           rel="alternate"

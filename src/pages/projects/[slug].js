@@ -43,12 +43,7 @@ const Project = ({ locale, slug, foundProject }) => {
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`https://www.carloshenriquedev.com/en/projects/${slug}`}
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href={`https://www.carloshenriquedev.com/en/projects/${slug}`}
+          href={`https://www.carloshenriquedev.com/projects/${slug}`}
         />
         <link
           rel="alternate"
@@ -201,18 +196,24 @@ const Project = ({ locale, slug, foundProject }) => {
                           {t("resumePageProjectHeadingText2")}
                         </h2>
 
-                        <ul className="h-fit gap-x-[32px] gap-y-[12px] grid sm:grid-cols-2">
+                        <ul className="grid gap-x-[16px] gap-y-[12px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
                           {foundProject.technologiesUsed.map(
                             (mapItem, itemIndex) => (
                               <li
                                 key={itemIndex}
-                                className="h-fit grid gap-[8px]"
+                                className="bg-[black] text-[white] px-[16px] py-[8px] flex gap-[8px] items-center w-full h-full border-solid border-[3px] border-[#5541D4] font-bold"
                               >
-                                <h3 className="font-bold text-[1.25rem]">
-                                  {itemIndex + 1}. {mapItem.name}
-                                </h3>
+                                <Image
+                                  aria-hidden={true}
+                                  className={`w-[20px] h-[20px]`}
+                                  src={mapItem.techImageSrc}
+                                  alt={`${mapItem.name} Logo`}
+                                  width={0}
+                                  height={0}
+                                  unoptimized
+                                />
 
-                                <p>{mapItem.reasonWhy}</p>
+                                <p className="w-fit">{mapItem.name}</p>
                               </li>
                             )
                           )}
@@ -308,7 +309,7 @@ const Project = ({ locale, slug, foundProject }) => {
                               </h2>
                             </div>
 
-                            <ul className="h-fit grid gap-[16px] grid-cols-3">
+                            <ul className="h-fit grid gap-[16px] md:grid-cols-3">
                               {foundProject.websiteVideos &&
                                 foundProject.websiteVideos.map(
                                   (mapItem, itemIndex) => (
@@ -329,26 +330,6 @@ const Project = ({ locale, slug, foundProject }) => {
                                 )}
                             </ul>
 
-                            <Link
-                              aria-label={`${t("projectsPageText8")} ${t(
-                                "accessibilityText8"
-                              )}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href={foundProject.liveWebsiteUrl}
-                              className={`${buttonClassName} mt-[16px] w-fit  px-[32px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                            >
-                              {t("projectsPageText8")}
-                              <Image
-                                aria-hidden={true}
-                                className="w-[16px] h-[16px]"
-                                src="/assets/arrow.svg"
-                                alt={t("altText1")}
-                                width={0}
-                                height={0}
-                                unoptimized
-                              />
-                            </Link>
                           </div>
                         </>
                       )}
