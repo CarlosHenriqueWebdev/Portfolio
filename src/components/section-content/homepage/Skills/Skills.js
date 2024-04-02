@@ -29,9 +29,16 @@ const Skills = () => {
   const { t } = useTranslation();
 
   const [selectedSkill, setSelectedSkill] = useState(null);
+  const [switchedSkillsBoolean, setSwitchedSkillsBoolean] = useState(false);
+  const [page, setPage] = useState(0);
 
   const motionUlRef = useRef(null);
   const isInView = useInView(motionUlRef, { once: true });
+
+  const skillsPerPage = 15;
+  const startIndex = page * skillsPerPage;
+  const endIndex = startIndex + skillsPerPage;
+  const totalSkills = t("skillsData", { returnObjects: true }).length;
 
   const handleSkillClick = (mapItem) => {
     setSelectedSkill((prevSelectedSkill) =>
@@ -39,15 +46,14 @@ const Skills = () => {
     );
   };
 
-  const handleButtonClick = (targetId) => {
-    const targetElement = document.getElementById(targetId);
+  const handleButtonClick = () => {
+    setSwitchedSkillsBoolean(
+      (prevSwitchedSkillsBoolean) => !prevSwitchedSkillsBoolean
+    );
 
-    if (targetElement) {
-      setTimeout(() => {
-        targetElement.tabIndex = -1;
-        targetElement.focus();
-      }, 1200);
-    }
+    setPage((prevPage) =>
+      prevPage === Math.floor(totalSkills / skillsPerPage) ? 0 : prevPage + 1
+    );
   };
 
   return (
@@ -88,7 +94,7 @@ const Skills = () => {
           </div>
         </div>
 
-        <div>
+        <div className="gap-[24px] flex flex-wrap md:justify-center md:max-w-[500px]">
           <motion.ul
             className="flex flex-wrap gap-[16px] w-fit md:justify-center md:max-w-[500px]"
             variants={delayItem}
@@ -96,36 +102,49 @@ const Skills = () => {
             animate={isInView && "open"}
             ref={motionUlRef}
           >
-            {t("skillsData", { returnObjects: true }).map((mapItem) => (
-              <motion.li
-                role="button"
-                aria-label={`${mapItem.name}, ${t("accessibilityText10")}`}
-                variants={itemAnimation}
-                key={mapItem.id}
-                className={` cursor-pointer transition-tap-background flex gap-[8px] p-[16px] bg-[black] border-solid border-royalPurple border-[2px] items-center ${
-                  selectedSkill && selectedSkill.id === mapItem.id
-                    ? "bg-[white]"
-                    : ""
-                }`}
-                onClick={() => {
-                  handleSkillClick(mapItem);
-                  handleButtonClick("skillsHeadingText");
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Image
-                  aria-hidden={true}
-                  className={`w-[44px] h-[44px]`}
-                  src={mapItem.imageSrc}
-                  alt={`${mapItem.name} Logo`}
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </motion.li>
-            ))}
+            {t("skillsData", { returnObjects: true })
+              .slice(startIndex, endIndex)
+              .map((mapItem) => (
+                <motion.li
+                  role="button"
+                  aria-label={`${mapItem.name}, ${t("accessibilityText10")}`}
+                  variants={itemAnimation}
+                  key={mapItem.id}
+                  className={`cursor-pointer transition-tap-background flex gap-[8px] p-[16px] bg-[black] border-solid border-royalPurple border-[2px] items-center ${
+                    selectedSkill && selectedSkill.id === mapItem.id
+                      ? "bg-[white]"
+                      : ""
+                  }`}
+                  onClick={() => handleSkillClick(mapItem)}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Image
+                    aria-hidden={true}
+                    className={`w-[44px] h-[44px]`}
+                    src={mapItem.imageSrc}
+                    alt={`${mapItem.name} Logo`}
+                    width={0}
+                    height={0}
+                    unoptimized
+                  />
+                </motion.li>
+              ))}
           </motion.ul>
+
+          <motion.button
+            className={`cursor-pointer transition-tap-background flex gap-[8px] p-[16px] bg-[black] border-solid border-royalPurple border-[2px] items-center ${
+              switchedSkillsBoolean
+                ? "bg-cornflowerBlueText !border-[black] text-[black] font-bold"
+                : ""
+            }`}
+            onClick={handleButtonClick}
+            variants={itemAnimation}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {switchedSkillsBoolean ? t("showLessButton") : t("showMoreButton")}
+          </motion.button>
         </div>
       </div>
     </div>

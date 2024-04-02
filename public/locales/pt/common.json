@@ -27,8 +27,7 @@
   "aboutText2": "Desenvolvedor Web",
   "aboutText3": "Eu sou <bold className=' text-royalPurpleText font-medium'>Carlos Henrique</bold>, um <bold className=' text-skyBlueText'>Desenvolvedor Web</bold> baseado no <bold className='brazil-gradient'>Brasil</bold>. Com alguma experiência tanto em <bold className=' italic'>desenvolvimento front-end quanto back-end</bold>, eu me especializo em criar sites que são <bold className=' text-cornflowerBlueText font-medium'>fáceis de usar</bold> e que têm um toque de <bold className=' text-royalPurpleText font-medium'>detalhe</bold> e <bold className=' text-skyBlueText'>vitalidade</bold>.",
   "aboutText4": "Para mim, a <bold className=' font-medium'>solução de problemas</bold> é o coração do desenvolvimento web. Eu acredito que, com tempo suficiente e determinação, qualquer desafio pode ser superado. Meu foco é criar <bold className=' font-medium'>soluções práticas</bold> e garantir uma <bold className=' text-royalPurpleText font-medium'>experiência do usuário fluida</bold> para todos.",
-  "aboutText5": "Eu posso não entrar em detalhes de codificação tanto quanto outros, mas estou totalmente focado em <bold className=' text-cornflowerBlueText italic'>resultados</bold>. Minha abordagem <bold className=' text-royalPurpleText font-medium'>prática</bold> envolve estudo extensivo, aprendizado iterativo e aplicação prática. Para mim, trata-se de <bold className=' text-skyBlueText font-medium'>fazer e melhorar através da experiência</bold>, em vez de lidar com <bold className=' text-cornflowerBlueText font-medium'>questões teóricas</bold>.",
-  "aboutText6": "Se minha abordagem ressoar com você ou se você tiver um projeto em mente, vamos nos conectar e dar vida às suas ideias juntos.",
+  "aboutText5": "Eu sou totalmente focado em <bold className=' text-cornflowerBlueText italic'>resultados</bold>. Minha abordagem <bold className=' text-royalPurpleText font-medium'>prática</bold> envolve estudo extensivo, aprendizado iterativo e muita aplicação prática. Estou constantemente buscando aprimorar minhas habilidades e conhecimentos para oferecer as melhores soluções possíveis.",
 
   "skillsText1": "Minhas Habilidades de Desenvolvedor Web",
   "skillsText2": "Descubra minhas habilidades atuais para <bold className=' text-royalPurpleText font-medium'>desenvolvimento web</bold>. Acredito que posso fazer qualquer coisa que outras pessoas conseguem com todas as habilidades apresentadas aqui. Embora eu não saiba de tudo, estou sempre aprendendo e melhorando para poder proporcionar uma experiência melhor para todos. <bold className='text-white75'>|</bold> <bold className='text-cornflowerBlueText font-medium'>*Clique em um cartão para revelar mais informações sobre cada habilidade.</bold>",
@@ -39,122 +38,164 @@
       "id": 1,
       "name": "JavaScript",
       "description": "JavaScript é uma linguagem de script versátil comumente usada para criar páginas da web dinâmicas e interativas. Com sua ampla adoção, é uma habilidade essencial para o desenvolvimento front-end e back-end.",
-      "imageSrc": "/assets/javascript-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/javascript-logo.svg",
-      "extraNote": "Utilizei JavaScript em alguns projetos online de estudantes, implementando recursos comuns como menus hamburguer, slideshows de imagens, dropdowns e modais. Embora não seja nada especial que eu já não faça em React / Nextjs. De qualquer forma, posso sempre voltar a isso para criar novos projetos e aprender muito mais."
+      "imageSrc": "/assets/javascript-logo.svg"
     },
     {
       "id": 2,
       "name": "CSS / SASS / SCSS",
       "description": "CSS (Cascading Style Sheets) é a linguagem usada para estilizar documentos HTML. Ele controla o layout e a aparência das páginas da web, permitindo que os desenvolvedores criem designs visualmente atraentes e responsivos.",
-      "imageSrc": "/assets/css-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/css-logo.svg",
-      "extraNote": ""
+      "imageSrc": "/assets/css-logo.svg"
     },
     {
       "id": 3,
       "name": "Node.js",
-      "description": "Node.js é um tempo de execução de JavaScript no lado do servidor que permite aos desenvolvedores criar aplicativos de rede escaláveis e eficientes. É amplamente utilizado para criar servidores web e lidar com tarefas assíncronas.",
-      "imageSrc": "/assets/nodejs-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/nodejs-logo.svg",
-      "extraNote": "Apliquei Node.js em um projeto online de estudante enquanto aprendia React simultaneamente. O projeto focava em um site social, apresentando registro de usuário, login, criação de postagens, edição, exclusão, curtidas, comentários, perfis de usuário e edição de perfil. Recursos adicionais incluíram um AuthGuard, validação de usuário e mais. Lamentavelmente, o projeto permaneceu incompleto devido à sua natureza como um exercício de aprendizado online. Pensei em completá-lo fortalecendo o AuthGuard, implementando e-mails e números de telefone com confirmação, aprimorando curtidas de postagens com algoritmos, adicionando filtros de postagens, melhorando o design geral, habilitando respostas a comentários, incorporando notificações, listas de amigos e muitos, muitos recursos para que estivesse pronto para produção em um cenário do mundo real. No entanto, a quantidade de trabalho para criar um site de mídia social totalmente funcional completamente sozinho parecia que exigiria um tempo extremo investido nele, então descartei a ideia depois de tentar por um tempo."
+      "description": "Node.js é um tempo de execução de JavaScript do lado do servidor que permite aos desenvolvedores criar aplicativos de rede escaláveis e eficientes. É amplamente utilizado para criar servidores web e lidar com tarefas assíncronas.",
+      "imageSrc": "/assets/nodejs-logo.svg"
     },
     {
       "id": 4,
       "name": "HTML",
       "description": "HTML (Hypertext Markup Language) é a base do desenvolvimento web. Ele estrutura o conteúdo na web, definindo os elementos que compõem uma página da web, como títulos, parágrafos e imagens.",
-      "imageSrc": "/assets/html-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/html-logo.svg",
-      "extraNote": ""
+      "imageSrc": "/assets/html-logo.svg"
     },
     {
       "id": 5,
       "name": "Next.js",
-      "description": "Next.js é um framework React que simplifica o processo de construção de aplicativos React renderizados no lado do servidor e gerados estaticamente. Ele aprimora o desempenho e a SEO de aplicativos web.",
-      "imageSrc": "/assets/nextjs-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/nextjs-logo.svg",
-      "extraNote": "Até agora, meu favorito. É direto e meio que faz todo o trabalho pesado para você. Como alguém que gosta de fazer sites que sejam amigáveis para todos, ter uma linguagem de programação fácil de usar que simplifica as coisas para os desenvolvedores é definitivamente uma grande vantagem para mim, e eu posso definitivamente apreciar o esforço dedicado a isso."
+      "description": "Next.js é um framework React que simplifica o processo de construção de aplicativos React renderizados no servidor e gerados estaticamente. Ele melhora o desempenho e o SEO de aplicativos da web.",
+      "imageSrc": "/assets/nextjs-logo.svg"
     },
     {
       "id": 6,
       "name": "React / React + Typescript",
-      "description": "React é uma biblioteca JavaScript para construir interfaces de usuário. Permite que os desenvolvedores criem componentes reutilizáveis, tornando eficiente a construção e manutenção de aplicativos web complexos.",
-      "imageSrc": "/assets/react-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/react-logo.svg",
-      "extraNote": ""
+      "description": "React é uma biblioteca JavaScript para construir interfaces de usuário. Ele permite que os desenvolvedores criem componentes reutilizáveis, tornando eficiente a construção e manutenção de aplicativos da web complexos.",
+      "imageSrc": "/assets/react-logo.svg"
     },
     {
       "id": 7,
       "name": "Bootstrap",
-      "description": "Bootstrap é um framework CSS popular que simplifica o processo de design de sites responsivos e visualmente atraentes. Ele fornece um conjunto de componentes e estilos pré-projetados.",
-      "imageSrc": "/assets/bootstrap-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/bootstrap-logo.svg",
-      "extraNote": ""
+      "description": "Bootstrap é um popular framework CSS que simplifica o processo de design de sites responsivos e visualmente atraentes. Ele fornece um conjunto de componentes e estilos pré-projetados.",
+      "imageSrc": "/assets/bootstrap-logo.svg"
     },
     {
       "id": 8,
       "name": "Figma",
-      "description": "Figma é uma ferramenta de design colaborativa que permite aos designers criar, compartilhar e colaborar em interfaces de usuário em tempo real. É amplamente utilizado para projetar aplicativos web e móveis.",
-      "imageSrc": "/assets/figma-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/figma-logo.svg",
-      "extraNote": ""
+      "description": "Figma é uma ferramenta de design colaborativa que permite aos designers criar, compartilhar e colaborar em interfaces de usuário em tempo real. É amplamente utilizado para design de aplicativos web e móveis.",
+      "imageSrc": "/assets/figma-logo.svg"
     },
     {
       "id": 9,
       "name": "Tailwind CSS",
-      "description": "Tailwind CSS é um framework CSS de utilidade que simplifica o processo de estilizar aplicativos web. Ele fornece classes de utilidade de baixo nível para construir designs de forma rápida e sustentável.",
-      "imageSrc": "/assets/tailwind-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/tailwind-logo.svg",
-      "extraNote": "Quando ouvi falar no conceito que o Bootstrap tinha a oferecer, é exatamente isso que eu pensava que seria. Usar CSS/SASS/SCSS normais e até mesmo Bootstrap honestamente parece ser um desperdício quando você tem o Tailwind CSS por perto. Eu o recomendo 100% a todos os desenvolvedores do mundo todo."
+      "description": "Tailwind CSS é um framework CSS de utilitários que simplifica o processo de estilização de aplicativos da web. Ele fornece classes de utilitários de baixo nível para criar designs de forma rápida e sustentável.",
+      "imageSrc": "/assets/tailwind-logo.svg"
     },
     {
       "id": 10,
       "name": "WordPress",
-      "description": "WordPress é um sistema de gerenciamento de conteúdo (CMS) que alimenta uma parte significativa da web. É usado para construir sites e blogs, oferecendo uma interface amigável e amplo suporte a plugins.",
-      "imageSrc": "/assets/wordpress-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/wordpress-logo.svg",
-      "extraNote": "Assim como o Strapi, usei o WordPress apenas como um Headless CMS. Infelizmente, não aprofundei muito no WordPress, mas estou muito inclinado a explorá-lo mais no futuro. Os plugins que ele tem a oferecer podem torná-lo uma escolha melhor do que o Strapi, e pode muito bem ser menos limitado e oferecer mais liberdade com o custo de possivelmente ser um pouco mais difícil de usar e gerenciar como um desenvolvedor do que o Strapi foi."
+      "description": "WordPress é um sistema de gerenciamento de conteúdo (CMS) que alimenta uma parte significativa da web. É usado para construir sites e blogs, oferecendo uma interface amigável e suporte extensivo a plugins.",
+      "imageSrc": "/assets/wordpress-logo.svg"
     },
     {
       "id": 11,
       "name": "Firebase",
-      "description": "Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web fornecida pelo Google. Oferece um conjunto de serviços em nuvem, incluindo autenticação, bancos de dados em tempo real e hospedagem, simplificando o desenvolvimento do backend.",
-      "imageSrc": "/assets/firebase-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/firebase-logo.svg",
-      "extraNote": "Usei como banco de dados para um site social em um projeto online de estudante, armazenando fotos de postagens, fotos de perfil, contas de usuário e mais. Não fiz nada especialmente especial com ele, e acredito que resultados semelhantes poderiam ser alcançados com qualquer outro banco de dados sem problemas."
+      "description": "Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web fornecida pelo Google. Ele oferece uma suíte de serviços em nuvem, incluindo autenticação, bancos de dados em tempo real e hospedagem, simplificando o desenvolvimento do lado do servidor.",
+      "imageSrc": "/assets/firebase-logo.svg"
     },
     {
       "id": 12,
       "name": "Strapi",
-      "description": "Strapi é um CMS de código aberto sem cabeça que permite aos desenvolvedores criar APIs poderosas rapidamente. É flexível, personalizável e adequado para criar aplicativos ricos em conteúdo.",
-      "imageSrc": "/assets/strapi-logo.svg",
-      "imageSrcBlack": "/assets/black-logos/strapi-logo.svg",
-      "extraNote": "Uso o Strapi como gerenciador de conteúdo para meu projeto Doggy Daycare. Do meu ponto de vista, o Strapi parecia mais acessível e visualmente moderno em comparação com o WordPress quando comecei, pois foi literalmente feito para ser um Headless CMS. No entanto, à medida que explorei mais, as limitações em termos de plugins e recursos me fizeram questionar seriamente se o WordPress poderia ter oferecido uma personalização superior como um Headless CMS para o conteúdo do cliente. Honestamente, ainda tenho que experimentar o WordPress a fundo para poder dizer se isso era realmente o caso."
+      "description": "Strapi é um CMS headless de código aberto que permite aos desenvolvedores construir APIs poderosas rapidamente. É flexível, personalizável e adequado para criar aplicativos ricos em conteúdo.",
+      "imageSrc": "/assets/strapi-logo.svg"
     },
     {
       "id": 13,
       "name": "Jest",
-      "description": "Jest é um framework de teste JavaScript encantador com foco em simplicidade. Ele funciona perfeitamente com a maioria dos projetos e fornece recursos como runners de teste integrados, assertivas e mocks para testes eficientes e confiáveis.",
+      "description": "Jest é um framework de teste JavaScript encantador com foco na simplicidade. Ele funciona perfeitamente com a maioria dos projetos e fornece recursos como execução de teste integrada, assertivas e simulações para testes eficientes e confiáveis.",
       "imageSrc": "/assets/jest-logo.svg"
     },
     {
       "id": 14,
       "name": "Angular",
-      "description": "Angular é um framework front-end popular para construir aplicações web. Ele fornece um conjunto abrangente de recursos para criar interfaces de usuário dinâmicas e responsivas, tornando-o uma ferramenta poderosa para o desenvolvimento web.",
+      "description": "Angular é um framework front-end popular para a construção de aplicativos web. Ele fornece um conjunto abrangente de recursos para criar interfaces de usuário dinâmicas e responsivas, tornando-se uma ferramenta poderosa para o desenvolvimento web.",
       "imageSrc": "/assets/angular-logo.svg"
-      },
-      {
+    },
+    {
       "id": 15,
       "name": "TypeScript",
-      "description": "TypeScript é um superset do JavaScript que adiciona tipagem estática à linguagem. Ele ajuda os desenvolvedores a identificar erros mais cedo no processo de desenvolvimento e escrever um código mais manutenível.",
+      "description": "TypeScript é um superset do JavaScript que adiciona tipagem estática à linguagem. Ele ajuda os desenvolvedores a detectar erros no início do processo de desenvolvimento e escrever código mais sustentável.",
       "imageSrc": "/assets/typescript-logo.svg"
-      },
-      {
-      "id": 16,
+    },
+    {
+      "id": 17,
+      "name": "Framer Motion",
+      "description": "Framer Motion é uma biblioteca de animação popular para aplicativos React. Ele permite que os desenvolvedores criem animações fluidas e expressivas com uma sintaxe declarativa simples, aprimorando a experiência do usuário de aplicativos da web.",
+      "imageSrc": "/assets/framer-motion-logo.svg"
+    },
+    {
+      "id": 18,
+      "name": "GraphQL",
+      "description": "GraphQL é uma linguagem de consulta para APIs e um tempo de execução para executar essas consultas. Ele fornece uma alternativa mais eficiente e flexível ao REST para comunicação cliente-servidor, permitindo que os clientes solicitem apenas os dados de que precisam.",
+      "imageSrc": "/assets/graphql-logo.svg"
+    },
+    {
+      "id": 19,
+      "name": "Rest Api",
+      "description": "REST (Representational State Transfer) é um estilo arquitetural para projetar aplicativos em rede. Ele usa um modelo de comunicação cliente-servidor sem estado, tipicamente sobre HTTP, tornando-o adequado para construir serviços web escaláveis.",
+      "imageSrc": "/assets/rest-api-logo.svg"
+    },
+    {
+      "id": 20,
+      "name": "XML",
+      "description": "XML (Extensible Markup Language) é uma linguagem de marcação que define regras para codificar documentos em um formato legível por humanos e por máquinas. É comumente usado para armazenar e trocar dados pela internet.",
+      "imageSrc": "/assets/xml-logo.svg"
+    },
+    {
+      "id": 21,
+      "name": "Single Page Application [SPA]",
+      "description": "Single Page Application (SPA) é um aplicativo da web que carrega uma única página HTML e atualiza dinamicamente o conteúdo à medida que o usuário interage com o aplicativo. Essa abordagem oferece uma experiência do usuário mais fluída, semelhante à de um aplicativo de desktop.",
+      "imageSrc": "/assets/spa-logo.svg"
+    },
+    {
+      "id": 22,
+      "name": "Email Provider",
+      "description": "Email Provider se refere aos serviços ou plataformas que fornecem funcionalidade de email. Isso inclui enviar, receber e gerenciar emails. Exemplos comuns de provedores de email incluem Gmail, Outlook e Yahoo Mail.",
+      "imageSrc": "/assets/email-provider-logo.svg"
+    },
+    {
+      "id": 23,
+      "name": "SEO",
+      "description": "SEO (Search Engine Optimization) é o processo de otimizar um site para classificar mais alto nas páginas de resultados de mecanismos de busca. Isso envolve melhorar o conteúdo, a estrutura e o desempenho do site para aumentar sua visibilidade nos mecanismos de busca e direcionar tráfego orgânico.",
+      "imageSrc": "/assets/seo-logo.svg"
+    },
+    {
+      "id": 24,
+      "name": "Acessibilidade Digital",
+      "description": "Acessibilidade Digital é a prática de tornar produtos digitais, como sites e aplicativos, acessíveis a todas as pessoas, incluindo aquelas com deficiências visuais, auditivas, motoras ou cognitivas. Isso envolve o uso de tecnologias e técnicas que garantam a inclusão e a igualdade de acesso.",
+      "imageSrc": "/assets/accessibility-logo.svg"
+    },
+    {
+      "id": 25,
+      "name": "Server Side Rendering [SSR]",
+      "description": "Server Side Rendering (SSR) é uma técnica usada no desenvolvimento web em que um servidor web processa o HTML, CSS e JavaScript de uma página da web e envia uma página totalmente renderizada para o navegador do cliente. Essa abordagem melhora o desempenho e o SEO, fornecendo tempos de carregamento mais rápidos e mais conteúdo indexável.",
+      "imageSrc": "/assets/ssr-logo.svg"
+    },
+    {
+      "id": 26,
+      "name": "Progressive Web App [PWA]",
+      "description": "Progressive Web App (PWA) é um tipo de aplicativo da web que aproveita as tecnologias web modernas para fornecer uma experiência do usuário semelhante à de um aplicativo móvel nativo. PWAs são confiáveis, rápidos e envolventes, oferecendo recursos como acesso offline, notificações push e instalação na tela inicial.",
+      "imageSrc": "/assets/pwa-logo.svg"
+    },
+    {
+      "id": 27,
+      "name": "JSON Web Token (JWT)",
+      "description": "JSON Web Token (JWT) é um padrão aberto para transmitir informações com segurança entre as partes como um objeto JSON. É comumente usado para autenticação e troca de informações no desenvolvimento web, fornecendo uma forma compacta e autocontida de transmitir dados.",
+      "imageSrc": "/assets/jwt-logo.svg"
+    },
+    {
+      "id": 28,
       "name": "Outros",
-      "description": "A categoria \"Outros\" representa minha abertura para aprender novas habilidades e tecnologias. Mesmo que eu ainda não tenha encontrado uma linguagem ou ferramenta específica, acredito que posso me adaptar e adquirir o conhecimento necessário para usá-la em produção se tiver um pouco de tempo para aprendê-la.",
+      "description": "A categoria 'Outros' representa minha disposição para aprender novas habilidades e tecnologias. Mesmo que eu ainda não tenha encontrado uma linguagem ou ferramenta específica, acredito que posso me adaptar e adquirir o conhecimento necessário para usá-la em produção se tiver um pouco de tempo para aprender.",
       "imageSrc": "/assets/question-mark.svg"
-      }
+    }
   ],
 
   "servicesText1": "Eleve Sua Presença Digital com Meus Serviços Digitais.",
@@ -166,25 +207,25 @@
     {
       "id": 1,
       "title": "Sistemas de Gerenciamento de Conteúdo",
-      "description": "Embora ainda esteja ganhando experiência com ferramentas de CMS, estou comprometido em proporcionar a você a melhor experiência possível. Vou me esforçar para garantir que seu gerenciamento de conteúdo seja direto e sem estresse, permitindo que você crie o conteúdo perfeito para o seu site.",
+      "description": "Ao continuar expandindo minha expertise com ferramentas de CMS, estou dedicado a proporcionar a você a melhor experiência possível. Me esforço para garantir que seu gerenciamento de conteúdo seja fluido e sem estresse, permitindo que você crie o conteúdo perfeito para o seu site.",
       "imageSrc": "/assets/dashboard.svg"
     },
     {
       "id": 2,
       "title": "Desenvolvimento Frontend & Backend",
-      "description": "Lido com tarefas de desenvolvimento tanto frontend quanto backend. Se houver uma espaço vazio em seu projeto que precisa ser preenchid0, estou aqui para ajudar. Embora ainda esteja construindo experiência, estou pronto para enfrentar desafios e contribuir para as necessidades de desenvolvimento do seu projeto.",
+      "description": "Manejo tarefas de desenvolvimento tanto frontend quanto backend. Se há um espaço vazio em seu projeto que precisa ser preenchido, estou aqui para ajudar. Estou em constante evolução e pronto para enfrentar desafios, contribuindo para as necessidades de desenvolvimento do seu projeto.",
       "imageSrc": "/assets/code-symbol.svg"
     },
     {
       "id": 3,
       "title": "Design UI/UX",
-      "description": "Embora meu design não seja tão incrível quanto muitos, abordo o UI/UX com dedicação e compromisso com a melhoria. Dado tempo suficiente, posso criar designs funcionais, atraentes e fáceis de usar, feitos para atender às suas necessidades.",
+      "description": "Abordo o UI/UX com dedicação e comprometimento com a melhoria contínua. Tenho a capacidade de criar designs funcionais, atraentes e fáceis de usar, adaptados às suas necessidades.",
       "imageSrc": "/assets/blueprint.svg"
     },
     {
       "id": 4,
       "title": "Design Responsivo",
-      "description": "É essencial garantir que seu site seja acessível a todos, independentemente do tamanho da tela de sua máquina. Assim como todo Desenvolvedor Web, consigo criar uma experiência do usuário perfeita que se adapta facilmente a diversos dispositivos e tamanhos de tela. Seja em desktops ou smartphones, seu site funcionará em todas as plataformas, proporcionando uma visualização e experiência do usuário ideais para cada visitante.",
+      "description": "Garantir que seu site seja acessível a todos, independentemente do tamanho da tela de seu dispositivo, é essencial. Posso criar uma experiência do usuário perfeita que se adapta facilmente a vários dispositivos e tamanhos de tela. Seja em desktops ou smartphones, seu site funcionará em todas as plataformas, proporcionando uma visualização e experiência do usuário ideais para cada visitante.",
       "imageSrc": "/assets/target.svg"
     },
     {
@@ -196,13 +237,13 @@
     {
       "id": 6,
       "title": "Otimização de SEO",
-      "description": "Assim como todo Desenvolvedor Web, melhorar sua visibilidade online é um dos meus serviços. Através de uma otimização de SEO completa, posiciono seu site para alcançar um público mais amplo. Desde pesquisa de palavras-chave até otimização na página, minha abordagem é projetada para aprimorar sua presença digital e atrair tráfego orgânico para seu site.",
+      "description": "Melhorar sua visibilidade online é um dos meus serviços. Através de uma otimização de SEO completa, posiciono seu site para alcançar um público mais amplo. Desde pesquisa de palavras-chave até otimização na página, minha abordagem é projetada para aprimorar sua presença digital e atrair tráfego orgânico para seu site.",
       "imageSrc": "/assets/seo.svg"
     },
     {
       "id": 7,
       "title": "Acessibilidade Web (WCAG)",
-      "description": "Estou comprometido com a acessibilidade digital, garantindo que meus projetos sejam fáceis de usar para todos. Ao desenvolver experiência em integração de acessibilidade, utilizo ferramentas como Leitores de Tela e consulto guias para testes detalhados. Reconhecendo as diversas experiências do usuário, estou dedicado à aprendizagem contínua e refinamento. Meu objetivo é criar experiências online inclusivas e fáceis de usar para todos.",
+      "description": "Estou comprometido com a acessibilidade digital, garantindo que meus projetos sejam fáceis de usar para todos. Ao desenvolver expertise em integração de acessibilidade, utilizo ferramentas como Leitores de Tela e consulto guias para testes detalhados. Reconhecendo as diversas experiências do usuário, estou dedicado à aprendizagem contínua e refinamento. Meu objetivo é criar experiências online inclusivas e fáceis de usar para todos.",
       "imageSrc": "/assets/checkmark.svg"
     },
     {
@@ -214,7 +255,7 @@
   ],
 
   "projectsText1": "Trabalhos em Destaque",
-  "projectsText2": "Embora eu tenha realizado vários <bold className='text-royalPurpleText font-medium'>projetos apenas para aprendizado</bold>, este portfólio apresenta exclusivamente meus <bold className='text-royalPurpleText font-medium'>projetos completos, distintos de exercícios de aprendizado de uma página</bold>. Representando meu trabalho pessoal em design e código, esses projetos não apenas mostram meu estilo, mas também integram muitas habilidades que aprendi até agora.",
+  "projectsText2": "Embora eu tenha explorado vários <bold className='text-cornflowerBlueText font-medium'>projetos como parte do meu aprendizado</bold>, este portfólio destaca exclusivamente meus <bold className='text-royalPurpleText font-medium'>trabalhos completos</bold>. Eles representam meu trabalho autoral em design e desenvolvimento, demonstrando a aplicação prática das habilidades que adquiri até o momento.",
   "projectsText3": "Descrição:",
   "projectsText4": "Recursos do Site Incluem:",
   "projectsText5": "URL do Website:",
@@ -233,33 +274,51 @@
       "technologiesUsed": [
         {
           "name": "Next.js",
-          "techImageSrc": "/assets/nextjs-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/nextjs-logo.svg",
-          "reasonWhy": "Next.js foi escolhido por sua eficiência na construção de aplicações React e suas rotas e configuração dinâmicas padrão, permitindo que o projeto progredisse mais rápido sem precisar de muitas configurações personalizadas como rotas personalizadas."
+          "techImageSrc": "/assets/nextjs-logo.svg"
         },
         {
           "name": "Tailwind CSS",
-          "techImageSrc": "/assets/tailwind-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/tailwind-logo.svg",
-          "reasonWhy": "Tailwind CSS foi selecionado para otimizar o processo de estilização com sua abordagem utility-first, garantindo uma base de código limpa e fácil de manter. Ele fez com que a estilização do site fosse extremamente rápida. Sinceramente, não consigo enfatizar o suficiente sobre o quão útil foi."
+          "techImageSrc": "/assets/tailwind-logo.svg"
         },
         {
           "name": "Strapi",
-          "techImageSrc": "/assets/strapi-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/strapi-logo.svg",
-          "reasonWhy": "Strapi serviu como o CMS headless para gerenciar conteúdo, proporcionando flexibilidade e facilidade de uso, permitindo atualizações de conteúdo eficientes. Embora, eu não o recomendaria muito, pois, pelo menos para mim, senti que muitos recursos estavam faltando."
+          "techImageSrc": "/assets/strapi-logo.svg"
         },
         {
           "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": "Figma foi a principal ferramenta de design; seus plugins e recursos ajudaram muito, garantindo uma interface de usuário coesa e visualmente atraente."
+          "techImageSrc": "/assets/figma-logo.svg"
         },
         {
           "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": "Enquanto o Tailwind CSS era a principal ferramenta de estilização, o CSS personalizado foi utilizado para elementos de design específicos, proporcionando uma melhor experiência visual."
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "GraphQl",
+          "techImageSrc": "/assets/graphql-logo.svg"
+        },
+        {
+          "name": "Rest Api",
+          "techImageSrc": "/assets/rest-api-logo.svg"
+        },
+        {
+          "name": "XML",
+          "techImageSrc": "/assets/xml-logo.svg"
+        },
+        {
+          "name": "Single Page Application [SPA]",
+          "techImageSrc": "/assets/spa-logo.svg"
+        },
+        {
+          "name": "Email Provider",
+          "techImageSrc": "/assets/email-provider-logo.svg"
+        },
+        {
+          "name": "Acessibilidade Digital",
+          "techImageSrc": "/assets/accessibility-logo.svg"
+        },
+        {
+          "name": "Server Side Rendering [SSR]",
+          "techImageSrc": "/assets/ssr-logo.svg"
         }
       ],
       "challengesDescription": "Ao desenvolver este projeto, encontrei desafios mínimos, principalmente centrados em refinar detalhes do site e lidar com tarefas repetitivas devido ao CMS. A complexidade do projeto foi relativamente baixa, sendo os passos mais complicados apenas um pouco desafiadores em comparação.",
@@ -331,44 +390,99 @@
       "figmaUrl": ""
     },
     {
+      "pageTitle": "Pixel Python | Portfólio de Desenvolvimento Web",
+      "slug": "pixel-python",
+      "icon": "/assets/snake.svg",
+      "iconAltText": "Ícone do Pixel Python",
+      "name": "Pixel Python",
+      "description": "Recriei o clássico jogo da Snake em uma versão moderna, utilizando Angular, TypeScript, CSS, Bootstrap e Figma para design. Esse projeto foi uma oportunidade de demonstrar minhas habilidades em desenvolvimento front end e programação de maneira envolvente e interativa, destacando minha capacidade de criar experiências digitais atraentes. Além disso, a aplicação é uma Progressive Web App (PWA), o que significa que o jogo pode ser acessado e jogado offline, proporcionando uma experiência contínua e sem interrupções",
+      "role": "(Desenvolvedor Único)",
+      "descriptionFeatures": "Lógica clássica do jogo da Snake, estilização CSS responsiva, Bootstrap para layout e componentes, TypeScript para comportamento do jogo e Figma para design.",
+      "technologiesUsed": [
+        {
+          "name": "Angular",
+          "techImageSrc": "/assets/angular-logo.svg"
+        },
+        {
+          "name": "TypeScript",
+          "techImageSrc": "/assets/typescript-logo.svg"
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "Bootstrap",
+          "techImageSrc": "/assets/bootstrap-logo.svg"
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg"
+        },
+        {
+          "name": "HTML",
+          "techImageSrc": "/assets/html-logo.svg"
+        },
+        {
+          "name": "Progressive Web App [PWA]",
+          "techImageSrc": "/assets/pwa-logo.svg"
+        }
+      ],
+      "featuresDescription": "O jogo apresenta uma experiência clássica de jogo da Snake, onde os jogadores controlam uma cobra para comer comida e crescer. O jogo termina se a cobra colidir consigo mesma ou com as paredes.",
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Jogabilidade Clássica da Snake",
+          "featureDescription": "Os jogadores controlam uma cobra para comer comida e crescer, evitando colisões com as paredes ou com ela mesma."
+        },
+        {
+          "featureHeading": "Efeitos Sonoros do Jogo",
+          "featureDescription": "Curta uma jogabilidade imersiva com efeitos sonoros que melhoram a experiência geral do jogo."
+        },
+        {
+          "featureHeading": "Opções Personalizadas",
+          "featureDescription": "Pausar ou silenciar o jogo a qualquer momento. Acompanhe sua pontuação atual e a pontuação mais alta na tela, adicionando conveniência e personalização à sua experiência de jogo."
+        },
+        {
+          "featureHeading": "Controles Intuitivos",
+          "featureDescription": "Experimente controles suaves e responsivos com a capacidade de enfileirar seus movimentos. O jogo é executado em um ritmo ligeiramente mais lento, garantindo que você possa inserir seus controles sem esforço, tornando o movimento incrivelmente fácil. Você também recebe 3 vezes mais comprimento do que o normal."
+        }
+      ],
+      "thumbnail": "/assets/projects/pixel-python-thumbnail.png",
+      "thumbnailAltText": "Thumbnail do Jogo Pixel Python",
+      "hero": "/assets/projects/pixel-python-hero.jpg",
+      "liveWebsiteUrl": "https://pixel-python.vercel.app/",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
+      "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
+    },
+    {
       "pageTitle": "Tic Tac Toe | Portfólio de Desenvolvimento Web",
       "slug": "tic-tac-toe",
       "icon": "/assets/cross.svg",
       "iconAltText": "Ícone de Jogo da Velha",
       "name": "Tic Tac Toe",
-      "description": "Um simples jogo da velha implementado usando HTML, CSS e JavaScript. Este projeto foi criado principalmente para praticar minhas habilidades de TDD com Jest.",
+      "description": "Um simples jogo da velha utilizando HTML, CSS e JavaScript. Implementei recursos interativos e responsivos para proporcionar uma experiência de usuário atraente e intuitiva. Além disso, pratiquei e aprimorei minhas habilidades em Desenvolvimento Orientado a Testes (TDD) ao utilizar Jest para testar e validar o código, garantindo assim um produto final robusto e livre de erros.",
       "role": "(Desenvolvedor Único)",
       "descriptionFeatures": "Lógica básica do jogo, estilização CSS para uma interface visualmente atraente, áudio de videogame e JavaScript para interatividade.",
       "technologiesUsed": [
         {
           "name": "HTML",
-          "techImageSrc": "/assets/html-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/html-logo.svg",
-          "reasonWhy": "HTML fornece a estrutura e o conteúdo do jogo."
+          "techImageSrc": "/assets/html-logo.svg"
         },
         {
           "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": "CSS estiliza a interface do jogo, tornando-a visualmente atraente."
+          "techImageSrc": "/assets/css-logo.svg"
         },
         {
           "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": "Figma foi a principal ferramenta de design."
+          "techImageSrc": "/assets/figma-logo.svg"
         },
         {
           "name": "JavaScript",
-          "techImageSrc": "/assets/javascript-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/javascript-logo.svg",
-          "reasonWhy": "JavaScript adiciona interatividade ao jogo, lidando com a lógica do jogo e interações do usuário."
+          "techImageSrc": "/assets/javascript-logo.svg"
         },
         {
           "name": "Jest",
-          "techImageSrc": "/assets/jest-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/jest-logo.svg",
-          "reasonWhy": "Jest é usado para testar a lógica do jogo e garantir sua correção."
+          "techImageSrc": "/assets/jest-logo.svg"
         }
       ],
       "challengesDescription": "O principal e único desafio deste projeto foi usar o Jest como TDD.",
@@ -404,73 +518,6 @@
       "liveWebsiteUrl": "https://tic-tac-toe-nine-tan.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/tic-tac-toe",
       "figmaUrl": "https://www.figma.com/file/SDtAyFbfhWtXmP0DAo2Dtt/Tic-Tac-Toe?type=design&mode=design&t=XNRXwdNnySDk0hor-0"
-    },
-    {
-      "pageTitle": "Pixel Python | Portfólio de Desenvolvimento Web",
-      "slug": "pixel-python",
-      "icon": "/assets/snake.svg",
-      "iconAltText": "Ícone do Pixel Python",
-      "name": "Pixel Python",
-      "description": "Um jogo clássico da Snake implementado usando Angular, TypeScript, CSS, Bootstrap e Figma para design. Este projeto foi criado para mostrar minhas habilidades em desenvolvimento front-end e programação de jogos de forma mais divertida.",
-      "role": "(Desenvolvedor Único)",
-      "descriptionFeatures": "Lógica clássica do jogo da Snake, estilização CSS responsiva, Bootstrap para layout e componentes, TypeScript para comportamento do jogo e Figma para design.",
-      "technologiesUsed": [
-        {
-          "name": "Angular",
-          "techImageSrc": "/assets/angular-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/angular-logo.svg",
-          "reasonWhy": "Angular fornece um framework robusto para construir aplicações de página única."
-        },
-        {
-          "name": "TypeScript",
-          "techImageSrc": "/assets/typescript-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/typescript-logo.svg",
-          "reasonWhy": "TypeScript adiciona tipagem estática e outros recursos avançados ao JavaScript, tornando o código mais manutenível e escalável."
-        },
-        {
-          "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": "CSS estiliza a interface do jogo, garantindo um layout visualmente atraente."
-        },
-        {
-          "name": "Bootstrap",
-          "techImageSrc": "/assets/bootstrap-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/bootstrap-logo.svg",
-          "reasonWhy": "Bootstrap fornece componentes pré-designados e um sistema de grade responsivo, simplificando o processo de desenvolvimento de layout."
-        },
-        {
-          "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": "O Figma foi usado para projetar os elementos visuais do jogo, incluindo layouts e gráficos."
-        }
-      ],
-      "featuresDescription": "O jogo apresenta uma experiência clássica de jogo da Snake, onde os jogadores controlam uma cobra para comer comida e crescer. O jogo termina se a cobra colidir consigo mesma ou com as paredes.",
-      "siteMainFeatures": [
-        {
-          "featureHeading": "Jogabilidade Clássica da Snake",
-          "featureDescription": "Os jogadores controlam uma cobra para comer comida e crescer, evitando colisões com as paredes ou com ela mesma."
-        },
-        {
-          "featureHeading": "Efeitos Sonoros do Jogo",
-          "featureDescription": "Curta uma jogabilidade imersiva com efeitos sonoros que melhoram a experiência geral do jogo."
-        },
-        {
-          "featureHeading": "Opções Personalizadas",
-          "featureDescription": "Pausar ou silenciar o jogo a qualquer momento. Acompanhe sua pontuação atual e a pontuação mais alta na tela, adicionando conveniência e personalização à sua experiência de jogo."
-        },
-        {
-          "featureHeading": "Controles Intuitivos",
-          "featureDescription": "Experimente controles suaves e responsivos com a capacidade de enfileirar seus movimentos. O jogo é executado em um ritmo ligeiramente mais lento, garantindo que você possa inserir seus controles sem esforço, tornando o movimento incrivelmente fácil. Você também recebe 3 vezes mais comprimento do que o normal."
-        }
-      ],
-      "thumbnail": "/assets/projects/pixel-python-thumbnail.png",
-      "thumbnailAltText": "Thumbnail do Jogo Pixel Python",
-      "hero": "/assets/projects/pixel-python-hero.jpg",
-      "liveWebsiteUrl": "https://pixel-python.vercel.app/",
-      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
-      "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
     }
   ],
 
@@ -482,27 +529,51 @@
       "technologiesUsed": [
         {
           "name": "Next.js",
-          "techImageSrc": "/assets/nextjs-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/nextjs-logo.svg",
-          "reasonWhy": ""
+          "techImageSrc": "/assets/nextjs-logo.svg"
         },
         {
           "name": "Tailwind CSS",
-          "techImageSrc": "/assets/tailwind-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/tailwind-logo.svg",
-          "reasonWhy": ""
+          "techImageSrc": "/assets/tailwind-logo.svg"
         },
         {
           "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": ""
+          "techImageSrc": "/assets/figma-logo.svg"
         },
         {
           "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": ""
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "Framer Motion",
+          "techImageSrc": "/assets/framer-motion-logo.svg"
+        },
+        {
+          "name": "XML",
+          "techImageSrc": "/assets/xml-logo.svg"
+        },
+        {
+          "name": "Email Provider",
+          "techImageSrc": "/assets/email-provider-logo.svg"
+        },
+        {
+          "name": "SEO",
+          "techImageSrc": "/assets/seo-logo.svg"
+        },
+        {
+          "name": "Single Page Application [SPA]",
+          "techImageSrc": "/assets/spa-logo.svg"
+        },
+        {
+          "name": "HTML",
+          "techImageSrc": "/assets/html-logo.svg"
+        },
+        {
+          "name": "Acessibilidade Digital",
+          "techImageSrc": "/assets/accessibility-logo.svg"
+        },
+        {
+          "name": "Server Side Rendering [SSR]",
+          "techImageSrc": "/assets/ssr-logo.svg"
         }
       ],
       "achievementsList": [
@@ -622,12 +693,12 @@
   "resumePageText2": "Voltar ao Portfólio",
   "resumePageText3": "DESENVOLVEDOR WEB",
   "resumePageText4": "DECLARAÇÃO PESSOAL",
-  "resumePageText5": "Como desenvolvedor web autodidata, aprendo novas habilidades com dedicação e persistência. Embora minha educação formal seja bem limitada, minha determinação para melhorar e ajudar os outros é elevada. Invisto incontáveis horas diariamente codificando, criando projetos para aprendizado e enfrentando problemas de codificação complexos. Por meio de uma mistura de videoaulas, guias e documentação detalhada, cultivei proficiência em design, desenvolvimento frontend e backend. Embora eu possa não ter a extensa experiência do mundo real de profissionais, estou confiante em minha capacidade de entregar trabalhos de alta qualidade e atender às demandas de qualquer projeto.",
+  "resumePageText5": "Como desenvolvedor web jûnior / pleno, aprendo novas habilidades com dedicação e persistência. Mantenho uma determinação sólida para melhorar e colaborar com outros. Invisto incontáveis horas diariamente codificando, criando projetos para aprendizado e enfrentando problemas de codificação complexos. Por meio de videoaulas, guias e documentação detalhada, desenvolvi proficiência em design e desenvolvimento, tanto no frontend quanto no backend. Com base nessa experiência, tenho confiança em minha capacidade de entregar trabalhos de alta qualidade e atender às demandas de qualquer projeto proposto. Minha pretensão salarial é baixa e está na faixa de R$700 - R$1.412, e estou totalmente aberto a negociações.",
   "resumePageText6": "HABILIDADES DE DESENVOLVEDOR WEB",
   "resumePageText7": "PROJETOS",
 
   "resumePageProjectHeadingText1": "DESCRIÇÃO:",
-  "resumePageProjectHeadingText2": "Tecnologias:",
+  "resumePageProjectHeadingText2": "Habilidades:",
   "resumePageProjectHeadingText3": "Conquistas:",
 
   "resumePageText8": "EDUCAÇÃO",
@@ -701,5 +772,8 @@
   "altText14": "Ilustração do Repositório Github",
   "altText15": "Símbolo de link externo",
 
-  "titleText1": "currículo"
+  "titleText1": "currículo",
+
+  "showMoreButton": "Mostrar Mais Habilidades",
+  "showLessButton": "Mostrar Menos Habilidades"
 }

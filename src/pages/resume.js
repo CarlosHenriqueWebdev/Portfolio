@@ -75,7 +75,7 @@ const Resume = ({ locale }) => {
                           aria-hidden={true}
                           className="w-[20px] h-[20px]"
                           src="/assets/left-arrow-icon.svg"
-                          alt="Estrela Icone"
+                          alt="Left Arrow"
                           width={0}
                           height={0}
                           unoptimized
@@ -125,7 +125,7 @@ const Resume = ({ locale }) => {
                         aria-hidden={true}
                         className={`w-[20px]`}
                         src={mapItem.whiteImageSrc}
-                        alt={mapItem.title}
+                        alt={mapItem.name}
                         width={0}
                         height={0}
                         unoptimized
@@ -308,47 +308,6 @@ const Resume = ({ locale }) => {
                         </div>
                       </li>
                     ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="grid gap-[16px]">
-                <div className="relative w-fit">
-                  <h2 className="text-[1.5rem] uppercase font-bold w-fit">
-                    {t("resumePageText8")}
-                  </h2>
-
-                  <div
-                    className={`bg-[black] left-0 absolute w-full h-[4px]`}
-                  ></div>
-                </div>
-
-                <div className="lg:pl-[12px]">
-                  <h3 className="font-bold text-[1.125rem] uppercase">
-                    {t("resumePageText9")}
-                  </h3>
-
-                  <h4 className="lg:pl-[12px] uppercase mt-[4px] font-bold text-[1rem] text-[#5541D4]">
-                    {t("resumePageText10")}
-                  </h4>
-
-                  <ul className="lg:pl-[12px] mt-[12px] grid gap-y-[12px]  gap-x-[24px] w-fit md:grid-cols-2">
-                    {t("educationList", { returnObjects: true }).map(
-                      (mapItem, itemIndex) => (
-                        <li
-                          key={itemIndex}
-                          className="bg-[white] lg:pl-[12px] flex flex-col gap-[4px] w-full"
-                        >
-                          <h5 className="uppercase w-fit font-bold text-[0.875rem]">
-                            {mapItem.educationHeading}
-                          </h5>
-
-                          <p className="text-[0.875rem]">
-                            {mapItem.educationDescription}
-                          </p>
-                        </li>
-                      )
-                    )}
                   </ul>
                 </div>
               </div>

@@ -73,10 +73,6 @@ const About = () => {
                   />
                 </p>
               </div>
-
-              <div>
-                <p>{t("aboutText6")}</p>
-              </div>
             </div>
           </div>
 

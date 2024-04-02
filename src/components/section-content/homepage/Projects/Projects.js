@@ -38,7 +38,7 @@ const Projects = () => {
         </div>
 
         <div className="mt-[32px]">
-          <div className="w-fit px-[24px] lg:px-[48px] flex gap-[16px] mb-[24px]">
+          <div className="w-fit px-[24px] lg:px-[48px] flex gap-[16px] mb-[24px] flex-wrap">
             {t("projectsData", { returnObjects: true }).map(
               (mapItem, itemIndex) => (
                 <button

@@ -25,10 +25,9 @@
 
   "aboutText1": "About Me",
   "aboutText2": "Web Developer",
-  "aboutText3": "I'm <bold className=' text-royalPurpleText font-medium'> Carlos Henrique</bold>, a <bold className=' text-skyBlueText'>Web Developer</bold> based in <bold className='brazil-gradient'>Brazil</bold>. With some experience in both <bold className=' italic'>front-end and back-end development</bold>, I specialize in creating <bold className=' text-cornflowerBlueText font-medium'>user-friendly websites</bold> that have a touch of <bold className=' text-royalPurpleText font-medium'>detail</bold> and <bold className=' text-skyBlueText'>vitality</bold>.",
-  "aboutText4": "For me, <bold className=' font-medium'>problem-solving</bold> is at the core of web development. I believe that given enough time and determination, any challenge can be overcome. My focus is on crafting <bold className=' font-medium'>practical solutions</bold> and ensuring a <bold className=' text-royalPurpleText font-medium'>seamless user experience</bold> for every and all.",
-  "aboutText5": "I may not delve into coding intricacies as much as others, but I'm all about <bold className=' text-cornflowerBlueText italic'>results</bold>. My <bold className=' text-royalPurpleText font-medium'>hands-on approach</bold> involves extensive study, iterative learning, and practical application. For me, it's about <bold className=' text-skyBlueText font-medium'>doing and improving through experience</bold>, rather than <bold className=' text-cornflowerBlueText font-medium'>theoretical matters</bold>.",
-  "aboutText6": "If my approach resonates with you or if you have a project in mind, let's connect and bring your ideas to life together.",
+  "aboutText3": "I am <bold className=' text-royalPurpleText font-medium'>Carlos Henrique</bold>, a <bold className=' text-skyBlueText'>Web Developer</bold> based in <bold className='brazil-gradient'>Brazil</bold>. With some experience in both <bold className=' italic'>front-end and back-end development</bold>, I specialize in creating websites that are <bold className=' text-cornflowerBlueText font-medium'>easy to use</bold> and that have a touch of <bold className=' text-royalPurpleText font-medium'>detail</bold> and <bold className=' text-skyBlueText'>vitality</bold>.",
+  "aboutText4": "For me, <bold className=' font-medium'>problem-solving</bold> is the heart of web development. I believe that, with enough time and determination, any challenge can be overcome. My focus is on creating <bold className=' font-medium'>practical solutions</bold> and ensuring a <bold className=' text-royalPurpleText font-medium'>smooth user experience</bold> for everyone.",
+  "aboutText5": "I am entirely focused on <bold className=' text-cornflowerBlueText italic'>results</bold>. My <bold className=' text-royalPurpleText font-medium'>practical</bold> approach involves extensive study, iterative learning, and plenty of hands-on application. I am constantly striving to improve my skills and knowledge to offer the best possible solutions.",
 
   "skillsText1": "Web Skills Showcase",
   "skillsText2": "Discover my current skills for <bold className=' text-royalPurpleText font-medium'>web development</bold>. I believe I can do anything that other people can with all the skills presented here. While I don't know everything, I'm always learning and improving so I can deliver a better experience to all. <bold className='text-white75'>|</bold> <bold className='text-cornflowerBlueText font-medium'>*Click on a card to reveal more information about each skill.</bold>",
@@ -126,7 +125,73 @@
       "imageSrc": "/assets/typescript-logo.svg"
     },
     {
-      "id": 16,
+      "id": 17,
+      "name": "Framer Motion",
+      "description": "Framer Motion is a popular animation library for React applications. It allows developers to create fluid and expressive animations with simple declarative syntax, enhancing the user experience of web applications.",
+      "imageSrc": "/assets/framer-motion-logo.svg"
+    },
+    {
+      "id": 18,
+      "name": "GraphQL",
+      "description": "GraphQL is a query language for APIs and a runtime for executing those queries. It provides a more efficient and flexible alternative to REST for client-server communication, allowing clients to request only the data they need.",
+      "imageSrc": "/assets/graphql-logo.svg"
+    },
+    {
+      "id": 19,
+      "name": "Rest Api",
+      "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. It uses a stateless, client-server communication model, typically over HTTP, making it suitable for building scalable web services.",
+      "imageSrc": "/assets/rest-api-logo.svg"
+    },
+    {
+      "id": 20,
+      "name": "XML",
+      "description": "XML (Extensible Markup Language) is a markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable. It's commonly used for storing and exchanging data over the internet.",
+      "imageSrc": "/assets/xml-logo.svg"
+    },
+    {
+      "id": 21,
+      "name": "Single Page Application [SPA]",
+      "description": "Single Page Application (SPA) is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the application. This approach provides a more fluid user experience similar to that of a desktop application.",
+      "imageSrc": "/assets/spa-logo.svg"
+    },
+    {
+      "id": 22,
+      "name": "Email Provider",
+      "description": "Email Provider refers to the services or platforms that provide email functionality. This includes sending, receiving, and managing emails. Common examples of email providers include Gmail, Outlook, and Yahoo Mail.",
+      "imageSrc": "/assets/email-provider-logo.svg"
+    },
+    {
+      "id": 23,
+      "name": "SEO",
+      "description": "SEO (Search Engine Optimization) is the process of optimizing a website to rank higher in search engine results pages. This involves improving the website's content, structure, and performance to increase its visibility to search engines and drive organic traffic.",
+      "imageSrc": "/assets/seo-logo.svg"
+    },
+    {
+      "id": 24,
+      "name": "Acessibilidade Digital",
+      "description": "Acessibilidade Digital é a prática de tornar produtos digitais, como sites e aplicativos, acessíveis a todas as pessoas, incluindo aquelas com deficiências visuais, auditivas, motoras ou cognitivas. Isso envolve o uso de tecnologias e técnicas que garantam a inclusão e a igualdade de acesso.",
+      "imageSrc": "/assets/accessibility-logo.svg"
+    },
+    {
+      "id": 25,
+      "name": "Server Side Rendering [SSR]",
+      "description": "Server Side Rendering (SSR) is a technique used in web development where a web server processes the HTML, CSS, and JavaScript for a web page and sends a fully rendered page to the client's browser. This approach improves performance and SEO by providing faster load times and more indexable content.",
+      "imageSrc": "/assets/ssr-logo.svg"
+    },
+    {
+      "id": 26,
+      "name": "Progressive Web App [PWA]",
+      "description": "Progressive Web App (PWA) is a type of web application that takes advantage of modern web technologies to provide a user experience similar to that of a native mobile app. PWAs are reliable, fast, and engaging, offering features such as offline access, push notifications, and home screen installation.",
+      "imageSrc": "/assets/pwa-logo.svg"
+    },
+    {
+      "id": 27,
+      "name": "JSON Web Token (JWT)",
+      "description": "JSON Web Token (JWT) is an open standard for securely transmitting information between parties as a JSON object. It's commonly used for authentication and information exchange in web development, providing a compact and self-contained way to transmit data.",
+      "imageSrc": "/assets/jwt-logo.svg"
+    },
+    {
+      "id": 28,
       "name": "Other",
       "description": "The \"Other\" category represents my openness to learning new skills and technologies. Even if I haven't encountered a specific language or tool yet, I believe I can adapt and acquire the necessary knowledge to use it for production if I have a bit of time to spend learning it.",
       "imageSrc": "/assets/question-mark.svg"
@@ -209,33 +274,51 @@
       "technologiesUsed": [
         {
           "name": "Next.js",
-          "techImageSrc": "/assets/nextjs-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/nextjs-logo.svg",
-          "reasonWhy": "Next.js was chosen for its efficiency in building React applications and its default dynamic routes & config, allowing the Project to progress faster without needing too many custom configurations like custom Routes."
+          "techImageSrc": "/assets/nextjs-logo.svg"
         },
         {
           "name": "Tailwind CSS",
-          "techImageSrc": "/assets/tailwind-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/tailwind-logo.svg",
-          "reasonWhy": "Tailwind CSS was selected to streamline the styling process with its utility-first approach, ensuring a clean and maintainable codebase. It made styling the website be extremely fast. I honestly can't stress enough about how useful it was."
+          "techImageSrc": "/assets/tailwind-logo.svg"
         },
         {
           "name": "Strapi",
-          "techImageSrc": "/assets/strapi-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/strapi-logo.svg",
-          "reasonWhy": "Strapi served as the headless CMS to manage content, providing flexibility and ease of use, allowing for efficient content updates. Although, I wouldn't recommend it too much, as at least for me, I felt like quite a bit of features were lacking."
+          "techImageSrc": "/assets/strapi-logo.svg"
         },
         {
           "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": "Figma was the main design tool; its plugins and features helped a lot, ensuring a cohesive and visually appealing user interface."
+          "techImageSrc": "/assets/figma-logo.svg"
         },
         {
           "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": "While Tailwind CSS was the primary styling tool, custom CSS was utilized for specific design elements, providing a better visual experience."
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "GraphQl",
+          "techImageSrc": "/assets/graphql-logo.svg"
+        },
+        {
+          "name": "Rest Api",
+          "techImageSrc": "/assets/rest-api-logo.svg"
+        },
+        {
+          "name": "XML",
+          "techImageSrc": "/assets/xml-logo.svg"
+        },
+        {
+          "name": "Single Page Application [SPA]",
+          "techImageSrc": "/assets/spa-logo.svg"
+        },
+        {
+          "name": "Email Provider",
+          "techImageSrc": "/assets/email-provider-logo.svg"
+        },
+        {
+          "name": "Acessibilidade Digital",
+          "techImageSrc": "/assets/accessibility-logo.svg"
+        },
+        {
+          "name": "Server Side Rendering [SSR]",
+          "techImageSrc": "/assets/ssr-logo.svg"
         }
       ],
       "challengesDescription": "While developing this project, I encountered minimal challenges, mostly centered around refining site details and handling repetitive tasks due to the CMS. The complexity of the project was relatively low, with the most complicated steps being only a little challenging in comparison.",
@@ -307,6 +390,71 @@
       "figmaUrl": ""
     },
     {
+      "pageTitle": "Pixel Python | Web Development Portfolio",
+      "slug": "pixel-python",
+      "icon": "/assets/snake.svg",
+      "iconAltText": "Pixel Python Icon",
+      "name": "Pixel Python",
+      "description": "A classic Snake game implemented using Angular, TypeScript, CSS, Bootstrap, and Figma for design. This project was created to showcase my skills in front-end development and game programming in a more fun way.",
+      "role": "(Sole Developer)",
+      "descriptionFeatures": "Classic Snake game logic, responsive CSS styling, Bootstrap for layout and components, TypeScript for game behavior, and Figma for design.",
+      "technologiesUsed": [
+        {
+          "name": "Angular",
+          "techImageSrc": "/assets/angular-logo.svg"
+        },
+        {
+          "name": "TypeScript",
+          "techImageSrc": "/assets/typescript-logo.svg"
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "Bootstrap",
+          "techImageSrc": "/assets/bootstrap-logo.svg"
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg"
+        },
+        {
+          "name": "HTML",
+          "techImageSrc": "/assets/html-logo.svg"
+        },
+        {
+          "name": "Progressive Web App [PWA]",
+          "techImageSrc": "/assets/pwa-logo.svg"
+        }
+      ],
+      "featuresDescription": "The game features a classic Snake gameplay experience where players control a snake to eat food and grow longer. The game ends if the snake collides with itself or the walls.",
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Classic Snake Gameplay",
+          "featureDescription": "Players control a snake to eat food and grow longer, avoiding collisions with the walls or itself."
+        },
+        {
+          "featureHeading": "Game Sound Effects",
+          "featureDescription": "Enjoy immersive gameplay with sound effects enhancing the overall gaming experience."
+        },
+        {
+          "featureHeading": "Custom Options",
+          "featureDescription": "Pause or mute the game at any time. Track your current score and highest score on screen, adding convenience and personalization to your gaming experience."
+        },
+        {
+          "featureHeading": "Intuitive Controls",
+          "featureDescription": "Experience smooth and responsive controls with the ability to queue your moves. The game runs at a slightly slower pace, ensuring you can input your controls effortlessly, making movement incredibly easy. You also receive 3 times more length than usual."
+        }
+      ],
+      "thumbnail": "/assets/projects/pixel-python-thumbnail.png",
+      "thumbnailAltText": "Pixel Python Game Thumbnail",
+      "hero": "/assets/projects/pixel-python-hero.jpg",
+      "liveWebsiteUrl": "https://pixel-python.vercel.app/",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
+      "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
+    },
+    {
       "pageTitle": "Tic Tac Toe | Web Development Portfolio",
       "slug": "tic-tac-toe",
       "icon": "/assets/cross.svg",
@@ -318,33 +466,23 @@
       "technologiesUsed": [
         {
           "name": "HTML",
-          "techImageSrc": "/assets/html-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/html-logo.svg",
-          "reasonWhy": "HTML provides the structure and content of the game."
+          "techImageSrc": "/assets/html-logo.svg"
         },
         {
           "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": "CSS styles the game interface, making it visually appealing."
+          "techImageSrc": "/assets/css-logo.svg"
         },
         {
           "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": "Figma was the main design tool."
+          "techImageSrc": "/assets/figma-logo.svg"
         },
         {
           "name": "JavaScript",
-          "techImageSrc": "/assets/javascript-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/javascript-logo.svg",
-          "reasonWhy": "JavaScript adds interactivity to the game, handling game logic and user interactions."
+          "techImageSrc": "/assets/javascript-logo.svg"
         },
         {
           "name": "Jest",
-          "techImageSrc": "/assets/jest-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/jest-logo.svg",
-          "reasonWhy": "Jest is used for testing the game logic and ensuring its correctness."
+          "techImageSrc": "/assets/jest-logo.svg"
         }
       ],
       "challengesDescription": "The main and only challenge of this project was using Jest as TDD.",
@@ -380,73 +518,6 @@
       "liveWebsiteUrl": "https://tic-tac-toe-nine-tan.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/tic-tac-toe",
       "figmaUrl": "https://www.figma.com/file/SDtAyFbfhWtXmP0DAo2Dtt/Tic-Tac-Toe?type=design&mode=design&t=XNRXwdNnySDk0hor-0"
-    },
-    {
-      "pageTitle": "Pixel Python | Web Development Portfolio",
-      "slug": "pixel-python",
-      "icon": "/assets/snake.svg",
-      "iconAltText": "Pixel Python Icon",
-      "name": "Pixel Python",
-      "description": "A classic Snake game implemented using Angular, TypeScript, CSS, Bootstrap, and Figma for design. This project was created to showcase my skills in front-end development and game programming in a more fun way.",
-      "role": "(Sole Developer)",
-      "descriptionFeatures": "Classic Snake game logic, responsive CSS styling, Bootstrap for layout and components, TypeScript for game behavior, and Figma for design.",
-      "technologiesUsed": [
-        {
-          "name": "Angular",
-          "techImageSrc": "/assets/angular-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/angular-logo.svg",
-          "reasonWhy": "Angular provides a robust framework for building single-page applications."
-        },
-        {
-          "name": "TypeScript",
-          "techImageSrc": "/assets/typescript-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/typescript-logo.svg",
-          "reasonWhy": "TypeScript adds static typing and other advanced features to JavaScript, making the code more maintainable and scalable."
-        },
-        {
-          "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": "CSS styles the game interface, ensuring a visually appealing layout."
-        },
-        {
-          "name": "Bootstrap",
-          "techImageSrc": "/assets/bootstrap-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/bootstrap-logo.svg",
-          "reasonWhy": "Bootstrap provides pre-designed components and a responsive grid system, streamlining the layout development process."
-        },
-        {
-          "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": "Figma was used for designing the game's visual elements, including layouts and graphics."
-        }
-      ],
-      "featuresDescription": "The game features a classic Snake gameplay experience where players control a snake to eat food and grow longer. The game ends if the snake collides with itself or the walls.",
-      "siteMainFeatures": [
-        {
-          "featureHeading": "Classic Snake Gameplay",
-          "featureDescription": "Players control a snake to eat food and grow longer, avoiding collisions with the walls or itself."
-        },
-        {
-          "featureHeading": "Game Sound Effects",
-          "featureDescription": "Enjoy immersive gameplay with sound effects enhancing the overall gaming experience."
-        },
-        {
-          "featureHeading": "Custom Options",
-          "featureDescription": "Pause or mute the game at any time. Track your current score and highest score on screen, adding convenience and personalization to your gaming experience."
-        },
-        {
-          "featureHeading": "Intuitive Controls",
-          "featureDescription": "Experience smooth and responsive controls with the ability to queue your moves. The game runs at a slightly slower pace, ensuring you can input your controls effortlessly, making movement incredibly easy. You also receive 3 times more length than usual."
-        }
-      ],
-      "thumbnail": "/assets/projects/pixel-python-thumbnail.png",
-      "thumbnailAltText": "Pixel Python Game Thumbnail",
-      "hero": "/assets/projects/pixel-python-hero.jpg",
-      "liveWebsiteUrl": "https://pixel-python.vercel.app/",
-      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
-      "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
     }
   ],
   "portfolioData": [
@@ -457,33 +528,51 @@
       "technologiesUsed": [
         {
           "name": "Next.js",
-          "techImageSrc": "/assets/nextjs-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/nextjs-logo.svg",
-          "reasonWhy": ""
+          "techImageSrc": "/assets/nextjs-logo.svg"
         },
         {
           "name": "Tailwind CSS",
-          "techImageSrc": "/assets/tailwind-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/tailwind-logo.svg",
-          "reasonWhy": ""
+          "techImageSrc": "/assets/tailwind-logo.svg"
         },
         {
           "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/figma-logo.svg",
-          "reasonWhy": ""
-        },
-        {
-          "name": "Jest",
-          "techImageSrc": "/assets/jest-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/jest-logo.svg",
-          "reasonWhy": ""
+          "techImageSrc": "/assets/figma-logo.svg"
         },
         {
           "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg",
-          "blackTechImageSrc": "/assets/black-logos/css-logo.svg",
-          "reasonWhy": ""
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "Framer Motion",
+          "techImageSrc": "/assets/framer-motion-logo.svg"
+        },
+        {
+          "name": "XML",
+          "techImageSrc": "/assets/xml-logo.svg"
+        },
+        {
+          "name": "Email Provider",
+          "techImageSrc": "/assets/email-provider-logo.svg"
+        },
+        {
+          "name": "SEO",
+          "techImageSrc": "/assets/seo-logo.svg"
+        },
+        {
+          "name": "Single Page Application [SPA]",
+          "techImageSrc": "/assets/spa-logo.svg"
+        },
+        {
+          "name": "HTML",
+          "techImageSrc": "/assets/html-logo.svg"
+        },
+        {
+          "name": "Acessibilidade Digital",
+          "techImageSrc": "/assets/accessibility-logo.svg"
+        },
+        {
+          "name": "Server Side Rendering [SSR]",
+          "techImageSrc": "/assets/ssr-logo.svg"
         }
       ],
       "achievementsList": [
@@ -601,7 +690,7 @@
   "resumePageText2": "Back to Portfolio",
   "resumePageText3": "WEB DEVELOPER",
   "resumePageText4": "PERSONAL STATEMENT",
-  "resumePageText5": "As a self-taught, all-around web developer, I learn new skills with dedication and persistence. While my formal education may be limited, my determination to improve and help other's is high. I invest countless hours daily into coding, crafting projects for learning, and tackling complex coding issues. Through a mix of video tutorials, guides, and thorough documentation, I've cultivated proficiency in design, frontend, and backend development. While I may not have the extensive real-world experience of professionals, I am confident in my ability to deliver high-quality work and meet the demands of any project.",
+  "resumePageText5": "As a junior/mid-level web developer, I learn new skills with dedication and persistence. I maintain a strong determination to improve and collaborate with others. I invest countless hours daily coding, creating projects for learning, and tackling complex coding issues. Through video tutorials, guides, and detailed documentation, I have developed proficiency in design and development, both on the frontend and backend. Based on this experience, I am confident in my ability to deliver high-quality work and meet the demands of any proposed project. My salary expectation is low and ranges from R$700 - R$1,412, and I am completely open to negotiations.",
   "resumePageText6": "WEB DEV SKILLS",
   "resumePageText7": "PROJECTS",
 
@@ -681,5 +770,8 @@
   "altText14": "Github Repository Illustration",
   "altText15": "Outside Link Symbol",
 
-  "titleText1": "resume"
+  "titleText1": "resume",
+
+  "showMoreButton": "Show More Skills",
+  "showLessButton": "Show Less Skills"
 }

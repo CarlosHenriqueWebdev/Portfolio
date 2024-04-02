@@ -22,7 +22,7 @@ const Services = () => {
               {t("servicesText1")}
             </h2>
 
-            <p className="mt-[16px] text-white85 mx-auto">
+            <p className="mt-[16px] mx-auto">
               <Trans
                 i18nKey={t("servicesText2")}
                 components={{ bold: <strong /> }}
@@ -68,7 +68,7 @@ const Services = () => {
                         {mapItem.title}
                       </h3>
 
-                      <p className="max-w-[500px] text-white85 text-[0.875rem] sm:text-[1rem]">
+                      <p className="max-w-[500px] text-[0.875rem] sm:text-[1rem]">
                         {mapItem.description}
                       </p>
                     </div>
