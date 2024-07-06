@@ -1,6 +1,4 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import Sparkle from "react-sparkle";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   TextAnimationHeadingEnglish,
@@ -14,16 +12,6 @@ import { buttonClassName } from "@/components/utils/buttonStyle";
 
 const Hero = ({ locale }) => {
   const { t } = useTranslation();
-
-  const [sparkleIsHovered, setsparkleIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setsparkleIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setsparkleIsHovered(false);
-  };
 
   const handleButtonClick = (targetId) => {
     const targetElement = document.getElementById(targetId);
@@ -40,22 +28,18 @@ const Hero = ({ locale }) => {
   const animatedTextEnglish = "I'm Carlos, a Web Developer";
 
   return (
-    <div className="overflow-hidden border-b-[6px] border-solid border-cornflowerBlue">
+    <div className="overflow-hidden border-b-[4px] ">
       <div
-        className={`hero-shadow bg-cover h-full bg-[black] w-full bg-no-repeat relative bg-center lg:bg-[url(/assets/hero.png)]`}
+        className={`hero-shadow bg-fixed h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/assets/img4.jpg)]`}
       >
-        <div
-          style={{
-            backgroundColor: `rgba(0, 0, 0, 0.6)`,
-          }}
-        >
-          <div className="px-[24px] lg:px-[48px] py-[72px] xl:max-w-[1280px] xl:mx-auto">
+        <div className="bg-black75 py-[100px]">
+          <div className="px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px]">
             <div className="grid gap-[12px]">
-              <span aria-hidden="true" className=" text-white85">
+              <span aria-hidden="true" className="font-bold text-white75">
                 {t("heroText1")}
               </span>
 
-              <div className="font-bold text-[1.5rem] sm:text-[1.75rem]">
+              <div className="font-bold text-[1.75rem]">
                 <motion.div aria-hidden="true">
                   {locale === "en" ? (
                     <TextAnimationHeadingEnglish text={animatedTextEnglish} />
@@ -77,111 +61,53 @@ const Hero = ({ locale }) => {
                 )}
               </div>
 
-              <p className=" text-[1.25rem] text-royalPurpleText font-bold">
-                {t("heroText2")}
-              </p>
+              <p className=" text-[1.25rem]  font-bold">{t("heroText2")}</p>
 
-              <div className="max-w-[600px]">
+              <div className="max-w-[600px] font-medium">
                 <p>
                   <Trans
-                    i18nKey={t("heroText3")} // optional -> fallbacks to defaults if not provided
+                    i18nKey={t("heroText3")}
                     components={{ bold: <strong /> }}
                   />
                 </p>
-              </div>
-
-              <p className="visually-hidden">{t("heroText4")}</p>
-
-              <div aria-hidden="true" className="w-fit h-fit relative">
-                <motion.button whileTap={{ scale: 0.95 }} tabIndex="-1">
-                  <ScrollLink
-                    className="cursor-pointer sm:text-[1.25rem] font-bold flex items-start sm:items-center gap-[8px] mt-[8px]"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    to={"contactSection"} // Use 'to' instead of 'href'
-                    smooth={true} // Enable smooth scrolling
-                    duration={500} // Set the duration of the scroll animation in milliseconds
-                    offset={-73}
-                  >
-                    <Image
-                      aria-hidden={true}
-                      className={`w-[20px] sm:w-[24px]`}
-                      src="/assets/star.svg"
-                      alt={t("altText8")}
-                      width={0}
-                      height={0}
-                      unoptimized
-                    />
-                    {t("heroText4")}
-                  </ScrollLink>
-
-                  {sparkleIsHovered && <Sparkle count={10} overflowPx={1} />}
-                </motion.button>
               </div>
             </div>
 
             <div className="flex flex-wrap mt-[24px] gap-[16px]">
               <ScrollLink
-                className={`${buttonClassName} px-[16px] w-fit flex gap-[8px] items-center`}
-                to={"projectsSection"} // Use 'to' instead of 'href'
-                smooth={true} // Enable smooth scrolling
-                duration={500} // Set the duration of the scroll animation in milliseconds
+                className={`${buttonClassName} w-fit flex rounded-[4px] bg-color02`}
+                to={"projectsSection"}
+                smooth={true}
+                duration={500}
                 offset={-73}
                 tabIndex="0"
                 onClick={() => handleButtonClick("projectsHeadingText")}
               >
                 {t("heroText5")}
-                <Image
-                  aria-hidden={true}
-                  className="w-[12px] h-[12px] rotate-[90deg]"
-                  src="/assets/arrow.svg"
-                  alt={t("altText1")}
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
               </ScrollLink>
 
               <ScrollLink
-                className={`${buttonClassName} px-[16px] w-fit !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                to={"resumeSection"} // Use 'to' instead of 'href'
-                smooth={true} // Enable smooth scrolling
-                duration={500} // Set the duration of the scroll animation in milliseconds
+                className={`${buttonClassName} w-fit flex rounded-[4px] bg-[white] text-[black]`}
+                to={"resumeSection"}
+                smooth={true}
+                duration={500}
                 offset={-73}
                 tabIndex="0"
                 onClick={() => handleButtonClick("resumeHeadingText")}
               >
                 {t("heroText6")}
-                <Image
-                  aria-hidden={true}
-                  className="w-[12px] h-[12px] rotate-[90deg]"
-                  src="/assets/arrow.svg"
-                  alt={t("altText1")}
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
               </ScrollLink>
 
               <ScrollLink
-                className={`${buttonClassName} px-[16px] w-fit !border-skyBlue before:!bg-skyBlue flex gap-[8px] items-center`}
-                to={"contactSection"} // Use 'to' instead of 'href'
-                smooth={true} // Enable smooth scrolling
-                duration={500} // Set the duration of the scroll animation in milliseconds
+                className={`${buttonClassName} w-fit flex rounded-[4px] bg-color02`}
+                to={"contactSection"}
+                smooth={true}
+                duration={500}
                 offset={-73}
                 tabIndex="0"
                 onClick={() => handleButtonClick("contactHeadingText")}
               >
                 {t("heroText7")}
-                <Image
-                  aria-hidden={true}
-                  className="w-[12px] h-[12px] rotate-[90deg]"
-                  src="/assets/arrow.svg"
-                  alt={t("altText1")}
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
               </ScrollLink>
             </div>
           </div>

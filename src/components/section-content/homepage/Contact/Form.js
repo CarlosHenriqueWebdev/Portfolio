@@ -52,7 +52,7 @@ const Form = ({ setDidFormSubmit }) => {
             to_email: formData.Email,
             message: formData.Message,
           },
-          process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+          process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
         );
 
         // After successful submission, clear the form data
@@ -124,7 +124,7 @@ const Form = ({ setDidFormSubmit }) => {
     hasErrorOnSubmit;
 
   const inputClassName =
-    "bg-[black] w-full rounded-[4px] py-[8px] px-[12px] border-solid border-[2px] border-cornflowerBlue focus:border-[#00a1ff] focus:outline-none focus:transition-none focus:static focus:z-0 !text-[white]";
+    "bg-color03 w-full rounded-[4px] py-[8px] px-[12px]  focus:border-[#00a1ff] focus:outline-none focus:transition-none focus:static focus:z-0 !text-[white]";
 
   return (
     <form action="" onSubmit={handleSubmit} className="">
@@ -134,7 +134,7 @@ const Form = ({ setDidFormSubmit }) => {
             <div className="flex gap-[4px] flex-col">
               <label className="font-medium cursor-pointer" htmlFor="Name">
                 {t("labelText1")}:
-                <span aria-hidden={true} className="text-skyBlueText">
+                <span aria-hidden={true} className="text-color02">
                   *
                 </span>
               </label>
@@ -169,7 +169,7 @@ const Form = ({ setDidFormSubmit }) => {
             <div className="flex gap-[4px] flex-col">
               <label className="font-medium cursor-pointer" htmlFor="Email">
                 {t("labelText2")}:
-                <span aria-hidden={true} className="text-skyBlueText">
+                <span aria-hidden={true} className="text-color02">
                   *
                 </span>
               </label>
@@ -205,7 +205,7 @@ const Form = ({ setDidFormSubmit }) => {
           <div className="flex gap-[4px] flex-col">
             <label className="font-medium cursor-pointer" htmlFor="Message">
               {t("labelText3")}:
-              <span aria-hidden={true} className="text-skyBlueText">
+              <span aria-hidden={true} className="text-color02">
                 *
               </span>
             </label>

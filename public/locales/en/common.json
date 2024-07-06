@@ -1,23 +1,25 @@
 {
-  "homeTitle": "Web Developer Portfolio | Explore My Projects and Skills",
-  "homeMetaDescription": "Check out my web development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies.",
-  "resumeTitle": "Resume | Skills, Experience, and Achievements",
-  "resumeMetaDescription": "Explore my web developer resume to learn about my skills, experience, and notable achievements.",
-  "downloadCvPath": "/assets/downloads/english-resume.pdf",
-  "downloadCvFileName": "Resume",
+  "currentLanguage": "English",
+  "currentLanguageFlag": "flag1.svg",
+  "currentLocale": "en",
+  "languages": [
+    { "language": "Português", "flag": "flag3.svg", "DO_NOT_CHANGE": "pt" }
+  ],
 
-  "navText1": "Home",
-  "navText2": "About",
-  "navText3": "Skills",
-  "navText4": "Services",
-  "navText5": "Portfolio",
-  "navText6": "Resume",
-  "navText7": "Questions",
-  "navText8": "Contact",
+  "navLinks": [
+    { "text": "Home", "DO_NOT_CHANGE": "homeSection" },
+    { "text": "About", "DO_NOT_CHANGE": "aboutSection" },
+    { "text": "Portfólio", "DO_NOT_CHANGE": "projectsSection" },
+    { "text": "Resume", "DO_NOT_CHANGE": "resumeSection" },
+    { "text": "Contact", "DO_NOT_CHANGE": "contactSection" }
+  ],
+
+  "homeTitle": "Web Developer Portfolio | Explore My Projects and Skills",
+  "homeMetaDescription": "Check out my development portfolio to explore a showcase of projects and skills. Learn about my expertise in front-end and back-end technologies.",
 
   "heroText1": "Elevating User Experience Through Code",
   "heroText2": "UX/UI Designer",
-  "heroText3": "<bold className='font-medium'>Salary Expectation: R$700 - R$1.412 (Brazilian Currency) | </bold> Welcome to my website! I'm comfortable working on both front-end and back-end development. I specialize in crafting <bold className=' text-royalPurpleText font-medium'>user-friendly</bold> and <bold className=' text-royalPurpleText font-medium'>very detailed</bold> websites.",
+  "heroText3": "Salary Expectation: R$700 - R$1.412 (Brazilian Currency) | Welcome to my website! I'm comfortable working on both front-end and back-end development. I specialize in crafting user-friendly and very detailed websites.",
   "heroText4": "Available for Freelance & Employment",
   "heroText5": "Portfolio Showcase",
   "heroText6": "View Resume",
@@ -25,252 +27,259 @@
 
   "aboutText1": "About Me",
   "aboutText2": "Web Developer",
-  "aboutText3": "I am <bold className=' text-royalPurpleText font-medium'>Carlos Henrique</bold>, a <bold className=' text-skyBlueText'>Web Developer</bold> based in <bold className='brazil-gradient'>Brazil</bold>. With some experience in both <bold className=' italic'>front-end and back-end development</bold>, I specialize in creating websites that are <bold className=' text-cornflowerBlueText font-medium'>easy to use</bold> and that have a touch of <bold className=' text-royalPurpleText font-medium'>detail</bold> and <bold className=' text-skyBlueText'>vitality</bold>.",
-  "aboutText4": "For me, <bold className=' font-medium'>problem-solving</bold> is the heart of web development. I believe that, with enough time and determination, any challenge can be overcome. My focus is on creating <bold className=' font-medium'>practical solutions</bold> and ensuring a <bold className=' text-royalPurpleText font-medium'>smooth user experience</bold> for everyone.",
-  "aboutText5": "I am entirely focused on <bold className=' text-cornflowerBlueText italic'>results</bold>. My <bold className=' text-royalPurpleText font-medium'>practical</bold> approach involves extensive study, iterative learning, and plenty of hands-on application. I am constantly striving to improve my skills and knowledge to offer the best possible solutions.",
+  "aboutText3": "I am a dedicated 19-year-old self-taught Developer based in Brazil, proficient in both front-end and back-end development. I excel in designing and implementing websites that seamlessly blend usability with distinctive creativity and functionality.",
 
-  "skillsText1": "Web Skills Showcase",
-  "skillsText2": "Discover my current skills for <bold className=' text-royalPurpleText font-medium'>web development</bold>. I believe I can do anything that other people can with all the skills presented here. While I don't know everything, I'm always learning and improving so I can deliver a better experience to all. <bold className='text-white75'>|</bold> <bold className='text-cornflowerBlueText font-medium'>*Click on a card to reveal more information about each skill.</bold>",
-  "skillsText3": "Extra Note:",
+  "skillsText1": "My Skills",
 
   "skillsData": [
     {
-      "id": 1,
       "name": "JavaScript",
-      "description": "JavaScript is a versatile scripting language commonly used to create dynamic and interactive web pages. With its widespread adoption, it's an essential skill for front-end and back-end development.",
       "imageSrc": "/assets/javascript-logo.svg"
     },
     {
-      "id": 2,
       "name": "CSS / SASS / SCSS",
-      "description": "CSS (Cascading Style Sheets) is the language used to style HTML documents. It controls the layout and appearance of web pages, allowing developers to create visually appealing and responsive designs.",
       "imageSrc": "/assets/css-logo.svg"
     },
     {
-      "id": 3,
       "name": "Node.js",
-      "description": "Node.js is a server-side JavaScript runtime that allows developers to build scalable and efficient network applications. It's widely used for creating web servers and handling asynchronous tasks.",
       "imageSrc": "/assets/nodejs-logo.svg"
     },
     {
-      "id": 4,
       "name": "HTML",
-      "description": "HTML (Hypertext Markup Language) is the foundation of web development. It structures content on the web, defining the elements that make up a webpage, such as headings, paragraphs, and images.",
       "imageSrc": "/assets/html-logo.svg"
     },
     {
-      "id": 5,
       "name": "Next.js",
-      "description": "Next.js is a React framework that simplifies the process of building server-side rendered and statically generated React applications. It enhances the performance and SEO of web applications.",
       "imageSrc": "/assets/nextjs-logo.svg"
     },
     {
-      "id": 6,
       "name": "React / React + Typescript",
-      "description": "React is a JavaScript library for building user interfaces. It allows developers to create reusable components, making it efficient to build and maintain complex web applications.",
       "imageSrc": "/assets/react-logo.svg"
     },
     {
-      "id": 7,
       "name": "Bootstrap",
-      "description": "Bootstrap is a popular CSS framework that streamlines the process of designing responsive and visually appealing websites. It provides a set of pre-designed components and styles.",
       "imageSrc": "/assets/bootstrap-logo.svg"
     },
     {
-      "id": 8,
       "name": "Figma",
-      "description": "Figma is a collaborative design tool that allows designers to create, share, and collaborate on user interfaces in real-time. It's widely used for designing web and mobile applications.",
       "imageSrc": "/assets/figma-logo.svg"
     },
     {
-      "id": 9,
       "name": "Tailwind CSS",
-      "description": "Tailwind CSS is a utility-first CSS framework that simplifies the process of styling web applications. It provides low-level utility classes to build designs quickly and maintainably.",
       "imageSrc": "/assets/tailwind-logo.svg"
     },
     {
-      "id": 10,
       "name": "WordPress",
-      "description": "WordPress is a content management system (CMS) that powers a significant portion of the web. It's used for building websites and blogs, offering a user-friendly interface and extensive plugin support.",
       "imageSrc": "/assets/wordpress-logo.svg"
     },
     {
-      "id": 11,
       "name": "Firebase",
-      "description": "Firebase is a mobile and web application development platform provided by Google. It offers a suite of cloud services, including authentication, real-time databases, and hosting, simplifying backend development.",
       "imageSrc": "/assets/firebase-logo.svg"
     },
     {
-      "id": 12,
       "name": "Strapi",
-      "description": "Strapi is an open-source headless CMS that enables developers to build powerful APIs quickly. It's flexible, customizable, and suitable for creating content-rich applications.",
       "imageSrc": "/assets/strapi-logo.svg"
     },
     {
-      "id": 13,
       "name": "Jest",
-      "description": "Jest is a delightful JavaScript testing framework with a focus on simplicity. It works seamlessly with most projects and provides features like built-in test runners, assertions, and mocks for efficient and reliable testing.",
       "imageSrc": "/assets/jest-logo.svg"
     },
     {
-      "id": 14,
       "name": "Angular",
-      "description": "Angular is a popular front-end framework for building web applications. It provides a comprehensive set of features for creating dynamic and responsive UIs, making it a powerful tool for web development.",
       "imageSrc": "/assets/angular-logo.svg"
     },
     {
-      "id": 15,
       "name": "TypeScript",
-      "description": "TypeScript is a superset of JavaScript that adds static typing to the language. It helps developers catch errors early in the development process and write more maintainable code.",
       "imageSrc": "/assets/typescript-logo.svg"
     },
     {
-      "id": 17,
-      "name": "Framer Motion",
-      "description": "Framer Motion is a popular animation library for React applications. It allows developers to create fluid and expressive animations with simple declarative syntax, enhancing the user experience of web applications.",
-      "imageSrc": "/assets/framer-motion-logo.svg"
+      "name": "Vue",
+      "imageSrc": "/assets/vue.svg"
     },
     {
-      "id": 18,
-      "name": "GraphQL",
-      "description": "GraphQL is a query language for APIs and a runtime for executing those queries. It provides a more efficient and flexible alternative to REST for client-server communication, allowing clients to request only the data they need.",
-      "imageSrc": "/assets/graphql-logo.svg"
+      "name": "Nuxt",
+      "imageSrc": "/assets/nuxt.svg"
     },
     {
-      "id": 19,
-      "name": "Rest Api",
-      "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. It uses a stateless, client-server communication model, typically over HTTP, making it suitable for building scalable web services.",
+      "name": "Rest Api & GraphQL",
       "imageSrc": "/assets/rest-api-logo.svg"
     },
     {
-      "id": 20,
-      "name": "XML",
-      "description": "XML (Extensible Markup Language) is a markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable. It's commonly used for storing and exchanging data over the internet.",
-      "imageSrc": "/assets/xml-logo.svg"
-    },
-    {
-      "id": 21,
-      "name": "Single Page Application [SPA]",
-      "description": "Single Page Application (SPA) is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the application. This approach provides a more fluid user experience similar to that of a desktop application.",
-      "imageSrc": "/assets/spa-logo.svg"
-    },
-    {
-      "id": 22,
-      "name": "Email Provider",
-      "description": "Email Provider refers to the services or platforms that provide email functionality. This includes sending, receiving, and managing emails. Common examples of email providers include Gmail, Outlook, and Yahoo Mail.",
+      "name": "Email Provider (SMTP)",
       "imageSrc": "/assets/email-provider-logo.svg"
     },
     {
-      "id": 23,
-      "name": "SEO",
-      "description": "SEO (Search Engine Optimization) is the process of optimizing a website to rank higher in search engine results pages. This involves improving the website's content, structure, and performance to increase its visibility to search engines and drive organic traffic.",
-      "imageSrc": "/assets/seo-logo.svg"
-    },
-    {
-      "id": 24,
       "name": "Acessibilidade Digital",
-      "description": "Acessibilidade Digital é a prática de tornar produtos digitais, como sites e aplicativos, acessíveis a todas as pessoas, incluindo aquelas com deficiências visuais, auditivas, motoras ou cognitivas. Isso envolve o uso de tecnologias e técnicas que garantam a inclusão e a igualdade de acesso.",
       "imageSrc": "/assets/accessibility-logo.svg"
-    },
-    {
-      "id": 25,
-      "name": "Server Side Rendering [SSR]",
-      "description": "Server Side Rendering (SSR) is a technique used in web development where a web server processes the HTML, CSS, and JavaScript for a web page and sends a fully rendered page to the client's browser. This approach improves performance and SEO by providing faster load times and more indexable content.",
-      "imageSrc": "/assets/ssr-logo.svg"
-    },
-    {
-      "id": 26,
-      "name": "Progressive Web App [PWA]",
-      "description": "Progressive Web App (PWA) is a type of web application that takes advantage of modern web technologies to provide a user experience similar to that of a native mobile app. PWAs are reliable, fast, and engaging, offering features such as offline access, push notifications, and home screen installation.",
-      "imageSrc": "/assets/pwa-logo.svg"
-    },
-    {
-      "id": 27,
-      "name": "JSON Web Token (JWT)",
-      "description": "JSON Web Token (JWT) is an open standard for securely transmitting information between parties as a JSON object. It's commonly used for authentication and information exchange in web development, providing a compact and self-contained way to transmit data.",
-      "imageSrc": "/assets/jwt-logo.svg"
-    },
-    {
-      "id": 28,
-      "name": "Other",
-      "description": "The \"Other\" category represents my openness to learning new skills and technologies. Even if I haven't encountered a specific language or tool yet, I believe I can adapt and acquire the necessary knowledge to use it for production if I have a bit of time to spend learning it.",
-      "imageSrc": "/assets/question-mark.svg"
-    }
-  ],
-
-  "servicesText1": "Elevate Your Digital Presence with my Digital Services.",
-  "servicesText2": "Explore a range of digital services that I offer. From <bold className=''>custom website development</bold> to <bold className=''>responsive designs</bold>, I try and improve every day so my services can not only meet your business needs but also enhance the <bold className='text-royalPurpleText font-medium'>usability</bold> and <bold className='text-royalPurpleText font-medium'>accessibility</bold> of your website for <bold className='text-skyBlueText font-medium'>you, your team, and all of the users from your website</bold>. Feel free to <bold className='text-cornflowerBlueText font-medium'>contact me</bold> using the form below if you have any questions about my services.",
-  "servicesText3": "Are you interested in working with me?",
-  "servicesText4": "Let’s get started now",
-
-  "servicesData": [
-    {
-      "id": 1,
-      "title": "Content Management Systems",
-      "description": "While I'm still gaining experience with CMS tools, I'm committed to providing you with the best possible experience. I'll put in the effort to ensure your content management is straightforward and stress-free, allowing you to curate the perfect content for your Website.",
-      "imageSrc": "/assets/dashboard.svg"
-    },
-    {
-      "id": 2,
-      "title": "Frontend & Backend Development",
-      "description": "I handle both frontend and backend development tasks. If you have a gap in your project that needs filling, I'm here to help. While I'm still building experience, I'm ready to take on challenges and contribute to your project's development needs.",
-      "imageSrc": "/assets/code-symbol.svg"
-    },
-    {
-      "id": 3,
-      "title": "UI/UX Design",
-      "description": "While my design might not be as incredible as some, I approach UI/UX with dedication and a commitment to improvement. Given sufficient time, I can create functional, nice-looking and user-friendly designs made to fit your needs.",
-      "imageSrc": "/assets/blueprint.svg"
-    },
-    {
-      "id": 4,
-      "title": "Responsive Design",
-      "description": "It's essential to ensure that your website is accessible to everyone, independently of their machine screen size. Just like every Web Developer, I am able to create a seamless user experience that effortlessly adapts to diverse devices and screen sizes. Whether it's desktops or smartphones, your website will work across all platforms, providing an optimal viewing and user experience for every visitor.",
-      "imageSrc": "/assets/target.svg"
-    },
-    {
-      "id": 5,
-      "title": "Ongoing Support & Content Updates",
-      "description": "I can support your site beyond the initial development phase. I offer ongoing support and content updates to ensure your website works properly and is up-to-date. Whether it's troubleshooting an error, security enhancements, or even adding advanced fresh content that you can't do on your own, I am here to support the longevity and success of your online presence.",
-      "imageSrc": "/assets/cogwheel.svg"
-    },
-    {
-      "id": 6,
-      "title": "SEO Optimization",
-      "description": "Like every Web Developer, improving your online visibility is one of my services. Through thorough SEO optimization, I strategically position your website to reach a wider audience. From keyword research to on-page optimization, my approach is designed to enhance your digital presence and attract organic traffic to your site.",
-      "imageSrc": "/assets/seo.svg"
-    },
-    {
-      "id": 7,
-      "title": "Web Accessibility (WCAG)",
-      "description": "I'm committed to digital accessibility, ensuring my projects are user-friendly for everyone. While developing expertise in accessibility integration, I use tools like Screen Readers and consult guides for thorough testing. Acknowledging the diverse user experiences, I'm dedicated to continual learning and refinement. My goal is to create inclusive and user-friendly online experiences for everyone.",
-      "imageSrc": "/assets/checkmark.svg"
-    },
-    {
-      "id": 8,
-      "title": "Fast Website",
-      "description": "I prioritize speed to ensure an optimal user experience for your visitors. Through efficient coding practices and performance optimizations, I am dedicated to delivering a fast and responsive website. Everyone on the web deserves a seamless online journey, and I am committed to providing just that.",
-      "imageSrc": "/assets/speed.svg"
     }
   ],
 
   "projectsText1": "Highlighted Works",
-  "projectsText2": "While I've done various <bold className='text-royalPurpleText font-medium '>projects for learning only</bold>, this portfolio exclusively features my <bold className='text-royalPurpleText font-medium '>complete projects, distinct from one page learning exercises</bold>. Representing my personal work in design and code, these projects not only display my style but also integrate many skills I have learned soo far.",
   "projectsText3": "Description:",
   "projectsText4": "Site Features Include:",
   "projectsText5": "Website URL:",
   "projectsText6": "Read Case Study",
+  "projectsText7": "Technologies",
+  "projectsText8": "Voltar para a página anterior",
 
   "projectsData": [
     {
+      "pageTitle": "Ronaldo Coelho Nutri | Web Development Portfolio",
+      "slug": "ronaldo-coelho-nutri",
+      "name": "Ronaldo Coelho Nutri Website",
+      "description": "A website developed for nutritionist Ronaldo Coelho as a volunteer project via 99freelas. The project utilized Nuxt 3 for server-side rendering (SSR) to enhance search engine optimization (SEO). Despite its cancellation due to client dismissal, it showcases a range of skills and technologies.",
+      "technologiesUsed": [
+        {
+          "name": "Nuxt 3",
+          "techImageSrc": "/assets/nuxt3-logo.svg"
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg"
+        },
+        {
+          "name": "Vue 3",
+          "techImageSrc": "/assets/vue3-logo.svg"
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/assets/tailwindcss-logo.svg"
+        },
+        {
+          "name": "Clean Code",
+          "techImageSrc": "/assets/clean-code-logo.svg"
+        },
+        {
+          "name": "Email Integration (SMTP)",
+          "techImageSrc": "/assets/smtp-logo.svg"
+        },
+        {
+          "name": "Web Accessibility (WCAG)",
+          "techImageSrc": "/assets/wcag-logo.svg"
+        }
+      ],
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Server-Side Rendering",
+          "featureDescription": "Implemented with Nuxt 3 to improve SEO and enhance page load times."
+        },
+        {
+          "featureHeading": "Responsive Design",
+          "featureDescription": "Ensured the website is fully responsive and accessible across various devices."
+        },
+        {
+          "featureHeading": "Email Integration",
+          "featureDescription": "Integrated SMTP for seamless email communication."
+        },
+        {
+          "featureHeading": "Web Accessibility",
+          "featureDescription": "Adhered to WCAG guidelines to make the website accessible to all users."
+        }
+      ],
+      "thumbnail": "/assets/Screenshot_1.png",
+      "thumbnailAltText": "Ronaldo Coelho Nutri Website Thumbnail",
+      "hero": "/assets/img21.webp",
+      "liveWebsiteUrl": "https://ronaldo-coelho-nutri-nuxt3.vercel.app/",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/RonaldoCoelhoNutriNuxt3/",
+      "figmaUrl": "https://www.figma.com/design/0OZKIKHiON5gAIJTipLR0K/Nutritionist-Website?t=iLw5oeb0EWJ0e8OL-0"
+    },
+    {
+      "pageTitle": "Excellence Conciergerie | Web Development Portfolio",
+      "slug": "excellence-conciergerie",
+      "name": "Excellence Conciergerie Website",
+      "description": "I was tasked with redesigning the Excellence Conciergerie website, which was facing issues with its previous developer. Initially built using Elementor on WordPress, the client was dissatisfied with the animations and previous design. To meet expectations, I redesigned the site from scratch in Figma and developed it using Next.js, incorporating various animations for a more dynamic and engaging user experience.",
+      "technologiesUsed": [
+        {
+          "name": "Next.js",
+          "techImageSrc": "/assets/nextjs-logo.svg"
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg"
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/assets/tailwindcss-logo.svg"
+        },
+        {
+          "name": "GSAP (GreenSock Animation Platform)",
+          "techImageSrc": "/assets/gsap-logo.svg"
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "i18next (Internationalization)",
+          "techImageSrc": "/assets/i18next-logo.svg"
+        },
+        {
+          "name": "Lenis Scroll",
+          "techImageSrc": "/assets/lenis-logo.svg"
+        },
+        {
+          "name": "Next SEO",
+          "techImageSrc": "/assets/next-seo-logo.svg"
+        },
+        {
+          "name": "Email Integration (SMTP)",
+          "techImageSrc": "/assets/smtp-logo.svg"
+        },
+        {
+          "name": "Formik/Yup (Forms and Validation)",
+          "techImageSrc": "/assets/formik-yup-logo.svg"
+        },
+        {
+          "name": "Web Accessibility (WCAG)",
+          "techImageSrc": "/assets/wcag-logo.svg"
+        },
+        {
+          "name": "Clean Code",
+          "techImageSrc": "/assets/clean-code-logo.svg"
+        }
+      ],
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Redesigned User Interface",
+          "featureDescription": "The website was redesigned from scratch to provide a modern, visually appealing user interface."
+        },
+        {
+          "featureHeading": "Enhanced Animations",
+          "featureDescription": "Incorporated various animations using GSAP for a more dynamic and engaging user experience."
+        },
+        {
+          "featureHeading": "Internationalization",
+          "featureDescription": "Implemented i18next for easy and efficient internationalization of the website content."
+        },
+        {
+          "featureHeading": "SEO Optimization",
+          "featureDescription": "Used Next SEO to enhance search engine optimization, improving the site's visibility."
+        },
+        {
+          "featureHeading": "Improved Form Handling",
+          "featureDescription": "Utilized Formik and Yup for robust form handling and validation."
+        },
+        {
+          "featureHeading": "Web Accessibility",
+          "featureDescription": "Adhered to WCAG standards to ensure the website is accessible to all users."
+        }
+      ],
+      "thumbnail": "/assets/Screenshot_2.png",
+      "thumbnailAltText": "Excellence Conciergerie Website Thumbnail",
+      "hero": "/assets/img1.webp",
+      "liveWebsiteUrl": "https://excellence-conciergerie.com/en",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/excellence-conciergerie",
+      "figmaUrl": "https://www.figma.com/file/ZbGuHDbMQJfuPJVLg6rhwY/Excellence-Conciergerie?node-id=885169-448&t=NeQeWCWDznkAKsle-0"
+    },
+    {
       "pageTitle": "Doggy Daycare | Web Development Portfolio",
       "slug": "doggy-daycare",
-      "icon": "/assets/paw-icon.svg",
-      "iconAltText": "Dog Paws",
       "name": "Doggy Daycare",
       "description": "A project about a fictional Doggy Daycare. Although the Name isn't very creative, the Site was made only with the goal of self-improvement. It served as a platform to mainly enhance my design skills, and utilize a popular CMS tool such as Strapi and WordPress, as I'm quite a fan of the Idea of what a CMS can do. The project also aimed at refining my coding proficiency in Next.js, implementing accessibility features, and a few more.",
-      "role": "(Sole Developer)",
-      "descriptionFeatures": "Strapi CMS, Interactive Map, Automatic Email, Accessibility Integration, Loading Screen & Skeleton Loading.",
       "technologiesUsed": [
         {
           "name": "Next.js",
@@ -293,19 +302,15 @@
           "techImageSrc": "/assets/css-logo.svg"
         },
         {
-          "name": "GraphQl",
+          "name": "GraphQL",
           "techImageSrc": "/assets/graphql-logo.svg"
         },
         {
-          "name": "Rest Api",
+          "name": "REST API",
           "techImageSrc": "/assets/rest-api-logo.svg"
         },
         {
-          "name": "XML",
-          "techImageSrc": "/assets/xml-logo.svg"
-        },
-        {
-          "name": "Single Page Application [SPA]",
+          "name": "SPA",
           "techImageSrc": "/assets/spa-logo.svg"
         },
         {
@@ -313,78 +318,35 @@
           "techImageSrc": "/assets/email-provider-logo.svg"
         },
         {
-          "name": "Acessibilidade Digital",
+          "name": "Accessibility",
           "techImageSrc": "/assets/accessibility-logo.svg"
         },
         {
-          "name": "Server Side Rendering [SSR]",
+          "name": "SSR",
           "techImageSrc": "/assets/ssr-logo.svg"
-        }
-      ],
-      "challengesDescription": "While developing this project, I encountered minimal challenges, mostly centered around refining site details and handling repetitive tasks due to the CMS. The complexity of the project was relatively low, with the most complicated steps being only a little challenging in comparison.",
-      "featuresDescription": "Explore the diverse range of features and functionality implemented in this project. From seamless content management to user-friendly interactions, each element is designed to enhance the overall user experience.",
-      "challenges": [
-        {
-          "challengeTitle": "Reservation Form Enhancement",
-          "challengeDescription": "Creating the reservation form had its challenges. While the main functions worked well—sending data to Strapi and triggering email notifications—the details of form validation and user experience needed improvement. Ensuring accessibility is uncertain without real users for testing, and as a learning project, I didn't want to inconvenience users solely for testing and learning purposes.",
-          "solutionText": "To address these challenges, I refined the form's visual cues for better feedback and extensively tested it with NVDA Screen Reader. I also consulted online guides on form accessibility. However, determining the form's success remains challenging without real-world user interaction. Continuous improvement is completely possible and essential if the website was gonna be accessible to the public as a non-fictional project."
         }
       ],
       "siteMainFeatures": [
         {
-          "featureHeading": "Strapi Headless CMS Integration:",
+          "featureHeading": "Strapi Headless CMS Integration",
           "featureDescription": "Easily update Texts, Images, Videos, Job Posts, and Services."
         },
         {
-          "featureHeading": "Interactive Leaflet Map:",
+          "featureHeading": "Interactive Leaflet Map",
           "featureDescription": "Enables users to locate each facility efficiently."
         },
         {
-          "featureHeading": "Accessibility Integration:",
+          "featureHeading": "Accessibility Integration",
           "featureDescription": "Screen Reader-friendly design, including the Interactive Map and Contact/Reservation Form."
         },
         {
-          "featureHeading": "Graphic Details for a Vibrant Experience:",
+          "featureHeading": "Graphic Details for a Vibrant Experience",
           "featureDescription": "Number Counter, Confetti, Hover Effects on Images, and subtle animations for enhanced design."
-        },
-        {
-          "featureHeading": "Automatic Email Notifications:",
-          "featureDescription": "Sent to Strapi Admin and User upon successful form completion."
-        },
-        {
-          "featureHeading": "HTML Animation Loading Screen:",
-          "featureDescription": "Smooth loading animation while fetching data from Strapi."
-        },
-        {
-          "featureHeading": "Custom Design Elements:",
-          "featureDescription": "Self-made Logo, Dog-Themed Pattern, and a blend of Free Vectors created on Figma."
-        },
-        {
-          "featureHeading": "Custom Video Thumbnail:",
-          "featureDescription": "Custom thumbnail for a nice touch on the Open Positions Page."
-        },
-        {
-          "featureHeading": "Images Interactions:",
-          "featureDescription": "Click non-interactive images to open a modal displaying all of the Page Images, Ken Burns Effect on Open Positions Page, and Infinite Image Carousel working as a Gallery on each Individual Service Page."
         }
       ],
-      "websiteVideos": [
-        {
-          "videoSrcMp4": "/assets/projects/doggy-homepage.mp4",
-          "videoSrcWebm": "/assets/projects/doggy-homepage.mp4"
-        },
-        {
-          "videoSrcMp4": "/assets/projects/doggy-showcase.mp4",
-          "videoSrcWebm": "/assets/projects/doggy-showcase.mp4"
-        },
-        {
-          "videoSrcMp4": "/assets/projects/doggy-strapi.mp4",
-          "videoSrcWebm": "/assets/projects/doggy-strapi.mp4"
-        }
-      ],
-      "thumbnail": "/assets/projects/doggy-thumbnail.png",
+      "thumbnail": "/assets/Screenshot_3.png",
       "thumbnailAltText": "Website Homepage Inside a Monitor Frame",
-      "hero": "/assets/projects/doggy-hero.png",
+      "hero": "/assets/img30.png",
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/DoggyDaycareFront",
       "figmaUrl": ""
@@ -392,12 +354,8 @@
     {
       "pageTitle": "Pixel Python | Web Development Portfolio",
       "slug": "pixel-python",
-      "icon": "/assets/snake.svg",
-      "iconAltText": "Pixel Python Icon",
       "name": "Pixel Python",
       "description": "A classic Snake game implemented using Angular, TypeScript, CSS, Bootstrap, and Figma for design. This project was created to showcase my skills in front-end development and game programming in a more fun way.",
-      "role": "(Sole Developer)",
-      "descriptionFeatures": "Classic Snake game logic, responsive CSS styling, Bootstrap for layout and components, TypeScript for game behavior, and Figma for design.",
       "technologiesUsed": [
         {
           "name": "Angular",
@@ -424,11 +382,10 @@
           "techImageSrc": "/assets/html-logo.svg"
         },
         {
-          "name": "Progressive Web App [PWA]",
+          "name": "PWA",
           "techImageSrc": "/assets/pwa-logo.svg"
         }
       ],
-      "featuresDescription": "The game features a classic Snake gameplay experience where players control a snake to eat food and grow longer. The game ends if the snake collides with itself or the walls.",
       "siteMainFeatures": [
         {
           "featureHeading": "Classic Snake Gameplay",
@@ -447,9 +404,9 @@
           "featureDescription": "Experience smooth and responsive controls with the ability to queue your moves. The game runs at a slightly slower pace, ensuring you can input your controls effortlessly, making movement incredibly easy. You also receive 3 times more length than usual."
         }
       ],
-      "thumbnail": "/assets/projects/pixel-python-thumbnail.png",
+      "thumbnail": "/assets/Screenshot_6.png",
       "thumbnailAltText": "Pixel Python Game Thumbnail",
-      "hero": "/assets/projects/pixel-python-hero.jpg",
+      "hero": "/assets/img31.jpg",
       "liveWebsiteUrl": "https://pixel-python.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
       "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
@@ -457,12 +414,8 @@
     {
       "pageTitle": "Tic Tac Toe | Web Development Portfolio",
       "slug": "tic-tac-toe",
-      "icon": "/assets/cross.svg",
-      "iconAltText": "Tic Tac Toe Icon",
       "name": "Tic Tac Toe Game",
       "description": "A simple Tic Tac Toe game implemented using HTML, CSS, and JavaScript. This project was created to primarily practice my Jest TDD skills.",
-      "role": "(Sole Developer)",
-      "descriptionFeatures": "Basic game logic, CSS styling for a visually appealing interface, videogame audio, and JavaScript for interactivity.",
       "technologiesUsed": [
         {
           "name": "HTML",
@@ -485,15 +438,6 @@
           "techImageSrc": "/assets/jest-logo.svg"
         }
       ],
-      "challengesDescription": "The main and only challenge of this project was using Jest as TDD.",
-      "challenges": [
-        {
-          "challengeTitle": "Jest TDD",
-          "challengeDescription": "Using Jest proved to be quite challenging. Many functionalities didn't work as expected with Jest, necessitating the use of numerous mocks. Additionally, I frequently encountered obstacles in different parts of the project, leading to extensive online research and documentation reading.",
-          "solutionText": "During the Jest TDD challenge, I encountered various problems with Jest, relying heavily on mocks. Despite the challenges, I persevered through multiple trials and errors, gaining a deeper understanding of how Jest works overall. As a result, my Jest tests are now much more precise and useful compared to before."
-        }
-      ],
-      "featuresDescription": "The game features a simple user interface where players can take turns clicking on cells to make their move. The game keeps track of the current player and displays the winner or a draw when the game ends.",
       "siteMainFeatures": [
         {
           "featureHeading": "Simple User Interface",
@@ -512,153 +456,20 @@
           "featureDescription": "Plays different sounds on Moves, Wins, and Ties."
         }
       ],
-      "thumbnail": "/assets/projects/tic-tac-toe-thumbnail.png",
+      "thumbnail": "/assets/Screenshot_4.png",
       "thumbnailAltText": "Tic Tac Toe Game Thumbnail",
-      "hero": "/assets/projects/tic-tac-toe-hero.png",
+      "hero": "/assets/img32.png",
       "liveWebsiteUrl": "https://tic-tac-toe-nine-tan.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/tic-tac-toe",
       "figmaUrl": "https://www.figma.com/file/SDtAyFbfhWtXmP0DAo2Dtt/Tic-Tac-Toe?type=design&mode=design&t=XNRXwdNnySDk0hor-0"
     }
   ],
-  "portfolioData": [
-    {
-      "name": "Web Dev Portfolio",
-      "description": "My personal portfolio, crafted following the development of my Dog Daycare Website. It represents a significant improvement in terms of design, functionality, SEO, and accessibility. I made it with the goal of showcasing my skills, it serves as a convenient platform to present my current and future completed projects moving forward.",
-      "role": "(Sole Developer)",
-      "technologiesUsed": [
-        {
-          "name": "Next.js",
-          "techImageSrc": "/assets/nextjs-logo.svg"
-        },
-        {
-          "name": "Tailwind CSS",
-          "techImageSrc": "/assets/tailwind-logo.svg"
-        },
-        {
-          "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg"
-        },
-        {
-          "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg"
-        },
-        {
-          "name": "Framer Motion",
-          "techImageSrc": "/assets/framer-motion-logo.svg"
-        },
-        {
-          "name": "XML",
-          "techImageSrc": "/assets/xml-logo.svg"
-        },
-        {
-          "name": "Email Provider",
-          "techImageSrc": "/assets/email-provider-logo.svg"
-        },
-        {
-          "name": "SEO",
-          "techImageSrc": "/assets/seo-logo.svg"
-        },
-        {
-          "name": "Single Page Application [SPA]",
-          "techImageSrc": "/assets/spa-logo.svg"
-        },
-        {
-          "name": "HTML",
-          "techImageSrc": "/assets/html-logo.svg"
-        },
-        {
-          "name": "Acessibilidade Digital",
-          "techImageSrc": "/assets/accessibility-logo.svg"
-        },
-        {
-          "name": "Server Side Rendering [SSR]",
-          "techImageSrc": "/assets/ssr-logo.svg"
-        }
-      ],
-      "achievementsList": [
-        {
-          "achievementHeading": "Multilingual Website Implementation:",
-          "achievementDescription": "Successfully implemented language change functionality using i18next, allowing users to switch between different languages for a more inclusive user experience."
-        },
-        {
-          "achievementHeading": "Enhancements for a Better User Experience:",
-          "achievementDescription": "Implemented a mechanism to save the selected language preference between sessions in Local Storage. Also Improved performance for a faster website. Additionally, search engines can now identify different language versions of the website."
-        },
-        {
-          "achievementHeading": "Enhanced User Engagement with Animations:",
-          "achievementDescription": "Implemented captivating animations and extra visual effects to enhance user engagement and create a more interactive and visually appealing website."
-        },
-        {
-          "achievementHeading": "Improved Accessibility On Website:",
-          "achievementDescription": "Successfully integrated improved accessibility features, ensuring the website is accessible to a diverse audience, including individuals with disabilities."
-        },
-        {
-          "achievementHeading": "Automated Email System Implementation:",
-          "achievementDescription": "Implemented an automated email system on Contact Form, streamlining communication processes and enhancing user engagement through email notifications."
-        },
-        {
-          "achievementHeading": "Optimized Website for Search Engines (SEO):",
-          "achievementDescription": "Successfully implemented SEO optimization strategies to improve the website's visibility on search engines."
-        },
-        {
-          "achievementHeading": "Implemented Loading Screen and Skeleton Loading:",
-          "achievementDescription": "Implemented a loading screen during Language Changes and employed skeleton loading techniques to significantly reduce layout shifts during page loading, ensuring a smoother user experience."
-        }
-      ],
-      "liveWebsiteUrl": "https://www.carloshenriquedev.com/en"
-    }
-  ],
+
   "resumeText1": "Web Developer Resume: Skills and Achievements",
   "resumeText2": "View on Website / Download CV.",
   "resumeText3": "View On Website",
-  "resumeText4": "Download CV",
-
-  "faqText1": "Frequently Asked Questions",
-  "faqText2": "Have any questions that haven't been answered here?",
-  "faqText3": "Feel free to contact me below",
-
-  "questionsData": [
-    {
-      "question": "1. How can I contact you?",
-      "answer": "You can reach me through the contact form on my website. I'll get back to you as soon as possible."
-    },
-    {
-      "question": "2. What services do you offer?",
-      "answer": "I offer a range of digital services, including custom website development, responsive design, frontend and backend development, and more. Explore my Services section for details."
-    },
-    {
-      "question": "3. Do you have experience with Content Management Systems (CMS)?",
-      "answer": "Yes, I have experience with CMS like Strapi and a bit of WordPress. While I'm still learning, I'm committed to providing an easy and stress-free content management experience for your site."
-    },
-    {
-      "question": "4. How do you ensure website accessibility?",
-      "answer": "Ensuring digital accessibility is a top priority for me. I use tools like Screen Readers, stay updated on accessibility guidelines, and run tests to create inclusive and user-friendly online experiences. Lately, I have been thinking about even calling Free Online Accessibility Testers so they can test the accessibility of my Site and give me a lot of Feedback so I can improve."
-    },
-    {
-      "question": "5. Can I update my website content myself?",
-      "answer": "Absolutely! I can provide personalized training videos to empower you to manage common aspects of your website independently. From content updates to basic maintenance, I'm here to help you learn if necessary."
-    },
-    {
-      "question": "6. What is your approach to SEO optimization?",
-      "answer": "I focus on comprehensive SEO optimization, from keyword research to on-page optimization. My goal is to strategically position your website to reach a wider audience and drive organic traffic."
-    },
-    {
-      "question": "7. How can I view your portfolio projects?",
-      "answer": "You can explore my original projects in the Projects section of my portfolio. These projects showcase my skills in design and code, incorporating lessons learned from various learning projects."
-    },
-    {
-      "question": "8. Do you provide ongoing support for websites?",
-      "answer": "Yes, I offer ongoing support and content updates for websites. Whether you need assistance with maintenance or have questions about your site, I'm here to help."
-    },
-    {
-      "question": "9. How do I inquire about your services?",
-      "answer": "You can use the contact form on my website to inquire about my services. Feel free to share your project details, and I'll get back to you with more information."
-    },
-    {
-      "question": "10. What is your process for website development?",
-      "answer": "My process includes understanding your requirements, creating visually appealing and functional designs, and ensuring seamless adaptation to various devices. I value open communication and collaboration throughout the development journey."
-    }
-  ],
+  "resumeText4": "Download CV | En",
+  "resumeText5": "Download CV | Pt",
 
   "contactText1": "Ready to Collaborate?",
   "contactText2": "Contact Me",
@@ -685,52 +496,6 @@
 
   "footerText1": "Carlos Henrique.",
   "footerText2": "Click Here to Open the Credits Tab",
-
-  "resumePageText1": "Back to Top",
-  "resumePageText2": "Back to Portfolio",
-  "resumePageText3": "WEB DEVELOPER",
-  "resumePageText4": "PERSONAL STATEMENT",
-  "resumePageText5": "As a junior/mid-level web developer, I learn new skills with dedication and persistence. I maintain a strong determination to improve and collaborate with others. I invest countless hours daily coding, creating projects for learning, and tackling complex coding issues. Through video tutorials, guides, and detailed documentation, I have developed proficiency in design and development, both on the frontend and backend. Based on this experience, I am confident in my ability to deliver high-quality work and meet the demands of any proposed project. My salary expectation is low and ranges from R$700 - R$1,412, and I am completely open to negotiations.",
-  "resumePageText6": "WEB DEV SKILLS",
-  "resumePageText7": "PROJECTS",
-
-  "resumePageProjectHeadingText1": "DESCRIPTION:",
-  "resumePageProjectHeadingText2": "Technologies:",
-  "resumePageProjectHeadingText3": "Achievements:",
-
-  "resumePageText8": "EDUCATION",
-  "resumePageText9": "SELF-TAUGHT WEB DEVELOPER",
-  "resumePageText10": "ONLINE LEARNING",
-
-  "educationList": [
-    {
-      "educationHeading": "Video Tutorials",
-      "educationDescription": "Watch video tutorials on platforms like YouTube, where experts and educators share insights, tips, and practical demonstrations."
-    },
-    {
-      "educationHeading": "Documentation Reading",
-      "educationDescription": "Dive into official documentation of programming languages, frameworks, and tools. Gain a deep understanding of the features, functionalities, and practices outlined in documentation."
-    },
-    {
-      "educationHeading": "Practical Projects",
-      "educationDescription": "Undertake hands-on projects to apply knowledge in a practical setting. Worked on many projects for learning purposes that cover various aspects of web development."
-    }
-  ],
-
-  "resumePageText11": "LANGUAGES",
-
-  "languageList": [
-    {
-      "name": "Portuguese",
-      "proficiency": "NATIVE SPEAKER",
-      "description": "Native Portuguese speaker with fluency in speaking, writing, and listening. Comfortable communicating complex ideas and technical concepts in Portuguese. Proficient in understanding spoken Portuguese in various contexts."
-    },
-    {
-      "name": "ENGLISH",
-      "proficiency": "READING, WRITING AND LISTENING",
-      "description": "Proficient in reading and writing English, with a strong ability to comprehend technical content. While I don't have a great vocal skill, I am comfortable reading, writing, and a bit of listening to voices in English, especially in the context of coding, documentation, and communication through written channels."
-    }
-  ],
 
   "projectsPageText1": "View Website Online",
   "projectsPageText2": "Figma Design File",
@@ -770,8 +535,5 @@
   "altText14": "Github Repository Illustration",
   "altText15": "Outside Link Symbol",
 
-  "titleText1": "resume",
-
-  "showMoreButton": "Show More Skills",
-  "showLessButton": "Show Less Skills"
+  "accessibility_text1": "Skip to main content"
 }

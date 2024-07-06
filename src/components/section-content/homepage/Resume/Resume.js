@@ -1,83 +1,58 @@
 import React from "react";
 import { buttonClassName } from "@/components/utils/buttonStyle";
-import Image from "next/image";
-import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 const Resume = () => {
   const { t } = useTranslation();
 
-  const handleDownloadClick = () => {
+  const handleDownloadClickEn = () => {
     const link = document.createElement("a");
 
-    link.href = `${t("downloadCvPath")}`;
+    link.href = `/assets/downloads/CV_Carlos_Henrique.pdf`;
 
-    link.download = `${t("downloadCvFileName")}`;
+    link.download = `CV_Carlos_Henrique`;
+
+    link.click();
+  };
+
+  const handleDownloadClickPt = () => {
+    const link = document.createElement("a");
+
+    link.href = `/assets/downloads/CV_Carlos_Henrique_En.pdf`;
+
+    link.download = `CV_Carlos_Henrique_En`;
 
     link.click();
   };
 
   return (
-    <div className="overflow-hidden border-b-[6px] border-solid border-cornflowerBlue bg-[url('/assets/space-bg.jpg')] bg-fixed bg-no-repeat bg-cover sm:text-center">
-      <div
-        className="w-full h-full py-[72px] px-[24px] lg:px-[48px]"
-        style={{
-          backgroundColor: `rgba(0, 0, 0, 0.8)`,
-        }}
-      >
-        <div className="bg-[black] w-fit mx-auto relative sm:after:bg-[url(/assets/resume.svg)] after:z-20 after:content-[''] after:absolute after:w-[60px] after:h-[120px] after:bg-no-repeat after:bg-contain after:mt-[8px] after:top-[-31px] after:left-[-33px] after:block">
-          <div className="relative p-[24px] md:p-[48px] rounded-[12px] overflow-hidden border-solid border-cornflowerBlue border-[6px]">
-            <div className="relative z-50">
-              <div>
-                <h2
-                  id="resumeHeadingText"
-                  className="font-bold text-[1.625rem]"
-                >
-                  {t("resumeText1")}
-                </h2>
+    <div className="bg-[url('/assets/img1.jpg')] bg-fixed bg-no-repeat bg-cover">
+      <div className="bg-black75">
+        <div className="w-full py-[100px] px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px]">
+          <div className="flex flex-col gap-[32px]">
+            <div className="flex flex-col gap-[16px]">
+              <h2 id="resumeHeadingText" className="font-bold text-[1.5rem]">
+                {t("resumeText1")}
+              </h2>
 
-                <h3 className="font-bold text-[1.375rem]  text-cornflowerBlueText mt-[12px]">
-                  {t("resumeText2")}
-                </h3>
-              </div>
-
-              <div className=" mt-[24px] gap-[16px] grid md:flex items-center sm:max-w-[400px] mx-auto">
-                <Link
-                  href={`/resume`}
-                  className={`${buttonClassName} rounded-[4px] w-full justify-center flex gap-[8px] items-center`}
-                >
-                  {t("resumeText3")}
-                  <Image
-                    aria-hidden={true}
-                    className="w-[12px] h-[12px]"
-                    src="/assets/arrow.svg"
-                    alt={t("altText1")}
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
-                </Link>
-
-                <button
-                  className={`${buttonClassName} rounded-[4px] w-full justify-center !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                  onClick={handleDownloadClick}
-                >
-                  {t("resumeText4")}
-                  <Image
-                    aria-hidden={true}
-                    className="w-[12px] h-[12px]"
-                    src="/assets/download.svg"
-                    alt={t("altText9")}
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
-                </button>
-              </div>
+              <h3 className="text-white75 font-bold text-[1.25rem]">
+                {t("resumeText2")}
+              </h3>
             </div>
 
-            <div id="container-stars">
-              <div id="stars"></div>
+            <div className="gap-[16px] flex flex-wrap items-center">
+              <button
+                className={`${buttonClassName} w-fit bg-color02 rounded-[4px]`}
+                onClick={handleDownloadClickEn}
+              >
+                {t("resumeText4")}
+              </button>
+              <button
+                className={`${buttonClassName} w-fit bg-[white] text-[black] rounded-[4px]`}
+                onClick={handleDownloadClickPt}
+              >
+                {t("resumeText5")}
+              </button>
             </div>
           </div>
         </div>

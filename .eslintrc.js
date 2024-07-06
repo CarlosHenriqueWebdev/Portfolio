@@ -8,6 +8,7 @@ module.exports = {
   plugins: ["react"],
   rules: {
     "react/prop-types": "off",
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "react/react-in-jsx-scope": "off",
   },
 };

@@ -18,9 +18,7 @@ export const TextAnimationHeadingEnglish = ({ text }) => {
             exit={{ opacity: 0, x: 10 }}
             transition={{ duration: 0.1, delay: index * 0.03 }}
             viewport={{ once: true }}
-            className={`inline-block ${
-              isStrong ? " text-royalPurpleText" : ""
-            }`}
+            className={`inline-block ${isStrong ? " " : ""}`}
           >
             {char === " " ? "\u00A0" : char === "," ? "," : char}
           </motion.span>
@@ -47,9 +45,7 @@ export const TextAnimationHeadingPortuguese = ({ text }) => {
             exit={{ opacity: 0, x: 10 }}
             transition={{ duration: 0.1, delay: index * 0.03 }}
             viewport={{ once: true }}
-            className={`inline-block ${
-              isStrong ? " text-royalPurpleText" : ""
-            }`}
+            className={`inline-block ${isStrong ? " " : ""}`}
           >
             {char === " " ? "\u00A0" : char === "," ? "," : char}
           </motion.span>
@@ -89,6 +85,7 @@ export const TextAnimationContactHeading = ({ text }) => {
       {characters.map((char, index) => (
         <motion.span
           key={index}
+          className="text-white75"
           initial={{ opacity: 0, x: 10, y: 20 }} // Move from below-right
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           exit={{ opacity: 0, x: 10, y: 20 }}

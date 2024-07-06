@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { buttonAnimationStyles } from "@/components/utils/buttonStyle";
 import { motion } from "framer-motion";
 import { TextAnimationAboutHeading } from "@/components/utils/textAnimations";
 import { contactInfo } from "./contactInfo";
@@ -19,29 +18,46 @@ const About = () => {
 
   return (
     <div className="overflow-hidden ">
-      <div
-        className="w-full h-full py-[72px] px-[24px] lg:px-[48px] xl:max-w-[1280px] xl:mx-auto"
-        style={{
-          backgroundColor: `rgba(0, 0, 0, 0.17)`,
-        }}
-      >
-        <div>
-          <div>
-            <h2
-              id="aboutHeadingText"
-              className="text-center font-bold text-[1.625rem] mb-[32px]"
-            >
-              {t("aboutText1")}
-            </h2>
-          </div>
-        </div>
+      <div className="py-[100px] px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px] flex flex-col gap-[32px]">
+        <ul className="flex flex-wrap gap-[16px]">
+          {contactInfo
+            .filter((mapItem) => mapItem.display)
+            .map((mapItem, itemIndex) => (
+              <li key={itemIndex}>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${mapItem.name} ${t("accessibilityText8")}`}
+                  className="hover:brightness-90"
+                  href={mapItem.url}
+                >
+                  <Image
+                    aria-hidden={true}
+                    className={`w-[28px] h-[28px]`}
+                    src={mapItem.imageSrc}
+                    alt={mapItem.name}
+                    width={0}
+                    height={0}
+                    unoptimized
+                  />
+                </Link>
+              </li>
+            ))}
+        </ul>
 
         <div className="grid md:grid-cols-2 gap-[32px]">
-          <div className="md:text-start">
-            <div className="mb-[16px] font-bold text-[1.5rem]  text-cornflowerBlueText">
+          <div className="md:text-start flex flex-col gap-[16px] ">
+            <div className="font-bold flex flex-col gap-[24px]">
+              <h2 id="aboutHeadingText" className="font-bold text-[1.5rem]">
+                {t("aboutText1")}
+              </h2>
+
               <h3 className="visually-hidden">{t("aboutText2")}</h3>
 
-              <motion.div aria-hidden="true">
+              <motion.div
+                aria-hidden="true"
+                className="!text-white75 text-[1.25rem]"
+              >
                 <TextAnimationAboutHeading text={t("aboutText2")} />
               </motion.div>
             </div>
@@ -55,80 +71,52 @@ const About = () => {
                   />
                 </p>
               </div>
-
-              <div>
-                <p>
-                  <Trans
-                    i18nKey={t("aboutText4")} // optional -> fallbacks to defaults if not provided
-                    components={{ bold: <strong /> }}
-                  />
-                </p>
-              </div>
-
-              <div>
-                <p>
-                  <Trans
-                    i18nKey={t("aboutText5")} // optional -> fallbacks to defaults if not provided
-                    components={{ bold: <strong /> }}
-                  />
-                </p>
-              </div>
             </div>
           </div>
 
           <div className="order-[-1]">
             <div className="h-fit grid gap-[12px] justify-items-center md:justify-items-start lg:gap-[8px]">
-              <div
-                className={`relative w-full block ${
-                  isAboutImageLoading ? "h-full" : "h-full"
-                }`}
-              >
+              <div className={`relative w-full block h-full`}>
                 <Image
-                  src="/assets/about-illustration.png"
+                  src="/assets/img2.jpg"
                   alt={t("alText5")}
-                  width={0} // Set your desired width
-                  height={0} // Set your desired height
+                  width={0}
+                  height={0}
                   unoptimized
+                  aria-hidden={true}
                   className={`${
                     isAboutImageLoading ? "opacity-0 h-[200px]" : "opacity-1"
-                  } max-w-[500px] mx-auto md:max-w-full w-full h-full object-cover border-solid border-[2px] border-[black]`}
+                  }  w-full h-full object-cover rounded-[4px]`}
                   onLoad={handleAboutImageLoad}
                 />
               </div>
-
-              <ul className="flex flex-wrap gap-[12px]">
-                {contactInfo
-                  .filter((mapItem) => mapItem.display)
-                  .map((mapItem, itemIndex) => (
-                    <li key={itemIndex}>
-                      <Link
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${mapItem.name} ${t(
-                          "accessibilityText8"
-                        )}`}
-                        className={`${buttonAnimationStyles} block  p-[12px] bg-[black] border-solid active:scale-[0.95] ${
-                          itemIndex % 2 === 0
-                            ? "border-cornflowerBlue"
-                            : "border-royalPurple"
-                        } border-[2px] rounded-[50%] before:bg-[white] before:rounded-[50%] !w-[52px] !h-[52px] flex justify-center`}
-                        href={mapItem.url}
-                      >
-                        <Image
-                          aria-hidden={true}
-                          className={`w-[20px] sm:w-[24px]`}
-                          src={mapItem.imageSrc}
-                          alt={mapItem.name}
-                          width={0}
-                          height={0}
-                          unoptimized
-                        />
-                      </Link>
-                    </li>
-                  ))}
-              </ul>
             </div>
           </div>
+        </div>
+
+        <div className="flex flex-col gap-[16px]">
+          <h3 className="font-bold text-[1.25rem]">{t("skillsText1")}</h3>
+
+          <ul className="grid gap-x-[16px] gap-y-[12px] sm:grid-cols-2 md:grid-cols-3 w-full">
+            {t("skillsData", { returnObjects: true }).map((mapItem) => (
+              <li
+                aria-label={`${mapItem.name}, ${t("accessibilityText10")}`}
+                key={mapItem.id}
+                className="bg-color03 text-[white] px-[16px] py-[12px] flex gap-[8px] items-center w-full h-full font-medium"
+              >
+                <Image
+                  aria-hidden={true}
+                  className={`w-[20px] h-[20px]`}
+                  src={mapItem.imageSrc}
+                  alt={`${mapItem.name} Logo`}
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
+                <p className="w-fit">{mapItem.name}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

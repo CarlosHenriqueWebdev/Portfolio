@@ -1,276 +1,285 @@
 {
-  "homeTitle": "Portfólio de Desenvolvedor Web | Explore Meus Projetos e Habilidades",
-  "homeMetaDescription": "Confira meu portfólio de desenvolvimento web para explorar uma seleção de projetos e habilidades. Saiba mais sobre minha expertise em tecnologias front-end e back-end.",
-  "resumeTitle": "Currículo | Habilidades, Experiência e Conquistas",
-  "resumeMetaDescription": "Explore meu currículo de desenvolvedor web para saber mais sobre minhas habilidades, experiência e conquistas notáveis.",
-  "downloadCvPath": "/assets/downloads/CV_Carlos_Henrique.pdf",
-  "downloadCvFileName": "Currículo",
+  "currentLanguage": "Português",
+  "currentLanguageFlag": "flag3.svg",
+  "currentLocale": "pt",
+  "languages": [
+    { "language": "English", "flag": "flag1.svg", "DO_NOT_CHANGE": "en" }
+  ],
 
-  "navText1": "Início",
-  "navText2": "Sobre",
-  "navText3": "Habilidades",
-  "navText4": "Serviços",
-  "navText5": "Portfólio",
-  "navText6": "Currículo",
-  "navText7": "Perguntas",
-  "navText8": "Contato",
+  "navLinks": [
+    { "text": "Início", "DO_NOT_CHANGE": "homeSection" },
+    { "text": "Sobre", "DO_NOT_CHANGE": "aboutSection" },
+    { "text": "Portfólio", "DO_NOT_CHANGE": "projectsSection" },
+    { "text": "Currículo", "DO_NOT_CHANGE": "resumeSection" },
+    { "text": "Contato", "DO_NOT_CHANGE": "contactSection" }
+  ],
+
+  "homeTitle": "Portfólio de Desenvolvedor Web | Explore Meus Projetos e Habilidades",
+  "homeMetaDescription": "Confira meu portfólio de desenvolvimento para explorar uma vitrine de projetos e habilidades. Conheça minha experiência em tecnologias front-end e back-end.",
 
   "heroText1": "Elevando a Experiência do Usuário Através do Código",
-  "heroText2": "UX/UI Designer",
-  "heroText3": "<bold className='font-medium'>Pretensão Salarial: R$700 - R$1.412 | </bold> Bem-vindo ao meu site! Sinto-me à vontade trabalhando tanto no desenvolvimento de front-end quanto no de back-end. Sou especializado em criar sites que são <bold className=' text-royalPurpleText font-medium'>user-friendly</bold> e <bold className=' text-royalPurpleText font-medium'>bem detalhados</bold>.",
-  "heroText4": "Disponível para Freelance e Emprego",
-  "heroText5": "Mostrar Portfólio",
+  "heroText2": "Designer UX/UI",
+  "heroText3": "Expectativa Salarial: R$700 - R$1.412 (Moeda Brasileira) | Bem-vindo ao meu site! Estou confortável trabalhando tanto no desenvolvimento front-end quanto no back-end. Especializo-me em criar sites amigáveis ao usuário e muito detalhados.",
+  "heroText4": "Disponível para Freelance & Emprego",
+  "heroText5": "Vitrine de Portfólio",
   "heroText6": "Ver Currículo",
-  "heroText7": "Entre em Contato",
+  "heroText7": "Fale Comigo",
 
   "aboutText1": "Sobre Mim",
   "aboutText2": "Desenvolvedor Web",
-  "aboutText3": "Eu sou <bold className=' text-royalPurpleText font-medium'>Carlos Henrique</bold>, um <bold className=' text-skyBlueText'>Desenvolvedor Web</bold> baseado no <bold className='brazil-gradient'>Brasil</bold>. Com alguma experiência tanto em <bold className=' italic'>desenvolvimento front-end quanto back-end</bold>, eu me especializo em criar sites que são <bold className=' text-cornflowerBlueText font-medium'>fáceis de usar</bold> e que têm um toque de <bold className=' text-royalPurpleText font-medium'>detalhe</bold> e <bold className=' text-skyBlueText'>vitalidade</bold>.",
-  "aboutText4": "Para mim, a <bold className=' font-medium'>solução de problemas</bold> é o coração do desenvolvimento web. Eu acredito que, com tempo suficiente e determinação, qualquer desafio pode ser superado. Meu foco é criar <bold className=' font-medium'>soluções práticas</bold> e garantir uma <bold className=' text-royalPurpleText font-medium'>experiência do usuário fluida</bold> para todos.",
-  "aboutText5": "Eu sou totalmente focado em <bold className=' text-cornflowerBlueText italic'>resultados</bold>. Minha abordagem <bold className=' text-royalPurpleText font-medium'>prática</bold> envolve estudo extensivo, aprendizado iterativo e muita aplicação prática. Estou constantemente buscando aprimorar minhas habilidades e conhecimentos para oferecer as melhores soluções possíveis.",
+  "aboutText3": "Sou um desenvolvedor autodidata de 19 anos, dedicado e baseado no Brasil, proficiente em desenvolvimento front-end e back-end. Excedo em projetar e implementar sites que combinam usabilidade com criatividade e funcionalidade distintas.",
 
-  "skillsText1": "Minhas Habilidades de Desenvolvedor Web",
-  "skillsText2": "Descubra minhas habilidades atuais para <bold className=' text-royalPurpleText font-medium'>desenvolvimento web</bold>. Acredito que posso fazer qualquer coisa que outras pessoas conseguem com todas as habilidades apresentadas aqui. Embora eu não saiba de tudo, estou sempre aprendendo e melhorando para poder proporcionar uma experiência melhor para todos. <bold className='text-white75'>|</bold> <bold className='text-cornflowerBlueText font-medium'>*Clique em um cartão para revelar mais informações sobre cada habilidade.</bold>",
-  "skillsText3": "Anotação Extra:",
+  "skillsText1": "Minhas Habilidades",
 
   "skillsData": [
     {
-      "id": 1,
       "name": "JavaScript",
-      "description": "JavaScript é uma linguagem de script versátil comumente usada para criar páginas da web dinâmicas e interativas. Com sua ampla adoção, é uma habilidade essencial para o desenvolvimento front-end e back-end.",
       "imageSrc": "/assets/javascript-logo.svg"
     },
     {
-      "id": 2,
       "name": "CSS / SASS / SCSS",
-      "description": "CSS (Cascading Style Sheets) é a linguagem usada para estilizar documentos HTML. Ele controla o layout e a aparência das páginas da web, permitindo que os desenvolvedores criem designs visualmente atraentes e responsivos.",
       "imageSrc": "/assets/css-logo.svg"
     },
     {
-      "id": 3,
       "name": "Node.js",
-      "description": "Node.js é um tempo de execução de JavaScript do lado do servidor que permite aos desenvolvedores criar aplicativos de rede escaláveis e eficientes. É amplamente utilizado para criar servidores web e lidar com tarefas assíncronas.",
       "imageSrc": "/assets/nodejs-logo.svg"
     },
     {
-      "id": 4,
       "name": "HTML",
-      "description": "HTML (Hypertext Markup Language) é a base do desenvolvimento web. Ele estrutura o conteúdo na web, definindo os elementos que compõem uma página da web, como títulos, parágrafos e imagens.",
       "imageSrc": "/assets/html-logo.svg"
     },
     {
-      "id": 5,
       "name": "Next.js",
-      "description": "Next.js é um framework React que simplifica o processo de construção de aplicativos React renderizados no servidor e gerados estaticamente. Ele melhora o desempenho e o SEO de aplicativos da web.",
       "imageSrc": "/assets/nextjs-logo.svg"
     },
     {
-      "id": 6,
       "name": "React / React + Typescript",
-      "description": "React é uma biblioteca JavaScript para construir interfaces de usuário. Ele permite que os desenvolvedores criem componentes reutilizáveis, tornando eficiente a construção e manutenção de aplicativos da web complexos.",
       "imageSrc": "/assets/react-logo.svg"
     },
     {
-      "id": 7,
       "name": "Bootstrap",
-      "description": "Bootstrap é um popular framework CSS que simplifica o processo de design de sites responsivos e visualmente atraentes. Ele fornece um conjunto de componentes e estilos pré-projetados.",
       "imageSrc": "/assets/bootstrap-logo.svg"
     },
     {
-      "id": 8,
       "name": "Figma",
-      "description": "Figma é uma ferramenta de design colaborativa que permite aos designers criar, compartilhar e colaborar em interfaces de usuário em tempo real. É amplamente utilizado para design de aplicativos web e móveis.",
       "imageSrc": "/assets/figma-logo.svg"
     },
     {
-      "id": 9,
       "name": "Tailwind CSS",
-      "description": "Tailwind CSS é um framework CSS de utilitários que simplifica o processo de estilização de aplicativos da web. Ele fornece classes de utilitários de baixo nível para criar designs de forma rápida e sustentável.",
       "imageSrc": "/assets/tailwind-logo.svg"
     },
     {
-      "id": 10,
       "name": "WordPress",
-      "description": "WordPress é um sistema de gerenciamento de conteúdo (CMS) que alimenta uma parte significativa da web. É usado para construir sites e blogs, oferecendo uma interface amigável e suporte extensivo a plugins.",
       "imageSrc": "/assets/wordpress-logo.svg"
     },
     {
-      "id": 11,
       "name": "Firebase",
-      "description": "Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web fornecida pelo Google. Ele oferece uma suíte de serviços em nuvem, incluindo autenticação, bancos de dados em tempo real e hospedagem, simplificando o desenvolvimento do lado do servidor.",
       "imageSrc": "/assets/firebase-logo.svg"
     },
     {
-      "id": 12,
       "name": "Strapi",
-      "description": "Strapi é um CMS headless de código aberto que permite aos desenvolvedores construir APIs poderosas rapidamente. É flexível, personalizável e adequado para criar aplicativos ricos em conteúdo.",
       "imageSrc": "/assets/strapi-logo.svg"
     },
     {
-      "id": 13,
       "name": "Jest",
-      "description": "Jest é um framework de teste JavaScript encantador com foco na simplicidade. Ele funciona perfeitamente com a maioria dos projetos e fornece recursos como execução de teste integrada, assertivas e simulações para testes eficientes e confiáveis.",
       "imageSrc": "/assets/jest-logo.svg"
     },
     {
-      "id": 14,
       "name": "Angular",
-      "description": "Angular é um framework front-end popular para a construção de aplicativos web. Ele fornece um conjunto abrangente de recursos para criar interfaces de usuário dinâmicas e responsivas, tornando-se uma ferramenta poderosa para o desenvolvimento web.",
       "imageSrc": "/assets/angular-logo.svg"
     },
     {
-      "id": 15,
       "name": "TypeScript",
-      "description": "TypeScript é um superset do JavaScript que adiciona tipagem estática à linguagem. Ele ajuda os desenvolvedores a detectar erros no início do processo de desenvolvimento e escrever código mais sustentável.",
       "imageSrc": "/assets/typescript-logo.svg"
     },
     {
-      "id": 17,
-      "name": "Framer Motion",
-      "description": "Framer Motion é uma biblioteca de animação popular para aplicativos React. Ele permite que os desenvolvedores criem animações fluidas e expressivas com uma sintaxe declarativa simples, aprimorando a experiência do usuário de aplicativos da web.",
-      "imageSrc": "/assets/framer-motion-logo.svg"
+      "name": "Vue",
+      "imageSrc": "/assets/vue.svg"
     },
     {
-      "id": 18,
-      "name": "GraphQL",
-      "description": "GraphQL é uma linguagem de consulta para APIs e um tempo de execução para executar essas consultas. Ele fornece uma alternativa mais eficiente e flexível ao REST para comunicação cliente-servidor, permitindo que os clientes solicitem apenas os dados de que precisam.",
-      "imageSrc": "/assets/graphql-logo.svg"
+      "name": "Nuxt",
+      "imageSrc": "/assets/nuxt.svg"
     },
     {
-      "id": 19,
-      "name": "Rest Api",
-      "description": "REST (Representational State Transfer) é um estilo arquitetural para projetar aplicativos em rede. Ele usa um modelo de comunicação cliente-servidor sem estado, tipicamente sobre HTTP, tornando-o adequado para construir serviços web escaláveis.",
+      "name": "Rest Api & GraphQL",
       "imageSrc": "/assets/rest-api-logo.svg"
     },
     {
-      "id": 20,
-      "name": "XML",
-      "description": "XML (Extensible Markup Language) é uma linguagem de marcação que define regras para codificar documentos em um formato legível por humanos e por máquinas. É comumente usado para armazenar e trocar dados pela internet.",
-      "imageSrc": "/assets/xml-logo.svg"
-    },
-    {
-      "id": 21,
-      "name": "Single Page Application [SPA]",
-      "description": "Single Page Application (SPA) é um aplicativo da web que carrega uma única página HTML e atualiza dinamicamente o conteúdo à medida que o usuário interage com o aplicativo. Essa abordagem oferece uma experiência do usuário mais fluída, semelhante à de um aplicativo de desktop.",
-      "imageSrc": "/assets/spa-logo.svg"
-    },
-    {
-      "id": 22,
-      "name": "Email Provider",
-      "description": "Email Provider se refere aos serviços ou plataformas que fornecem funcionalidade de email. Isso inclui enviar, receber e gerenciar emails. Exemplos comuns de provedores de email incluem Gmail, Outlook e Yahoo Mail.",
+      "name": "Email Provider (SMTP)",
       "imageSrc": "/assets/email-provider-logo.svg"
     },
     {
-      "id": 23,
-      "name": "SEO",
-      "description": "SEO (Search Engine Optimization) é o processo de otimizar um site para classificar mais alto nas páginas de resultados de mecanismos de busca. Isso envolve melhorar o conteúdo, a estrutura e o desempenho do site para aumentar sua visibilidade nos mecanismos de busca e direcionar tráfego orgânico.",
-      "imageSrc": "/assets/seo-logo.svg"
-    },
-    {
-      "id": 24,
       "name": "Acessibilidade Digital",
-      "description": "Acessibilidade Digital é a prática de tornar produtos digitais, como sites e aplicativos, acessíveis a todas as pessoas, incluindo aquelas com deficiências visuais, auditivas, motoras ou cognitivas. Isso envolve o uso de tecnologias e técnicas que garantam a inclusão e a igualdade de acesso.",
       "imageSrc": "/assets/accessibility-logo.svg"
-    },
-    {
-      "id": 25,
-      "name": "Server Side Rendering [SSR]",
-      "description": "Server Side Rendering (SSR) é uma técnica usada no desenvolvimento web em que um servidor web processa o HTML, CSS e JavaScript de uma página da web e envia uma página totalmente renderizada para o navegador do cliente. Essa abordagem melhora o desempenho e o SEO, fornecendo tempos de carregamento mais rápidos e mais conteúdo indexável.",
-      "imageSrc": "/assets/ssr-logo.svg"
-    },
-    {
-      "id": 26,
-      "name": "Progressive Web App [PWA]",
-      "description": "Progressive Web App (PWA) é um tipo de aplicativo da web que aproveita as tecnologias web modernas para fornecer uma experiência do usuário semelhante à de um aplicativo móvel nativo. PWAs são confiáveis, rápidos e envolventes, oferecendo recursos como acesso offline, notificações push e instalação na tela inicial.",
-      "imageSrc": "/assets/pwa-logo.svg"
-    },
-    {
-      "id": 27,
-      "name": "JSON Web Token (JWT)",
-      "description": "JSON Web Token (JWT) é um padrão aberto para transmitir informações com segurança entre as partes como um objeto JSON. É comumente usado para autenticação e troca de informações no desenvolvimento web, fornecendo uma forma compacta e autocontida de transmitir dados.",
-      "imageSrc": "/assets/jwt-logo.svg"
-    },
-    {
-      "id": 28,
-      "name": "Outros",
-      "description": "A categoria 'Outros' representa minha disposição para aprender novas habilidades e tecnologias. Mesmo que eu ainda não tenha encontrado uma linguagem ou ferramenta específica, acredito que posso me adaptar e adquirir o conhecimento necessário para usá-la em produção se tiver um pouco de tempo para aprender.",
-      "imageSrc": "/assets/question-mark.svg"
-    }
-  ],
-
-  "servicesText1": "Eleve Sua Presença Digital com Meus Serviços Digitais.",
-  "servicesText2": "Explore uma variedade de serviços digitais que ofereço. Desde <bold className=''>desenvolvimento de sites personalizados</bold> até <bold className=''>designs responsivos</bold>, busco melhorar a cada dia para que meus serviços possam não apenas atender às suas necessidades comerciais, mas também aprimorar a <bold className='text-royalPurpleText font-medium'>usabilidade</bold> e <bold className='text-royalPurpleText font-medium'>acessibilidade</bold> do seu site para <bold className='text-skyBlueText font-medium'>você, sua equipe e todos os usuários do seu site</bold>. Sinta-se à vontade para <bold className='text-cornflowerBlueText font-medium'>entrar em contato comigo</bold> usando o formulário abaixo se tiver alguma dúvida sobre meus serviços.",
-  "servicesText3": "Interessado em trabalhar comigo?",
-  "servicesText4": "Vamos começar agora",
-
-  "servicesData": [
-    {
-      "id": 1,
-      "title": "Sistemas de Gerenciamento de Conteúdo",
-      "description": "Ao continuar expandindo minha expertise com ferramentas de CMS, estou dedicado a proporcionar a você a melhor experiência possível. Me esforço para garantir que seu gerenciamento de conteúdo seja fluido e sem estresse, permitindo que você crie o conteúdo perfeito para o seu site.",
-      "imageSrc": "/assets/dashboard.svg"
-    },
-    {
-      "id": 2,
-      "title": "Desenvolvimento Frontend & Backend",
-      "description": "Manejo tarefas de desenvolvimento tanto frontend quanto backend. Se há um espaço vazio em seu projeto que precisa ser preenchido, estou aqui para ajudar. Estou em constante evolução e pronto para enfrentar desafios, contribuindo para as necessidades de desenvolvimento do seu projeto.",
-      "imageSrc": "/assets/code-symbol.svg"
-    },
-    {
-      "id": 3,
-      "title": "Design UI/UX",
-      "description": "Abordo o UI/UX com dedicação e comprometimento com a melhoria contínua. Tenho a capacidade de criar designs funcionais, atraentes e fáceis de usar, adaptados às suas necessidades.",
-      "imageSrc": "/assets/blueprint.svg"
-    },
-    {
-      "id": 4,
-      "title": "Design Responsivo",
-      "description": "Garantir que seu site seja acessível a todos, independentemente do tamanho da tela de seu dispositivo, é essencial. Posso criar uma experiência do usuário perfeita que se adapta facilmente a vários dispositivos e tamanhos de tela. Seja em desktops ou smartphones, seu site funcionará em todas as plataformas, proporcionando uma visualização e experiência do usuário ideais para cada visitante.",
-      "imageSrc": "/assets/target.svg"
-    },
-    {
-      "id": 5,
-      "title": "Suporte Contínuo e Atualizações de Conteúdo",
-      "description": "Posso apoiar seu site além da fase inicial de desenvolvimento. Ofereço suporte contínuo e atualizações de conteúdo para garantir que seu site funcione corretamente e esteja atualizado. Seja solucionando um erro, aprimorando a segurança ou até mesmo adicionando conteúdo avançado que você não pode fazer sozinho, estou aqui para apoiar a longevidade e o sucesso de sua presença online.",
-      "imageSrc": "/assets/cogwheel.svg"
-    },
-    {
-      "id": 6,
-      "title": "Otimização de SEO",
-      "description": "Melhorar sua visibilidade online é um dos meus serviços. Através de uma otimização de SEO completa, posiciono seu site para alcançar um público mais amplo. Desde pesquisa de palavras-chave até otimização na página, minha abordagem é projetada para aprimorar sua presença digital e atrair tráfego orgânico para seu site.",
-      "imageSrc": "/assets/seo.svg"
-    },
-    {
-      "id": 7,
-      "title": "Acessibilidade Web (WCAG)",
-      "description": "Estou comprometido com a acessibilidade digital, garantindo que meus projetos sejam fáceis de usar para todos. Ao desenvolver expertise em integração de acessibilidade, utilizo ferramentas como Leitores de Tela e consulto guias para testes detalhados. Reconhecendo as diversas experiências do usuário, estou dedicado à aprendizagem contínua e refinamento. Meu objetivo é criar experiências online inclusivas e fáceis de usar para todos.",
-      "imageSrc": "/assets/checkmark.svg"
-    },
-    {
-      "id": 8,
-      "title": "Website Rápido",
-      "description": "Dou prioridade à velocidade para garantir uma experiência de usuário ideal para seus visitantes. Através de práticas de codificação eficientes e otimizações de desempenho, estou dedicado a entregar um site rápido e responsivo. Todos na web merecem uma jornada online sem problemas, e estou comprometido em fornecer exatamente isso.",
-      "imageSrc": "/assets/speed.svg"
     }
   ],
 
   "projectsText1": "Trabalhos em Destaque",
-  "projectsText2": "Embora eu tenha explorado vários <bold className='text-cornflowerBlueText font-medium'>projetos como parte do meu aprendizado</bold>, este portfólio destaca exclusivamente meus <bold className='text-royalPurpleText font-medium'>trabalhos completos</bold>. Eles representam meu trabalho autoral em design e desenvolvimento, demonstrando a aplicação prática das habilidades que adquiri até o momento.",
   "projectsText3": "Descrição:",
   "projectsText4": "Recursos do Site Incluem:",
-  "projectsText5": "URL do Website:",
-  "projectsText6": "Leia Mais Sobre",
+  "projectsText5": "URL do Site:",
+  "projectsText6": "Ler Estudo de Caso",
+  "projectsText7": "Tecnologias",
+  "projectsText8": "Voltar para a página anterior",
 
   "projectsData": [
     {
-      "pageTitle": "Doggy Daycare | Portfólio de Desenvolvimento Web",
+      "pageTitle": "Ronaldo Coelho Nutri | Web Development Portfolio",
+      "slug": "ronaldo-coelho-nutri",
+      "name": "Ronaldo Coelho Nutri Website",
+      "description": "Um site desenvolvido para o nutricionista Ronaldo Coelho como um projeto voluntário via 99freelas. O projeto utilizou Nuxt 3 para renderização no servidor (SSR) para melhorar a otimização para mecanismos de busca (SEO). Apesar do cancelamento devido à dispensa do cliente, ele mostra uma variedade de habilidades e tecnologias.",
+      "technologiesUsed": [
+        {
+          "name": "Nuxt 3",
+          "techImageSrc": "/assets/nuxt3-logo.svg"
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg"
+        },
+        {
+          "name": "Vue 3",
+          "techImageSrc": "/assets/vue3-logo.svg"
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/assets/tailwindcss-logo.svg"
+        },
+        {
+          "name": "Clean Code",
+          "techImageSrc": "/assets/clean-code-logo.svg"
+        },
+        {
+          "name": "Integração de Email (SMTP)",
+          "techImageSrc": "/assets/smtp-logo.svg"
+        },
+        {
+          "name": "Acessibilidade na Web (WCAG)",
+          "techImageSrc": "/assets/wcag-logo.svg"
+        }
+      ],
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Renderização no Servidor",
+          "featureDescription": "Implementada com Nuxt 3 para melhorar o SEO e os tempos de carregamento da página."
+        },
+        {
+          "featureHeading": "Design Responsivo",
+          "featureDescription": "Garantiu que o site seja completamente responsivo e acessível em diversos dispositivos."
+        },
+        {
+          "featureHeading": "Integração de Email",
+          "featureDescription": "Integrou SMTP para comunicação de email sem falhas."
+        },
+        {
+          "featureHeading": "Acessibilidade na Web",
+          "featureDescription": "Seguiu as diretrizes WCAG para tornar o site acessível a todos os usuários."
+        }
+      ],
+      "thumbnail": "/assets/Screenshot_1.png",
+      "thumbnailAltText": "Miniatura do Site Ronaldo Coelho Nutri",
+      "hero": "/assets/img21.webp",
+      "liveWebsiteUrl": "https://ronaldo-coelho-nutri-nuxt3.vercel.app/",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/RonaldoCoelhoNutriNuxt3/",
+      "figmaUrl": "https://www.figma.com/design/0OZKIKHiON5gAIJTipLR0K/Nutritionist-Website?t=iLw5oeb0EWJ0e8OL-0"
+    },
+    {
+      "pageTitle": "Excellence Conciergerie | Web Development Portfolio",
+      "slug": "excellence-conciergerie",
+      "name": "Excellence Conciergerie Website",
+      "description": "Fui encarregado de redesenhar o site da Excellence Conciergerie, que estava enfrentando problemas com seu desenvolvedor anterior. Inicialmente construído usando Elementor no WordPress, o cliente estava insatisfeito com as animações e o design anterior. Para atender às expectativas, redesenhei o site do zero no Figma e o desenvolvi usando Next.js, incorporando várias animações para uma experiência de usuário mais dinâmica e envolvente.",
+      "technologiesUsed": [
+        {
+          "name": "Next.js",
+          "techImageSrc": "/assets/nextjs-logo.svg"
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg"
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/assets/tailwindcss-logo.svg"
+        },
+        {
+          "name": "GSAP (Plataforma de Animação GreenSock)",
+          "techImageSrc": "/assets/gsap-logo.svg"
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "i18next (Internacionalização)",
+          "techImageSrc": "/assets/i18next-logo.svg"
+        },
+        {
+          "name": "Lenis Scroll",
+          "techImageSrc": "/assets/lenis-logo.svg"
+        },
+        {
+          "name": "Next SEO",
+          "techImageSrc": "/assets/next-seo-logo.svg"
+        },
+        {
+          "name": "Integração de Email (SMTP)",
+          "techImageSrc": "/assets/smtp-logo.svg"
+        },
+        {
+          "name": "Formik/Yup (Formulários e Validação)",
+          "techImageSrc": "/assets/formik-yup-logo.svg"
+        },
+        {
+          "name": "Acessibilidade na Web (WCAG)",
+          "techImageSrc": "/assets/wcag-logo.svg"
+        },
+        {
+          "name": "Clean Code",
+          "techImageSrc": "/assets/clean-code-logo.svg"
+        }
+      ],
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Interface de Usuário Redesenhada",
+          "featureDescription": "O site foi redesenhado do zero para fornecer uma interface de usuário moderna e visualmente atraente."
+        },
+        {
+          "featureHeading": "Animações Aprimoradas",
+          "featureDescription": "Incorporou várias animações usando GSAP para uma experiência de usuário mais dinâmica e envolvente."
+        },
+        {
+          "featureHeading": "Internacionalização",
+          "featureDescription": "Implementou i18next para internacionalização fácil e eficiente do conteúdo do site."
+        },
+        {
+          "featureHeading": "Otimização de SEO",
+          "featureDescription": "Usou Next SEO para melhorar a otimização para mecanismos de busca, melhorando a visibilidade do site."
+        },
+        {
+          "featureHeading": "Melhoria no Tratamento de Formulários",
+          "featureDescription": "Utilizou Formik e Yup para tratamento robusto de formulários e validação."
+        },
+        {
+          "featureHeading": "Acessibilidade na Web",
+          "featureDescription": "Seguiu os padrões WCAG para garantir que o site seja acessível a todos os usuários."
+        }
+      ],
+      "thumbnail": "/assets/Screenshot_2.png",
+      "thumbnailAltText": "Miniatura do Site Excellence Conciergerie",
+      "hero": "/assets/img1.webp",
+      "liveWebsiteUrl": "https://excellence-conciergerie.com/en",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/excellence-conciergerie",
+      "figmaUrl": "https://www.figma.com/file/ZbGuHDbMQJfuPJVLg6rhwY/Excellence-Conciergerie?node-id=885169-448&t=NeQeWCWDznkAKsle-0"
+    },
+    {
+      "pageTitle": "Doggy Daycare | Web Development Portfolio",
       "slug": "doggy-daycare",
-      "icon": "/assets/paw-icon.svg",
-      "iconAltText": "Patadas de Cão",
       "name": "Doggy Daycare",
-      "description": "Um projeto sobre uma creche fictícia para cães. Embora o nome não seja muito criativo, o site foi feito apenas com o objetivo de autoaperfeiçoamento. Serviu como plataforma para melhorar principalmente minhas habilidades de design e utilizar ferramentas CMS populares como Strapi e WordPress, já que sou bastante fã da ideia do que um CMS pode fazer. O projeto também visava refinar minha proficiência em codificação no Next.js, implementando recursos de acessibilidade e alguns outros.",
-      "role": "(Desenvolvedor Único)",
-      "descriptionFeatures": "CMS Strapi, Mapa Interativo, Email Automático, Integração de Acessibilidade, Tela de Carregamento & Carregamento Esquelético.",
+      "description": "Um projeto sobre um fictício Doggy Daycare. Embora o nome não seja muito criativo, o site foi feito apenas com o objetivo de autoaperfeiçoamento. Serviu como plataforma para principalmente melhorar minhas habilidades de design e utilizar ferramentas populares de CMS como Strapi e WordPress, já que sou um grande fã da ideia do que um CMS pode fazer. O projeto também visava refinar minha proficiência em codificação no Next.js, implementando recursos de acessibilidade e alguns mais.",
       "technologiesUsed": [
         {
           "name": "Next.js",
@@ -293,111 +302,60 @@
           "techImageSrc": "/assets/css-logo.svg"
         },
         {
-          "name": "GraphQl",
+          "name": "GraphQL",
           "techImageSrc": "/assets/graphql-logo.svg"
         },
         {
-          "name": "Rest Api",
+          "name": "REST API",
           "techImageSrc": "/assets/rest-api-logo.svg"
         },
         {
-          "name": "XML",
-          "techImageSrc": "/assets/xml-logo.svg"
-        },
-        {
-          "name": "Single Page Application [SPA]",
+          "name": "SPA",
           "techImageSrc": "/assets/spa-logo.svg"
         },
         {
-          "name": "Email Provider",
+          "name": "Provedor de Email",
           "techImageSrc": "/assets/email-provider-logo.svg"
         },
         {
-          "name": "Acessibilidade Digital",
+          "name": "Acessibilidade",
           "techImageSrc": "/assets/accessibility-logo.svg"
         },
         {
-          "name": "Server Side Rendering [SSR]",
+          "name": "SSR",
           "techImageSrc": "/assets/ssr-logo.svg"
-        }
-      ],
-      "challengesDescription": "Ao desenvolver este projeto, encontrei desafios mínimos, principalmente centrados em refinar detalhes do site e lidar com tarefas repetitivas devido ao CMS. A complexidade do projeto foi relativamente baixa, sendo os passos mais complicados apenas um pouco desafiadores em comparação.",
-      "featuresDescription": "Explore a diversa gama de recursos e funcionalidades implementadas neste projeto. Desde a gestão de conteúdo sem problemas até interações amigáveis, cada elemento é projetado para melhorar a experiência geral do usuário.",
-      "challenges": [
-        {
-          "challengeTitle": "Aprimoramento do Formulário de Reserva",
-          "challengeDescription": "Criar o formulário de reserva teve seus desafios. Embora as principais funções funcionassem bem - enviar dados para o Strapi e acionar notificações por email - os detalhes da validação do formulário e a experiência do usuário precisavam de melhorias. Garantir a acessibilidade é incerto sem usuários reais para testes, e como projeto de aprendizado, eu não queria incomodar os usuários apenas para fins de teste e aprendizado.",
-          "solutionText": "Para enfrentar esses desafios, refinei as dicas visuais do formulário para um melhor feedback e testei extensivamente com o NVDA Screen Reader. Também consultei guias online sobre acessibilidade de formulários. No entanto, determinar o sucesso do formulário permanece desafiador sem interação do usuário do mundo real. A melhoria contínua é completamente possível e essencial se o site fosse acessível ao público como um projeto não fictício."
         }
       ],
       "siteMainFeatures": [
         {
-          "featureHeading": "Integração com CMS Strapi Headless:",
-          "featureDescription": "Atualize facilmente Textos, Imagens, Vídeos, Postagens de Trabalho e Serviços."
+          "featureHeading": "Integração com Strapi Headless CMS",
+          "featureDescription": "Atualização fácil de textos, imagens, vídeos, postagens de empregos e serviços."
         },
         {
-          "featureHeading": "Mapa Interativo do Leaflet:",
+          "featureHeading": "Mapa Interativo Leaflet",
           "featureDescription": "Permite aos usuários localizar cada instalação de forma eficiente."
         },
         {
-          "featureHeading": "Integração de Acessibilidade:",
-          "featureDescription": "Design amigável ao leitor de tela, incluindo o Mapa Interativo e o Formulário de Contato/Reserva."
+          "featureHeading": "Integração de Acessibilidade",
+          "featureDescription": "Design amigável para leitores de tela, incluindo o mapa interativo e formulário de contato/reserva."
         },
         {
-          "featureHeading": "Detalhes Gráficos para uma Experiência Vibrante:",
-          "featureDescription": "Contador de Números, Confete, Efeitos de Hover em Imagens e animações sutis para um design aprimorado."
-        },
-        {
-          "featureHeading": "Notificações Automáticas por Email:",
-          "featureDescription": "Enviadas para o Administrador do Strapi e o Usuário após a conclusão bem-sucedida do formulário."
-        },
-        {
-          "featureHeading": "Tela de Carregamento com Animação HTML:",
-          "featureDescription": "Animação de carregamento suave ao buscar dados do Strapi."
-        },
-        {
-          "featureHeading": "Elementos de Design Personalizados:",
-          "featureDescription": "Logotipo feito por mim, Padrão Temático de Cães e uma combinação de Vetores Gratuitos criados no Figma."
-        },
-        {
-          "featureHeading": "Miniatura de Vídeo Personalizada:",
-          "featureDescription": "Miniatura personalizada para um toque agradável na Página de Posições Abertas."
-        },
-        {
-          "featureHeading": "Interações com Imagens:",
-          "featureDescription": "Clique em imagens não interativas para abrir um modal exibindo todas as Imagens da Página, Efeito Ken Burns na Página de Posições Abertas e Carrossel de Imagens Infinito funcionando como uma Galeria em cada Página de Serviço Individual."
+          "featureHeading": "Detalhes Gráficos para uma Experiência Vibrante",
+          "featureDescription": "Contador Numérico, Confetti, Efeitos Hover em Imagens e animações sutis para um design aprimorado."
         }
       ],
-      "websiteVideos": [
-        {
-          "videoSrcMp4": "/assets/projects/doggy-homepage.mp4",
-          "videoSrcWebm": "/assets/projects/doggy-homepage.mp4"
-        },
-        {
-          "videoSrcMp4": "/assets/projects/doggy-showcase.mp4",
-          "videoSrcWebm": "/assets/projects/doggy-showcase.mp4"
-        },
-        {
-          "videoSrcMp4": "/assets/projects/doggy-strapi.mp4",
-          "videoSrcWebm": "/assets/projects/doggy-strapi.mp4"
-        }
-      ],
-      "thumbnail": "/assets/projects/doggy-thumbnail.png",
-      "thumbnailAltText": "Página Inicial do Site Dentro de um Quadro de Monitor",
-      "hero": "/assets/projects/doggy-hero.png",
+      "thumbnail": "/assets/Screenshot_3.png",
+      "thumbnailAltText": "Página Inicial do Site Dentro de um Monitor",
+      "hero": "/assets/img30.png",
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/DoggyDaycareFront",
       "figmaUrl": ""
     },
     {
-      "pageTitle": "Pixel Python | Portfólio de Desenvolvimento Web",
+      "pageTitle": "Pixel Python | Web Development Portfolio",
       "slug": "pixel-python",
-      "icon": "/assets/snake.svg",
-      "iconAltText": "Ícone do Pixel Python",
       "name": "Pixel Python",
-      "description": "Recriei o clássico jogo da Snake em uma versão moderna, utilizando Angular, TypeScript, CSS, Bootstrap e Figma para design. Esse projeto foi uma oportunidade de demonstrar minhas habilidades em desenvolvimento front end e programação de maneira envolvente e interativa, destacando minha capacidade de criar experiências digitais atraentes. Além disso, a aplicação é uma Progressive Web App (PWA), o que significa que o jogo pode ser acessado e jogado offline, proporcionando uma experiência contínua e sem interrupções",
-      "role": "(Desenvolvedor Único)",
-      "descriptionFeatures": "Lógica clássica do jogo da Snake, estilização CSS responsiva, Bootstrap para layout e componentes, TypeScript para comportamento do jogo e Figma para design.",
+      "description": "Um jogo clássico da Snake implementado usando Angular, TypeScript, CSS, Bootstrap e Figma para design. Este projeto foi criado para mostrar minhas habilidades em desenvolvimento front-end e programação de jogos de uma maneira mais divertida.",
       "technologiesUsed": [
         {
           "name": "Angular",
@@ -424,45 +382,40 @@
           "techImageSrc": "/assets/html-logo.svg"
         },
         {
-          "name": "Progressive Web App [PWA]",
+          "name": "PWA",
           "techImageSrc": "/assets/pwa-logo.svg"
         }
       ],
-      "featuresDescription": "O jogo apresenta uma experiência clássica de jogo da Snake, onde os jogadores controlam uma cobra para comer comida e crescer. O jogo termina se a cobra colidir consigo mesma ou com as paredes.",
       "siteMainFeatures": [
         {
           "featureHeading": "Jogabilidade Clássica da Snake",
-          "featureDescription": "Os jogadores controlam uma cobra para comer comida e crescer, evitando colisões com as paredes ou com ela mesma."
+          "featureDescription": "Os jogadores controlam uma cobra para comer comida e crescer, evitando colisões com as paredes ou ela mesma."
         },
         {
           "featureHeading": "Efeitos Sonoros do Jogo",
-          "featureDescription": "Curta uma jogabilidade imersiva com efeitos sonoros que melhoram a experiência geral do jogo."
+          "featureDescription": "Curta uma jogabilidade imersiva com efeitos sonoros que melhoram a experiência geral de jogo."
         },
         {
           "featureHeading": "Opções Personalizadas",
-          "featureDescription": "Pausar ou silenciar o jogo a qualquer momento. Acompanhe sua pontuação atual e a pontuação mais alta na tela, adicionando conveniência e personalização à sua experiência de jogo."
+          "featureDescription": "Pause ou silencie o jogo a qualquer momento. Acompanhe sua pontuação atual e a maior pontuação na tela, adicionando conveniência e personalização à sua experiência de jogo."
         },
         {
           "featureHeading": "Controles Intuitivos",
-          "featureDescription": "Experimente controles suaves e responsivos com a capacidade de enfileirar seus movimentos. O jogo é executado em um ritmo ligeiramente mais lento, garantindo que você possa inserir seus controles sem esforço, tornando o movimento incrivelmente fácil. Você também recebe 3 vezes mais comprimento do que o normal."
+          "featureDescription": "Experimente controles suaves e responsivos com a capacidade de enfileirar seus movimentos. O jogo é executado em um ritmo ligeiramente mais lento, garantindo que você possa inserir seus controles sem esforço, facilitando muito o movimento. Você também recebe 3 vezes mais comprimento do que o habitual."
         }
       ],
-      "thumbnail": "/assets/projects/pixel-python-thumbnail.png",
-      "thumbnailAltText": "Thumbnail do Jogo Pixel Python",
-      "hero": "/assets/projects/pixel-python-hero.jpg",
+      "thumbnail": "/assets/Screenshot_6.png",
+      "thumbnailAltText": "Miniatura do Jogo Pixel Python",
+      "hero": "/assets/img31.jpg",
       "liveWebsiteUrl": "https://pixel-python.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
       "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
     },
     {
-      "pageTitle": "Tic Tac Toe | Portfólio de Desenvolvimento Web",
+      "pageTitle": "Jogo da Velha | Portfólio de Desenvolvimento Web",
       "slug": "tic-tac-toe",
-      "icon": "/assets/cross.svg",
-      "iconAltText": "Ícone de Jogo da Velha",
-      "name": "Tic Tac Toe",
-      "description": "Um simples jogo da velha utilizando HTML, CSS e JavaScript. Implementei recursos interativos e responsivos para proporcionar uma experiência de usuário atraente e intuitiva. Além disso, pratiquei e aprimorei minhas habilidades em Desenvolvimento Orientado a Testes (TDD) ao utilizar Jest para testar e validar o código, garantindo assim um produto final robusto e livre de erros.",
-      "role": "(Desenvolvedor Único)",
-      "descriptionFeatures": "Lógica básica do jogo, estilização CSS para uma interface visualmente atraente, áudio de videogame e JavaScript para interatividade.",
+      "name": "Jogo da Velha",
+      "description": "Um simples jogo da velha implementado usando HTML, CSS e JavaScript. Este projeto foi criado principalmente para praticar minhas habilidades de TDD com Jest.",
       "technologiesUsed": [
         {
           "name": "HTML",
@@ -485,295 +438,102 @@
           "techImageSrc": "/assets/jest-logo.svg"
         }
       ],
-      "challengesDescription": "O principal e único desafio deste projeto foi usar o Jest como TDD.",
-      "challenges": [
-        {
-          "challengeTitle": "Jest TDD",
-          "challengeDescription": "Usar Jest se mostrou bastante desafiador. Muitas funcionalidades não funcionaram como esperado com Jest, necessitando o uso de inúmeros mocks. Além disso, encontrei frequentemente obstáculos em diferentes partes do projeto, levando a extensa pesquisa online e leitura de documentação.",
-          "solutionText": "Durante o desafio de TDD com Jest, deparei-me com vários problemas, tendo que recorrer bastante a mocks. Apesar dos desafios, persisti através de múltiplas tentativas e erros, ganhando um entendimento mais profundo de como o Jest funciona como um todo. Como resultado, meus testes com Jest agora são muito mais precisos e úteis em comparação com antes."
-        }
-      ],
-      "featuresDescription": "O jogo apresenta uma interface de usuário simples onde os jogadores podem se revezar clicando nas células para fazer sua jogada. O jogo acompanha o jogador atual e exibe o vencedor ou um empate quando o jogo termina.",
       "siteMainFeatures": [
         {
           "featureHeading": "Interface de Usuário Simples",
-          "featureDescription": "O jogo apresenta uma interface de usuário simples onde os jogadores podem fazer suas jogadas facilmente clicando nas células."
+          "featureDescription": "O jogo apresenta uma interface de usuário simples onde os jogadores podem fazer seus movimentos facilmente clicando nas células."
         },
         {
-          "featureHeading": "Rastreamento da Vez do Jogador",
-          "featureDescription": "O jogo acompanha o jogador atual e alterna as jogadas após cada jogada."
+          "featureHeading": "Rastreamento de Vez do Jogador",
+          "featureDescription": "O jogo mantém o controle do jogador atual e troca de turno após cada movimento."
         },
         {
           "featureHeading": "Detecção de Vitória e Empate",
-          "featureDescription": "O jogo verifica a condição de vitória ou empate após cada jogada e exibe o resultado conforme apropriado."
+          "featureDescription": "O jogo verifica condições de vitória ou empate após cada movimento e exibe o resultado de acordo."
         },
         {
           "featureHeading": "Efeitos Sonoros",
-          "featureDescription": "Toca sons diferentes em Movimentos, Vitórias e Empates."
+          "featureDescription": "Reproduz diferentes sons em Movimentos, Vitórias e Empates."
         }
       ],
-      "thumbnail": "/assets/projects/tic-tac-toe-thumbnail.png",
+      "thumbnail": "/assets/Screenshot_4.png",
       "thumbnailAltText": "Miniatura do Jogo da Velha",
-      "hero": "/assets/projects/tic-tac-toe-hero.png",
+      "hero": "/assets/img32.png",
       "liveWebsiteUrl": "https://tic-tac-toe-nine-tan.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/tic-tac-toe",
       "figmaUrl": "https://www.figma.com/file/SDtAyFbfhWtXmP0DAo2Dtt/Tic-Tac-Toe?type=design&mode=design&t=XNRXwdNnySDk0hor-0"
     }
   ],
 
-  "portfolioData": [
-    {
-      "name": "Portfólio de Desenvolvimento Web",
-      "description": "Meu portfólio pessoal, desenvolvido após a criação do meu site de creche para cães. Ele representa uma melhoria significativa em termos de design, funcionalidade, SEO e acessibilidade. Fiz com o objetivo de destacar minhas habilidades; ele serve como uma plataforma conveniente para apresentar meus projetos concluídos atuais e futuros.",
-      "role": "(Desenvolvedor Único)",
-      "technologiesUsed": [
-        {
-          "name": "Next.js",
-          "techImageSrc": "/assets/nextjs-logo.svg"
-        },
-        {
-          "name": "Tailwind CSS",
-          "techImageSrc": "/assets/tailwind-logo.svg"
-        },
-        {
-          "name": "Figma",
-          "techImageSrc": "/assets/figma-logo.svg"
-        },
-        {
-          "name": "CSS",
-          "techImageSrc": "/assets/css-logo.svg"
-        },
-        {
-          "name": "Framer Motion",
-          "techImageSrc": "/assets/framer-motion-logo.svg"
-        },
-        {
-          "name": "XML",
-          "techImageSrc": "/assets/xml-logo.svg"
-        },
-        {
-          "name": "Email Provider",
-          "techImageSrc": "/assets/email-provider-logo.svg"
-        },
-        {
-          "name": "SEO",
-          "techImageSrc": "/assets/seo-logo.svg"
-        },
-        {
-          "name": "Single Page Application [SPA]",
-          "techImageSrc": "/assets/spa-logo.svg"
-        },
-        {
-          "name": "HTML",
-          "techImageSrc": "/assets/html-logo.svg"
-        },
-        {
-          "name": "Acessibilidade Digital",
-          "techImageSrc": "/assets/accessibility-logo.svg"
-        },
-        {
-          "name": "Server Side Rendering [SSR]",
-          "techImageSrc": "/assets/ssr-logo.svg"
-        }
-      ],
-      "achievementsList": [
-        {
-          "achievementHeading": "Implementação de Site Multilíngue:",
-          "achievementDescription": "Implementação bem-sucedida da funcionalidade de troca de idioma usando o i18next, permitindo que os usuários alternem entre diferentes idiomas para uma experiência mais inclusiva."
-        },
-        {
-          "achievementHeading": "Aprimoramentos para uma Melhor Experiência do Usuário:",
-          "achievementDescription": "Implementou um mecanismo para salvar a preferência de idioma selecionada entre as sessões no Armazenamento Local. Também melhorou o desempenho para um site mais rápido. Além disso, os mecanismos de busca agora podem identificar diferentes versões de idioma do site."
-        },
-        {
-          "achievementHeading": "Melhoria no Engajamento do Usuário com Animações:",
-          "achievementDescription": "Implementou animações envolventes e efeitos visuais extras para aprimorar o engajamento do usuário e criar um site mais interativo e visualmente atraente."
-        },
-        {
-          "achievementHeading": "Melhoria na Acessibilidade do Site:",
-          "achievementDescription": "Integrou com sucesso recursos aprimorados de acessibilidade, garantindo que o site seja acessível a um público diversificado, incluindo pessoas com deficiências."
-        },
-        {
-          "achievementHeading": "Implementação de Sistema Automatizado de E-mails:",
-          "achievementDescription": "Implementou um sistema automatizado de e-mails no formulário de contato, otimizando os processos de comunicação e aprimorando o engajamento do usuário por meio de notificações por e-mail."
-        },
-        {
-          "achievementHeading": "Otimização do Site para Mecanismos de Busca (SEO):",
-          "achievementDescription": "Implementou com sucesso estratégias de otimização de SEO para melhorar a visibilidade do site nos mecanismos de busca."
-        },
-        {
-          "achievementHeading": "Implementação de Tela de Carregamento e Carregamento Esquelético:",
-          "achievementDescription": "Implementou uma tela de carregamento durante as mudanças de idioma e empregou técnicas de carregamento esquelético para reduzir significativamente os deslocamentos de layout durante o carregamento da página, garantindo uma experiência mais suave para o usuário."
-        }
-      ],
-
-      "liveWebsiteUrl": "https://www.carloshenriquedev.com/en"
-    }
-  ],
-
   "resumeText1": "Currículo de Desenvolvedor Web: Habilidades e Conquistas",
-  "resumeText2": "Ver no Site / Baixar Currículo.",
-  "resumeText3": "Ver no Site",
-  "resumeText4": "Baixar Currículo",
-
-  "faqText1": "Perguntas Frequentes",
-  "faqText2": "Tem alguma pergunta que não foi respondida aqui?",
-  "faqText3": "Sinta-se à vontade para entrar em contato comigo abaixo",
-
-  "questionsData": [
-    {
-      "question": "1. Como posso entrar em contato com você?",
-      "answer": "Você pode me alcançar através do formulário de contato no meu site. Eu responderei o mais rápido possível."
-    },
-    {
-      "question": "2. Quais serviços você oferece?",
-      "answer": "Ofereço uma variedade de serviços digitais, incluindo desenvolvimento personalizado de sites, design responsivo, desenvolvimento frontend e backend, entre outros. Explore a seção de Serviços para obter mais detalhes."
-    },
-    {
-      "question": "3. Você tem experiência com Sistemas de Gerenciamento de Conteúdo (CMS)?",
-      "answer": "Sim, tenho experiência com CMS como Strapi e um pouco de WordPress. Embora ainda esteja aprendendo, estou comprometido em fornecer uma experiência de gerenciamento de conteúdo fácil e sem estresse para o seu site."
-    },
-    {
-      "question": "4. Como você garante a acessibilidade do site?",
-      "answer": "Garantir a acessibilidade digital é uma prioridade para mim. Eu uso ferramentas como Leitores de Tela, mantenho-me atualizado nas diretrizes de acessibilidade e realizo testes para criar experiências online inclusivas e amigáveis. Recentemente, tenho pensado até mesmo em chamar Testadores de Acessibilidade Online Gratuitos para testarem a acessibilidade do meu site e me darem muitos feedbacks para que eu possa melhorar."
-    },
-    {
-      "question": "5. Posso atualizar o conteúdo do meu site por conta própria?",
-      "answer": "Com certeza! Posso fornecer vídeos de treinamento personalizados para capacitar você a gerenciar aspectos comuns do seu site de forma independente. Desde atualizações de conteúdo até manutenção básica, estou aqui para ajudar você a aprender, se necessário."
-    },
-    {
-      "question": "6. Qual é a sua abordagem para a otimização de SEO?",
-      "answer": "Concentro-me na otimização abrangente de SEO, desde a pesquisa de palavras-chave até a otimização na página. Meu objetivo é posicionar seu site para alcançar um público mais amplo e gerar tráfego orgânico."
-    },
-    {
-      "question": "7. Como posso ver seus projetos no portfólio?",
-      "answer": "Você pode explorar meus projetos originais na seção Projetos do meu portfólio. Esses projetos mostram minhas habilidades em design e código, incorporando lições aprendidas de vários projetos de aprendizado."
-    },
-    {
-      "question": "8. Você fornece suporte contínuo para sites?",
-      "answer": "Sim, ofereço suporte contínuo e atualizações de conteúdo para sites. Se precisar de ajuda com a manutenção ou tiver dúvidas sobre seu site, estou aqui para ajudar."
-    },
-    {
-      "question": "9. Como faço para saber mais sobre seus serviços?",
-      "answer": "Você pode usar o formulário de contato no meu site para obter informações sobre meus serviços. Sinta-se à vontade para compartilhar detalhes do seu projeto, e eu entrarei em contato com mais informações."
-    },
-    {
-      "question": "10. Qual é o seu processo para o desenvolvimento de sites?",
-      "answer": "Meu processo inclui entender seus requisitos, criar designs visualmente atraentes e funcionais, e garantir adaptação perfeita a vários dispositivos. Valorizo a comunicação aberta e a colaboração ao longo da jornada de desenvolvimento."
-    }
-  ],
+  "resumeText2": "Ver no Website / Baixar CV.",
+  "resumeText3": "Ver no Website",
+  "resumeText4": "Baixar CV | En",
+  "resumeText5": "Baixar CV | Pt",
 
   "contactText1": "Pronto para Colaborar?",
-  "contactText2": "Entre em Contato",
-  "contactText3": "Vamos nos conectar e explorar suas ideias. Se você tiver um projeto em mente, estiver interessado em colaborar ou tiver alguma dúvida, sinta-se à vontade para entrar em contato. Estou aqui para ajudar e ansioso para ouvir de você.",
+  "contactText2": "Contate-me",
+  "contactText3": "Vamos nos conectar e explorar suas ideias. Se você tem um projeto em mente, está interessado em colaboração ou tem alguma pergunta, sinta-se à vontade para entrar em contato. Estou aqui para ajudar e ansioso para ouvir de você.",
 
   "labelText1": "Nome",
-  "labelText2": "E-mail",
+  "labelText2": "Email",
   "labelText3": "Mensagem",
 
   "formButtonText1": "Enviar",
-  "formButtonText2": "Enviando...",
+  "formButtonText2": "Enviar...",
 
   "placeHolderText1": "Seu Nome",
-  "placeHolderText2": "Seu E-mail",
+  "placeHolderText2": "Seu Email",
   "placeHolderText3": "Sua Mensagem",
 
   "formErrorText1": "Nome é obrigatório",
-  "formErrorText2": "E-mail é obrigatório",
-  "formErrorText3": "Endereço de e-mail inválido",
+  "formErrorText2": "Email é obrigatório",
+  "formErrorText3": "Endereço de email inválido",
   "formErrorText4": "Mensagem é obrigatória",
 
   "successText1": "Mensagem Enviada com Sucesso!",
-  "successText2": "Retornar ao Formulário de Contato",
+  "successText2": "Voltar para o Formulário de Contato",
 
   "footerText1": "Carlos Henrique.",
-  "footerText2": "Clique aqui para abrir a aba de créditos",
+  "footerText2": "Clique aqui para abrir a aba de Créditos",
 
-  "resumePageText1": "Voltar ao Topo",
-  "resumePageText2": "Voltar ao Portfólio",
-  "resumePageText3": "DESENVOLVEDOR WEB",
-  "resumePageText4": "DECLARAÇÃO PESSOAL",
-  "resumePageText5": "Como desenvolvedor web jûnior / pleno, aprendo novas habilidades com dedicação e persistência. Mantenho uma determinação sólida para melhorar e colaborar com outros. Invisto incontáveis horas diariamente codificando, criando projetos para aprendizado e enfrentando problemas de codificação complexos. Por meio de videoaulas, guias e documentação detalhada, desenvolvi proficiência em design e desenvolvimento, tanto no frontend quanto no backend. Com base nessa experiência, tenho confiança em minha capacidade de entregar trabalhos de alta qualidade e atender às demandas de qualquer projeto proposto. Minha pretensão salarial é baixa e está na faixa de R$700 - R$1.412, e estou totalmente aberto a negociações.",
-  "resumePageText6": "HABILIDADES DE DESENVOLVEDOR WEB",
-  "resumePageText7": "PROJETOS",
-
-  "resumePageProjectHeadingText1": "DESCRIÇÃO:",
-  "resumePageProjectHeadingText2": "Habilidades:",
-  "resumePageProjectHeadingText3": "Conquistas:",
-
-  "resumePageText8": "EDUCAÇÃO",
-  "resumePageText9": "DESENVOLVEDOR WEB AUTODIDATA",
-  "resumePageText10": "APRENDIZAGEM ONLINE",
-
-  "educationList": [
-    {
-      "educationHeading": "Videoaulas",
-      "educationDescription": "Assiste a videoaulas em plataformas como o YouTube, onde especialistas e educadores compartilham insights, dicas e demonstrações práticas."
-    },
-    {
-      "educationHeading": "Leitura de Documentação",
-      "educationDescription": "Aprofunde-se na documentação oficial de linguagens de programação, frameworks e ferramentas. Adquira uma compreensão profunda dos recursos, funcionalidades e práticas descritas na documentação."
-    },
-    {
-      "educationHeading": "Projetos Práticos",
-      "educationDescription": "Realize projetos práticos para aplicar conhecimentos em um ambiente real. Trabalhei em muitos projetos para fins de aprendizado que abrangem vários aspectos do desenvolvimento web."
-    }
-  ],
-
-  "resumePageText11": "IDIOMAS",
-
-  "languageList": [
-    {
-      "name": "Português",
-      "proficiency": "LÍNGUA NATIVA",
-      "description": "Falante nativo de português com fluência em falar, escrever e ouvir. Confortável em comunicar ideias complexas e conceitos técnicos em português. Proficiente em entender português falado em vários contextos."
-    },
-    {
-      "name": "Inglês",
-      "proficiency": "LEITURA, ESCRITA E AUDIÇÃO",
-      "description": "Proficiente em leitura e escrita em inglês, com forte capacidade de compreender conteúdo técnico. Embora eu não tenha uma grande habilidade vocal, estou confortável lendo, escrevendo e ouvindo um pouco em inglês, especialmente no contexto de codificação, documentação e comunicação por canais escritos."
-    }
-  ],
-
-  "projectsPageText1": "Ver Site Online",
-  "projectsPageText2": "Arquivo de Design Figma",
+  "projectsPageText1": "Ver Website Online",
+  "projectsPageText2": "Arquivo de Design no Figma",
   "projectsPageText3": "Repositório no Github",
   "projectsPageText4": "Desafios:",
   "projectsPageText5": "Recursos:",
-  "projectsPageText6": "Download do Vídeo",
-  "projectsPageText7": "Visão Rápida das Páginas:",
+  "projectsPageText6": "Baixar Vídeo",
+  "projectsPageText7": "Visão Geral Rápida das Páginas:",
+  "projectsPageText8": "Ver Mais Online no Website",
 
-  "accessibilityText1": "Pular para o Conteúdo Principal",
+  "accessibilityText1": "Ir para o Conteúdo Principal",
   "accessibilityText2": "Fechar Menu",
   "accessibilityText3": "Abrir Menu",
   "accessibilityText4": "Fechar Menu de Troca de Idioma",
-  "accessibilityText5": "Abrir Menu para Trocar de Idiomas",
-  "accessibilityText6": "Fechar Lista Suspensa de Créditos",
-  "accessibilityText7": "Abrir Lista Suspensa de Créditos",
-  "accessibilityText8": ", Abrir em uma nova guia",
+  "accessibilityText5": "Abrir Menu para Trocar Idiomas",
+  "accessibilityText6": "Fechar Dropdown de Créditos",
+  "accessibilityText7": "Abrir Dropdown de Créditos",
+  "accessibilityText8": ", Abrir em uma nova Aba",
   "accessibilityText9": ", Clique para mostrar uma visualização rápida. Informações sobre este Projeto",
   "accessibilityText10": "Clique para mostrar mais Informações",
   "accessibilityText11": "Formulário de Contato abaixo, forneça seu Nome, seu Email e sua Mensagem.",
-  "accessibilityText12": "Ocorreu um erro ao tentar enviar o formulário. Por favor, tente novamente mais tarde.",
+  "accessibilityText12": "Ocorreu um Erro ao tentar Enviar o Formulário. Por favor, tente novamente mais tarde.",
 
   "altText1": "Seta para frente",
   "altText2": "Bandeira do Brasil",
   "altText3": "Bandeira dos Estados Unidos",
-  "altText4": "Seta de alternância para baixo",
+  "altText4": "Seta de alternância de dropdown",
   "altText5": "Ilustração de programação",
   "altText6": "Marca de verificação de sucesso cercada por estrelas",
   "altText7": "Avião de papel",
   "altText8": "Forma de estrela",
   "altText9": "Obter arquivo para download",
-  "altText10": "Ilustração de Serviço para:",
+  "altText10": "Ilustração de serviço para:",
   "altText11": "Seta de retorno",
-  "altText12": "Ilustração do Planeta do Website",
-  "altText13": "Ilustração do Logo Figma",
-  "altText14": "Ilustração do Repositório Github",
+  "altText12": "Ilustração de planeta do website",
+  "altText13": "Ilustração do logo do Figma",
+  "altText14": "Ilustração do repositório do Github",
   "altText15": "Símbolo de link externo",
 
-  "titleText1": "currículo",
-
-  "showMoreButton": "Mostrar Mais Habilidades",
-  "showLessButton": "Mostrar Menos Habilidades"
+  "accessibility_text1": "Pular para o conteúdo principal"
 }

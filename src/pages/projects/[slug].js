@@ -1,25 +1,30 @@
-import LanguageDropdown from "@/components/common/NavBar/LanguageDropdown";
-import React from "react";
+// pages/[slug].js
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
+import i18n from "../../../i18n";
+import Head from "next/head";
 import Link from "next/link";
-import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import Image from "next/image";
 import { buttonClassName } from "@/components/utils/buttonStyle";
 import Footer from "@/components/common/Footer/Footer";
-import ScrollToTopButton from "@/components/utils/scrollToTopButton";
-import { useTranslation } from "react-i18next";
-import useLanguageChange from "@/hooks/useLanguageChange";
-import i18n from "../../../i18n";
-import Head from "next/head";
 
-const Project = ({ locale, slug, foundProject }) => {
+const SlugPage = ({ data, locale, slug }) => {
+  const router = useRouter();
   const { t } = useTranslation();
 
-  const { isLanguageLoading, changeLanguage } = useLanguageChange();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   const handleClick = () => {
     const targetElement = document.getElementById("projectHeadingText");
-
-    // Set focus to the target element
     if (targetElement) {
       setTimeout(() => {
         targetElement.tabIndex = -1;
@@ -28,21 +33,23 @@ const Project = ({ locale, slug, foundProject }) => {
     }
   };
 
+  const changeLanguage = (newLocale) => {
+    const { asPath } = router;
+
+    // Construct the new URL with the new locale
+    const newPath = `/${newLocale}${asPath}`;
+
+    // Force a full page reload
+    window.location.href = newPath;
+  };
+
   return (
     <>
       <Head>
-        <title>{`${foundProject.pageTitle}`}</title>
-
-        <meta name="description" content={foundProject.description} />
-
+        <title>{`${data.pageTitle}`}</title>
+        <meta name="description" content={data.description} />
         <link
           rel="canonical"
-          href={`https://www.carloshenriquedev.com/${locale}/projects/${slug}`}
-        />
-
-        <link
-          rel="alternate"
-          hrefLang="x-default"
           href={`https://www.carloshenriquedev.com/projects/${slug}`}
         />
         <link
@@ -52,331 +59,296 @@ const Project = ({ locale, slug, foundProject }) => {
         />
       </Head>
 
-      {!isLanguageLoading ? (
+      {data ? (
         <>
-          {foundProject ? (
-            <>
-              <div className="cursor-auto">
-                <ScrollToTopButton />
+          <div className="cursor-auto">
+            <nav className="text-[white] ">
+              <div className="xl:max-w-[1280px] xl:mx-auto">
+                <button className="skip-to-content" onClick={handleClick}>
+                  {t("accessibilityText1")}
+                </button>
 
-                <nav className="text-[white] border-solid border-b-[6px] border-cornflowerBlue">
-                  <div className="xl:max-w-[1280px] xl:mx-auto">
-                    <button className="skip-to-content" onClick={handleClick}>
-                      {t("accessibilityText1")}
-                    </button>
-
-                    <div className="px-[24px] py-[8px] lg:px-[48px] bg-[black] w-full flex lg:justify-center items-center">
-                      <div className="w-full flex gap-[24px] items-center justify-between">
-                        <div>
-                          <Link
-                            className="font-bold flex gap-[8px] items-center underline text-[0.875rem] sm:text-[1rem]"
-                            href={`/${locale}`}
-                          >
-                            <Image
-                              aria-hidden={true}
-                              className="w-[20px] h-[20px]"
-                              src="/assets/left-arrow-icon.svg"
-                              alt={t("altText11")}
-                              width={0}
-                              height={0}
-                              unoptimized
-                            />
-                            {t("resumePageText2")}
-                          </Link>
-                        </div>
-
-                        <div className="order-1">
-                          <LanguageDropdown
-                            locale={locale}
-                            changeLanguage={changeLanguage}
-                          />
-                        </div>
-                      </div>
+                <div className="px-[24px] py-[8px] lg:px-[48px] bg-[black] w-full flex lg:justify-center items-center">
+                  <div className="w-full flex gap-[24px] items-center justify-between">
+                    <div>
+                      <Link
+                        className="font-bold flex gap-[8px] items-center underline text-[0.875rem]"
+                        href={`/${locale}`}
+                      >
+                        <Image
+                          aria-hidden={true}
+                          className="w-[20px] h-[20px]"
+                          src="/assets/left-arrow-icon.svg"
+                          alt={t("altText11")}
+                          width={0}
+                          height={0}
+                          unoptimized
+                        />
+                        {t("projectsText8")}
+                      </Link>
                     </div>
-                  </div>
-                </nav>
-
-                <div>
-                  <div>
-                    <div
-                      className="bg-center bg-cover h-[80vh] border-solid border-b-[6px] border-cornflowerBlue bg-fixed"
-                      style={{
-                        backgroundImage: `url(${foundProject.hero})`,
-                      }}
-                    ></div>
-
-                    <div className="py-[72px] px-[24px] lg:px-[48px] xl:max-w-[1280px] xl:mx-auto">
-                      <div>
-                        <div className="grid gap-[12px]">
-                          <h1
-                            id="projectHeadingText"
-                            className="text-[1.625rem] font-bold"
-                          >
-                            {foundProject.name}
-                          </h1>
-
-                          <p>{foundProject.description}</p>
-                        </div>
-
-                        <div className="mt-[24px] flex gap-[16px] flex-wrap">
-                          <Link
-                            aria-label={`${t("projectsPageText1")} ${t(
-                              "accessibilityText8"
-                            )}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={foundProject.liveWebsiteUrl}
-                            className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                          >
+                    <div className="order-1">
+                      <div className="relative">
+                        <button
+                          className="py-[6px] flex items-center gap-[4px] text-white75 font-bold"
+                          onClick={toggleDropdown}
+                          aria-haspopup="true"
+                          aria-expanded={isOpen}
+                          aria-controls="language-menu"
+                          aria-label="Select language"
+                        >
+                          <div className="flex items-center gap-[6px]">
                             <Image
                               aria-hidden={true}
-                              className="w-[16px] h-[16px]"
-                              src="/assets/white-icons/website-white.svg"
-                              alt={t("altText12")}
-                              width={0}
-                              height={0}
-                              unoptimized
+                              src={`/assets/${t("currentLanguageFlag")}`}
+                              alt={`${t("currentLanguage")} flag`}
+                              width={14}
+                              height={14}
+                              intrinsic="true"
+                              className="w-[14px] h-[14px]"
+                              quality={100}
                             />
-                            {t("projectsPageText1")}
-                          </Link>
+                            {t("currentLanguage")}
+                          </div>
 
-                          {foundProject.slug !== "doggy-daycare" && (
-                            <Link
-                              aria-label={`${t("projectsPageText1")} ${t(
-                                "accessibilityText8"
-                              )}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href={foundProject.figmaUrl}
-                              className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                            >
-                              <Image
-                                aria-hidden={true}
-                                className="w-[16px] h-[16px]"
-                                src="/assets/white-icons/figma-white.svg"
-                                alt={t("altText12")}
-                                width={0}
-                                height={0}
-                                unoptimized
-                              />
-                              {t("projectsPageText2")}
-                            </Link>
-                          )}
-
-                          <Link
-                            aria-label={`${t("projectsPageText1")} ${t(
-                              "accessibilityText8"
-                            )}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={foundProject.gitHubUrl}
-                            className={`${buttonClassName} px-[16px] !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
-                          >
-                            <Image
-                              aria-hidden={true}
-                              className="w-[16px] h-[16px]"
-                              src="/assets/white-icons/github-white.svg"
-                              alt={t("altText12")}
-                              width={0}
-                              height={0}
-                              unoptimized
-                            />
-                            {t("projectsPageText3")}
-                          </Link>
-                        </div>
-                      </div>
-
-                      <hr
-                        aria-hidden="true"
-                        className="border-t-[3px] border-cornflowerBlue my-[32px]"
-                      />
-
-                      <div className="grid gap-[12px]">
-                        <h2 className="text-[1.375rem] font-bold">
-                          {t("resumePageProjectHeadingText2")}
-                        </h2>
-
-                        <ul className="grid gap-x-[16px] gap-y-[12px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
-                          {foundProject.technologiesUsed.map(
-                            (mapItem, itemIndex) => (
-                              <li
-                                key={itemIndex}
-                                className="bg-[black] text-[white] px-[16px] py-[8px] flex gap-[8px] items-center w-full h-full border-solid border-[3px] border-[#5541D4] font-bold"
-                              >
-                                <Image
-                                  aria-hidden={true}
-                                  className={`w-[20px] h-[20px]`}
-                                  src={mapItem.techImageSrc}
-                                  alt={`${mapItem.name} Logo`}
-                                  width={0}
-                                  height={0}
-                                  unoptimized
-                                />
-
-                                <p className="w-fit">{mapItem.name}</p>
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </div>
-
-                      {foundProject.challenges && (
-                        <>
-                          <hr
-                            aria-hidden="true"
-                            className="border-t-[3px] border-cornflowerBlue my-[32px]"
+                          <Image
+                            aria-hidden={true}
+                            src="/assets/vector4.svg"
+                            alt="down arrow"
+                            width={10}
+                            height={10}
+                            intrinsic="true"
+                            className="w-[10px] h-[10px]"
+                            quality={100}
                           />
-
-                          <div className="grid gap-[16px]">
-                            <div className="grid gap-[12px]">
-                              <h2 className="text-[1.375rem] font-bold">
-                                {t("projectsPageText4")}
-                              </h2>
-
-                              <p>{foundProject.challengesDescription}</p>
-                            </div>
-
-                            <ul className="h-fit gap-x-[32px] gap-y-[12px] grid sm:grid-cols-2">
-                              {foundProject.challenges.map(
-                                (mapItem, itemIndex) => (
-                                  <li
-                                    key={itemIndex}
-                                    className="h-fit grid gap-[8px]"
+                        </button>
+                        {isOpen && (
+                          <div className="bg-color03 border-solid border-white75 w-[150px] right-[0] font-bold text-white75  border-[2px]  absolute top-full z-10 mt-3 overflow-hidden rounded-[4px] ">
+                            <ul>
+                              {t("languages", {
+                                returnObjects: true,
+                              })?.map((item, index) => (
+                                <li key={index} role="none">
+                                  <a
+                                    className="hover:brightness-90 flex items-center gap-[6px] hover:bg-darkCharcoal px-[24px] py-[12px] w-full cursor-pointer"
+                                    onClick={() =>
+                                      changeLanguage(item.DO_NOT_CHANGE)
+                                    }
+                                    tabIndex="0"
                                   >
-                                    <h3 className="text-[1.25rem] font-bold">
-                                      {itemIndex + 1}. {mapItem.challengeTitle}:
-                                    </h3>
-
-                                    <p>{mapItem.challengeDescription}</p>
-
-                                    <p>
-                                      <strong className="italic font-semibold">
-                                        Solution:
-                                      </strong>{" "}
-                                      {mapItem.solutionText}
-                                    </p>
-                                  </li>
-                                )
-                              )}
+                                    <Image
+                                      aria-hidden={true}
+                                      src={`/assets/${item.flag}`}
+                                      alt={`${item.language} flag`}
+                                      width={14}
+                                      height={14}
+                                      intrinsic="true"
+                                      className="w-[14px] h-[14px]"
+                                      quality={100}
+                                    />
+                                    {item.language}
+                                  </a>
+                                </li>
+                              ))}
                             </ul>
                           </div>
-                        </>
-                      )}
-
-                      <hr
-                        aria-hidden="true"
-                        className="border-t-[3px] border-cornflowerBlue my-[32px]"
-                      />
-
-                      <div className="grid gap-[16px]">
-                        <div className="grid gap-[12px]">
-                          <h2 className="text-[1.375rem] font-bold">
-                            {t("projectsPageText5")}
-                          </h2>
-
-                          <p>{foundProject.featuresDescription}</p>
-                        </div>
-
-                        <ul className="h-fit gap-x-[32px] gap-y-[12px]  grid sm:grid-cols-2">
-                          {foundProject.siteMainFeatures.map(
-                            (mapItem, itemIndex) => (
-                              <li
-                                key={itemIndex}
-                                className="h-fit grid gap-[8px]"
-                              >
-                                <h3 className="font-bold text-[1.25rem]">
-                                  {itemIndex + 1}. {mapItem.featureHeading}
-                                </h3>
-
-                                <h4>{mapItem.featureDescription}</h4>
-                              </li>
-                            )
-                          )}
-                        </ul>
+                        )}
                       </div>
-
-                      {foundProject.websiteVideos && (
-                        <>
-                          <hr
-                            aria-hidden="true"
-                            className="border-t-[3px] border-cornflowerBlue my-[32px]"
-                          />
-
-                          <div className="grid gap-[16px]">
-                            <div className="grid gap-[12px]">
-                              <h2 className="text-[1.375rem] font-bold">
-                                {t("projectsPageText7")}
-                              </h2>
-                            </div>
-
-                            <ul className="h-fit grid gap-[16px] md:grid-cols-3">
-                              {foundProject.websiteVideos &&
-                                foundProject.websiteVideos.map(
-                                  (mapItem, itemIndex) => (
-                                    <li
-                                      className="border-solid border-[4px] border-cornflowerBlue h-fit"
-                                      key={itemIndex}
-                                    >
-                                      <video className="w-fit h-fit" controls>
-                                        <source
-                                          src={mapItem.videoSrcMp4}
-                                          type="video/mp4"
-                                        />
-                                        Your browser does not support the video
-                                        tag.
-                                      </video>
-                                    </li>
-                                  )
-                                )}
-                            </ul>
-
-                          </div>
-                        </>
-                      )}
                     </div>
                   </div>
-                </div>
-
-                <div className="border-solid border-t-[6px] border-cornflowerBlue">
-                  <Footer />
                 </div>
               </div>
-            </>
-          ) : (
-            <p>No Project Found</p>
-          )}
+            </nav>
+
+            <div>
+              <div
+                className="bg-center bg-cover h-[80vh] bg-fixed mb-[100px]"
+                style={{ backgroundImage: `url(${data.hero})` }}
+              ></div>
+
+              <div className="flex flex-col gap-[64px]">
+                <div className="px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px] w-full">
+                  <div className="grid gap-[12px]">
+                    <h1
+                      id="projectHeadingText"
+                      className="text-[1.5rem] font-bold"
+                    >
+                      {data.name}
+                    </h1>
+                    <p className="max-w-[800px]">{data.description}</p>
+                  </div>
+
+                  <div className="mt-[24px] flex gap-[16px] flex-wrap">
+                    <Link
+                      aria-label={`${t("projectsPageText1")} ${t(
+                        "accessibilityText8",
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={data.liveWebsiteUrl}
+                      className={`${buttonClassName} px-[16px] bg-color02 rounded-[4px] flex gap-[8px] items-center !text-[0.875rem]`}
+                    >
+                      <Image
+                        aria-hidden={true}
+                        className="w-[16px] h-[16px]"
+                        src="/assets/website-white.svg"
+                        alt={t("altText12")}
+                        width={0}
+                        height={0}
+                        unoptimized
+                      />
+                      {t("projectsPageText1")}
+                    </Link>
+
+                    {data.slug !== "doggy-daycare" && (
+                      <Link
+                        aria-label={`${t("projectsPageText1")} ${t(
+                          "accessibilityText8",
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={data.figmaUrl}
+                        className={`${buttonClassName} px-[16px] bg-color02 rounded-[4px] flex gap-[8px] items-center !text-[0.875rem]`}
+                      >
+                        <Image
+                          aria-hidden={true}
+                          className="w-[16px] h-[16px]"
+                          src="/assets/figma-white.svg"
+                          alt={t("altText12")}
+                          width={0}
+                          height={0}
+                          unoptimized
+                        />
+                        {t("projectsPageText2")}
+                      </Link>
+                    )}
+
+                    <Link
+                      aria-label={`${t("projectsPageText1")} ${t(
+                        "accessibilityText8",
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={data.gitHubUrl}
+                      className={`${buttonClassName} px-[16px] bg-color02 rounded-[4px] flex gap-[8px] items-center !text-[0.875rem]`}
+                    >
+                      <Image
+                        aria-hidden={true}
+                        className="w-[16px] h-[16px]"
+                        src="/assets/github-white.svg"
+                        alt={t("altText12")}
+                        width={0}
+                        height={0}
+                        unoptimized
+                      />
+                      {t("projectsPageText3")}
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px] w-full grid gap-[12px]">
+                  <h2 className="text-[1.25rem] font-bold">
+                    {t("projectsText7")}
+                  </h2>
+
+                  <ul className="grid gap-x-[16px] gap-y-[12px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
+                    {data.technologiesUsed.map((mapItem, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="bg-color03 text-[white] px-[16px] py-[12px] flex gap-[8px] items-center w-full h-full rounded-[4px] border-[3px] border-[#5541D4] font-bold"
+                      >
+                        <p className="w-fit text-[0.875rem]">{mapItem.name}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="grid gap-[16px] px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px] w-full">
+                  <div className="grid gap-[12px]">
+                    <h2 className="text-[1.25rem] font-bold">
+                      {t("projectsPageText5")}
+                    </h2>
+                  </div>
+                  <ul className="h-fit gap-x-[32px] gap-y-[12px]  grid sm:grid-cols-2">
+                    {data.siteMainFeatures.map((mapItem, itemIndex) => (
+                      <li key={itemIndex} className="h-fit grid gap-[8px]">
+                        <h3 className="font-bold text-[1rem]">
+                          {itemIndex + 1}. {mapItem.featureHeading}
+                        </h3>
+                        <h4>{mapItem.featureDescription}</h4>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="pt-[100px]">
+              <Footer />
+            </div>
+          </div>
         </>
       ) : (
-        <LoadingScreen />
+        <p>No Project Found</p>
       )}
     </>
   );
 };
 
-export async function getServerSideProps({ locale, query }) {
-  const { slug } = query;
+// This function gets called at build time
+export async function getStaticPaths() {
+  // Fetch the translated projects data for all locales
+  const locales = ["en", "pt"]; // Add all locales your application supports
+  let paths = [];
 
+  for (const locale of locales) {
+    i18n.changeLanguage(locale);
+    const { t } = i18n;
+    const translatedProjectsData = await t("projectsData", {
+      returnObjects: true,
+    });
+
+    // Create paths with locale
+    const localePaths = translatedProjectsData.map((project) => ({
+      params: { slug: project.slug },
+      locale,
+    }));
+
+    paths = [...paths, ...localePaths];
+  }
+
+  return { paths, fallback: "blocking" };
+}
+
+// This function gets called at build time
+export async function getStaticProps({ params, locale }) {
+  const { slug } = params;
+
+  // Change language to the current locale
   i18n.changeLanguage(locale);
 
   // Fetch the translated projects data
   const { t } = i18n;
-
   const translatedProjectsData = await t("projectsData", {
     returnObjects: true,
   });
 
   // Find the foundProject based on the current slug
-  const foundProject = translatedProjectsData.find(
-    (project) => project.slug === slug
-  );
+  const data = translatedProjectsData.find((project) => project.slug === slug);
+
+  if (!data) {
+    // Return a 404 error if the slug is not valid
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
-      foundProject,
+      data,
       locale,
       slug,
     },
   };
 }
 
-export default Project;
+export default SlugPage;

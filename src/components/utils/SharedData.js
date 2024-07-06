@@ -5,35 +5,23 @@ const SharedData = () => {
         links: [
           {
             href: "homeSection",
-            screenReaderHref: "homeHeadingText"
+            screenReaderHref: "homeHeadingText",
           },
           {
             href: "aboutSection",
-            screenReaderHref: "aboutHeadingText"
-          },
-          {
-            href: "skillsSection",
-            screenReaderHref: "skillsHeadingText"
-          },
-          {
-            href: "servicesSection",
-            screenReaderHref: "servicesHeadingText"
+            screenReaderHref: "aboutHeadingText",
           },
           {
             href: "projectsSection",
-            screenReaderHref: "projectsHeadingText"
+            screenReaderHref: "projectsHeadingText",
           },
           {
             href: "resumeSection",
-            screenReaderHref: "resumeHeadingText"
-          },
-          {
-            href: "questionsSection",
-            screenReaderHref: "questionsHeadingText"
+            screenReaderHref: "resumeHeadingText",
           },
           {
             href: "contactSection",
-            screenReaderHref: "contactHeadingText"
+            screenReaderHref: "contactHeadingText",
           },
         ],
       },

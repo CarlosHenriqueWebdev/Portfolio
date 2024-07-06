@@ -7,14 +7,12 @@ module.exports = {
   ],
   theme: {
     colors: {
-      cornflowerBlue: "#475EDF",
-      cornflowerBlueText: "#5D71DF",
-      royalPurple: "#5C47DF",
-      royalPurpleText: "#7464DD",
-      skyBlue: "#4784DF",
-      skyBlueText: "#6BA2E1",
+      color01: "#0B0B11",
+      color02: "#4760FF",
+      color03: "#13131B",
       crimsonRed: "#DF4747",
-
+      pureSnow: "#F0F0F0",
+      black85: "rgba(0, 0, 0, 0.85)",
       black75: "rgba(0, 0, 0, 0.75)",
       black50: "rgba(0, 0, 0, 0.50)",
       black25: "rgba(0, 0, 0, 0.25)",

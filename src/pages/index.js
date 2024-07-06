@@ -1,11 +1,8 @@
 import NavBar from "@/components/common/NavBar/NavBar";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import SharedData from "@/components/utils/SharedData";
 import Head from "next/head";
 import Footer from "@/components/common/Footer/Footer";
-import useLanguageChange from "@/hooks/useLanguageChange";
-import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 import dynamic from "next/dynamic";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -17,7 +14,7 @@ const Hero = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  }
+  },
 );
 
 const About = dynamic(
@@ -25,23 +22,7 @@ const About = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  }
-);
-
-const Skills = dynamic(
-  () => import("@/components/section-content/homepage/Skills/Skills"),
-  {
-    loading: blackLoadingScreen,
-    ssr: false,
-  }
-);
-
-const Services = dynamic(
-  () => import("@/components/section-content/homepage/Services/Services"),
-  {
-    loading: blackLoadingScreen,
-    ssr: false,
-  }
+  },
 );
 
 const Projects = dynamic(
@@ -49,7 +30,7 @@ const Projects = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  }
+  },
 );
 
 const Resume = dynamic(
@@ -57,15 +38,7 @@ const Resume = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  }
-);
-
-const Questions = dynamic(
-  () => import("@/components/section-content/homepage/Questions/Questions"),
-  {
-    loading: blackLoadingScreen,
-    ssr: false,
-  }
+  },
 );
 
 const Contact = dynamic(
@@ -73,13 +46,11 @@ const Contact = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  }
+  },
 );
 
 const Home = ({ locale }) => {
   const { t } = useTranslation();
-
-  const { isLanguageLoading, changeLanguage } = useLanguageChange();
 
   const [activeSection, setActiveSection] = useState("homeSection");
 
@@ -129,7 +100,7 @@ const Home = ({ locale }) => {
   }, [activeSection]);
 
   return (
-    <div className="bg-[black]">
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
@@ -154,72 +125,31 @@ const Home = ({ locale }) => {
         />
       </Head>
 
-      {!isLanguageLoading ? (
-        <>
-          <NavBar activeSection={activeSection} locale={locale} changeLanguage={changeLanguage} />
+      <div>
+        <NavBar activeSection={activeSection} locale={locale} />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <div id="homeSection">
-              <Hero locale={locale} />
-            </div>
-          </motion.div>
+        <div id="homeSection">
+          <Hero locale={locale} />
+        </div>
 
-          <div id="aboutSection">
-            <About />
-          </div>
+        <div id="aboutSection">
+          <About />
+        </div>
 
-          <div id="skillsSection">
-            <Skills />
-          </div>
+        <div id="projectsSection">
+          <Projects />
+        </div>
 
-          <div id="servicesSection">
-            <Services />
-          </div>
+        <div id="resumeSection">
+          <Resume />
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }} // Adjust the value to your needs
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <div id="projectsSection">
-              <Projects />
-            </div>
-          </motion.div>
+        <div id="contactSection">
+          <Contact />
+        </div>
 
-          <div id="resumeSection">
-            <Resume />
-          </div>
-
-          <div id="questionsSection">
-            <Questions />
-          </div>
-
-          <div
-            className={`border-t-[6px] border-cornflowerBlue border-solid bg-cover bg-fixed  bg-[black] w-full bg-no-repeat bg-center bg-[url(/assets/divider-illustration.png)]`}
-          >
-            <div
-              className="h-[50vh] uppercase w-full flex justify-center items-center text-[1.625rem] font-bold"
-              style={{
-                backgroundColor: `rgba(0, 0, 0, 0.7)`,
-              }}
-            ></div>
-          </div>
-
-          <div id="contactSection">
-            <Contact />
-          </div>
-
-          <Footer />
-        </>
-      ) : (
-        <LoadingScreen />
-      )}
+        <Footer />
+      </div>
     </div>
   );
 };

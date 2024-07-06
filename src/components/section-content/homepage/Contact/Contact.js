@@ -28,28 +28,23 @@ const Contact = () => {
   };
 
   return (
-    <div className="border-y-[6px] border-solid border-cornflowerBlue overflow-hidden">
+    <div className=" overflow-hidden">
       {!didFormSubmit ? (
         <div>
-          <div
-            className="w-full h-full pt-[72px] pb-[48px] px-[24px] lg:px-[96px] xl:max-w-[1280px] xl:mx-auto"
-            style={{
-              backgroundColor: `rgba(0, 0, 0, 0.92)`,
-            }}
-          >
+          <div className="w-full h-full pt-[100px] pb-[48px] px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px]">
             <div>
               <div className="">
                 <div className="h-fit">
                   <motion.div
                     aria-hidden="true"
-                    className="text-[1.5rem] font-bold  text-royalPurpleText"
+                    className="text-[1.25rem] font-bold  "
                   >
                     <TextAnimationContactHeading text={t("contactText1")} />
                   </motion.div>
 
                   <h2
                     id="contactHeadingText"
-                    className="text-[1.625rem] font-bold mt-[8px]"
+                    className="text-[1.5rem] font-bold mt-[8px]"
                   >
                     {t("contactText2")}
                   </h2>
@@ -120,9 +115,7 @@ const Contact = () => {
               </div>
 
               <div className="mt-[32px]">
-                <h3 className="visually-hidden">
-                  {t("accessibilityText11")}
-                </h3>
+                <h3 className="visually-hidden">{t("accessibilityText11")}</h3>
 
                 <Form
                   didFormSubmit={didFormSubmit}
@@ -133,7 +126,7 @@ const Contact = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-[black] w-full h-full grid gap-[24px] py-[72px]">
+        <div className="w-full h-full grid gap-[24px] py-[100px]">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -159,15 +152,12 @@ const Contact = () => {
             />
           </motion.div>
 
-          <h2
-            role="alert"
-            className="text-[1.625rem] text-center font-bold text-skyBlueText"
-          >
+          <h2 role="alert" className="text-[1.5rem] text-center font-bold ">
             {t("successText1")}
           </h2>
 
           <button
-            className={`${buttonClassName} w-fit mx-auto !border-cornflowerBlue before:!bg-cornflowerBlue flex gap-[8px] items-center`}
+            className={`${buttonClassName} w-fit mx-auto ! before:! flex gap-[8px] items-center`}
             onClick={handleButtonClick}
           >
             <Image

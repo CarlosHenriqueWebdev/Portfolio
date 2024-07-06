@@ -1,172 +1,194 @@
+import React, { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { useCallback, useEffect, useRef, useState } from "react";
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { buttonClassName } from "@/components/utils/buttonStyle";
+import Link from "next/link";
+import { Trans, useTranslation } from "react-i18next";
 
-const LanguageDropdown = ({ locale, changeLanguage }) => {
+const Projects = () => {
   const { t } = useTranslation();
 
-  const options = ["en", "pt"];
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isDropdownOpenHover, setIsDropdownOpenHover] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(0);
 
-  const dropdownRef = useRef();
-  const router = useRouter();
-
-  const handleOptionChange = () => {
-    setIsDropdownOpenHover(false);
-    closeDropdown();
+  const handleProjectClick = (mapItem) => {
+    setSelectedProject(mapItem);
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prevState) => !prevState);
-    setIsDropdownOpenHover(false);
-  };
-
-  const closeDropdown = useCallback(() => {
-    setIsDropdownOpen(false);
-  }, []); // Empty dependency array as it doesn't depend on any external variables
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        closeDropdown();
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [closeDropdown]);
-
-  const dropDownUlRef = useRef(null);
-
-  useEffect(() => {
-    if (isDropdownOpen && dropDownUlRef.current) {
-      dropDownUlRef.current.focus();
-    }
-  }, [isDropdownOpen]);
-
-  const linkStyle =
-    "block w-fit p-[12px] lg:text-[white] lg:hover:text-[white]";
+  const buttonClassNameRadio =
+    "btn-animation relative overflow-hidden z-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before: before:z-[-1] bg-[black] px-[16px] py-[8px] bg-[black]  border-[2px]  font-bold rounded-[0px] flex gap-[8px] items-center rounded-[4px] active:scale-[0.95]";
 
   return (
-    <div
-      ref={dropdownRef}
-      className={`${linkStyle} text-[1rem] block !w-fit relative`}
-      onMouseEnter={() => setIsDropdownOpenHover(true)}
-      onMouseLeave={() => setIsDropdownOpenHover(false)}
-    >
-      <button
-        aria-expanded={isDropdownOpen}
-        aria-label={
-          isDropdownOpen ? t("accessibilityText4") : t("accessibilityText5")
-        }
-        className="flex gap-[8px] items-center text-[white] w-max"
-        onClick={toggleDropdown}
-      >
-        <Image
-          aria-hidden={true}
-          className="w-[20px]"
-          src={`${
-            locale === "en"
-              ? "/assets/american-flag-real.svg"
-              : locale === "pt"
-              ? "/assets/brazil-flag-real.svg"
-              : null
-          }`}
-          alt={locale === "en" ? t("altText3") : t("altText2")}
-          width={0}
-          height={0}
-          unoptimized
-        />
-        {locale === "en" ? "English" : locale === "pt" ? "Portugues" : ""}
-        <Image
-          aria-hidden={true}
-          className="w-[12px]"
-          src="/assets/dropdown-arrow.svg"
-          alt={t("altText4")}
-          width={0}
-          height={0}
-          unoptimized
-        />
-      </button>
+    <div className="overflow-hidden ">
+      <div className="px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px] w-full py-[100px]">
+        <div className="">
+          <h2 id="projectsHeadingText" className="font-bold text-[1.5rem]">
+            {t("projectsText1")}
+          </h2>
 
-      <div
-        className={`hidden absolute z-[200] overflow-hidden pt-[24px] !w-max right-[-8px] ${
-          isDropdownOpen || isDropdownOpenHover ? "!block" : ""
-        }`}
-      >
-        <div
-          className={`relative ${
-            router.pathname === "/resume"
-              ? ""
-              : "after:bg-[url(/assets/triangle.svg)]"
-          } after:z-10 after:content-[''] after:absolute after:w-[73px] after:h-[20px] after:bg-no-repeat after:bg-contain  after:block after:right-[-37px] after:top-[-16px]`}
-        >
-          <ul
-            tabIndex="-1"
-            ref={dropDownUlRef}
-            role={isDropdownOpen ? "dialog" : undefined}
-            aria-modal={isDropdownOpen ? "true" : "false"}
-            className={`w-fit relative bg-[black] border-solid ${
-              router.pathname === "/resume"
-                ? "border-[#002B5C] "
-                : "border-skyBlue"
-            } border-[3px] z-20`}
-          >
-            {options.map((option) => (
-              <li
-                role="button"
-                tabIndex="0"
-                className={`w-full bg-midnightBlack px-[12px] py-[8px] cursor-pointer flex gap-[8px] items-center hover:bg-[black] hover:text-[white] ${
-                  locale === "en" && option === "en"
-                    ? "bg-cornflowerBlue !text-[white]"
-                    : "text-white75"
-                } ${
-                  locale === "pt" && option === "pt"
-                    ? "bg-cornflowerBlue !text-[white]"
-                    : "text-white75"
-                }`}
-                onClick={() => {
-                  handleOptionChange(option);
-                  changeLanguage(option);
-                }}
-                key={option}
-              >
-                <div>
+          <p className="mt-[12px] max-w-[800px]">
+            <Trans
+              i18nKey={t("projectsText2")}
+              components={{ bold: <strong /> }}
+            />
+          </p>
+        </div>
+
+        <div className="mt-[32px]">
+          <div className="w-fit  flex gap-[16px] mb-[24px] flex-wrap">
+            {t("projectsData", { returnObjects: true }).map(
+              (mapItem, itemIndex) => (
+                <button
+                  aria-label={`${mapItem.name} ${t("accessibilityText9")}`}
+                  key={itemIndex}
+                  className={`${buttonClassNameRadio}  ${
+                    selectedProject === itemIndex ? " " : "hover:brightness-90"
+                  }`}
+                  onClick={() => {
+                    handleProjectClick(itemIndex);
+                  }}
+                >
+                  {mapItem.name}
                   <Image
                     aria-hidden={true}
-                    className="w-[18px]"
-                    src={`${
-                      option === "en"
-                        ? "/assets/american-flag-real.svg"
-                        : "/assets/brazil-flag-real.svg"
-                    }`}
-                    alt={locale === "en" ? t("altText3") : t("altText2")}
+                    className="w-[12px] h-[12px] "
+                    src={mapItem.icon}
+                    alt={mapItem.iconAltText}
                     width={0}
                     height={0}
                     unoptimized
                   />
-                </div>
+                </button>
+              )
+            )}
+          </div>
 
-                <div>
-                  <p>{option === "en" ? "English" : "Portugues"} </p>
-                </div>
-              </li>
-            ))}
+          <ul
+            className=""
+            style={{
+              display: "flex",
+              transform: `translateX(${-selectedProject * 100}%)`,
+              transition: "transform 0.5s",
+            }}
+          >
+            {t("projectsData", { returnObjects: true }).map(
+              (mapItem, itemIndex) => (
+                <li
+                  aria-hidden={selectedProject === itemIndex ? "false" : "true"}
+                  className="bg-[black]"
+                  style={{ flex: "0 0 100%" }}
+                  key={itemIndex}
+                >
+                  <div className=" grid md:grid-cols-2 gap-[24px]">
+                    <div className={`w-full h-full`}>
+                      <Image
+                        aria-hidden={true}
+                        className="white-box w-full h-fit"
+                        src={mapItem.thumbnail}
+                        alt={mapItem.thumbnailAltText}
+                        width={0}
+                        height={0}
+                        unoptimized
+                      />
+                    </div>
 
-            <li
-              onClick={toggleDropdown}
-              role="button"
-              tabIndex="0"
-              className="close-button-sr w-full bg-midnightBlack px-[12px] py-[8px] cursor-pointer flex gap-[8px] items-center hover:bg-[black] hover:text-[white]"
-            >
-              <p>{t("accessibilityText4")}</p>
-            </li>
+                    <div className="grid gap-[16px] h-fit">
+                      <div className="grid gap-[12px]">
+                        <h3
+                          id={`projectTextFocusSr${itemIndex}`}
+                          className="font-bold text-[1.25rem]  "
+                        >
+                          {mapItem.name}
+                        </h3>
+
+                        <div className="flex gap-[8px] items-baseline">
+                          <p className="text-[white]">
+                            {" "}
+                            <strong className="text-[white] font-medium">
+                              {t("projectsText3")}
+                            </strong>{" "}
+                            {mapItem.description}
+                          </p>
+                        </div>
+
+                        <div className="flex gap-[8px] items-baseline">
+                          <p>
+                            <strong className="text-[white] font-medium">
+                              {t("projectsText4")}
+                            </strong>{" "}
+                            {mapItem.descriptionFeatures}
+                          </p>
+                        </div>
+
+                        <div className="flex gap-[8px] items-baseline">
+                          <p>
+                            <strong className="text-[white] font-medium">
+                              {t("projectsText5")}
+                            </strong>{" "}
+                            <Link
+                              tabIndex={
+                                selectedProject === itemIndex ? "0" : "-1"
+                              }
+                              className="underline"
+                              href={mapItem.liveWebsiteUrl}
+                            >
+                              {mapItem.liveWebsiteUrl}
+                            </Link>
+                          </p>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="visually-hidden">
+                          {t("resumePageProjectHeadingText2")}
+                        </h4>
+
+                        <ul className="flex gap-[12px] flex-wrap">
+                          {mapItem.technologiesUsed.map(
+                            (mapItem, itemIndex) => (
+                              <li
+                                className="p-[8px] rounded-[3%]   bg-[white] border-[2px]"
+                                key={itemIndex}
+                              >
+                                <Image
+                                  className="w-[28px] h-[28px]"
+                                  src={mapItem.techImageSrc}
+                                  alt={mapItem.name}
+                                  width={0}
+                                  height={0}
+                                  unoptimized
+                                />
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <div className="flex gap-[16px] mt-[16px]">
+                          <Link
+                            tabIndex={
+                              selectedProject === itemIndex ? "0" : "-1"
+                            }
+                            href={`/projects/${mapItem.slug}`}
+                            className={`${buttonClassName} rounded-[3%] !px-[32px] !w-fit flex gap-[8px] items-center ! before:!`}
+                          >
+                            {t("projectsText6")}
+                            <Image
+                              aria-hidden={true}
+                              className="w-[12px] h-[12px]"
+                              src="/assets/arrow.svg"
+                              alt={t("altText1")}
+                              width={0}
+                              height={0}
+                              unoptimized
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              )
+            )}
           </ul>
         </div>
       </div>
@@ -174,4 +196,4 @@ const LanguageDropdown = ({ locale, changeLanguage }) => {
   );
 };
 
-export default LanguageDropdown;
+export default Projects;

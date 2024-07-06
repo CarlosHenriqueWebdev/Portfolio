@@ -75,9 +75,7 @@ const Menu = ({
   };
 
   const linkStyle =
-    "relative cursor-pointer block w-full p-[12px] lg:text-[white] lg:p-[10px] lg:hover:text-[white]";
-
-  const underlineStyle = "bg-cornflowerBlue left-0 absolute w-full h-[4px]";
+    "relative cursor-pointer block w-full p-[12px] lg:text-[white] lg:p-[10px]";
 
   const handleButtonClick = (targetId) => {
     const targetElement = document.getElementById(targetId);
@@ -93,7 +91,6 @@ const Menu = ({
   return (
     <>
       <motion.div
-        className="w-[70%] fixed h-full lg:static lg:w-full"
         initial={false}
         animate={menuOpen ? "open" : "closed"}
         variants={!isScreen1024Px ? sidebar : null}
@@ -107,7 +104,7 @@ const Menu = ({
             role={menuOpen && !isScreen1024Px ? "dialog" : undefined}
             tabIndex="-1" // Make the ul focusable
             aria-modal={menuOpen ? "true" : "false"}
-            className={`pt-[24px] pb-[48px] lg:mx-[0px] max-h-[420px] flex flex-col items-center text-[1.25rem] overflow-auto lg:flex-row lg:py-[0px] lg:h-auto lg:overflow-visible lg:gap-[16px]`}
+            className={`pt-[24px] pb-[48px] lg:mx-[0px] max-h-[420px] flex flex-col items-center text-[1rem] overflow-auto lg:flex-row lg:py-[0px] lg:h-auto lg:overflow-visible lg:gap-[16px]`}
             variants={delayItem}
           >
             {isScreen1024Px && (
@@ -139,11 +136,11 @@ const Menu = ({
                   <ScrollLink
                     className={`${linkStyle} h-fit w-fit ${
                       !isScreen1024Px
-                        ? "active:border-[white] border-solid border-cornflowerBlue border-[2px]"
+                        ? "active:border-[white]  border-[2px]"
                         : ""
                     } ${
                       mapItem.href === activeSection
-                        ? "-nav bg-royalPurple lg:!bg-[transparent]"
+                        ? "-nav  lg:!bg-[transparent]"
                         : ""
                     }`}
                     to={mapItem.href} // Use 'to' instead of 'href'
@@ -154,16 +151,6 @@ const Menu = ({
                     onClick={() => handleButtonClick(mapItem.screenReaderHref)}
                   >
                     {t(`navText${itemIndex + 1}`)}
-
-                    {isScreen1024Px && (
-                      <div
-                        className={`${underlineStyle} animation-underline ${
-                          mapItem.href === activeSection
-                            ? "expand-animation opacity-100"
-                            : "opacity-0"
-                        } group-hover:!opacity-100 `}
-                      ></div>
-                    )}
                   </ScrollLink>
                 </motion.div>
               </motion.li>
