@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   TextAnimationHeadingEnglish,
@@ -9,9 +9,16 @@ import { useTranslation } from "react-i18next";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Trans } from "react-i18next";
 import { buttonClassName } from "@/components/utils/buttonStyle";
+import useScrollTriggerAnimation from "@/components/hooks/useScrollTriggerAnimation";
 
 const Hero = ({ locale }) => {
   const { t } = useTranslation();
+  const containerRef = useRef(null);
+
+  useScrollTriggerAnimation(containerRef, {
+    heroScroll: true,
+    entranceScrollDuration: 0.5,
+  });
 
   const handleButtonClick = (targetId) => {
     const targetElement = document.getElementById(targetId);
@@ -28,12 +35,12 @@ const Hero = ({ locale }) => {
   const animatedTextEnglish = "I'm Carlos, a Web Developer";
 
   return (
-    <div className="overflow-hidden border-b-[4px] ">
+    <div ref={containerRef} className="overflow-hidden border-b-[4px] ">
       <div
-        className={`hero-shadow bg-fixed h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/assets/img4.jpg)]`}
+        className={`hero-shadow bg-fixed h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/assets/img4.webp)]`}
       >
         <div className="bg-black75 py-[100px]">
-          <div className="px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px]">
+          <div className="item px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px]">
             <div className="grid gap-[12px]">
               <span aria-hidden="true" className="font-bold text-white75">
                 {t("heroText1")}
@@ -50,18 +57,20 @@ const Hero = ({ locale }) => {
                   )}
                 </motion.div>
 
-                {locale === "en" ? (
-                  <h1 id="homeHeadingText" className="visually-hidden">
-                    {animatedTextEnglish}
-                  </h1>
-                ) : (
-                  <h1 id="homeHeadingText" className="visually-hidden">
-                    {animatedTextPortuguese}
-                  </h1>
-                )}
+                <div>
+                  {locale === "en" ? (
+                    <h1 id="homeHeadingText" className="visually-hidden">
+                      {animatedTextEnglish}
+                    </h1>
+                  ) : (
+                    <h1 id="homeHeadingText" className="visually-hidden">
+                      {animatedTextPortuguese}
+                    </h1>
+                  )}
+                </div>
               </div>
 
-              <p className=" text-[1.25rem]  font-bold">{t("heroText2")}</p>
+              <p className="text-[1.25rem] font-bold">{t("heroText2")}</p>
 
               <div className="max-w-[600px] font-medium">
                 <p>

@@ -47,7 +47,7 @@ export default function NavBar() {
       >
         <ScrollLink
           className="skip-to-content"
-          to="main-content"
+          to="aboutHeadingText"
           tabIndex="0"
           onClick={() => handleButtonClick("main-content")}
           smooth={true}
@@ -255,7 +255,7 @@ export default function NavBar() {
                           {item.text}
                         </ScrollLink>
                       </li>
-                    )
+                    ),
                   )}
                 </ul>
               </div>

@@ -180,7 +180,7 @@
           "featureDescription": "Seguiu as diretrizes WCAG para tornar o site acessível a todos os usuários."
         }
       ],
-      "thumbnail": "/assets/Screenshot_1.png",
+      "thumbnail": "/assets/Screenshot_1.webp",
       "thumbnailAltText": "Miniatura do Site Ronaldo Coelho Nutri",
       "hero": "/assets/img21.webp",
       "liveWebsiteUrl": "https://ronaldo-coelho-nutri-nuxt3.vercel.app/",
@@ -268,7 +268,7 @@
           "featureDescription": "Seguiu os padrões WCAG para garantir que o site seja acessível a todos os usuários."
         }
       ],
-      "thumbnail": "/assets/Screenshot_2.png",
+      "thumbnail": "/assets/Screenshot_2.webp",
       "thumbnailAltText": "Miniatura do Site Excellence Conciergerie",
       "hero": "/assets/img1.webp",
       "liveWebsiteUrl": "https://excellence-conciergerie.com/en",
@@ -344,9 +344,9 @@
           "featureDescription": "Contador Numérico, Confetti, Efeitos Hover em Imagens e animações sutis para um design aprimorado."
         }
       ],
-      "thumbnail": "/assets/Screenshot_3.png",
+      "thumbnail": "/assets/Screenshot_3.webp",
       "thumbnailAltText": "Página Inicial do Site Dentro de um Monitor",
-      "hero": "/assets/img30.png",
+      "hero": "/assets/img30.webp",
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/DoggyDaycareFront",
       "figmaUrl": ""
@@ -404,9 +404,9 @@
           "featureDescription": "Experimente controles suaves e responsivos com a capacidade de enfileirar seus movimentos. O jogo é executado em um ritmo ligeiramente mais lento, garantindo que você possa inserir seus controles sem esforço, facilitando muito o movimento. Você também recebe 3 vezes mais comprimento do que o habitual."
         }
       ],
-      "thumbnail": "/assets/Screenshot_6.png",
+      "thumbnail": "/assets/Screenshot_6.webp",
       "thumbnailAltText": "Miniatura do Jogo Pixel Python",
-      "hero": "/assets/img31.jpg",
+      "hero": "/assets/img31.webp",
       "liveWebsiteUrl": "https://pixel-python.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
       "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
@@ -456,9 +456,9 @@
           "featureDescription": "Reproduz diferentes sons em Movimentos, Vitórias e Empates."
         }
       ],
-      "thumbnail": "/assets/Screenshot_4.png",
+      "thumbnail": "/assets/Screenshot_4.webp",
       "thumbnailAltText": "Miniatura do Jogo da Velha",
-      "hero": "/assets/img32.png",
+      "hero": "/assets/img32.webp",
       "liveWebsiteUrl": "https://tic-tac-toe-nine-tan.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/tic-tac-toe",
       "figmaUrl": "https://www.figma.com/file/SDtAyFbfhWtXmP0DAo2Dtt/Tic-Tac-Toe?type=design&mode=design&t=XNRXwdNnySDk0hor-0"

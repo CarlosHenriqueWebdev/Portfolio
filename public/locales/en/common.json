@@ -180,7 +180,7 @@
           "featureDescription": "Adhered to WCAG guidelines to make the website accessible to all users."
         }
       ],
-      "thumbnail": "/assets/Screenshot_1.png",
+      "thumbnail": "/assets/Screenshot_1.webp",
       "thumbnailAltText": "Ronaldo Coelho Nutri Website Thumbnail",
       "hero": "/assets/img21.webp",
       "liveWebsiteUrl": "https://ronaldo-coelho-nutri-nuxt3.vercel.app/",
@@ -268,7 +268,7 @@
           "featureDescription": "Adhered to WCAG standards to ensure the website is accessible to all users."
         }
       ],
-      "thumbnail": "/assets/Screenshot_2.png",
+      "thumbnail": "/assets/Screenshot_2.webp",
       "thumbnailAltText": "Excellence Conciergerie Website Thumbnail",
       "hero": "/assets/img1.webp",
       "liveWebsiteUrl": "https://excellence-conciergerie.com/en",
@@ -344,9 +344,9 @@
           "featureDescription": "Number Counter, Confetti, Hover Effects on Images, and subtle animations for enhanced design."
         }
       ],
-      "thumbnail": "/assets/Screenshot_3.png",
+      "thumbnail": "/assets/Screenshot_3.webp",
       "thumbnailAltText": "Website Homepage Inside a Monitor Frame",
-      "hero": "/assets/img30.png",
+      "hero": "/assets/img30.webp",
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/DoggyDaycareFront",
       "figmaUrl": ""
@@ -404,9 +404,9 @@
           "featureDescription": "Experience smooth and responsive controls with the ability to queue your moves. The game runs at a slightly slower pace, ensuring you can input your controls effortlessly, making movement incredibly easy. You also receive 3 times more length than usual."
         }
       ],
-      "thumbnail": "/assets/Screenshot_6.png",
+      "thumbnail": "/assets/Screenshot_6.webp",
       "thumbnailAltText": "Pixel Python Game Thumbnail",
-      "hero": "/assets/img31.jpg",
+      "hero": "/assets/img31.webp",
       "liveWebsiteUrl": "https://pixel-python.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/Pixel-Python",
       "figmaUrl": "https://www.figma.com/file/OBzWCu0uSs0N4E39udOaZK/Snake-Game?type=design&node-id=0-1&mode=design&t=sC0bodHHs3p3D1s2-0"
@@ -456,9 +456,9 @@
           "featureDescription": "Plays different sounds on Moves, Wins, and Ties."
         }
       ],
-      "thumbnail": "/assets/Screenshot_4.png",
+      "thumbnail": "/assets/Screenshot_4.webp",
       "thumbnailAltText": "Tic Tac Toe Game Thumbnail",
-      "hero": "/assets/img32.png",
+      "hero": "/assets/img32.webp",
       "liveWebsiteUrl": "https://tic-tac-toe-nine-tan.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/tic-tac-toe",
       "figmaUrl": "https://www.figma.com/file/SDtAyFbfhWtXmP0DAo2Dtt/Tic-Tac-Toe?type=design&mode=design&t=XNRXwdNnySDk0hor-0"

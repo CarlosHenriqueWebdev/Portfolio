@@ -28,16 +28,16 @@ const Contact = () => {
   };
 
   return (
-    <div className=" overflow-hidden">
+    <div className="overflow-hidden">
       {!didFormSubmit ? (
         <div>
-          <div className="w-full h-full pt-[100px] pb-[48px] px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px]">
+          <div className="w-full h-full py-[100px] px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px]">
             <div>
               <div className="">
                 <div className="h-fit">
                   <motion.div
                     aria-hidden="true"
-                    className="text-[1.25rem] font-bold  "
+                    className="!text-white75 text-[1.25rem] font-bold  "
                   >
                     <TextAnimationContactHeading text={t("contactText1")} />
                   </motion.div>
@@ -75,7 +75,7 @@ const Contact = () => {
                         {mapItem.url.startsWith("mailto:") ? (
                           <a
                             aria-label={`${mapItem.name} ${t(
-                              "accessibilityText8"
+                              "accessibilityText8",
                             )}`}
                             className="text-[0.875rem] font-semibold underline"
                             href={mapItem.url}
@@ -87,7 +87,7 @@ const Contact = () => {
                         ) : mapItem.url.startsWith("https://wa.me/") ? (
                           <a
                             aria-label={`${mapItem.name} ${t(
-                              "accessibilityText8"
+                              "accessibilityText8",
                             )}`}
                             className="text-[0.875rem] font-semibold underline"
                             href={mapItem.url}
@@ -99,7 +99,7 @@ const Contact = () => {
                         ) : (
                           <Link
                             aria-label={`${mapItem.name} ${t(
-                              "accessibilityText8"
+                              "accessibilityText8",
                             )}`}
                             className="text-[0.875rem] font-semibold underline"
                             href={mapItem.url}

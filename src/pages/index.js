@@ -14,7 +14,7 @@ const Hero = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  },
+  }
 );
 
 const About = dynamic(
@@ -22,7 +22,7 @@ const About = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  },
+  }
 );
 
 const Projects = dynamic(
@@ -30,7 +30,7 @@ const Projects = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  },
+  }
 );
 
 const Resume = dynamic(
@@ -38,7 +38,7 @@ const Resume = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  },
+  }
 );
 
 const Contact = dynamic(
@@ -46,7 +46,7 @@ const Contact = dynamic(
   {
     loading: blackLoadingScreen,
     ssr: false,
-  },
+  }
 );
 
 const Home = ({ locale }) => {
@@ -103,6 +103,7 @@ const Home = ({ locale }) => {
     <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/img4.webp" as="image" />
 
         <title>{t("homeTitle")}</title>
 

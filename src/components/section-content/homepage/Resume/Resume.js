@@ -26,7 +26,7 @@ const Resume = () => {
   };
 
   return (
-    <div className="bg-[url('/assets/img1.jpg')] bg-fixed bg-no-repeat bg-cover">
+    <div className="bg-[url('/assets/img5.webp')] bg-fixed bg-no-repeat bg-cover">
       <div className="bg-black75">
         <div className="w-full py-[100px] px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px]">
           <div className="flex flex-col gap-[32px]">
