@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   TextAnimationHeadingEnglish,
@@ -9,16 +9,9 @@ import { useTranslation } from "react-i18next";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Trans } from "react-i18next";
 import { buttonClassName } from "@/components/utils/buttonStyle";
-import useScrollTriggerAnimation from "@/components/hooks/useScrollTriggerAnimation";
 
 const Hero = ({ locale }) => {
   const { t } = useTranslation();
-  const containerRef = useRef(null);
-
-  useScrollTriggerAnimation(containerRef, {
-    heroScroll: true,
-    entranceScrollDuration: 0.5,
-  });
 
   const handleButtonClick = (targetId) => {
     const targetElement = document.getElementById(targetId);
@@ -35,7 +28,7 @@ const Hero = ({ locale }) => {
   const animatedTextEnglish = "I'm Carlos, a Web Developer";
 
   return (
-    <div ref={containerRef} className="overflow-hidden border-b-[4px] ">
+    <div className="overflow-hidden border-b-[4px] ">
       <div
         className={`hero-shadow bg-fixed h-full bg-[black] w-full bg-no-repeat relative bg-center bg-[url(/assets/img4.webp)]`}
       >

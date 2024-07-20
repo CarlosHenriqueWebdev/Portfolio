@@ -1,27 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { TextAnimationAboutHeading } from "@/components/utils/textAnimations";
 import { contactInfo } from "./contactInfo";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
-import useScrollTriggerAnimation from "@/components/hooks/useScrollTriggerAnimation";
+
 import Skills from "@/components/section-content/homepage/About/Skills";
 
 const About = () => {
   const { t } = useTranslation();
-  const containerRef = useRef(null);
-
-  useScrollTriggerAnimation(containerRef, {
-    entranceScroll: true,
-    entranceScrollDuration: 0.5,
-  });
 
   return (
     <div className="overflow-hidden">
       <div className="py-[100px] px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px] flex flex-col gap-[32px]">
-        <div ref={containerRef} className="flex flex-col gap-[32px]">
+        <div className="flex flex-col gap-[32px]">
           <ul className="flex flex-wrap gap-[16px] item">
             {contactInfo
               .filter((mapItem) => mapItem.display)

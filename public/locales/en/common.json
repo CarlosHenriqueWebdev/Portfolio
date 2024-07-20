@@ -124,6 +124,94 @@
 
   "projectsData": [
     {
+      "pageTitle": "Excellence Cleaners | Web Development Portfolio",
+      "slug": "excellence-cleaners",
+      "name": "Excellence Cleaners Website",
+      "description": "I was tasked with redesigning the Excellence Cleaners website, which was facing issues with its previous developer. Initially built using Elementor on WordPress, the client was dissatisfied with the animations and previous design. To meet expectations, I redesigned the site from scratch in Figma and developed it using Next.js, incorporating various animations for a more dynamic and engaging user experience.",
+      "technologiesUsed": [
+        {
+          "name": "Next.js",
+          "techImageSrc": "/assets/nextjs-logo.svg"
+        },
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg"
+        },
+        {
+          "name": "Tailwind CSS",
+          "techImageSrc": "/assets/tailwindcss-logo.svg"
+        },
+        {
+          "name": "GSAP (GreenSock Animation Platform)",
+          "techImageSrc": "/assets/gsap-logo.svg"
+        },
+        {
+          "name": "CSS",
+          "techImageSrc": "/assets/css-logo.svg"
+        },
+        {
+          "name": "i18next (Internationalization)",
+          "techImageSrc": "/assets/i18next-logo.svg"
+        },
+        {
+          "name": "Lenis Scroll",
+          "techImageSrc": "/assets/lenis-logo.svg"
+        },
+        {
+          "name": "Next SEO",
+          "techImageSrc": "/assets/next-seo-logo.svg"
+        },
+        {
+          "name": "Email Integration (SMTP)",
+          "techImageSrc": "/assets/smtp-logo.svg"
+        },
+        {
+          "name": "Formik/Yup (Forms and Validation)",
+          "techImageSrc": "/assets/formik-yup-logo.svg"
+        },
+        {
+          "name": "Web Accessibility (WCAG)",
+          "techImageSrc": "/assets/wcag-logo.svg"
+        },
+        {
+          "name": "Clean Code",
+          "techImageSrc": "/assets/clean-code-logo.svg"
+        }
+      ],
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Redesigned User Interface",
+          "featureDescription": "The website was redesigned from scratch to provide a modern, visually appealing user interface."
+        },
+        {
+          "featureHeading": "Enhanced Animations",
+          "featureDescription": "Incorporated various animations using GSAP for a more dynamic and engaging user experience."
+        },
+        {
+          "featureHeading": "Internationalization",
+          "featureDescription": "Implemented i18next for easy and efficient internationalization of the website content."
+        },
+        {
+          "featureHeading": "SEO Optimization",
+          "featureDescription": "Used Next SEO to enhance search engine optimization, improving the site's visibility."
+        },
+        {
+          "featureHeading": "Improved Form Handling",
+          "featureDescription": "Utilized Formik and Yup for robust form handling and validation."
+        },
+        {
+          "featureHeading": "Web Accessibility",
+          "featureDescription": "Adhered to WCAG standards to ensure the website is accessible to all users."
+        }
+      ],
+      "thumbnail": "/assets/Screenshot_5.webp",
+      "thumbnailAltText": "Excellence Cleaners Website Thumbnail",
+      "hero": "/assets/img10.webp",
+      "liveWebsiteUrl": "https://excellence-cleaners.com",
+      "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/excellence-cleaners",
+      "figmaUrl": "https://www.figma.com/design/piapBIxY5QuHYWUMTLVjFG/Excellence-Cleaners?m=auto&t=myC4CYR0cgnwLk8l-6"
+    },
+    {
       "pageTitle": "Ronaldo Coelho Nutri | Web Development Portfolio",
       "slug": "ronaldo-coelho-nutri",
       "name": "Ronaldo Coelho Nutri Website",

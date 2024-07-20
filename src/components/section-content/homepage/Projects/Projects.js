@@ -1,20 +1,13 @@
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import useScrollTriggerAnimation from "@/components/hooks/useScrollTriggerAnimation";
 
 const Projects = () => {
   const { t } = useTranslation();
-  const projectsRef = useRef(null);
-
-  useScrollTriggerAnimation(projectsRef, {
-    projectsScroll: true,
-    entranceScrollDuration: 0.225,
-  });
 
   return (
-    <div ref={projectsRef} className="overflow-hidden bg-color03">
+    <div className="overflow-hidden bg-color03">
       <div className="px-[24px] lg:px-[80px] mx-auto max-w-[640px] md:max-w-full xl:max-w-[1280px] w-full py-[100px] flex flex-col gap-[32px]">
         <h2
           id="projectsHeadingText"
@@ -35,7 +28,7 @@ const Projects = () => {
                   >
                     <Image
                       aria-hidden={true}
-                      className="w-full h-full"
+                      className="w-full h-[161.25px] object-cover"
                       src={mapItem.thumbnail}
                       alt={mapItem.thumbnailAltText}
                       width={0}
