@@ -200,7 +200,7 @@ const SlugPage = ({ data, locale, slug }) => {
                       {t("projectsPageText1")}
                     </Link>
 
-                    {data.slug !== "doggy-daycare" && (
+                    {!data.isMissingFigmaButton && (
                       <Link
                         aria-label={`${t("projectsPageText1")} ${t(
                           "accessibilityText8",
@@ -223,26 +223,28 @@ const SlugPage = ({ data, locale, slug }) => {
                       </Link>
                     )}
 
-                    <Link
-                      aria-label={`${t("projectsPageText1")} ${t(
-                        "accessibilityText8",
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={data.gitHubUrl}
-                      className={`${buttonClassName} px-[16px] bg-color02 rounded-[4px] flex gap-[8px] items-center !text-[0.875rem]`}
-                    >
-                      <Image
-                        aria-hidden={true}
-                        className="w-[16px] h-[16px]"
-                        src="/assets/github-white.svg"
-                        alt={t("altText12")}
-                        width={0}
-                        height={0}
-                        unoptimized
-                      />
-                      {t("projectsPageText3")}
-                    </Link>
+                    {!data.isMissingGithubButton && (
+                      <Link
+                        aria-label={`${t("projectsPageText1")} ${t(
+                          "accessibilityText8",
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={data.gitHubUrl}
+                        className={`${buttonClassName} px-[16px] bg-color02 rounded-[4px] flex gap-[8px] items-center !text-[0.875rem]`}
+                      >
+                        <Image
+                          aria-hidden={true}
+                          className="w-[16px] h-[16px]"
+                          src="/assets/github-white.svg"
+                          alt={t("altText12")}
+                          width={0}
+                          height={0}
+                          unoptimized
+                        />
+                        {t("projectsPageText3")}
+                      </Link>
+                    )}
                   </div>
                 </div>
 

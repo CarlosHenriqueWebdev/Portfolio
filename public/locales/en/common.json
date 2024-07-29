@@ -124,6 +124,42 @@
 
   "projectsData": [
     {
+      "pageTitle": "Excellence Cleaners Presentation PDF | Web Development Portfolio",
+      "slug": "excellence-cleaners-pdf",
+      "name": "Excellence Cleaners Presentation PDF",
+      "description": "I created a comprehensive presentation PDF for Excellence Cleaners, leveraging my skills in Figma and presentation design. This project was part of voluntary work following the completion of two non-paid website redesigns for the company. The initial presentation was outdated and was a very basic free template, so I made a entirely new design to better reflect the company’s professionalism and commitment to high-quality cleaning services.",
+      "technologiesUsed": [
+        {
+          "name": "Figma",
+          "techImageSrc": "/assets/figma-logo.svg"
+        }
+      ],
+      "siteMainFeatures": [
+        {
+          "featureHeading": "Modern Visual Design",
+          "featureDescription": "Utilized Figma to create a visually appealing and professional presentation design."
+        },
+        {
+          "featureHeading": "Clear Information Structure",
+          "featureDescription": "Organized content in a logical and easy-to-follow format to enhance readability and comprehension."
+        },
+        {
+          "featureHeading": "Engaging Visuals",
+          "featureDescription": "Included high-quality images and graphics to make the presentation more engaging and visually appealing."
+        },
+        {
+          "featureHeading": "Brand Consistency",
+          "featureDescription": "Ensured that the presentation design aligns with the company's brand identity and values."
+        }
+      ],
+      "thumbnail": "/assets/Screenshot_7.webp",
+      "thumbnailAltText": "Excellence Cleaners Website Thumbnail",
+      "hero": "/assets/img11.webp",
+      "isMissingGithubButton": true,
+      "liveWebsiteUrl": "https://drive.google.com/file/d/1GEn9rRVDLTNBUcFsGfpsCZg_FacxaC1m/view?usp=sharing",
+      "figmaUrl": "https://www.figma.com/design/QJ9a7zVKC1VkeUsY4PnKs6/Presentation-%2F-Excellence-Cleaners?node-id=885169-448&t=bxuoBo7Ep3AJPEoS-1"
+    },
+    {
       "pageTitle": "Excellence Cleaners | Web Development Portfolio",
       "slug": "excellence-cleaners",
       "name": "Excellence Cleaners Website",
@@ -437,7 +473,7 @@
       "hero": "/assets/img30.webp",
       "liveWebsiteUrl": "https://doggy-daycare-front.vercel.app/",
       "gitHubUrl": "https://github.com/CarlosHenriqueWebdev/DoggyDaycareFront",
-      "figmaUrl": ""
+      "isMissingFigmaButton": true
     },
     {
       "pageTitle": "Pixel Python | Web Development Portfolio",
@@ -585,7 +621,7 @@
   "footerText1": "Carlos Henrique.",
   "footerText2": "Click Here to Open the Credits Tab",
 
-  "projectsPageText1": "View Website Online",
+  "projectsPageText1": "View Online",
   "projectsPageText2": "Figma Design File",
   "projectsPageText3": "Repository On Github",
   "projectsPageText4": "Challenges:",
